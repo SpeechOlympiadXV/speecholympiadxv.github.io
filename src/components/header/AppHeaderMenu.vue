@@ -20,22 +20,24 @@ export default {
           name: 'Support',
           url: '/support'
         }
-        ]
+      ]
 
     }
   }
 }
 </script>
 <template>
-  <div class="navBar">
-    This is the AppHeaderMenu component. I should add a list here.
 
-    <!-- TODO: Create an array and render the items -->
-    <li v-for="(item, index) in items" :key="index">
-      {{ item.name }}
-    </li>
 
-  </div>
+  <!-- TODO: Create an array and render the items -->
+  <li class="nav-item" v-for="(item, index) in items" :key="index">
+    <a class="nav-link active" aria-current="page" href="{{ item.url }}">{{ item.name }}</a>
+
+  </li>
+
+
+
+
 </template>
 
 <style scoped>

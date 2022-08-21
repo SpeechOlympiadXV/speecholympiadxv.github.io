@@ -22,7 +22,7 @@ export default {
 
     <!-- The following components are for testing purposes -->
     <Sample />
-    <ButtonCounter />
+    <!-- <ButtonCounter /> -->
   </div>
 </template>
 
