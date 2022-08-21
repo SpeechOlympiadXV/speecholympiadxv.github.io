@@ -93,7 +93,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 .footer-menu-title {
   font-weight: 700;
 }
