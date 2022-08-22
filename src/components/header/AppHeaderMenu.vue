@@ -5,20 +5,20 @@ export default {
       items: [
         //  Change the names to the correct names
         {
-          name: 'Features',
-          url: '/features'
+          name: 'Home',
+          url: '/home'
         },
         {
-          name: 'Prices',
-          url: '/prices'
+          name: 'About',
+          url: '/about'
         },
         {
-          name: 'Community',
-          url: '/community'
+          name: 'Speakers',
+          url: '/speakers'
         },
         {
-          name: 'Support',
-          url: '/support'
+          name: 'Contact',
+          url: '/contact'
         }
       ],
       activeItem: -1
@@ -40,10 +40,8 @@ export default {
 
   <!-- Create an array and render the items -->
   <!-- Create a function and bind it to the onclick. Add logic to change active menu item  -->
-  <li class="nav-item" v-for="(item, index) in items" 
-  :key="index" 
-  :class="{ active: index == activeItem }"
-  :v-on:click="clickHandler(index)">
+  <li class="nav-item" v-for="(item, index) in items" :key="index" :class="{ active: index == activeItem }"
+    @click="clickHandler(index)">
 
     <div>
       <a class="nav-link" :href="item.url">{{ item.name }}</a>
@@ -58,7 +56,6 @@ export default {
 </template>
 
 <style scoped>
-
 </style>
 
 

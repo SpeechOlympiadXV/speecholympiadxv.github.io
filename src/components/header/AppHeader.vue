@@ -16,11 +16,11 @@ export default {
 <template>
   <div class="headerbar">
     <!-- Write a css to position the below containers -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="Fourth navbar example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="NavBar">
       <div class="container-fluid">
-        
+
         <div id="logo" style="width: 2opx !important,height=20px !important">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/home">
 
             <!-- Change the logo to the correct source -->
             <SOLogo />
@@ -44,16 +44,10 @@ export default {
 
   </div>
 
-  <!-- TODO: Create a function and bind it to the onclick. Add logic to change active menu item -->
-  <!-- Create a function and bind it to the onclick. Add logic to change active menu item
-   -->
 
 
 
 </template>
 
 <style scoped>
-.heading {
-  font-size: 2.5rem;
-}
 </style>
