@@ -20,18 +20,35 @@ export default {
           name: 'Support',
           url: '/support'
         }
-      ]
+      ],
+      activeItem: -1
 
     }
+
+  },
+
+  methods: {
+    clickHandler(idx) {
+      this.activeItem = idx
+    }
   }
+
 }
 </script>
 <template>
 
 
-  <!-- TODO: Create an array and render the items -->
-  <li class="nav-item" v-for="(item, index) in items" :key="index">
-    <a class="nav-link active" aria-current="page" href="{{ item.url }}">{{ item.name }}</a>
+  <!-- Create an array and render the items -->
+  <!-- Create a function and bind it to the onclick. Add logic to change active menu item  -->
+  <li class="nav-item" v-for="(item, index) in items" 
+  :key="index" 
+  :class="{ active: index == activeItem }"
+  :v-on:click="clickHandler(index)">
+
+    <div>
+      <a class="nav-link" :href="item.url">{{ item.name }}</a>
+    </div>
+
 
   </li>
 
@@ -41,7 +58,7 @@ export default {
 </template>
 
 <style scoped>
-.heading {
-  font-size: 2.5rem;
-}
+
 </style>
+
+

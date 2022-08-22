@@ -45,6 +45,9 @@ export default {
   </div>
 
   <!-- TODO: Create a function and bind it to the onclick. Add logic to change active menu item -->
+  <!-- Create a function and bind it to the onclick. Add logic to change active menu item
+   -->
+
 
 
 </template>
