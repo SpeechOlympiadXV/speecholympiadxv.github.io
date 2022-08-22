@@ -26,22 +26,17 @@ export default {
         {
           profile: 'instagram',
           icon: faInstagram,
-          link: ''
+          link: 'https://www.instagram.com/gavelmora'
         },
         {
           profile: 'facebook',
           icon: faFacebook,
-          link: ''
+          link: 'https://www.facebook.com/gavelmora/'
         },
         {
           profile: 'linkedin',
           icon: faLinkedin,
-          link: ''
-        },
-        {
-          profile: 'twitter',
-          icon: faTwitter,
-          link: ''
+          link: 'https://www.linkedin.com/company/gavel-club-of-university-of-moratuwa/'
         }
       ]
     }
