@@ -2,8 +2,8 @@
 import SOLogo from './SOLogo.vue'
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-import {faFacebook, faInstagram, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons'
-
+import {faFacebook, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons'
+// TODO: Check svg core bundle size
 library.add(faInstagram, faFacebook, faLinkedin)
 
 export default {
@@ -46,7 +46,7 @@ export default {
 
 
 <template>
-  <div class="container w-100">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-md-8 d-flex align-items-center
       justify-content-center justify-content-md-start my-md-0 my-4">
