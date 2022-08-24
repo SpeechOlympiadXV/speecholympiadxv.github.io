@@ -51,12 +51,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "AppCarousel"
-}
-</script>
-
 <style scoped>
 /* Carousel base class */
 .carousel {

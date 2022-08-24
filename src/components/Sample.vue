@@ -1,5 +1,5 @@
 <script>
-import AppCarousel from 'AppCarousel.vue'
+import AppCarousel from './AppCarousel.vue'
 export default {
   components: {AppCarousel}
 }
