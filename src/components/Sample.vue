@@ -109,11 +109,6 @@ export default {
 
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
     </div><!-- /.container -->
   </main>
 </template>
