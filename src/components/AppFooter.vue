@@ -79,7 +79,7 @@ export default {
           d-flex justify-content-center justify-content-md-end align-items-center"><span>Follow us on</span></div>
           <div v-for="social_media in social_media_profiles" class="col my-2 my-md-0 d-flex justify-content-center">
             <a :href="social_media.link">
-              <FontAwesomeIcon :icon="social_media.icon" size="2x"/>
+              <FontAwesomeIcon :icon="social_media.icon" size="2x" color="#000000"/>
             </a>
           </div>
         </div>
