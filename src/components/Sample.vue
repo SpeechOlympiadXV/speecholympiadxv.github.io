@@ -7,7 +7,7 @@ export default {
 
 <template>
 
-  <header>
+  <!-- <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Carousel</a>
@@ -33,7 +33,7 @@ export default {
         </div>
       </div>
     </nav>
-  </header>
+  </header> -->
 
   <main>
     <AppCarousel/>
@@ -112,6 +112,7 @@ export default {
     </div><!-- /.container -->
   </main>
 </template>
+
 
 <style scoped>
 .bd-placeholder-img {
