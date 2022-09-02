@@ -16,7 +16,7 @@ export default {
 <template>
   <div class="headerbar">
     <!-- Write a css to position the below containers -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="NavBar">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" aria-label="NavBar">
       <div class="container-fluid">
 
         <div id="logo" style="width: 2opx !important,height=20px !important">
