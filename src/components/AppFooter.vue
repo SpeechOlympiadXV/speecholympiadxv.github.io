@@ -26,7 +26,7 @@ export default {
         {
           profile: 'instagram',
           icon: faInstagram,
-          link: 'https://www.instagram.com/gavelmora'
+          link: 'https://www.instagram.com/gavelmora_'
         },
         {
           profile: 'facebook',
@@ -91,6 +91,10 @@ export default {
 <style scoped>
 .footer-menu-title {
   font-weight: 700;
+}
+
+.svg-inline--fa:hover {
+  color: var(--vt-c-indigo);
 }
 </style>
 
