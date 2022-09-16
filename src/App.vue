@@ -3,13 +3,14 @@ import AppFooter from "./components/AppFooter.vue";
 import AppHeader from "./components/AppHeader.vue";
 import AppPageLayout from "./components/AppPageLayout.vue";
 
-import PageSample from "./pages/PageSample.vue";
+import PageHome from "./pages/PageHome.vue";
+import PageAbout from "./pages/PageAbout.vue";
 import PageComingSoon from "./pages/PageComingSoon.vue";
 import Page404 from "./pages/Page404.vue";
 
 const routes = {
-  "/": PageSample,
-  "/about": PageComingSoon,
+  "/": PageHome,
+  "/about": PageAbout,
   "/speakers": PageComingSoon,
   "/contact": PageComingSoon,
 };
