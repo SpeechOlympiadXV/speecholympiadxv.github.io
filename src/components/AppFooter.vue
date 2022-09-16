@@ -60,7 +60,7 @@ export default {
 
 
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid app-footer">
     <div class="row">
       <div
           class="
@@ -162,5 +162,8 @@ export default {
 .footer-link:hover{
 }
 
+.app-footer {
+  margin-top: auto;
+}
 </style>
 
