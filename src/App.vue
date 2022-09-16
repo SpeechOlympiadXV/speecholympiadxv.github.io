@@ -28,7 +28,6 @@ export default {
   },
   computed: {
     currentView() {
-      console.log(window.location.hash.slice(1));
       return routes["/" + this.currentPath.slice(1)] || Page404;
     },
   },
