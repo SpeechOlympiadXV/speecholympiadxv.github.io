@@ -1,8 +1,7 @@
 <script >
 import AppFooter from "./components/AppFooter.vue";
-
 import AppHeader from "./components/AppHeader.vue";
-import AppPageLayout from "./components/AppPageLayout";
+import AppPageLayout from "./components/AppPageLayout.vue";
 
 export default {
   components: {
@@ -19,9 +18,6 @@ export default {
 <template>
   <div>
     <AppHeader />
-
-
-    <!-- The following components are for testing purposes -->
     <AppPageLayout />
     <AppFooter />
   </div>
