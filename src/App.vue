@@ -1,12 +1,12 @@
 <script >
-import Sample from "./components/Sample.vue";
 import AppFooter from "./components/AppFooter.vue";
 
 import AppHeader from "./components/AppHeader.vue";
+import AppPageLayout from "./components/AppPageLayout";
 
 export default {
   components: {
-    Sample,
+    AppPageLayout,
     AppHeader,
     AppFooter
   }
@@ -22,7 +22,7 @@ export default {
 
 
     <!-- The following components are for testing purposes -->
-    <Sample />
+    <AppPageLayout />
     <AppFooter />
   </div>
 </template>
