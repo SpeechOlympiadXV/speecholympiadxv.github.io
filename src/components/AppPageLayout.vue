@@ -86,10 +86,12 @@ export default {
         <div class="col-12 mb-2"><h2 class="featurette-heading mt-0">Testimonials</h2></div>
         <div class="col-12 mb-2"><p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p></div>
         <!-- Three columns of cards  -->
-        <div class="row">
-          <div class="col-lg-4" v-for="testimonial in testimonials">
-            <TestimonialCard :title="testimonial.title" :imageSrc="testimonial.imageSrc" :body="testimonial.body"/>
-          </div><!-- /.col-lg-4 -->
+        <div class="col-12 mb-2">
+          <div class="row">
+            <div class="col-lg-4 d-flex justify-content-center" v-for="testimonial in testimonials">
+              <TestimonialCard :title="testimonial.title" :imageSrc="testimonial.imageSrc" :body="testimonial.body"/>
+            </div><!-- /.col-lg-4 -->
+          </div>
         </div><!-- /.row -->
       </div>
 
