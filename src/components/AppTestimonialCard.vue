@@ -1,9 +1,9 @@
 <template>
-  <div class="card">
+  <div class="card testimonial-card">
     <img :src="this.imageSrc" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title text-left">{{this.title}}</h5>
-      <p class="card-text text-left">{{this.body}}</p>
+      <h5 class="card-title text-left testimonial-card-heading">{{this.title}}</h5>
+      <p class="card-text text-left testimonial-card-body">{{this.body}}</p>
     </div>
   </div>
 </template>
@@ -20,5 +20,27 @@ export default {
 </script>
 
 <style scoped>
+
+/*Testimonial Card*/
+.testimonial-card{
+  background-color: rgba(224, 221, 221, 0.88);
+  border: solid 1px var(--color-border);
+}
+.testimonial-card:hover{
+  border:solid 1px var(--color-border-hover);
+}
+.testimonial-card-heading{
+  color:var(--color-heading);
+}
+.testimonial-card-body{
+  color:var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .testimonial-card{
+    background-color: #1e1e1e;
+  }
+}
+/*Testimonial Card end*/
 
 </style>
