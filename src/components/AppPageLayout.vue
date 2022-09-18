@@ -18,13 +18,13 @@ export default {
         },
         {
           heading:"Walk the Path of a Champion",
-          headingEnd:"(Yasir ayya’s Story)",
+          headingEnd:"",
           text:"Experience the journey of Speech Olympiad through the story of an ambitious and talented champion. Toastmaster Mohamed Yasir shares his fond memories from Speech Olympiad and invites you to grab your opportunity at SOXV.",
           image:""
         },
         {
           heading:"A Guide to Becoming a Better Speaker",
-          headingEnd:"(Samadhi akka’s interview)",
+          headingEnd:"",
           text:"From the basic do’s and don’ts of public speaking to the delicate intricacies of a winning speech, the champion of SOIX Samadhi Poornima guides you through the art of becoming a great public speaker.",
           image:""
         }
