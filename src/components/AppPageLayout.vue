@@ -1,6 +1,6 @@
 <script>
 import AppCarousel from './AppCarousel.vue'
-import TestimonialCard from "./TestimonialCard.vue";
+import TestimonialCard from "./AppTestimonialCard.vue";
 
 import rectangle from "../assets/images/rectangle.jpg";
 
