@@ -19,11 +19,10 @@ export default {
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" aria-label="NavBar">
       <div class="container-fluid">
 
-        <div id="logo" style="width: 2opx !important,height=20px !important">
+        <div id="logo">
           <a class="navbar-brand" href="/home">
-
             <!-- Change the logo to the correct source -->
-            <SOLogo />
+            <SOLogo style="width:85px; height: 35px !important;"/>
           </a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar1"
