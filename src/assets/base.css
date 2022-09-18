@@ -33,7 +33,12 @@
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
+  /*Testimonial card colors*/
   --color-testimonial-card-bg : rgba(224, 221, 221, 0.88);
+  --color-testimonial-card-heading : var(--vt-c-text-light-1);
+  --color-testimonial-card-text: var(--vt-c-text-light-1);
+  --color-testimonial-card-border: var(--vt-c-divider-light-1);
+  --color-testimonial-card-border-hover: var(--vt-c-divider-light-2);
 
   --section-gap: 160px;
 
@@ -51,8 +56,12 @@
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
 
+    /*Testimonial card colors*/
     --color-testimonial-card-bg : #1e1e1e;
-
+    --color-testimonial-card-heading :var(--vt-c-text-dark-1);
+    --color-testimonial-card-text: var(--vt-c-text-dark-2);
+    --color-testimonial-card-border: var(--vt-c-divider-dark-1);
+    --color-testimonial-card-border-hover: var(--vt-c-divider-dark-2);
   }
 }
 

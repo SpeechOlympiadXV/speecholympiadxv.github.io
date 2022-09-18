@@ -24,16 +24,16 @@ export default {
 /*Testimonial Card*/
 .testimonial-card{
   background-color: var(--color-testimonial-card-bg);
-  border: solid 1px var(--color-border);
+  border: solid 1px var(--color-testimonial-card-border);
 }
 .testimonial-card:hover{
-  border:solid 1px var(--color-border-hover);
+  border:solid 1px var(--color-testimonial-card-border-hover);
 }
 .testimonial-card-heading{
-  color:var(--color-heading);
+  color:var(--color-testimonial-card-heading);
 }
 .testimonial-card-body{
-  color:var(--color-text);
+  color:var(--color-testimonial-card-text);
 }
 
 /*Testimonial Card end*/
