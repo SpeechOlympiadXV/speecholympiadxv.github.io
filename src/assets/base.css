@@ -33,7 +33,10 @@
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
+  --color-testimonial-card-bg : rgba(224, 221, 221, 0.88);
+
   --section-gap: 160px;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,6 +50,9 @@
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+
+    --color-testimonial-card-bg : #1e1e1e;
+
   }
 }
 

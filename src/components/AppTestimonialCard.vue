@@ -23,7 +23,7 @@ export default {
 
 /*Testimonial Card*/
 .testimonial-card{
-  background-color: rgba(224, 221, 221, 0.88);
+  background-color: var(--color-testimonial-card-bg);
   border: solid 1px var(--color-border);
 }
 .testimonial-card:hover{
@@ -36,11 +36,6 @@ export default {
   color:var(--color-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  .testimonial-card{
-    background-color: #1e1e1e;
-  }
-}
 /*Testimonial Card end*/
 
 </style>
