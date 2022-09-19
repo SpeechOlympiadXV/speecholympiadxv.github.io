@@ -147,16 +147,15 @@ export default doodle;
 <style scoped>
 #doodle {
   position: fixed;
-  left: 50%;
+  right: 2%;
   top: 10vh;
-  width: 100%;
-  height: 100vh;
+  bottom: 5vh;
   margin: auto;
   z-index: -1;
   opacity: 0.125;
 }
 #doodle svg{
-  height: 90vh;
+  height: 100%;
   width: auto;
   object-fit: contain;
 }
