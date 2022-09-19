@@ -13,12 +13,12 @@ export default {
           url: "#about",
         },
         {
-          name: "Speakers",
-          url: "#speakers",
+          name: "Champion's Story",
+          url: "#champions-story",
         },
         {
-          name: "Contact",
-          url: "#contact",
+          name: "Technical Tips",
+          url: "#technical-tips",
         },
       ],
       activeItem: 0,
