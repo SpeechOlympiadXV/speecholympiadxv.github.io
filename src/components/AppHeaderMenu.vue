@@ -27,6 +27,9 @@ export default {
 
   methods: {
     clickHandler(idx) {
+      //collapse navbar before changing active item. Click on the button to do so
+      document.querySelector(".navbar-toggler").click();
+
       this.activeItem = idx;
     },
   },
@@ -37,7 +40,7 @@ export default {
   <!-- render menu items from list -->
   <li class="nav-item" v-for="(item, index) in items" :key="index">
     <!-- active class for selected menu item -->
-    <div @click="clickHandler(index)" :class="{ active: index == activeItem }">
+    <div @click="clickHandler(index)" :class="{ active: index === activeItem }">
       <a class="nav-link" :href="item.url">{{ item.name }}</a>
     </div>
   </li>
