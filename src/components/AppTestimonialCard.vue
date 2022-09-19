@@ -26,17 +26,17 @@ export default {
 <style scoped>
 /*Testimonial Card*/
 .testimonial-card{
-  background-color: var(--color-testimonial-card-bg);
-  border: solid 1px var(--color-testimonial-card-border);
+  background-color: var(--color-background-transparent);
+  border: solid 1px var(--color-border-hover);
 }
 .testimonial-card:hover{
-  border:solid 1px var(--color-testimonial-card-border-hover);
+  border:solid 1px var(--color-border);
 }
 .testimonial-card-heading{
-  color:var(--color-testimonial-card-heading);
+  color:var(--color-heading);
 }
 .testimonial-card-body{
-  color:var(--color-testimonial-card-text);
+  color:var(--color-text);
 }
 
 /*Testimonial Card end*/
