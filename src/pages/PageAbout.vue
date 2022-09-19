@@ -2,7 +2,7 @@
   <main>
     <div class="container-fluid">
       <div class="column">
-        <div class="row">
+        <div class="row article-text">
           <p>
             The Gavel Club of the University of Moratuwa is excited to announce
             that Speech Olympiad, the most coveted intra-university speech
@@ -43,3 +43,9 @@
     </div>
   </main>
 </template>
+
+<style scoped>
+.article-text {
+  font-size: 1.125rem;
+}
+</style>
