@@ -7,12 +7,9 @@ export default {
   components: {
     AppPageLayout,
     AppHeader,
-    AppFooter
-  }
-}
-
-
-
+    AppFooter,
+  },
+};
 </script>
 
 <template>
@@ -24,5 +21,4 @@ export default {
 </template>
 
 <style >
-
 </style>

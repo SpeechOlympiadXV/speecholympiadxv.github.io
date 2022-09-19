@@ -1,24 +1,24 @@
 <script>
-import SOLogo from '../assets/images/SOXIV_LOGO_White-small.png'
+import SOLogo from "../assets/images/SOXIV_LOGO_White-small.png";
 
 export default {
   data() {
     return {
       logo: {
         filename: SOLogo,
-        alt: 'Speech Olympiad Logo'
-      }
-    }
-  }
-}
+        alt: "Speech Olympiad Logo",
+      },
+    };
+  },
+};
 </script>
 
 <template>
-  <img :src="logo.filename" :alt="logo.alt" class="logo">
+  <img :src="logo.filename" :alt="logo.alt" class="logo" />
 </template>
 
 <style scoped>
-.logo{
+.logo {
   object-fit: cover;
 }
 </style>
