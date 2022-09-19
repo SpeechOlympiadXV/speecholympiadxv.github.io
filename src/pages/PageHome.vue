@@ -1,7 +1,53 @@
 <script>
 import AppCarousel from "../components/AppCarousel.vue";
+import AppFeaturette from "../components/AppFeaturette.vue";
+import AppTestimonialCard from "../components/AppTestimonialCard.vue";
+import Doodle from "../components/Doodle.vue";
+import rectangle from "../assets/images/rectangle.jpg";
+
 export default {
-  components: { AppCarousel },
+  components: { AppFeaturette, AppTestimonialCard, AppCarousel, Doodle },
+  data() {
+    return {
+      featurettes: [
+        {
+          heading: "What is SOXV?",
+          headingEnd: "",
+          text: "Learn more about the premier intra-university speech competition of the University of Moratuwa, the structure of the competition and its theme for the year 2022. True excitement awaits as Speech Olympiad returns to a physical context this year!",
+          image: "",
+        },
+        {
+          heading: "Walk the Path of a Champion",
+          headingEnd: "",
+          text: "Experience the journey of Speech Olympiad through the story of an ambitious and talented champion. Toastmaster Mohamed Yasir shares his fond memories from Speech Olympiad and invites you to grab your opportunity at SOXV.",
+          image: "",
+        },
+        {
+          heading: "A Guide to Becoming a Better Speaker",
+          headingEnd: "",
+          text: "From the basic do’s and don’ts of public speaking to the delicate intricacies of a winning speech, the champion of SOIX Samadhi Poornima guides you through the art of becoming a great public speaker.",
+          image: "",
+        },
+      ],
+      testimonials: [
+        {
+          imageSrc: rectangle,
+          title: "Testimonial title",
+          body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        },
+        {
+          imageSrc: rectangle,
+          title: "Testimonial title",
+          body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        },
+        {
+          imageSrc: rectangle,
+          title: "Testimonial title",
+          body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -13,264 +59,52 @@ export default {
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-      <!-- Three columns of text below the carousel -->
-      
-
+      <Doodle />
       <!-- START THE FEATURETTES -->
+      <AppFeaturette
+        v-for="(featurette, i) in featurettes"
+        :index="i"
+        :key="i"
+        :heading="featurette.heading"
+        :heading-end="featurette.headingEnd"
+        :text="featurette.text"
+        :image="featurette.image"
+      />
 
-      <hr class="featurette-divider" />
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">
-            First featurette heading.
-            <span class="text-muted">It’ll blow your mind.</span>
-          </h2>
+      <!--Testimonials-->
+      <div class="row mb-5">
+        <div class="col-12 mb-2">
+          <h2 class="featurette-heading mt-0">Testimonials</h2>
+        </div>
+        <div class="col-12 mb-2">
           <p class="lead">
-            Some great placeholder content for the first featurette here.
-            Imagine some exciting prose here.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore
           </p>
         </div>
-        <div class="col-md-5">
-          <svg
-            class="
-              bd-placeholder-img bd-placeholder-img-lg
-              featurette-image
-              img-fluid
-              mx-auto
-            "
-            width="500"
-            height="500"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 500x500"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#eee" />
-            <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-          </svg>
+        <!-- Three columns of cards  -->
+        <div class="col-12 mb-2">
+          <div class="row">
+            <div
+              class="col-lg-4 d-flex justify-content-center"
+              v-for="testimonial in testimonials"
+            >
+              <AppTestimonialCard
+                :title="testimonial.title"
+                :imageSrc="testimonial.imageSrc"
+                :body="testimonial.body"
+              />
+            </div>
+            <!-- /.col-lg-4 -->
+          </div>
         </div>
+        <!-- /.row -->
       </div>
-
-      <hr class="featurette-divider" />
-
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">
-            Oh yeah, it’s that good.
-            <span class="text-muted">See for yourself.</span>
-          </h2>
-          <p class="lead">
-            Another featurette? Of course. More placeholder content here to give
-            you an idea of how this layout would work with some actual
-            real-world content in place.
-          </p>
-        </div>
-        <div class="col-md-5 order-md-1">
-          <svg
-            class="
-              bd-placeholder-img bd-placeholder-img-lg
-              featurette-image
-              img-fluid
-              mx-auto
-            "
-            width="500"
-            height="500"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 500x500"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#eee" />
-            <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-          </svg>
-        </div>
-      </div>
-
-      <hr class="featurette-divider" />
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">
-            And lastly, this one. <span class="text-muted">Checkmate.</span>
-          </h2>
-          <p class="lead">
-            And yes, this is the last block of representative placeholder
-            content. Again, not really intended to be actually read, simply here
-            to give you a better view of what this would look like with some
-            actual content. Your content.
-          </p>
-        </div>
-        <div class="col-md-5">
-          <svg
-            class="
-              bd-placeholder-img bd-placeholder-img-lg
-              featurette-image
-              img-fluid
-              mx-auto
-            "
-            width="500"
-            height="500"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 500x500"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#eee" />
-            <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-          </svg>
-        </div>
-      </div>
-
-      <hr class="featurette-divider" />
-
-      <div class="row">
-        <div class="col-lg-4">
-          <svg
-            class="bd-placeholder-img rounded-circle"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 140x140"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" />
-            <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg>
-
-          <h2>Heading</h2>
-          <p>
-            Some representative placeholder content for the three columns of
-            text below the carousel. This is the first column.
-          </p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div>
-        <!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg
-            class="bd-placeholder-img rounded-circle"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 140x140"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" />
-            <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg>
-
-          <h2>Heading</h2>
-          <p>
-            Another exciting bit of representative placeholder content. This
-            time, we've moved on to the second column.
-          </p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div>
-        <!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg
-            class="bd-placeholder-img rounded-circle"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 140x140"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" />
-            <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg>
-
-          <h2>Heading</h2>
-          <p>
-            And lastly this, the third column of representative placeholder
-            content.
-          </p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div>
-        <!-- /.col-lg-4 -->
-      </div>
-      <!-- /.row -->
-
     </div>
     <!-- /.container -->
   </main>
 </template>
 
+
 <style scoped>
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: 400;
-}
-/* rtl:begin:ignore */
-.marketing .col-lg-4 p {
-  margin-right: 0.75rem;
-  margin-left: 0.75rem;
-}
-/* rtl:end:ignore */
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  /* rtl:remove */
-  letter-spacing: -0.05rem;
-}
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (min-width: 40em) {
-  .featurette-heading {
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
-  }
-}
 </style>

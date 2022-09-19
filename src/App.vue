@@ -1,7 +1,6 @@
 <script >
 import AppFooter from "./components/AppFooter.vue";
 import AppHeader from "./components/AppHeader.vue";
-import AppPageLayout from "./components/AppPageLayout.vue";
 
 import PageHome from "./pages/PageHome.vue";
 import PageAbout from "./pages/PageAbout.vue";
@@ -22,7 +21,6 @@ export default {
     };
   },
   components: {
-    AppPageLayout,
     AppHeader,
     AppFooter,
   },
