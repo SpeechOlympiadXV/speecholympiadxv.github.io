@@ -3,6 +3,8 @@
     <div class="container-fluid">
       <div class="column">
         <div class="row article-text">
+          <h1>What is Speech Olympiad XV?</h1>
+
           <p>
             The Gavel Club of the University of Moratuwa is excited to announce
             that Speech Olympiad, the most coveted intra-university speech
