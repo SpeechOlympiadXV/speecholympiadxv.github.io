@@ -1,5 +1,5 @@
 <template>
-  <div class="card testimonial-card">
+  <div class="card testimonial-card mb-3 md-lg-0">
     <div class="row mt-3">
       <div class="col d-flex justify-content-center">
         <svg

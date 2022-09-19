@@ -82,4 +82,13 @@ h2 {
     margin-top: 7rem;
   }
 }
+
+@media (max-width: 62em) {
+  .featurette-heading{
+    padding-top: 2rem;
+  }
+  .featurette-divider{
+    margin: 2rem 0;
+  }
+}
 </style>

@@ -73,7 +73,11 @@
   min-width: 100%;
   height: 32rem;
 }
-
+@media (max-width: 62em) {
+  .carousel{
+    margin-bottom: 0;
+  }
+}
 
 @media (min-width: 40em) {
   /* Bump up size of carousel content */
