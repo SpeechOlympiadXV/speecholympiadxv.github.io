@@ -32,6 +32,7 @@ export default {
   },
   mounted() {
     window.addEventListener("hashchange", () => {
+      // TODO pass a reference to the current menu item
       this.currentPath = window.location.hash;
     });
   },
