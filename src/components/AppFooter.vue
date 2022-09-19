@@ -1,5 +1,5 @@
 <script>
-import SOLogo from "./SOLogo.vue";
+import GavelLogo from "./GavelLogo.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
@@ -12,7 +12,7 @@ library.add(faInstagram, faFacebook, faLinkedin);
 
 export default {
   components: {
-    SOLogo,
+    GavelLogo,
     FontAwesomeIcon,
   },
   data() {
@@ -60,7 +60,7 @@ export default {
 
 
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid app-footer">
     <div class="row">
       <div
           class="
@@ -71,7 +71,7 @@ export default {
           my-md-0 my-4
         "
       >
-        <SOLogo/>
+        <GavelLogo />
       </div>
       <div class="col-12 col-md-9">
         <div class="row justify-content-end">
@@ -162,5 +162,8 @@ export default {
 .footer-link:hover{
 }
 
+.app-footer {
+  margin-top: auto;
+}
 </style>
 

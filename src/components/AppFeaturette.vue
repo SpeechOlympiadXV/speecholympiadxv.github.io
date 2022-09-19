@@ -2,7 +2,9 @@
   <div class="row featurette">
     <div :class="'col-md-7 ' + getOrder(index, 0)">
       <h2 class="featurette-heading">
-        {{ heading }} <span class="text-muted">{{ headingEnd }}</span>
+        <a class="nav-link" :href="urlString"
+          >{{ heading }} <span class="text-muted">{{ headingEnd }}</span></a
+        >
       </h2>
       <p class="lead">{{ text }}</p>
     </div>
@@ -40,6 +42,7 @@ export default {
     headingEnd: String,
     text: String,
     image: String,
+    urlString: String,
   },
   methods: {
     getOrder(rowIndex, colIndex) {

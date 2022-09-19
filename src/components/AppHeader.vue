@@ -18,8 +18,8 @@ export default {
       aria-label="NavBar"
     >
       <div class="container-fluid">
-        <div id="logo">
-          <a class="navbar-brand" href="/home">
+        <div id="logo" style="width: 20px !important, height=20px !important">
+          <a class="navbar-brand" href="/#">
             <!-- Change the logo to the correct source -->
             <SOLogo style="width: 85px; height: 35px !important" />
           </a>

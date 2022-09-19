@@ -1,33 +1,35 @@
 <script>
-import AppCarousel from "./AppCarousel.vue";
-import TestimonialCard from "./AppTestimonialCard.vue";
-
+import AppCarousel from "../components/AppCarousel.vue";
+import AppFeaturette from "../components/AppFeaturette.vue";
+import AppTestimonialCard from "../components/AppTestimonialCard.vue";
+import Doodle from "../components/Doodle.vue";
 import rectangle from "../assets/images/rectangle.jpg";
-import AppFeaturette from "./AppFeaturette.vue";
-import Doodle from "./Doodle.vue";
 
 export default {
-  components: { AppFeaturette, TestimonialCard, AppCarousel, Doodle },
+  components: { AppFeaturette, AppTestimonialCard, AppCarousel, Doodle },
   data() {
     return {
       featurettes: [
         {
-          heading: "What is SOXV?",
-          headingEnd: "",
+          heading: "What is Speech Olympiad XV",
+          headingEnd: "?",
           text: "Learn more about the premier intra-university speech competition of the University of Moratuwa, the structure of the competition and its theme for the year 2022. True excitement awaits as Speech Olympiad returns to a physical context this year!",
           image: "",
+          urlString: "#about",
         },
         {
           heading: "Walk the Path of a Champion",
           headingEnd: "",
           text: "Experience the journey of Speech Olympiad through the story of an ambitious and talented champion. Toastmaster Mohamed Yasir shares his fond memories from Speech Olympiad and invites you to grab your opportunity at SOXV.",
           image: "",
+          urlString: "#champions-story",
         },
         {
           heading: "A Guide to Becoming a Better Speaker",
           headingEnd: "",
           text: "From the basic do’s and don’ts of public speaking to the delicate intricacies of a winning speech, the champion of SOIX Samadhi Poornima guides you through the art of becoming a great public speaker.",
           image: "",
+          urlString: "#technical-tips",
         },
       ],
       testimonials: [
@@ -65,10 +67,12 @@ export default {
       <AppFeaturette
         v-for="(featurette, i) in featurettes"
         :index="i"
+        :key="i"
         :heading="featurette.heading"
         :heading-end="featurette.headingEnd"
         :text="featurette.text"
         :image="featurette.image"
+        :urlString="featurette.urlString"
       />
 
       <!--Testimonials-->
@@ -89,7 +93,7 @@ export default {
               class="col-lg-4 d-flex justify-content-center"
               v-for="testimonial in testimonials"
             >
-              <TestimonialCard
+              <AppTestimonialCard
                 :title="testimonial.title"
                 :imageSrc="testimonial.imageSrc"
                 :body="testimonial.body"
