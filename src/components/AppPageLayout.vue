@@ -4,9 +4,10 @@ import TestimonialCard from "./AppTestimonialCard.vue";
 
 import rectangle from "../assets/images/rectangle.jpg";
 import AppFeaturette from "./AppFeaturette.vue";
+import Doodle from "./Doodle.vue";
 
 export default {
-  components: {AppFeaturette, TestimonialCard, AppCarousel},
+  components: {AppFeaturette, TestimonialCard, AppCarousel, Doodle},
   data(){
     return {
       featurettes:[
@@ -59,7 +60,7 @@ export default {
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-
+      <Doodle/>
       <!-- START THE FEATURETTES -->
       <AppFeaturette v-for="(featurette,i) in featurettes" :index="i"
        :heading="featurette.heading" :heading-end="featurette.headingEnd" :text="featurette.text"
