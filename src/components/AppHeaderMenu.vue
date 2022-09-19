@@ -21,7 +21,7 @@ export default {
           url: "#contact",
         },
       ],
-      activeItem: -1,
+      activeItem: 0,
     };
   },
 
