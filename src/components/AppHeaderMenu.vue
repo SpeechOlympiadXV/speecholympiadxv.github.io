@@ -27,8 +27,12 @@ export default {
 
   methods: {
     clickHandler(idx) {
-      //collapse navbar before changing active item. Click on the button to do so
-      document.querySelector(".navbar-toggler").click();
+      //collapse navbar for mobile view before changing active item.
+      // Click on the button to do so
+      if(window.matchMedia("(max-width: 992px)").matches){
+        // Viewport is less or equal to 992 pixels wide (md)
+        document.querySelector(".navbar-toggler").click();
+      }
 
       this.activeItem = idx;
     },
