@@ -27,6 +27,9 @@ export default {
   },
   computed: {
     currentView() {
+      //scroll to page top before changing the view
+      window.scrollTo({ top: 0, behavior: 'auto' });
+
       return routes["/" + this.currentPath.slice(1)] || Page404;
     },
   },
