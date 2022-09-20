@@ -3,7 +3,6 @@ export default {
   data() {
     return {
       items: [
-        //  Change the names to the correct names
         {
           name: "Home",
           url: "#",
@@ -29,6 +28,18 @@ export default {
     clickHandler(idx) {
       this.activeItem = idx;
     },
+  },
+
+  mounted() {
+    window.addEventListener("hashchange", () => {
+      let hashInd = window.location.hash.slice(1);
+      this.activeItem = [
+        "",
+        "about",
+        "champions-story",
+        "technical-tips",
+      ].indexOf(hashInd);
+    });
   },
 };
 </script>
