@@ -140,8 +140,8 @@ export default doodle;
 #doodle {
   position: fixed;
   right: 2%;
-  top: 10vh;
-  bottom: 5vh;
+  top: 10%;
+  bottom: 5%;
   margin: auto;
   z-index: -1;
   opacity: 0.125;
@@ -150,5 +150,15 @@ export default doodle;
   height: 100%;
   width: auto;
   object-fit: contain;
+}
+@media (max-width: 992px) {
+  #doodle{
+    left:2% !important;
+    bottom: 1%;
+  }
+  #doodle svg{
+    width: 120%;
+    height: auto;
+  }
 }
 </style>
