@@ -6,14 +6,12 @@
   </div>
 </template>
 <script>
-import ArticleInterview from "./ArticleInterview.vue"
-
 export default {
   name: 'AppArticle',
-  components: {ArticleInterview}
 }
 </script>
-<style scoped>
+<style>
+/*Since the content is defined in parent components style is not scoped*/
 .article-container {
   display: flex;
   justify-content: center;

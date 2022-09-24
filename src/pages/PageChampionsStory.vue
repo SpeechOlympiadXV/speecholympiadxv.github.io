@@ -123,8 +123,9 @@
 <script>
 import AppHeroSection from "../components/AppHeroSection.vue";
 import AppArticle from "../components/AppArticle.vue";
+import ArticleInterview from "../components/ArticleInterview.vue";
 
 export default {
-  components: {AppArticle, AppHeroSection}
+  components: {AppArticle, AppHeroSection, ArticleInterview}
 }
 </script>
