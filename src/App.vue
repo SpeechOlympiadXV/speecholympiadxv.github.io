@@ -7,11 +7,12 @@ import PageAbout from "./pages/PageAbout.vue";
 import PageTechnicalTips from "./pages/PageTechnicalTips.vue";
 import PageComingSoon from "./pages/PageComingSoon.vue";
 import Page404 from "./pages/Page404.vue";
+import PageChampionsStory from "./pages/PageChampionsStory.vue"
 
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
-  "/champions-story": PageComingSoon,
+  "/champions-story": PageChampionsStory,
   "/technical-tips": PageTechnicalTips,
 };
 
