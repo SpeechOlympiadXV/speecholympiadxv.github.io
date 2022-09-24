@@ -1,9 +1,9 @@
 <template>
   <main>
-    <div class="hero hero-img">
+    <AppHeroSection image="">
       <div><h1>Walk the Path of a Champion</h1></div>
       <div><h4>The Story of Mohamed Yasir, <br class="lb-phone"> Champion of Speech Olympiad VIII</h4></div>
-    </div>
+    </AppHeroSection>
     <div class="container-fluid article-container">
       <div class="article column pb-2">
           <div class="article-img">
@@ -112,18 +112,6 @@
 </template>
 
 <style scoped>
-.hero {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.hero-img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-}
 .article-container{
   display: flex;
   justify-content: center;
@@ -145,9 +133,6 @@
   font-style: italic;
 }
 
-.lb-phone{
-  display: none;
-}
 @media (min-width: 768px) {
   .article{
     width: 70%;
@@ -157,9 +142,7 @@
   .hero h4{
     font-size: 1.25em;
   }
-  .lb-phone{
-    display: block;
-  }
+
   .article-img{
     aspect-ratio: 1/1;
   }
@@ -167,8 +150,9 @@
 </style>
 <script>
 import ArticleInterview from "./ArticleInterview.vue";
+import AppHeroSection from "./AppHeroSection.vue";
 
 export default {
-  components: {ArticleInterview}
+  components: {AppHeroSection, ArticleInterview}
 }
 </script>
