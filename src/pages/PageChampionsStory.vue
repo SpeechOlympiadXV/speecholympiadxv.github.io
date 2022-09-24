@@ -105,7 +105,7 @@
             </b>
           </p>
 
-        <ArticleInterview/>
+        <ArticleInterview author-name="Chemini Mallikarachchi" interviewee-name="Mohamed Yasir"/>
       </div>
     </div>
   </main>

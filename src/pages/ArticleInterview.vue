@@ -4,19 +4,24 @@
   </p>
   <div class="interviewee d-flex">
     <div class="interviewee-img">
-      <img src="" alt="">
+      <img :src="intervieweeImg" alt="">
     </div>
     <div class="interview-name">
-      Mohamed Yasir
+      {{intervieweeName}}
     </div>
   </div>
   <p>
-    Compiled by Chemini Mallikarachchi
+    Compiled by {{authorName}}
   </p>
 </template>
 <script>
 export default {
-  name: 'ArticleInterview'
+  name: 'ArticleInterview',
+  props:{
+    authorName: String,
+    intervieweeName: String,
+    intervieweeImg: String
+  }
 }
 </script>
 <style scoped>
