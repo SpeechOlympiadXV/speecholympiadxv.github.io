@@ -1,15 +1,13 @@
 <template>
   <main>
-    <AppHeroSection image="./src/assets/images/rectangle.jpg">
+    <AppHeroSection image="./src/assets/images/">
       <div class="hero-text">
         <h1>Walk the Path of a Champion</h1>
         <h4>The Story of Mohamed Yasir, <br class="lb-phone"> Champion of Speech Olympiad VIII</h4>
       </div>
     </AppHeroSection>
     <AppArticle>
-      <div class="article-img">
-        <img alt="" src="">
-      </div>
+      <img class="article-img" alt="" src="">
       <p>
         Walking the journey through the shadows of my past, during my school days, just like most students, I was
         always reluctant to opt in speech contests. Perturbed by the fear of failure and embarrassment, I never
@@ -44,9 +42,7 @@
         and being mentored by senior Gaveliers. With their guidance, I came up with a solid speech for the following
         Speech Olympiad, and with a huge effort put in from my end, I emerged as the <b>first runner-up</b>.
       </p>
-      <div class="article-img">
-        <img alt="" src="">
-      </div>
+      <img class="article-img" src="">
       <p>
         Motivated by the success of that year’s competition, I wanted to compete in the upcoming competition as
         well. But along with being a past winner and the experience gained through Gavel, I became overconfident in
@@ -112,29 +108,6 @@
 </template>
 
 <style scoped>
-.lb-phone {
-  display: none;
-}
-.hero-text{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  z-index: 1;
-}
-@media (max-width: 768px) {
-  .hero-text h4{
-    font-size: 1.125em;
-  }
-  .lb-phone {
-    display: block;
-  }
-  .hero-text{
-    left: 1%;
-    right: 1%;
-    transform: translate(0,-50%);
-  }
-}
 </style>
 <script>
 import AppHeroSection from "../components/AppHeroSection.vue";

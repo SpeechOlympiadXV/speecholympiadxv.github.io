@@ -20,9 +20,10 @@ export default {
 .article {
   font-size: 1.125rem;
 }
-
-.article-img {
+.article-img{
+  width: 100%;
   aspect-ratio: 1000 / 450;
+  height: auto;
   object-fit: cover;
   background-color: grey;
   margin-bottom: 1rem;
