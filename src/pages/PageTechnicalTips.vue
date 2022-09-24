@@ -6,7 +6,7 @@
       </div>
     </AppHeroSection>
     <AppArticle>
-      <p>
+      <p class="mt-3">
         A single voice has the power to create a massive impact, it just
         needs the right opportunity. Speech Olympiad is a stage where
         revolutionary leaders and revolutionary speakers are discovered. To
@@ -14,15 +14,22 @@
         into conversation with a prestigious and eloquent past champion of
         Speech Olympiad, who shared some invaluable tips with us.
       </p>
-      <p>
-        Dr. Samadhi Poornima, the Champion of Speech Olympiad IX generously
-        joined us for an interview despite her busy schedule working as a
-        Computer Vision Algorithm Researcher at Zebra Technologies. As the
-        crowned champion in 2015 along with the public speaking experience
-        she has accumulated over the years, we are most certain that
-        up-and-coming speakers will definitely have a lot to take home from
-        the answers of Dr. Poornima.
-      </p>
+      <div class="row mb-3 border">
+        <div class="col-12 col-lg-9 d-flex align-items-center">
+          <p>
+            Dr. Samadhi Poornima, the Champion of Speech Olympiad IX generously
+            joined us for an interview despite her busy schedule working as a
+            Computer Vision Algorithm Researcher at Zebra Technologies. As the
+            crowned champion in 2015 along with the public speaking experience
+            she has accumulated over the years, we are most certain that
+            up-and-coming speakers will definitely have a lot to take home from
+            the answers of Dr. Poornima.
+          </p>
+        </div>
+        <div class="col-12 col-lg-3 d-flex end">
+          <img src="" class="box-img m-2" alt="">
+        </div>
+      </div>
 
       <h3>
         1. What are the key points to focus on when crafting a speech?
@@ -238,6 +245,11 @@
 </template>
 
 <style scoped>
+.box-img{
+  height: 200px;
+  aspect-ratio: 1/1;
+  background-color: grey;
+}
 </style>
 <script>
 import AppArticle from "../components/AppArticle.vue";
