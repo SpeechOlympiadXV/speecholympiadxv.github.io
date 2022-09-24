@@ -105,20 +105,7 @@
             </b>
           </p>
 
-          <p>
-            Words by
-          </p>
-          <div class="interviewee d-flex">
-            <div class="interviewee-img">
-              <img src="" alt="">
-            </div>
-            <div class="interview-name">
-              Mohamed Yasir
-            </div>
-          </div>
-          <p>
-            Compiled by Chemini Mallikarachchi
-          </p>
+        <ArticleInterview/>
       </div>
     </div>
   </main>
@@ -157,19 +144,7 @@
   text-align: center;
   font-style: italic;
 }
-.interviewee{
-  align-items: center;
-  padding: 0 1rem 1rem 0;
-}
-.interviewee-img{
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: grey;
-}
-.interview-name{
-  margin-left: 1rem;
-}
+
 .lb-phone{
   display: none;
 }
@@ -190,3 +165,10 @@
   }
 }
 </style>
+<script>
+import ArticleInterview from "./ArticleInterview.vue";
+
+export default {
+  components: {ArticleInterview}
+}
+</script>
