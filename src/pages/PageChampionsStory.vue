@@ -145,7 +145,7 @@
   font-size: 1.125rem;
 }
 .article-img {
-  height: 450px;
+  aspect-ratio: 1000 / 450;
   object-fit: cover;
   background-color: grey;
   margin-bottom: 1rem;
@@ -184,6 +184,9 @@
   }
   .lb-phone{
     display: block;
+  }
+  .article-img{
+    aspect-ratio: 1/1;
   }
 }
 </style>
