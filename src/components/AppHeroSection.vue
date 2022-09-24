@@ -1,6 +1,7 @@
 <template>
-  <div class="hero hero-img">
+  <div class="hero">
     <slot></slot>
+    <img class="hero-img" :src="image" alt="">
   </div>
 </template>
 <script>
@@ -15,33 +16,12 @@ export default {
 </script>
 <style scoped>
 .hero {
-  display: flex;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
-
 .hero-img {
+  z-index: -1;
+  object-fit: cover;
   width: 100%;
   height: 450px;
-  object-fit: cover;
-}
-
-.lb-phone {
-  display: none;
-}
-
-@media (min-width: 768px) {
-}
-
-@media (max-width: 768px) {
-  .hero h4 {
-    font-size: 1.25em;
-  }
-
-  .lb-phone {
-    display: block;
-  }
 }
 </style>

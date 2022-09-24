@@ -1,8 +1,10 @@
 <template>
   <main>
-    <AppHeroSection image="">
-      <div><h1>Walk the Path of a Champion</h1></div>
-      <div><h4>The Story of Mohamed Yasir, <br class="lb-phone"> Champion of Speech Olympiad VIII</h4></div>
+    <AppHeroSection image="./src/assets/images/rectangle.jpg">
+      <div class="hero-text">
+        <h1>Walk the Path of a Champion</h1>
+        <h4>The Story of Mohamed Yasir, <br class="lb-phone"> Champion of Speech Olympiad VIII</h4>
+      </div>
     </AppHeroSection>
     <AppArticle>
       <div class="article-img">
@@ -110,14 +112,28 @@
 </template>
 
 <style scoped>
-
-@media (min-width: 768px) {
+.lb-phone {
+  display: none;
+}
+.hero-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
 }
 @media (max-width: 768px) {
-  .hero h4{
-    font-size: 1.25em;
+  .hero-text h4{
+    font-size: 1.125em;
   }
-
+  .lb-phone {
+    display: block;
+  }
+  .hero-text{
+    left: 1%;
+    right: 1%;
+    transform: translate(0,-50%);
+  }
 }
 </style>
 <script>
