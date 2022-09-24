@@ -6,8 +6,7 @@
       </div>
     </AppHeroSection>
     <AppArticle>
-      <img class="article-img" alt="" src="../assets/images/about_SO_article_image_1.jpg">
-      <p>
+      <p class="mt-3">
         The Gavel Club of the University of Moratuwa is excited to announce
         that Speech Olympiad, the most coveted intra-university speech
         competition is back for the 15th iteration and this year, it’s all
@@ -42,6 +41,7 @@
         what you believe, break the silence, and redefine the power of
         words.
       </p>
+      <img class="article-img" alt="" src="../assets/images/about_SO_article_image_1.jpg">
     </AppArticle>
   </main>
 </template>
