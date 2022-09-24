@@ -2,11 +2,12 @@
   <div class="row featurette">
     <div :class="'col-md-7 ' + getOrder(index, 0)">
       <h2 class="featurette-heading">
-        <a class="nav-link" :href="urlString"
-          >{{ heading }} <span class="text-muted">{{ headingEnd }}</span></a
+        <div class="nav-link"
+          >{{ heading }} <span class="text-muted">{{ headingEnd }}</span></div
         >
       </h2>
       <p class="lead">{{ text }}</p>
+      <div><a class="read-more btn btn-secondary mb-3" :href="urlString">Read more</a></div>
     </div>
     <div :class="'col-md-5 ' + getOrder(index, 1)">
       <svg
@@ -50,9 +51,9 @@ export default {
         (rowIndex % 2 === 0 && colIndex === 0) ||
         (rowIndex % 2 === 1 && colIndex === 1)
       ) {
-        return "order-first";
+        return "order-md-first";
       } else {
-        return "order-last";
+        return "order-md-last";
       }
     },
   },
@@ -66,6 +67,9 @@ export default {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+}
+.read-more{
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
