@@ -35,7 +35,7 @@ export default {
         some invaluable tips with us.
       </p>
       <div class="row mb-3 border">
-        <div class="col-12 col-lg-9 d-flex align-items-center">
+        <div class="col d-flex text-center">
           <p>
             Dr. Samadhi Poornima, the Champion of Speech Olympiad IX generously
             joined us for an interview despite her busy schedule working as a
@@ -45,9 +45,6 @@ export default {
             up-and-coming speakers will definitely have a lot to take home from
             the answers of Dr. Poornima.
           </p>
-        </div>
-        <div class="col-12 col-lg-3 d-flex end">
-          <img src="" class="box-img m-2" alt="" />
         </div>
       </div>
 
