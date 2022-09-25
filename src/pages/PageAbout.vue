@@ -1,8 +1,24 @@
+<script>
+import AppArticle from "../components/AppArticle.vue";
+import AppHeroSection from "../components/AppHeroSection.vue";
+export default {
+  components: { AppArticle, AppHeroSection },
+  computed: {
+    isMobile() {
+      return window.matchMedia("(max-width: 768px)").matches;
+    },
+  },
+};
+</script>
+
 <template>
   <main>
     <AppHeroSection
-      imageDesktop="/src/assets/images/About_title_desktop.jpg"
-      imageMobile="/src/assets/images/About_title_mobile.jpg"
+      :imagePath="
+        isMobile
+          ? '/src/assets/images/About_title_mobile.jpg'
+          : '/src/assets/images/About_title_desktop.jpg'
+      "
     >
       <div class="hero-text">
         <h1>What is Speech Olympiad XV?</h1>
@@ -52,10 +68,3 @@
 
 <style scoped>
 </style>
-<script>
-import AppArticle from "../components/AppArticle.vue";
-import AppHeroSection from "../components/AppHeroSection.vue";
-export default {
-  components: { AppArticle, AppHeroSection },
-};
-</script>

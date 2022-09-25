@@ -10,13 +10,8 @@ export default {
   props: {
     heading: String,
     subHeading: String,
-    imageDesktop: String,
+    imagePath: String,
     imageMobile: String
-  },
-  computed: {
-    imagePath() {
-      return window.matchMedia("(max-width: 768px)").matches ? this.imageMobile : this.imageDesktop
-    }
   }
 };
 </script>

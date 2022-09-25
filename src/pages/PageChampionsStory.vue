@@ -1,8 +1,26 @@
+<script>
+import AppHeroSection from "../components/AppHeroSection.vue";
+import AppArticle from "../components/AppArticle.vue";
+import ArticleInterview from "../components/ArticleInterview.vue";
+
+export default {
+  components: { AppArticle, AppHeroSection, ArticleInterview },
+  computed: {
+    isMobile() {
+      return window.matchMedia("(max-width: 768px)").matches;
+    },
+  },
+};
+</script>
+
 <template>
   <main>
     <AppHeroSection
-      imageDesktop="/src/assets/images/PathOfChampion_title_desktop.jpg"
-      imageMobile="/src/assets/images/PathOfChampion_title_mobile.jpg"
+      :imagePath="
+        isMobile
+          ? '/src/assets/images/PathOfChampion_title_mobile.jpg'
+          : '/src/assets/images/PathOfChampion_title_desktop.jpg'
+      "
     >
       <div class="hero-text">
         <h1>Walk the Path of a Champion</h1>
@@ -14,7 +32,16 @@
     </AppHeroSection>
 
     <AppArticle>
-      <img class="article-img" alt="" src="" />
+      <img
+        class="article-img"
+        alt=""
+        :src="
+          isMobile
+            ? '/src/assets/images/PathOfChampion_image1_mobile.jpg'
+            : '/src/assets/images/PathOfChampion_image1_desktop.jpg'
+        "
+        loading="lazy"
+      />
       <p class="first-letter">
         Walking the journey through the shadows of my past, during my school
         days, just like most students, I was always reluctant to opt in speech
@@ -58,7 +85,15 @@
         Olympiad, and with a huge effort put in from my end, I emerged as the
         <b>first runner-up</b>.
       </p>
-      <img class="article-img" src="" />
+      <img
+        class="article-img"
+        :src="
+          isMobile
+            ? '/src/assets/images/PathOfChampion_image2_mobile.jpg'
+            : '/src/assets/images/PathOfChampion_image2_desktop.jpg'
+        "
+        loading="lazy"
+      />
       <p>
         Motivated by the success of that year’s competition, I wanted to compete
         in the upcoming competition as well. But along with being a past winner
@@ -143,12 +178,3 @@
 
 <style scoped>
 </style>
-<script>
-import AppHeroSection from "../components/AppHeroSection.vue";
-import AppArticle from "../components/AppArticle.vue";
-import ArticleInterview from "../components/ArticleInterview.vue";
-
-export default {
-  components: { AppArticle, AppHeroSection, ArticleInterview },
-};
-</script>
