@@ -28,6 +28,13 @@ export default {
             <SOLogo style="width: 85px; height: 35px !important" />
           </a>
         </div>
+
+        <div class="collapse navbar-collapse" id="navBar1">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <AppHeaderMenu />
+          </ul>
+        </div>
+
         <ul class="navbar-nav ms-auto mb-0 me-2">
           <li class="nav-item my-auto">
             <a
@@ -39,6 +46,7 @@ export default {
             >
           </li>
         </ul>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -50,12 +58,6 @@ export default {
         >
           <span class="navbar-toggler-icon ml-2"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navBar1">
-          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-            <AppHeaderMenu />
-          </ul>
-        </div>
       </div>
     </nav>
   </div>
