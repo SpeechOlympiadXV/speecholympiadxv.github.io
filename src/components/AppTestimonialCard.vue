@@ -1,11 +1,11 @@
 <template>
   <div class="card testimonial-card mb-3 md-lg-0">
     <div class="row mt-3">
-      <div class="col d-flex justify-content-center">
+      <div class="col d-flex justify-content-center my-4">
         <svg
           class="rounded-circle"
-          width="200"
-          height="200"
+          width="100"
+          height="100"
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           aria-label="Placeholder: 200x200"
@@ -21,6 +21,7 @@
       <h5 class="card-title text-left testimonial-card-heading">
         {{ this.title }}
       </h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ this.subtitle }}</h6>
       <p class="card-text text-left testimonial-card-body">{{ this.body }}</p>
     </div>
   </div>
@@ -32,6 +33,7 @@ export default {
   props: {
     imageSrc: String,
     title: String,
+    subtitle: String,
     body: String,
   },
 };
@@ -40,13 +42,8 @@ export default {
 <style scoped>
 /*Testimonial Card*/
 .testimonial-card {
-  cursor: pointer;
   background-color: var(--color-background-transparent);
   border: solid 1px var(--color-border-hover);
-}
-.testimonial-card:hover {
-  border: solid 1px var(--color-border);
-  background-color: var(--color-background-mute);
 }
 .testimonial-card-heading {
   color: var(--color-heading);
