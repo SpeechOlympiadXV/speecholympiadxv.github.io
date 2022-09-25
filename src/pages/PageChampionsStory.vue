@@ -11,7 +11,7 @@
     </AppHeroSection>
     <AppArticle>
       <img class="article-img" alt="" src="" />
-      <p>
+      <p class="first-letter">
         Walking the journey through the shadows of my past, during my school
         days, just like most students, I was always reluctant to opt in speech
         contests. Perturbed by the fear of failure and embarrassment, I never
