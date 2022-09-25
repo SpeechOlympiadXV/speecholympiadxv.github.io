@@ -71,12 +71,10 @@ export default {
         under-prepared with a very short speech lasting merely 2 minutes, not to
         mention getting tongue-tied somewhere mid-speech as well.
       </p>
-      <p style="font-size: 1.2em">
-        <i>
-          Leaving the hall, I realized that I needed help from someone who was
-          experienced and proficient in public speaking, which was my driving
-          intention to join the Gavel Club.
-        </i>
+      <p>
+        Leaving the hall, I realized that I needed help from someone who was
+        experienced and proficient in public speaking, which was my driving
+        intention to join the Gavel Club.
       </p>
       <p>
         The following year was all about learning the basics of public speaking,
@@ -158,14 +156,11 @@ export default {
         become better at what you do and the way you define yourself.
       </p>
 
-      <p>
-        <b>
-          Being a champion does not only mean that you will be celebrating, but
-          rather exploring the deep end and investing in yourself more. Grow up
-          to every dawn of sunrise and bloom wherever life plants you, for
-          enjoying what you do matters the most. I cherish the journey, not the
-          end result.
-        </b>
+      <p class="box">
+        Being a champion does not only mean that you will be celebrating, but
+        rather exploring the deep end and investing in yourself more. Grow up to
+        every dawn of sunrise and bloom wherever life plants you, for enjoying
+        what you do matters the most. I cherish the journey, not the end result.
       </p>
 
       <ArticleInterview
