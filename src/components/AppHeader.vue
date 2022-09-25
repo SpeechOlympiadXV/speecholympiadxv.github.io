@@ -18,12 +18,27 @@ export default {
       aria-label="NavBar"
     >
       <div class="container-fluid">
-        <div id="logo" style="width: 20px !important, height=20px !important">
+        <div
+          id="logo"
+          class=""
+          style="width: 20px !important, height=20px !important"
+        >
           <a class="navbar-brand" href="/#">
             <!-- Change the logo to the correct source -->
             <SOLogo style="width: 85px; height: 35px !important" />
           </a>
         </div>
+        <ul class="navbar-nav ms-auto mb-0 me-2">
+          <li class="nav-item my-auto">
+            <a
+              class="btn badge bg-primary fs-6 ml-auto"
+              href="https://bit.ly/SO_XV_Register"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Register Now !</a
+            >
+          </li>
+        </ul>
         <button
           class="navbar-toggler"
           type="button"
@@ -33,7 +48,7 @@ export default {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon ml-2"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navBar1">
