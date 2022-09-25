@@ -6,7 +6,7 @@
       </div>
     </AppHeroSection>
     <AppArticle>
-      <p class="mt-3">
+      <p class="mt-3 first-letter">
         The Gavel Club of the University of Moratuwa is excited to announce that
         Speech Olympiad, the most coveted intra-university speech competition is
         back for the 15th iteration and this year, it’s all about being bold

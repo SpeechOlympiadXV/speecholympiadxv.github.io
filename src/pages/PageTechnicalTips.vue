@@ -6,7 +6,7 @@
       </div>
     </AppHeroSection>
     <AppArticle>
-      <p class="mt-3">
+      <p class="mt-3 first-letter">
         A single voice has the power to create a massive impact, it just needs
         the right opportunity. Speech Olympiad is a stage where revolutionary
         leaders and revolutionary speakers are discovered. To help you embark on

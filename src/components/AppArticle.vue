@@ -37,6 +37,11 @@ export default {
   font-style: italic;
 }
 
+.first-letter::first-letter {
+  font-size: 250%;
+  line-height: 100%;
+}
+
 @media (min-width: 768px) {
   .article {
     width: 70%;
