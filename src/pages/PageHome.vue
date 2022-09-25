@@ -134,4 +134,11 @@ export default {
     margin-top: 7rem;
   }
 }
+
+@media (max-width: 62em) {
+  .featurette-heading {
+    padding-top: 2rem;
+    font-weight: bold;
+  }
+}
 </style>
