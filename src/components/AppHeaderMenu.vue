@@ -1,4 +1,13 @@
 <script>
+const getActiveItem = () => {
+  let hashInd = window.location.hash.slice(1);
+      return [
+        "",
+        "about",
+        "champions-story",
+        "technical-tips",
+      ].indexOf(hashInd);
+}
 export default {
   data() {
     return {
@@ -20,7 +29,7 @@ export default {
           url: "#technical-tips",
         },
       ],
-      activeItem: 0,
+      activeItem: getActiveItem(),
     };
   },
 
@@ -32,20 +41,13 @@ export default {
         // Viewport is less or equal to 992 pixels wide (md)
         document.querySelector(".navbar-toggler").click();
       }
-
-      this.activeItem = idx;
     },
   },
 
   mounted() {
     window.addEventListener("hashchange", () => {
       let hashInd = window.location.hash.slice(1);
-      this.activeItem = [
-        "",
-        "about",
-        "champions-story",
-        "technical-tips",
-      ].indexOf(hashInd);
+      this.activeItem = getActiveItem()
     });
   },
 };
