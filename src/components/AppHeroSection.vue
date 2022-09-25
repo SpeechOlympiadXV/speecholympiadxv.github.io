@@ -1,28 +1,28 @@
 <template>
   <div class="hero">
     <slot></slot>
-    <img class="hero-img" :src="image" alt="">
+    <img class="hero-img" :src="image" alt="" />
   </div>
 </template>
 <script>
 export default {
-  name: 'AppHeroSection',
-  props:{
-    heading:String,
-    subHeading:String,
-    image:String
-  }
-}
+  name: "AppHeroSection",
+  props: {
+    heading: String,
+    subHeading: String,
+    image: String,
+  },
+};
 </script>
 <style>
 .lb-phone {
   display: none;
 }
-.hero-text{
+.hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 .hero {
@@ -35,16 +35,16 @@ export default {
   height: 450px;
 }
 @media (max-width: 768px) {
-  .hero-text h4{
+  .hero-text h4 {
     font-size: 1.125em;
   }
   .lb-phone {
     display: block;
   }
-  .hero-text{
+  .hero-text {
     left: 1%;
     right: 1%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
   }
 }
 </style>

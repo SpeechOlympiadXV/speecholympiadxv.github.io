@@ -7,8 +7,8 @@
 </template>
 <script>
 export default {
-  name: 'AppArticle',
-}
+  name: "AppArticle",
+};
 </script>
 <style>
 /*Since the content is defined in parent components style is not scoped*/
@@ -20,7 +20,7 @@ export default {
 .article {
   font-size: 1.125rem;
 }
-.article-img{
+.article-img {
   width: 100%;
   aspect-ratio: 1000 / 450;
   height: auto;

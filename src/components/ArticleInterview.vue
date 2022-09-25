@@ -1,28 +1,24 @@
 <template>
-  <p>
-    Words by
-  </p>
+  <p>Words by</p>
   <div class="interviewee d-flex">
     <div class="interviewee-img">
-      <img :src="intervieweeImg" alt="">
+      <img :src="intervieweeImg" alt="" />
     </div>
     <div class="interview-name">
-      {{intervieweeName}}
+      {{ intervieweeName }}
     </div>
   </div>
-  <p>
-    Compiled by {{authorName}}
-  </p>
+  <p>Compiled by {{ authorName }}</p>
 </template>
 <script>
 export default {
-  name: 'ArticleInterview',
-  props:{
+  name: "ArticleInterview",
+  props: {
     authorName: String,
     intervieweeName: String,
-    intervieweeImg: String
-  }
-}
+    intervieweeImg: String,
+  },
+};
 </script>
 <style scoped>
 .interviewee {
