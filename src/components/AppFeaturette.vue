@@ -109,6 +109,7 @@ h2 {
 @media (max-width: 62em) {
   .featurette-heading {
     padding-top: 2rem;
+    font-weight: bold;
   }
   .featurette-divider {
     margin: 2rem 0;

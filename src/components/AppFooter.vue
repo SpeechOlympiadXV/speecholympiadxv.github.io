@@ -22,7 +22,7 @@ export default {
           title: "Contact",
           links: [
             {
-              text: "Umesha Amodama : +94 77 067 6760",
+              text: "Umesha Tilakarathna : +94 77 067 6760",
               href: "tel: +94 77 067 6760",
             },
             {
