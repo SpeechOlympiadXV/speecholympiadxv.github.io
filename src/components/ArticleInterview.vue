@@ -2,7 +2,7 @@
   <p>Words by</p>
   <div class="interviewee d-flex">
     <div class="interviewee-img">
-      <img :src="intervieweeImg" alt="" />
+      <img :src="intervieweeImg" alt="" loading="lazy" class="interviewee-img" />
     </div>
     <div class="interview-name">
       {{ intervieweeName }}

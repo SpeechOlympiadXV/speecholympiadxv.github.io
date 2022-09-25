@@ -171,6 +171,7 @@ export default {
       <ArticleInterview
         author-name="Chemini Mallikarachchi"
         interviewee-name="Mohamed Yasir"
+        intervieweeImg="/src/assets/images/PathOfChampion_portrait.jpg"
       />
     </AppArticle>
   </main>

@@ -1,9 +1,10 @@
 <script>
 import AppArticle from "../components/AppArticle.vue";
 import AppHeroSection from "../components/AppHeroSection.vue";
+import ArticleInterview from "../components/ArticleInterview.vue";
 
 export default {
-  components: { AppArticle, AppHeroSection },
+  components: { AppArticle, AppHeroSection, ArticleInterview },
   computed: {
     isMobile() {
       return window.matchMedia("(max-width: 768px)").matches;
@@ -286,7 +287,11 @@ export default {
         changed world tomorrow.
       </p>
 
-      <p>(Written by Udesh Dangalla)</p>
+      <ArticleInterview
+        author-name="Udesh Dangalla"
+        interviewee-name="Dr. Samadhi Poornima"
+        intervieweeImg="/src/assets/images/TechnicalTips_portrait.jpeg"
+      />
     </AppArticle>
   </main>
 </template>
