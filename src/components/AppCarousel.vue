@@ -1,5 +1,22 @@
 <script>
+import HomePage_carousel1_mobile from "../assets/images/HomePage_carousel1_mobile.jpg"
+import HomePage_carousel1_desktop from "../assets/images/HomePage_carousel1_desktop.jpg"
+import HomePage_carousel2_mobile from "../assets/images/HomePage_carousel2_mobile.jpg"
+import HomePage_carousel2_desktop from "../assets/images/HomePage_carousel2_desktop.jpg"
+import HomePage_carousel3_mobile from "../assets/images/HomePage_carousel3_mobile.jpg"
+import HomePage_carousel3_desktop from "../assets/images/HomePage_carousel3_desktop.jpg"
+
 export default {
+  data() {
+    return {
+      HomePage_carousel1_mobile,
+      HomePage_carousel1_desktop,
+      HomePage_carousel2_mobile,
+      HomePage_carousel2_desktop,
+      HomePage_carousel3_mobile,
+      HomePage_carousel3_desktop
+    }
+  },
   computed: {
     isMobile() {
       return window.matchMedia("(max-width: 768px)").matches;
@@ -39,8 +56,8 @@ export default {
         <img
           :src="
             isMobile
-              ? '/src/assets/images/HomePage_carousel1_mobile.jpg'
-              : '/src/assets/images/HomePage_carousel1_desktop.jpg'
+              ? HomePage_carousel1_mobile
+              : HomePage_carousel1_desktop
           "
           alt=""
           aria-hidden="true"
@@ -63,12 +80,12 @@ export default {
         <img
           :src="
             isMobile
-              ? '/src/assets/images/HomePage_carousel2_mobile.jpg'
-              : '/src/assets/images/HomePage_carousel2_desktop.jpg'
+              ? HomePage_carousel2_mobile
+              : HomePage_carousel2_desktop
           "
           alt=""
           aria-hidden="true"
-          loading="eager"
+          loading="lazy"
         />
       </div>
 
@@ -76,12 +93,12 @@ export default {
         <img
           :src="
             isMobile
-              ? '/src/assets/images/HomePage_carousel3_mobile.jpg'
-              : '/src/assets/images/HomePage_carousel3_desktop.jpg'
+              ? HomePage_carousel3_mobile
+              : HomePage_carousel3_desktop
           "
           alt=""
           aria-hidden="true"
-          loading="eager"
+          loading="lazy"
         />
       </div>
     </div>

@@ -2,8 +2,18 @@
 import AppArticle from "../components/AppArticle.vue";
 import AppHeroSection from "../components/AppHeroSection.vue";
 import ArticleInterview from "../components/ArticleInterview.vue";
+import TechnicalTips_title_mobile from "../assets/images/TechnicalTips_title_mobile.jpg"
+import TechnicalTips_title_desktop from "../assets/images/TechnicalTips_title_desktop.jpg"
+import TechnicalTips_portrait from "../assets/images/TechnicalTips_portrait.jpeg"
 
 export default {
+  data() {
+    return {
+      TechnicalTips_title_mobile,
+      TechnicalTips_title_desktop,
+      TechnicalTips_portrait,
+    }
+  },
   components: { AppArticle, AppHeroSection, ArticleInterview },
   computed: {
     isMobile() {
@@ -18,8 +28,8 @@ export default {
     <AppHeroSection
       :imagePath="
         isMobile
-          ? '/src/assets/images/TechnicalTips_title_mobile.jpg'
-          : '/src/assets/images/TechnicalTips_title_desktop.jpg'
+          ? TechnicalTips_title_mobile
+          : TechnicalTips_title_desktop
       "
     >
       <div class="hero-text">
@@ -290,7 +300,7 @@ export default {
       <ArticleInterview
         author-name="Udesh Dangalla"
         interviewee-name="Dr. Samadhi Poornima"
-        intervieweeImg="/src/assets/images/TechnicalTips_portrait.jpeg"
+        :intervieweeImg="TechnicalTips_portrait"
       />
     </AppArticle>
   </main>
