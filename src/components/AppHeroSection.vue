@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <slot></slot>
-    <img class="hero-img" :src="image" alt="" />
+    <img class="hero-img" :src="imagePath" alt="" loading="lazy" />
   </div>
 </template>
 <script>
@@ -10,8 +10,14 @@ export default {
   props: {
     heading: String,
     subHeading: String,
-    image: String,
+    imageDesktop: String,
+    imageMobile: String
   },
+  computed: {
+    imagePath() {
+      return window.matchMedia("(max-width: 768px)").matches ? this.imageMobile : this.imageDesktop
+    }
+  }
 };
 </script>
 <style>
@@ -42,9 +48,14 @@ export default {
     display: block;
   }
   .hero-text {
+    top: 25%;
     left: 1%;
     right: 1%;
     transform: translate(0, -50%);
+  }
+  .hero-img {
+    width: 100%;
+    height: auto;
   }
 }
 </style>

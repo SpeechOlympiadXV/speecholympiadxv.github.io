@@ -1,6 +1,9 @@
 <template>
   <main>
-    <AppHeroSection image="./src/assets/images/">
+    <AppHeroSection
+      imageDesktop="/src/assets/images/PathOfChampion_title_desktop.jpg"
+      imageMobile="/src/assets/images/PathOfChampion_title_mobile.jpg"
+    >
       <div class="hero-text">
         <h1>Walk the Path of a Champion</h1>
         <h4>
@@ -9,6 +12,7 @@
         </h4>
       </div>
     </AppHeroSection>
+
     <AppArticle>
       <img class="article-img" alt="" src="" />
       <p class="first-letter">

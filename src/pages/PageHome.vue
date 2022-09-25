@@ -11,8 +11,8 @@ export default {
     return {
       featurettes: [
         {
-          heading: "What is Speech Olympiad XV",
-          headingEnd: "?",
+          heading: "What is Speech Olympiad XV ?",
+          headingEnd: "",
           text: "Learn more about the premier intra-university speech competition of the University of Moratuwa, the structure of the competition and its theme for the year 2022. True excitement awaits as Speech Olympiad returns to a physical context this year!",
           image: "/src/assets/images/HomePage_About.jpg",
           urlString: "#about",

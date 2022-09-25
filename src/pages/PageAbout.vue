@@ -1,6 +1,9 @@
 <template>
   <main>
-    <AppHeroSection image="./src/assets/images/">
+    <AppHeroSection
+      imageDesktop="/src/assets/images/About_title_desktop.jpg"
+      imageMobile="/src/assets/images/About_title_mobile.jpg"
+    >
       <div class="hero-text">
         <h1>What is Speech Olympiad XV?</h1>
       </div>

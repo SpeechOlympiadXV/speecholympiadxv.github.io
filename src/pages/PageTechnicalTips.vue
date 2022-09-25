@@ -1,6 +1,9 @@
 <template>
   <main>
-    <AppHeroSection>
+    <AppHeroSection
+      imageDesktop="/src/assets/images/TechnicalTips_title_desktop.jpg"
+      imageMobile="/src/assets/images/TechnicalTips_title_mobile.jpg"
+    >
       <div class="hero-text">
         <h1>A Guide to Becoming a Better Speaker</h1>
       </div>
@@ -49,12 +52,14 @@
           speaker.
         </p>
         <li><b>Stage movements</b></li>
+        <!-- image -->
         <p>
           Stage movements keep your speech alive. For example, if you are
           talking about two friends you divide the stage into two, left and
           right for each one.
         </p>
         <li><b>Humour</b></li>
+        <!-- image -->
         <p>
           Humour is what keeps your audience entertained and engaged. It is one
           of the best things to include in a speech. To bring out some humour
@@ -116,6 +121,7 @@
           well-practised speaker will have an idea of what 1-minute feels like.
         </p>
         <li><b>Confidence</b></li>
+        <!-- image -->
         <p>
           Impromptu speakers require a lot of confidence. If you are nervous you
           might not be able to bring out the best speech you can. And through
