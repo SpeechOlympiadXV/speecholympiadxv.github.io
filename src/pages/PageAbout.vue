@@ -61,6 +61,7 @@ export default {
         class="article-img"
         alt=""
         src="../assets/images/about_SO_article_image_1.jpg"
+        loading="lazy"
       />
     </AppArticle>
   </main>

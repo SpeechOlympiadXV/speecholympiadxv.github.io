@@ -66,14 +66,24 @@ export default {
           speaker.
         </p>
         <li><b>Stage movements</b></li>
-        <!-- image -->
+        <img
+          class="article-img article-img-resize"
+          alt=""
+          src="/src/assets/images/TechnicalTips_StageMovement.jpg"
+          loading="lazy"
+        />
         <p>
           Stage movements keep your speech alive. For example, if you are
           talking about two friends you divide the stage into two, left and
           right for each one.
         </p>
         <li><b>Humour</b></li>
-        <!-- image -->
+        <img
+          class="article-img article-img-resize"
+          alt=""
+          src="/src/assets/images/TechnicalTips_Humor.jpg"
+          loading="lazy"
+        />
         <p>
           Humour is what keeps your audience entertained and engaged. It is one
           of the best things to include in a speech. To bring out some humour
@@ -135,7 +145,12 @@ export default {
           well-practised speaker will have an idea of what 1-minute feels like.
         </p>
         <li><b>Confidence</b></li>
-        <!-- image -->
+        <img
+          class="article-img article-img-resize"
+          alt=""
+          src="/src/assets/images/TechnicalTips_Confidence.jpg"
+          loading="lazy"
+        />
         <p>
           Impromptu speakers require a lot of confidence. If you are nervous you
           might not be able to bring out the best speech you can. And through

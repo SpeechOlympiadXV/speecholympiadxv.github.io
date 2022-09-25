@@ -49,5 +49,10 @@ export default {
   .hero h4 {
     font-size: 1.25em;
   }
+
+  .article-img-resize {
+    width: 50%;
+    margin-left: 25%;
+  }
 }
 </style>
