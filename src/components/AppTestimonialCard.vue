@@ -2,7 +2,7 @@
   <div class="card testimonial-card mb-3 md-lg-0">
     <div class="row mt-3">
       <div class="col d-flex justify-content-center my-4">
-        <svg
+        <!-- <svg
           class="rounded-circle"
           width="100"
           height="100"
@@ -14,7 +14,8 @@
         >
           <rect width="100%" height="100%" fill="#777" />
           <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-        </svg>
+        </svg> -->
+        <img alt="" :src="imageSrc" class="testimonial-card-img" loading="lazy">
       </div>
     </div>
     <div class="card-body">
@@ -50,6 +51,11 @@ export default {
 }
 .testimonial-card-body {
   color: var(--color-text);
+}
+.testimonial-card-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
 }
 
 /*Testimonial Card end*/

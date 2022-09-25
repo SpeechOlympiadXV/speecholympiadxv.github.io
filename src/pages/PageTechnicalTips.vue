@@ -1,6 +1,27 @@
+<script>
+import AppArticle from "../components/AppArticle.vue";
+import AppHeroSection from "../components/AppHeroSection.vue";
+import ArticleInterview from "../components/ArticleInterview.vue";
+
+export default {
+  components: { AppArticle, AppHeroSection, ArticleInterview },
+  computed: {
+    isMobile() {
+      return window.matchMedia("(max-width: 768px)").matches;
+    },
+  },
+};
+</script>
+
 <template>
   <main>
-    <AppHeroSection>
+    <AppHeroSection
+      :imagePath="
+        isMobile
+          ? '/src/assets/images/TechnicalTips_title_mobile.jpg'
+          : '/src/assets/images/TechnicalTips_title_desktop.jpg'
+      "
+    >
       <div class="hero-text">
         <h1>A Guide to Becoming a Better Speaker</h1>
       </div>
@@ -15,7 +36,7 @@
         some invaluable tips with us.
       </p>
       <div class="row mb-3 border">
-        <div class="col-12 col-lg-9 d-flex align-items-center">
+        <div class="col d-flex text-center">
           <p>
             Dr. Samadhi Poornima, the Champion of Speech Olympiad IX generously
             joined us for an interview despite her busy schedule working as a
@@ -25,9 +46,6 @@
             up-and-coming speakers will definitely have a lot to take home from
             the answers of Dr. Poornima.
           </p>
-        </div>
-        <div class="col-12 col-lg-3 d-flex end">
-          <img src="" class="box-img m-2" alt="" />
         </div>
       </div>
 
@@ -49,12 +67,24 @@
           speaker.
         </p>
         <li><b>Stage movements</b></li>
+        <img
+          class="article-img article-img-resize"
+          alt=""
+          src="/src/assets/images/TechnicalTips_StageMovement.jpg"
+          loading="lazy"
+        />
         <p>
           Stage movements keep your speech alive. For example, if you are
           talking about two friends you divide the stage into two, left and
           right for each one.
         </p>
         <li><b>Humour</b></li>
+        <img
+          class="article-img article-img-resize"
+          alt=""
+          src="/src/assets/images/TechnicalTips_Humor.jpg"
+          loading="lazy"
+        />
         <p>
           Humour is what keeps your audience entertained and engaged. It is one
           of the best things to include in a speech. To bring out some humour
@@ -116,6 +146,12 @@
           well-practised speaker will have an idea of what 1-minute feels like.
         </p>
         <li><b>Confidence</b></li>
+        <img
+          class="article-img article-img-resize"
+          alt=""
+          src="/src/assets/images/TechnicalTips_Confidence.jpg"
+          loading="lazy"
+        />
         <p>
           Impromptu speakers require a lot of confidence. If you are nervous you
           might not be able to bring out the best speech you can. And through
@@ -251,7 +287,11 @@
         changed world tomorrow.
       </p>
 
-      <p>(Written by Udesh Dangalla)</p>
+      <ArticleInterview
+        author-name="Udesh Dangalla"
+        interviewee-name="Dr. Samadhi Poornima"
+        intervieweeImg="/src/assets/images/TechnicalTips_portrait.jpeg"
+      />
     </AppArticle>
   </main>
 </template>
@@ -263,11 +303,3 @@
   background-color: grey;
 }
 </style>
-<script>
-import AppArticle from "../components/AppArticle.vue";
-import AppHeroSection from "../components/AppHeroSection.vue";
-
-export default {
-  components: { AppArticle, AppHeroSection },
-};
-</script>

@@ -10,7 +10,7 @@
       <div><a class="read-more btn btn-secondary mb-3" :href="urlString">Read more</a></div>
     </div>
     <div :class="'col-md-5 ' + getOrder(index, 1)">
-      <svg
+      <img
         class="
           bd-placeholder-img bd-placeholder-img-lg
           featurette-image
@@ -19,16 +19,10 @@
         "
         width="500"
         height="500"
-        xmlns="http://www.w3.org/2000/svg"
-        role="img"
-        aria-label="Placeholder: 500x500"
-        preserveAspectRatio="xMidYMid slice"
-        focusable="false"
+        :src="image"
+        alt=""
+        loading="lazy"
       >
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#eee" />
-        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-      </svg>
     </div>
   </div>
   <hr class="featurette-divider" />

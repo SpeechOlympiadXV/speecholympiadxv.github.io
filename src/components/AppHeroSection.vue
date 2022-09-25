@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <slot></slot>
-    <img class="hero-img" :src="image" alt="" />
+    <img class="hero-img" :src="imagePath" alt="" loading="lazy" />
   </div>
 </template>
 <script>
@@ -10,8 +10,9 @@ export default {
   props: {
     heading: String,
     subHeading: String,
-    image: String,
-  },
+    imagePath: String,
+    imageMobile: String
+  }
 };
 </script>
 <style>
@@ -42,9 +43,14 @@ export default {
     display: block;
   }
   .hero-text {
+    top: 25%;
     left: 1%;
     right: 1%;
     transform: translate(0, -50%);
+  }
+  .hero-img {
+    width: 100%;
+    height: auto;
   }
 }
 </style>

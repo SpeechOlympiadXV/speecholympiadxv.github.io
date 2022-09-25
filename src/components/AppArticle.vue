@@ -22,7 +22,6 @@ export default {
 }
 .article-img {
   width: 100%;
-  aspect-ratio: 1000 / 450;
   height: auto;
   object-fit: cover;
   background-color: grey;
@@ -46,15 +45,14 @@ export default {
   .article {
     width: 70%;
   }
-}
-
-@media (max-width: 768px) {
+  
   .hero h4 {
     font-size: 1.25em;
   }
 
-  .article-img {
-    aspect-ratio: 1/1;
+  .article-img-resize {
+    width: 50%;
+    margin-left: 25%;
   }
 }
 </style>
