@@ -45,12 +45,12 @@ export default {
           subtitle: "1st Runner-Up and Best Prepared Speaker - SOXI",
           body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
         },
-        {
-          imageSrc: rectangle,
-          title: "Asitha Rathnayake",
-          subtitle: "Champion – SOXII",
-          body: "Speech Olympiad is a good place to win, but more than that, it is a great place to lose. The Gavel Mora family helped me a lot to improve myself as a speaker and a leader during the course of three Speech Olympiads, which helped me become the overall champion at Speech Olympiad XII.",
-        },
+        // {
+        //   imageSrc: rectangle,
+        //   title: "Asitha Rathnayake",
+        //   subtitle: "Champion – SOXII",
+        //   body: "Speech Olympiad is a good place to win, but more than that, it is a great place to lose. The Gavel Mora family helped me a lot to improve myself as a speaker and a leader during the course of three Speech Olympiads, which helped me become the overall champion at Speech Olympiad XII.",
+        // },
         {
           imageSrc: rectangle,
           title: "Amaya Dharmasiri",
@@ -87,7 +87,7 @@ export default {
       <!--Testimonials-->
       <div class="row mb-5">
         <div class="col-12 mb-2">
-          <h2 class="featurette-heading mt-0">Testimonials</h2>
+          <h1 class="featurette-heading mt-0 mb-4">Testimonials</h1>
         </div>
 
         <!-- Three columns of cards  -->
@@ -116,4 +116,22 @@ export default {
 
 
 <style scoped>
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -0.05rem;
+}
+@media (min-width: 40em) {
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
 </style>
