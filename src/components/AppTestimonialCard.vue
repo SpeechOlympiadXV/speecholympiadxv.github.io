@@ -21,6 +21,7 @@
       <h5 class="card-title text-left testimonial-card-heading">
         {{ this.title }}
       </h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ this.subtitle }}</h6>
       <p class="card-text text-left testimonial-card-body">{{ this.body }}</p>
     </div>
   </div>
@@ -32,6 +33,7 @@ export default {
   props: {
     imageSrc: String,
     title: String,
+    subtitle: String,
     body: String,
   },
 };

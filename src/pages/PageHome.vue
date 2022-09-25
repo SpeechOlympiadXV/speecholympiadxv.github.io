@@ -35,22 +35,26 @@ export default {
       testimonials: [
         {
           imageSrc: rectangle,
-          title: "Sirimevan Jayasundera Champion - SOVI",
+          title: "Sirimevan Jayasundera",
+          subtitle: "Champion - SOVI",
           body: "Speech Olympiad is more than a mere speaking contest, it is a culmination of people, experiences and exposure. I cherish to this date, every moment of the competition which was a gateway to self-reflection that enhanced my capabilities in the corporate world and beyond.",
         },
         {
           imageSrc: rectangle,
-          title: "Malindi Jayathunga 1st Runner-Up and Best Prepared Speaker - SOXI",
+          title: "Malindi Jayathunga",
+          subtitle: "1st Runner-Up and Best Prepared Speaker - SOXI",
           body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
         },
         {
           imageSrc: rectangle,
-          title: "Asitha Rathnayake Champion – SOXII",
+          title: "Asitha Rathnayake",
+          subtitle: "Champion – SOXII",
           body: "Speech Olympiad is a good place to win, but more than that, it is a great place to lose. The Gavel Mora family helped me a lot to improve myself as a speaker and a leader during the course of three Speech Olympiads, which helped me become the overall champion at Speech Olympiad XII.",
         },
         {
           imageSrc: rectangle,
-          title: "Amaya Dharmasiri 1st Runner-Up and Best Impromptu Speaker – SOXII",
+          title: "Amaya Dharmasiri",
+          subtitle: "1st Runner-Up and Best Impromptu Speaker – SOXII",
           body: "I was not new to the stage, but I was new to public speaking when I took part in Speech Olympiad. Everyone at the Gavel Club was willing to help us become the best version of ourselves. Not only did I become more confident in communicating in English, but I also learnt about my capabilities and understood myself better, thanks to Speech Olympiad.",
         },
       ],
@@ -97,6 +101,7 @@ export default {
                 :title="testimonial.title"
                 :imageSrc="testimonial.imageSrc"
                 :body="testimonial.body"
+                :subtitle="testimonial.subtitle"
               />
             </div>
             <!-- /.col-lg-4 -->
