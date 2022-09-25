@@ -1,7 +1,16 @@
 <script>
 import AppArticle from "../components/AppArticle.vue";
 import AppHeroSection from "../components/AppHeroSection.vue";
+import About_title_mobile from "../assets/images/About_title_mobile.jpg"
+import About_title_desktop from "../assets/images/About_title_desktop.jpg"
+
 export default {
+  data() {
+    return {
+      About_title_mobile,
+      About_title_desktop
+    }
+  },
   components: { AppArticle, AppHeroSection },
   computed: {
     isMobile() {
@@ -16,8 +25,8 @@ export default {
     <AppHeroSection
       :imagePath="
         isMobile
-          ? '/src/assets/images/About_title_mobile.jpg'
-          : '/src/assets/images/About_title_desktop.jpg'
+          ? About_title_mobile
+          : About_title_desktop
       "
     >
       <div class="hero-text">

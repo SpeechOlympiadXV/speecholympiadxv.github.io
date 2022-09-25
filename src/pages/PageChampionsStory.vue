@@ -2,8 +2,26 @@
 import AppHeroSection from "../components/AppHeroSection.vue";
 import AppArticle from "../components/AppArticle.vue";
 import ArticleInterview from "../components/ArticleInterview.vue";
+import PathOfChampion_title_mobile from "../assets/images/PathOfChampion_title_mobile.jpg"
+import PathOfChampion_title_desktop from "../assets/images/PathOfChampion_title_desktop.jpg"
+import PathOfChampion_image1_mobile from "../assets/images/PathOfChampion_image1_mobile.jpg"
+import PathOfChampion_image1_desktop from "../assets/images/PathOfChampion_image1_desktop.jpg"
+import PathOfChampion_image2_mobile from "../assets/images/PathOfChampion_image2_mobile.jpg"
+import PathOfChampion_image2_desktop from "../assets/images/PathOfChampion_image2_desktop.jpg"
+import PathOfChampion_portrait from "../assets/images/PathOfChampion_portrait.jpg"
 
 export default {
+  data() {
+    return {
+      PathOfChampion_title_mobile,
+      PathOfChampion_title_desktop,
+      PathOfChampion_image1_mobile,
+      PathOfChampion_image1_desktop,
+      PathOfChampion_image2_mobile,
+      PathOfChampion_image2_desktop,
+      PathOfChampion_portrait
+    }
+  },
   components: { AppArticle, AppHeroSection, ArticleInterview },
   computed: {
     isMobile() {
@@ -18,8 +36,8 @@ export default {
     <AppHeroSection
       :imagePath="
         isMobile
-          ? '/src/assets/images/PathOfChampion_title_mobile.jpg'
-          : '/src/assets/images/PathOfChampion_title_desktop.jpg'
+          ? PathOfChampion_title_mobile
+          : PathOfChampion_title_desktop
       "
     >
       <div class="hero-text">
@@ -37,8 +55,8 @@ export default {
         alt=""
         :src="
           isMobile
-            ? '/src/assets/images/PathOfChampion_image1_mobile.jpg'
-            : '/src/assets/images/PathOfChampion_image1_desktop.jpg'
+            ? PathOfChampion_image1_mobile
+            : PathOfChampion_image1_desktop
         "
         loading="lazy"
       />
@@ -87,8 +105,8 @@ export default {
         class="article-img"
         :src="
           isMobile
-            ? '/src/assets/images/PathOfChampion_image2_mobile.jpg'
-            : '/src/assets/images/PathOfChampion_image2_desktop.jpg'
+            ? PathOfChampion_image2_mobile
+            : PathOfChampion_image2_desktop
         "
         loading="lazy"
       />
@@ -166,7 +184,7 @@ export default {
       <ArticleInterview
         author-name="Chemini Mallikarachchi"
         interviewee-name="Mohamed Yasir"
-        intervieweeImg="/src/assets/images/PathOfChampion_portrait.jpg"
+        :intervieweeImg="PathOfChampion_portrait"
       />
     </AppArticle>
   </main>
