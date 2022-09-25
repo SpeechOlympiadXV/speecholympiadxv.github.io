@@ -1,3 +1,14 @@
+<script>
+export default {
+  computed: {
+    isMobile() {
+      return window.matchMedia("(max-width: 768px)").matches;
+    },
+  },
+};
+</script>
+
+
 <template>
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -22,80 +33,59 @@
         aria-label="Slide 3"
       ></button>
     </div>
+
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg
-          class="bd-placeholder-img"
-          width="100%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
+        <img
+          :src="
+            isMobile
+              ? '/src/assets/images/HomePage_carousel1_mobile.jpg'
+              : '/src/assets/images/HomePage_carousel1_desktop.jpg'
+          "
+          alt=""
           aria-hidden="true"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <rect width="100%" height="100%" fill="#777" />
-        </svg>
-
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>
-              Some representative placeholder content for the first slide of the
-              carousel.
-            </p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg
-          class="bd-placeholder-img"
-          width="100%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <rect width="100%" height="100%" fill="#777" />
-        </svg>
-
+          loading="eager"
+        />
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>
-              Some representative placeholder content for the second slide of
-              the carousel.
-            </p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            <p><a
+              class="btn btn-lg btn-primary"
+              href="https://bit.ly/SO_XV_Register"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Register Now !</a
+            ></p>
           </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <svg
-          class="bd-placeholder-img"
-          width="100%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <rect width="100%" height="100%" fill="#777" />
-        </svg>
 
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>
-              Some representative placeholder content for the third slide of
-              this carousel.
-            </p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-          </div>
-        </div>
+      <div class="carousel-item">
+        <img
+          :src="
+            isMobile
+              ? '/src/assets/images/HomePage_carousel2_mobile.jpg'
+              : '/src/assets/images/HomePage_carousel2_desktop.jpg'
+          "
+          alt=""
+          aria-hidden="true"
+          loading="eager"
+        />
+      </div>
+
+      <div class="carousel-item">
+        <img
+          :src="
+            isMobile
+              ? '/src/assets/images/HomePage_carousel3_mobile.jpg'
+              : '/src/assets/images/HomePage_carousel3_desktop.jpg'
+          "
+          alt=""
+          aria-hidden="true"
+          loading="eager"
+        />
       </div>
     </div>
+
     <button
       class="carousel-control-prev"
       type="button"
@@ -114,6 +104,7 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+
   </div>
 </template>
 
@@ -133,15 +124,23 @@
   height: 32rem;
 }
 .carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
   min-width: 100%;
   height: 32rem;
+  z-index: -1;
 }
+
 @media (max-width: 62em) {
   .carousel {
     margin-bottom: 0;
+  }
+
+  .carousel-item {
+    height: 100%;
+    width: 100%;
+  }
+  .carousel-item > img {
+    height: 100%;
+    width: 100%;
   }
 }
 
