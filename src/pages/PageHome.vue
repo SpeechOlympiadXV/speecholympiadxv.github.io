@@ -10,9 +10,8 @@ import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonia
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
 import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg";
 import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_asitha.jpg";
-import {animateOnScroll} from "../aos.js";
+import { animateOnScroll } from "../aos.js";
 
-var testimonialInd = 3;
 var testimonialOut = null;
 
 export default {
@@ -118,12 +117,10 @@ export default {
 
         <!-- Three columns of cards  -->
         <div class="col-12 mb-2">
-          <div class="row ">
           <transition-group name="list" tag="div" class="row">
             <div
-              class="col-lg-4 d-flex justify-content-center hidden app-testimonial-card"
-              v-for="(testimonial,index) in testimonials"
-              :style="'--order:'+index+';'"
+              class="col-lg-4 d-flex justify-content-center"
+              v-for="testimonial in testimonials"
               :key="'testimonial' + testimonial.key"
             >
               <AppTestimonialCard
@@ -186,13 +183,15 @@ export default {
     padding-top: 2rem;
     font-weight: bold;
   }
-  .app-testimonial-card{
+  .app-testimonial-card {
     transition-delay: 0s;
   }
 }
 
-.app-testimonial-card{
+.app-testimonial-card {
   /*noinspection CssUnresolvedCustomProperty*/
-  transition-delay: calc(200ms * var(--order)); /*order is declared as an inline variable*/
+  transition-delay: calc(
+    200ms * var(--order)
+  ); /*order is declared as an inline variable*/
 }
 </style>
