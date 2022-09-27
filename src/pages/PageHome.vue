@@ -9,9 +9,13 @@ import HomePage_TechnicalTips from "../assets/images/HomePage_TechnicalTips.jpg"
 import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonial_sirimevan.jpg"
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg"
 import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg"
+import {animateOnScroll} from "../aos.js";
 
 export default {
   components: { AppFeaturette, AppTestimonialCard, AppCarousel, Doodle },
+  mounted() {
+    animateOnScroll();
+  },
   data() {
     return {
       featurettes: [
