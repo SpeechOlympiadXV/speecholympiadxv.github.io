@@ -40,13 +40,13 @@ export default {
           : PathOfChampion_title_desktop
       "
     >
-      <div class="hero-text">
+      <!-- <div class="hero-text">
         <h1>Walk the Path of a Champion</h1>
         <h4>
           The Story of Mohamed Yasir, <br class="lb-phone" />
           Champion of Speech Olympiad VIII
         </h4>
-      </div>
+      </div> -->
     </AppHeroSection>
 
     <AppArticle>
