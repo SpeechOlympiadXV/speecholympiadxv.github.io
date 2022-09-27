@@ -1,5 +1,5 @@
 <template>
-  <div class="row featurette">
+  <div class="row featurette hidden">
     <div :class="'col-md-7 ' + getOrder(index, 0)">
       <h2 class="featurette-heading">
         <div class="nav-link"

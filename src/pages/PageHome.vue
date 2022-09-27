@@ -9,9 +9,13 @@ import HomePage_TechnicalTips from "../assets/images/HomePage_TechnicalTips.jpg"
 import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonial_sirimevan.jpg"
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg"
 import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg"
+import {animateOnScroll} from "../aos.js";
 
 export default {
   components: { AppFeaturette, AppTestimonialCard, AppCarousel, Doodle },
+  mounted() {
+    animateOnScroll();
+  },
   data() {
     return {
       featurettes: [
@@ -97,10 +101,11 @@ export default {
 
         <!-- Three columns of cards  -->
         <div class="col-12 mb-2">
-          <div class="row">
+          <div class="row ">
             <div
-              class="col-lg-4 d-flex justify-content-center"
-              v-for="testimonial in testimonials"
+              class="col-lg-4 d-flex justify-content-center hidden app-testimonial-card"
+              v-for="(testimonial,index) in testimonials"
+              :style="'--order:'+index+';'"
             >
               <AppTestimonialCard
                 :title="testimonial.title"
@@ -145,5 +150,13 @@ export default {
     padding-top: 2rem;
     font-weight: bold;
   }
+  .app-testimonial-card{
+    transition-delay: 0s;
+  }
+}
+
+.app-testimonial-card{
+  /*noinspection CssUnresolvedCustomProperty*/
+  transition-delay: calc(200ms * var(--order)); /*order is declared as an inline variable*/
 }
 </style>
