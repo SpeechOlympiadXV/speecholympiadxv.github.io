@@ -15,19 +15,28 @@ export default {
         {
           name: "Home",
           url: "#",
+          newTab: false
         },
         {
           name: "About",
           url: "#about",
+          newTab: false
         },
         {
           name: "Champion's Story",
           url: "#champions-story",
+          newTab: false
         },
         {
           name: "Technical Tips",
           url: "#technical-tips",
+          newTab: false
         },
+        {
+          name: "Rules & Regulations",
+          url: "https://bit.ly/SOXV_Rules",
+          newTab: true
+        }
       ],
       activeItem: getActiveItem(),
     };
@@ -58,7 +67,7 @@ export default {
   <li class="nav-item" v-for="(item, index) in items" :key="index">
     <!-- active class for selected menu item -->
     <div @click="clickHandler(index)" :class="{ active: index === activeItem }">
-      <a class="nav-link" :href="item.url">{{ item.name }}</a>
+      <a class="nav-link" :href="item.url" :target="item.newTab ? '_blank' : ''" >{{ item.name }}</a>
     </div>
   </li>
 </template>
