@@ -32,9 +32,9 @@ export default {
           : TechnicalTips_title_desktop
       "
     >
-      <div class="hero-text">
+      <!-- <div class="hero-text">
         <h1>A Guide to Becoming a Better Speaker</h1>
-      </div>
+      </div> -->
     </AppHeroSection>
     <AppArticle>
       <p class="mt-3 first-letter">

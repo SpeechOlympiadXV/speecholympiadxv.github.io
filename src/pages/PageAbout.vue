@@ -29,9 +29,9 @@ export default {
           : About_title_desktop
       "
     >
-      <div class="hero-text">
+      <!-- <div class="hero-text">
         <h1>What is Speech Olympiad XV?</h1>
-      </div>
+      </div> -->
     </AppHeroSection>
     <AppArticle>
       <p class="mt-3 first-letter">

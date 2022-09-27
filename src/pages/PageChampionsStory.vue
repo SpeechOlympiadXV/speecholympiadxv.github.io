@@ -40,27 +40,17 @@ export default {
           : PathOfChampion_title_desktop
       "
     >
-      <div class="hero-text">
+      <!-- <div class="hero-text">
         <h1>Walk the Path of a Champion</h1>
         <h4>
           The Story of Mohamed Yasir, <br class="lb-phone" />
           Champion of Speech Olympiad VIII
         </h4>
-      </div>
+      </div> -->
     </AppHeroSection>
 
     <AppArticle>
-      <img
-        class="article-img"
-        alt=""
-        :src="
-          isMobile
-            ? PathOfChampion_image1_mobile
-            : PathOfChampion_image1_desktop
-        "
-        loading="lazy"
-      />
-      <p class="first-letter">
+      <p class="mt-3 first-letter">
         Walking the journey through the shadows of my past, during my school
         days, just like most students, I was always reluctant to opt in speech
         contests. Perturbed by the fear of failure and embarrassment, I never
@@ -82,6 +72,17 @@ export default {
         university life, I eagerly joined Speech Olympiad, embarking on a quest
         to expand my comfort zone.
       </p>
+
+      <img
+        class="article-img"
+        alt=""
+        :src="
+          isMobile
+            ? PathOfChampion_image1_mobile
+            : PathOfChampion_image1_desktop
+        "
+        loading="lazy"
+      />
 
       <p>
         I was excited for my very first experience at Speech Olympiad which was
