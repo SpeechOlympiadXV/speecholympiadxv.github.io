@@ -23,7 +23,7 @@
         {{ this.title }}
       </h5>
       <h6 class="card-subtitle mb-2 text-muted">{{ this.subtitle }}</h6>
-      <p class="card-text text-left testimonial-card-body">{{ this.body }}</p>
+      <p class="card-text text-left testimonial-card-body">"{{ this.body }}"</p>
     </div>
   </div>
 </template>

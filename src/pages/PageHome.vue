@@ -3,18 +3,31 @@ import AppCarousel from "../components/AppCarousel.vue";
 import AppFeaturette from "../components/AppFeaturette.vue";
 import AppTestimonialCard from "../components/AppTestimonialCard.vue";
 import Doodle from "../components/Doodle.vue";
-import HomePage_About from "../assets/images/HomePage_About.jpg"
-import HomePage_PathOfChampion from "../assets/images/HomePage_PathOfChampion.jpg"
-import HomePage_TechnicalTips from "../assets/images/HomePage_TechnicalTips.jpg"
-import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonial_sirimevan.jpg"
-import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg"
-import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg"
+import HomePage_About from "../assets/images/HomePage_About.jpg";
+import HomePage_PathOfChampion from "../assets/images/HomePage_PathOfChampion.jpg";
+import HomePage_TechnicalTips from "../assets/images/HomePage_TechnicalTips.jpg";
+import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonial_sirimevan.jpg";
+import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
+import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg";
+import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_asitha.jpg";
 import {animateOnScroll} from "../aos.js";
+
+var testimonialInd = 3;
+var testimonialOut = null;
 
 export default {
   components: { AppFeaturette, AppTestimonialCard, AppCarousel, Doodle },
   mounted() {
     animateOnScroll();
+    if (!window.matchMedia("(max-width: 768px)").matches) {
+      testimonialOut = this.$data.testimonials.pop();
+      const shiftTestimonial = () => {
+        let temp = testimonialOut;
+        testimonialOut = this.$data.testimonials.shift();
+        this.$data.testimonials.push(temp);
+      };
+      setInterval(shiftTestimonial, 4000);
+    }
   },
   data() {
     return {
@@ -43,24 +56,28 @@ export default {
       ],
       testimonials: [
         {
+          key: "1",
           imageSrc: HomePage_testimonial_sirimevan,
           title: "Sirimevan Jayasundera",
           subtitle: "Champion - SOVI",
           body: "Speech Olympiad is more than a mere speaking contest, it is a culmination of people, experiences and exposure. I cherish to this date, every moment of the competition which was a gateway to self-reflection that enhanced my capabilities in the corporate world and beyond.",
         },
         {
+          key: "2",
           imageSrc: HomePage_testimonial_malindi,
           title: "Malindi Jayathunga",
           subtitle: "1st Runner-Up and Best Prepared Speaker - SOXI",
           body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
         },
-        // {
-        //   imageSrc: rectangle,
-        //   title: "Asitha Rathnayake",
-        //   subtitle: "Champion – SOXII",
-        //   body: "Speech Olympiad is a good place to win, but more than that, it is a great place to lose. The Gavel Mora family helped me a lot to improve myself as a speaker and a leader during the course of three Speech Olympiads, which helped me become the overall champion at Speech Olympiad XII.",
-        // },
         {
+          key: "3",
+          imageSrc: HomePage_testimonial_asitha,
+          title: "Asitha Rathnayake",
+          subtitle: "Champion – SOXII",
+          body: "Speech Olympiad is a good place to win, but more than that, it is a great place to lose. The Gavel Mora family helped me a lot to improve myself as a speaker and a leader during the course of three Speech Olympiads, which helped me become the overall champion at Speech Olympiad XII.",
+        },
+        {
+          key: "4",
           imageSrc: HomePage_testimonial_amaya,
           title: "Amaya Dharmasiri",
           subtitle: "1st Runner-Up and Best Impromptu Speaker – SOXII",
@@ -102,10 +119,12 @@ export default {
         <!-- Three columns of cards  -->
         <div class="col-12 mb-2">
           <div class="row ">
+          <transition-group name="list" tag="div" class="row">
             <div
               class="col-lg-4 d-flex justify-content-center hidden app-testimonial-card"
               v-for="(testimonial,index) in testimonials"
               :style="'--order:'+index+';'"
+              :key="'testimonial' + testimonial.key"
             >
               <AppTestimonialCard
                 :title="testimonial.title"
@@ -115,7 +134,7 @@ export default {
               />
             </div>
             <!-- /.col-lg-4 -->
-          </div>
+          </transition-group>
         </div>
         <!-- /.row -->
       </div>
@@ -133,6 +152,23 @@ export default {
   /* rtl:remove */
   letter-spacing: -0.05rem;
 }
+.hidden {
+  display: none !important;
+}
+
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+}
+.list-leave-active {
+  position: absolute;
+}
+
 @media (min-width: 40em) {
   .featurette-heading {
     font-size: 50px;
