@@ -25,7 +25,7 @@ export default {
         testimonialOut = this.$data.testimonials.shift();
         this.$data.testimonials.push(temp);
       };
-      setInterval(shiftTestimonial, 4000);
+      setInterval(shiftTestimonial, 10000);
     }
   },
   data() {
