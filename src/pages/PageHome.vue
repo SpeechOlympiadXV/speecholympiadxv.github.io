@@ -48,7 +48,7 @@ export default {
         {
           heading: "A Guide to Becoming a Better Speaker",
           headingEnd: "",
-          text: "From the basic do’s and don’ts of public speaking to the delicate intricacies of a winning speech, the champion of SOIX Samadhi Poornima guides you through the art of becoming a great public speaker.",
+          text: "From the basic do’s and don’ts of public speaking to the delicate intricacies of a winning speech, the champion of SOIX Dr. Samadhi Poornima guides you through the art of becoming a great public speaker.",
           image: HomePage_TechnicalTips,
           urlString: "#technical-tips",
         },
