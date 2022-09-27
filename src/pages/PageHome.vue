@@ -12,11 +12,10 @@ import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_am
 import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_asitha.jpg";
 import { animateOnScroll } from "../aos.js";
 
-var testimonialOut = null;
-
 export default {
   components: { AppFeaturette, AppTestimonialCard, AppCarousel, Doodle },
   mounted() {
+    var testimonialOut = null;
     animateOnScroll();
     if (!window.matchMedia("(max-width: 768px)").matches) {
       testimonialOut = this.$data.testimonials.pop();
@@ -25,7 +24,7 @@ export default {
         testimonialOut = this.$data.testimonials.shift();
         this.$data.testimonials.push(temp);
       };
-      setInterval(shiftTestimonial, 10000);
+      setInterval(shiftTestimonial, 10000); 
     }
   },
   data() {
