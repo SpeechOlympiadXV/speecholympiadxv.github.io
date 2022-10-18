@@ -1,5 +1,6 @@
 <script>
 import AppCarousel from "../components/AppCarousel.vue";
+import AppGallery from "../components/AppGallery.vue";
 import AppFeaturette from "../components/AppFeaturette.vue";
 import AppTestimonialCard from "../components/AppTestimonialCard.vue";
 import Doodle from "../components/Doodle.vue";
@@ -13,10 +14,10 @@ import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_a
 import { animateOnScroll } from "../aos.js";
 
 export default {
-  components: { AppFeaturette, AppTestimonialCard, AppCarousel, Doodle },
+  components: { AppFeaturette, AppTestimonialCard, AppCarousel, Doodle, AppGallery },
   mounted() {
     var testimonialOut = null;
-    animateOnScroll();
+    animateOnScroll('.hidden');
     if (!window.matchMedia("(max-width: 768px)").matches) {
       testimonialOut = this.$data.testimonials.pop();
       const shiftTestimonial = () => {
@@ -133,6 +134,17 @@ export default {
           </transition-group>
         </div>
         <!-- /.row -->
+      </div>
+
+      <!--Prelis images-->
+      <div class="row mb-5">
+        <div class="col-12 mb-2">
+          <h1 class="featurette-heading mt-0 mb-4">Prelimary Round</h1>
+        </div>
+        <div class="col-12 mb-2">
+          <AppGallery :images="['prelis_01.jpeg','prelis_02.jpeg','PathOfChampion_portrait.jpg',
+          'TechnicalTips_Humor.jpg','HomePage_carousel2_desktop.jpg','HomePage_carousel1_desktop.jpg']"/>
+        </div>
       </div>
     </div>
     <!-- /.container -->
