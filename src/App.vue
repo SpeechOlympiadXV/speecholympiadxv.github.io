@@ -6,6 +6,7 @@ import PageHome from "./pages/PageHome.vue";
 import PageAbout from "./pages/PageAbout.vue";
 import PageTechnicalTips from "./pages/PageTechnicalTips.vue";
 import PageComingSoon from "./pages/PageComingSoon.vue";
+import PageGallery from "./pages/PageGallery.vue";
 import Page404 from "./pages/Page404.vue";
 import PageChampionsStory from "./pages/PageChampionsStory.vue"
 
@@ -14,6 +15,7 @@ const routes = {
   "/about": PageAbout,
   "/champions-story": PageChampionsStory,
   "/technical-tips": PageTechnicalTips,
+  "/gallery": PageGallery
 };
 
 export default {

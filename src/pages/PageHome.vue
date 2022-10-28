@@ -14,10 +14,16 @@ import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_a
 import { animateOnScroll } from "../aos.js";
 
 export default {
-  components: { AppFeaturette, AppTestimonialCard, AppCarousel, Doodle, AppGallery },
+  components: {
+    AppFeaturette,
+    AppTestimonialCard,
+    AppCarousel,
+    Doodle,
+    AppGallery,
+  },
   mounted() {
     var testimonialOut = null;
-    animateOnScroll('.hidden');
+    animateOnScroll(".hidden");
     if (!window.matchMedia("(max-width: 768px)").matches) {
       testimonialOut = this.$data.testimonials.pop();
       const shiftTestimonial = () => {
@@ -25,7 +31,7 @@ export default {
         testimonialOut = this.$data.testimonials.shift();
         this.$data.testimonials.push(temp);
       };
-      setInterval(shiftTestimonial, 10000); 
+      setInterval(shiftTestimonial, 10000);
     }
   },
   data() {
@@ -139,11 +145,17 @@ export default {
       <!--Prelis images-->
       <div class="row mb-5">
         <div class="col-12 mb-2">
-          <h1 class="featurette-heading mt-0 mb-4">Prelimary Round</h1>
+          <h1 class="featurette-heading mt-0 mb-4">Gallery</h1>
         </div>
         <div class="col-12 mb-2">
-          <AppGallery :images="['prelis_01.jpeg','prelis_02.jpeg','PathOfChampion_portrait.jpg',
-          'TechnicalTips_Humor.jpg','HomePage_carousel2_desktop.jpg','HomePage_carousel1_desktop.jpg']"/>
+          <AppGallery
+            :images="[
+              'prelis1.jpg',
+              'prelis2.jpg',
+              'prelis3.jpg'
+            ]"
+            :showLink="true"
+          />
         </div>
       </div>
     </div>

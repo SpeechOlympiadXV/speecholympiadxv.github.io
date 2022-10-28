@@ -33,6 +33,11 @@ export default {
           newTab: false
         },
         {
+          name: "Gallery",
+          url: "#gallery",
+          newTab: false
+        },
+        {
           name: "Rules & Regulations",
           url: "https://bit.ly/SOXV_Rules",
           newTab: true
