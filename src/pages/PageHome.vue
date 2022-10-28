@@ -1,5 +1,6 @@
 <script>
 import AppCarousel from "../components/AppCarousel.vue";
+import AppGallery from "../components/AppGallery.vue";
 import AppFeaturette from "../components/AppFeaturette.vue";
 import AppTestimonialCard from "../components/AppTestimonialCard.vue";
 import Doodle from "../components/Doodle.vue";
@@ -10,13 +11,22 @@ import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonia
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
 import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg";
 import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_asitha.jpg";
+import Prelis1 from "../assets/images/gallery/prelis1.jpg";
+import Prelis2 from "../assets/images/gallery/prelis2.jpg";
+import Prelis3 from "../assets/images/gallery/prelis3.jpg";
 import { animateOnScroll } from "../aos.js";
 
 export default {
-  components: { AppFeaturette, AppTestimonialCard, AppCarousel, Doodle },
+  components: {
+    AppFeaturette,
+    AppTestimonialCard,
+    AppCarousel,
+    Doodle,
+    AppGallery,
+  },
   mounted() {
     var testimonialOut = null;
-    animateOnScroll();
+    animateOnScroll(".hidden");
     if (!window.matchMedia("(max-width: 768px)").matches) {
       testimonialOut = this.$data.testimonials.pop();
       const shiftTestimonial = () => {
@@ -24,11 +34,12 @@ export default {
         testimonialOut = this.$data.testimonials.shift();
         this.$data.testimonials.push(temp);
       };
-      setInterval(shiftTestimonial, 10000); 
+      setInterval(shiftTestimonial, 10000);
     }
   },
   data() {
     return {
+      galleryImages: [Prelis1, Prelis2, Prelis3],
       featurettes: [
         {
           heading: "What is Speech Olympiad XV ?",
@@ -133,6 +144,16 @@ export default {
           </transition-group>
         </div>
         <!-- /.row -->
+      </div>
+
+      <!--Prelis images-->
+      <div class="row mb-5">
+        <div class="col-12 mb-2">
+          <h1 class="featurette-heading mt-0 mb-4">Gallery</h1>
+        </div>
+        <div class="col-12 mb-2">
+          <AppGallery :images="galleryImages" :showLink="true" />
+        </div>
       </div>
     </div>
     <!-- /.container -->

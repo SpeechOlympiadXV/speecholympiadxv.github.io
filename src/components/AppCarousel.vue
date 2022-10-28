@@ -63,17 +63,6 @@ export default {
           aria-hidden="true"
           loading="eager"
         />
-        <div class="container">
-          <div class="carousel-caption">
-            <p><a
-              class="btn btn-lg btn-primary"
-              href="https://bit.ly/SO_XV_Register"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Register Now !</a
-            ></p>
-          </div>
-        </div>
       </div>
 
       <div class="carousel-item">
@@ -141,8 +130,9 @@ export default {
   height: 32rem;
 }
 .carousel-item > img {
+  object-fit: cover;
   min-width: 100%;
-  height: 32rem;
+  height: 30rem;
   z-index: -1;
 }
 
