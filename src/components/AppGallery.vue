@@ -4,12 +4,12 @@
       class="img-container"
       :style="getOrder(i)"
       :key="i"
-      v-for="(img, i) in getImages()"
+      v-for="(image, i) in getImages()"
     >
-      <div @click="preview(img)" class="overlay">
+      <div @click="preview(image)" class="overlay">
         <h5 class="center">See full image</h5>
       </div>
-      <img :src="getPath(img)" class="center" alt="" loading="lazy" />
+      <img :src="image" class="center" alt="" loading="lazy" />
     </div>
     <div v-if="getShowLink()" class="col-sm-12 col-md-3 link-container">
       <a class="gallery-link" :href="'#gallery'">View Gallery</a>
@@ -29,14 +29,13 @@
 
 <script>
 const IMAGES_PER_ROW = 4;
-const IMAGES_PATH = "/src/assets/images/gallery/";
 
 export default {
   name: "AppGallery",
   props: {
     galleryName: String,
     images: Array,
-    showLink: Boolean
+    showLink: Boolean,
   },
   data() {
     return {
@@ -46,7 +45,7 @@ export default {
   computed: {
     previewImage() {
       if (this.currentImage !== "") {
-        return IMAGES_PATH + this.currentImage;
+        return this.currentImage;
       }
       return "";
     },
@@ -60,17 +59,15 @@ export default {
       if (event.target.tagName === "IMG") return;
       this._setCurrentImage("");
     },
-    getPath(img) {
-      return IMAGES_PATH + img;
-    },
     getImages() {
+      console.log(this.images)
       return this.images;
     },
     preview(img) {
       this._setCurrentImage(img);
     },
     getShowLink() {
-      console.log(this.showLink)
+      console.log(this.showLink);
       if (this.showLink == null) {
         return false;
       } else {

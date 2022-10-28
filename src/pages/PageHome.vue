@@ -11,6 +11,9 @@ import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonia
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
 import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg";
 import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_asitha.jpg";
+import Prelis1 from "../assets/images/gallery/prelis1.jpg";
+import Prelis2 from "../assets/images/gallery/prelis2.jpg";
+import Prelis3 from "../assets/images/gallery/prelis3.jpg";
 import { animateOnScroll } from "../aos.js";
 
 export default {
@@ -36,6 +39,7 @@ export default {
   },
   data() {
     return {
+      galleryImages: [Prelis1, Prelis2, Prelis3],
       featurettes: [
         {
           heading: "What is Speech Olympiad XV ?",
@@ -148,14 +152,7 @@ export default {
           <h1 class="featurette-heading mt-0 mb-4">Gallery</h1>
         </div>
         <div class="col-12 mb-2">
-          <AppGallery
-            :images="[
-              'prelis1.jpg',
-              'prelis2.jpg',
-              'prelis3.jpg'
-            ]"
-            :showLink="true"
-          />
+          <AppGallery :images="galleryImages" :showLink="true" />
         </div>
       </div>
     </div>
