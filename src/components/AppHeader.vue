@@ -35,18 +35,6 @@ export default {
           </ul>
         </div>
 
-        <ul class="navbar-nav ms-auto mb-0 me-2">
-          <li class="nav-item my-auto">
-            <a
-              class="btn badge bg-primary fs-6 ml-auto"
-              href="https://bit.ly/SO_XV_Register"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Register Now !</a
-            >
-          </li>
-        </ul>
-
         <button
           class="navbar-toggler"
           type="button"
