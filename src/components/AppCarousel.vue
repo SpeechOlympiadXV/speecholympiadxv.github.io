@@ -43,16 +43,16 @@ export default {
         data-bs-slide-to="1"
         aria-label="Slide 2"
       ></button>
-      <!-- <button
+      <button
         type="button"
         data-bs-target="#myCarousel"
         data-bs-slide-to="2"
         aria-label="Slide 3"
-      ></button> -->
+      ></button>
     </div>
 
     <div class="carousel-inner">
-      <!-- <div class="carousel-item active">
+      <div class="carousel-item active">
         <img
           :src="
             isMobile
@@ -63,9 +63,9 @@ export default {
           aria-hidden="true"
           loading="eager"
         />
-      </div> -->
+      </div>
 
-      <div class="carousel-item active">
+      <div class="carousel-item">
         <img
           :src="
             isMobile
@@ -130,8 +130,9 @@ export default {
   height: 32rem;
 }
 .carousel-item > img {
+  object-fit: cover;
   min-width: 100%;
-  height: 32rem;
+  height: 30rem;
   z-index: -1;
 }
 
