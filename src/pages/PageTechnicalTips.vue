@@ -250,7 +250,7 @@ export default {
           in life and being true to yourself etc.
         </li>
         <li>
-          some facts ready. It is good to have some general knowledge facts
+          Have some facts ready. It is good to have some general knowledge facts
           ready when you are practising for an impromptu speech. You don’t need
           to memorise a whole list but 5 key facts from different areas can be
           helpful if you can’t think of a story related to the topic you got.
@@ -258,7 +258,7 @@ export default {
           sayings etc.
         </li>
         <li>
-          ready to think of something entirely new then and there. This is an
+          Be ready to think of something entirely new then and there. This is an
           example I heard from someone when I was practising. So this guy has
           got the topic ‘Michael Jordan’ as the title for his impromptu speech.
           He started the speech with “I don’t know who Michael Jordan is but I
@@ -266,7 +266,7 @@ export default {
           deliver a very interesting speech which was completely unexpected.
         </li>
         <li>
-          coming up with an impromptu speech response within 2 minutes. And if
+          Practise coming up with an impromptu speech response within 2 minutes. And if
           you could not, just deliver whatever that you manage to come up with
           then and there. Experience how you work under pressure. With each
           practice, you will improve. And once you feel confident, try lowering
@@ -277,12 +277,12 @@ export default {
           with something successful even in the last few seconds.
         </li>
         <li>
-          is okay to practise on the same topic several times. No need to have a
+          It is okay to practise on the same topic several times. No need to have a
           new topic each time you practise. But practise facing completely
           unheard of topics as well, just to broaden your thinking.
         </li>
         <li>
-          need to practise for long hours. So do not exhaust yourself. You might
+          No need to practise for long hours. So do not exhaust yourself. You might
           get tired and lose interest.
         </li>
       </ul>
