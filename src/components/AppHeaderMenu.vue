@@ -6,6 +6,7 @@ const getActiveItem = () => {
         "about",
         "champions-story",
         "technical-tips",
+        "gallery"
       ].indexOf(hashInd);
 }
 export default {
@@ -60,7 +61,6 @@ export default {
 
   mounted() {
     window.addEventListener("hashchange", () => {
-      let hashInd = window.location.hash.slice(1);
       this.activeItem = getActiveItem()
     });
   },
@@ -74,6 +74,13 @@ export default {
     <div @click="clickHandler(index)" :class="{ active: index === activeItem }">
       <a class="nav-link" :href="item.url" :target="item.newTab ? '_blank' : ''" >{{ item.name }}</a>
     </div>
+  </li>
+  <li class="nav-item my-auto" @click="clickHandler(null)" >
+    <a
+      class="btn badge bg-primary fs-6 ml-auto"
+      href="#vote"
+      >Vote Now</a
+    >
   </li>
 </template>
 
