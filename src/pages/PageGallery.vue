@@ -15,7 +15,7 @@ import trophy_2 from "../assets/images/gallery/trophy_2.jpg";
 import judges from "../assets/images/gallery/judges.jpg";
 import group_pic_1 from "../assets/images/gallery/group_pic_1.jpg"
 import crowd_1 from "../assets/images/gallery/crowd_1.jpg"
-
+import crowd from "../assets/images/gallery/crowd.jpg"
 import Prelis14 from "../assets/images/gallery/prelis14.jpg";
 
 export default {
@@ -37,8 +37,7 @@ export default {
         Prelis8,
         Prelis9,
         Prelis10,
-
-
+        crowd,
       ],
     };
   },

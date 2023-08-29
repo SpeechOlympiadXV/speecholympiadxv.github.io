@@ -1,4 +1,6 @@
 <script>
+
+// importing the necessary components
 import AppCarousel from "../components/AppCarousel.vue";
 import AppGallery from "../components/AppGallery.vue";
 import AppFeaturette from "../components/AppFeaturette.vue";
