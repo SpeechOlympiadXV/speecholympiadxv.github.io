@@ -64,7 +64,7 @@ export default {
 
             </div>
         </div>
-        <div v-if="loadBlog" class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div v-if="loadBlog" class="grid grid-cols-2 md:grid-cols- lg:grid-cols-3 gap-2 px-4 w-full">
             <div v-for="post in posts" :key="post._id" class="post-item">
                 <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <a href="#">
