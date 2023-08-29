@@ -15,6 +15,7 @@ import SinglePost from "./components/SinglePost.vue";
 import PageForm from "./pages/PageForm.vue";
 import { useSanityClient } from 'vue-sanity'
 import PageAdmin from "./pages/PageAdmin.vue";
+import PageFormNew from "./pages/PageFormNew.vue";
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
@@ -23,7 +24,8 @@ const routes = {
   "/gallery": PageGallery,
   "/blogs": PageTest,
   "/form": PageForm,
-  "/admin": PageAdmin
+  "/admin": PageAdmin,
+  "/form2": PageFormNew
 };
 
 export default {
