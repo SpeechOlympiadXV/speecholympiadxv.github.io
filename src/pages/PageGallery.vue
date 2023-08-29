@@ -32,7 +32,6 @@ export default {
         Prelis2,
         winner_1,
         Prelis4,
-        Prelis5,
         Prelis6,
         Prelis7,
         Prelis8,

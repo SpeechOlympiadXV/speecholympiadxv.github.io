@@ -39,7 +39,7 @@ export default {
         },
         {
           name: "Rules & Regulations",
-          url: "https://bit.ly/SOXV_Rules",
+          url: "https://bit.ly/45vWx1K",
           newTab: true,
         },
         {
