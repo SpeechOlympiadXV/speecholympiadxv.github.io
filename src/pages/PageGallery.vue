@@ -10,9 +10,8 @@ import Prelis7 from "../assets/images/gallery/prelis7.jpg";
 import Prelis8 from "../assets/images/gallery/prelis8.jpg";
 import Prelis9 from "../assets/images/gallery/prelis9.jpg";
 import Prelis10 from "../assets/images/gallery/prelis10.jpg";
-import Prelis11 from "../assets/images/gallery/prelis11.jpg";
-import Prelis12 from "../assets/images/gallery/prelis12.jpg";
-import Prelis13 from "../assets/images/gallery/prelis13.jpg";
+import winner_1 from "../assets/images/gallery/winner_1.jpg";
+import trophy_2 from "../assets/images/gallery/trophy_2.jpg";
 import judges from "../assets/images/gallery/judges.jpg";
 import group_pic_1 from "../assets/images/gallery/group_pic_1.jpg"
 import crowd_1 from "../assets/images/gallery/crowd_1.jpg"
@@ -26,9 +25,12 @@ export default {
   data() {
     return {
       images: [
-        Prelis1,
+        group_pic_1,
+        judges,
+        trophy_2,
+        crowd_1,
         Prelis2,
-        Prelis3,
+        winner_1,
         Prelis4,
         Prelis5,
         Prelis6,
@@ -36,10 +38,8 @@ export default {
         Prelis8,
         Prelis9,
         Prelis10,
-        Prelis11,
-        crowd_1,
-        group_pic_1,
-        judges,
+
+
       ],
     };
   },
