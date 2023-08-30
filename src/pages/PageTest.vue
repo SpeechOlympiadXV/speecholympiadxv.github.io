@@ -51,7 +51,7 @@ export default {
                 <SanityBlocks :blocks="blocks" />
                 <h6 class="flex items-center ">
                     <img v-if="post.authorImage" :src="imageUrlFor(post.authorImage)" class="w-16 h-16 rounded-full mr-2" />
-                    By: {{ post.name }}
+                    Compiled By: {{ post.name }}
                 </h6>
 
 

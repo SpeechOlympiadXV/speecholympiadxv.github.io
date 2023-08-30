@@ -1,13 +1,33 @@
 <template>
     <div class="relative min-h-screen bg-black">
         <img :src="Background.filename" :alt="Background.alt" class="w-full sm:w-1/2 mx-auto">
-        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+        <div class="absolute md:top-1/2 i top-1/2 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex"
+            v-if="eightV">
+            <!-- <imageAnimation /> -->
+            <transition name="bon" mode="out-in">
+                <img :src="currentImage" :key="currentImage" class="image" />
+            </transition>
+            <div class="flex flex-col items-center justify-center ml-4 w-1/2">
+                <transition name="bounce" mode="out-in">
+                    <p class="text-white text-3xl ml-2" v-html="eight.fullText" :key="fadeAnimation" v-if="fadeAnimation">
+                    </p>
+                </transition>
+
+                <!-- Additional text elements can be added here -->
+
+                <transition name="slide-fade" mode="out-in">
+                    <img :src="sologo" class="w-32" :key="fadeAnimation" v-if="fadeAnimation" />
+                </transition>
+            </div>
+        </div>
+        <div class="absolute md:top-1/3 i top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="firstV">
+
             <p class="text-3xl  text-gray-200 bg-black" v-html="first.typedText"></p>
             <div class="relative flex items-center mt-4">
                 <input
                     class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                    type="text" placeholder="Enter your full name here" v-model="fullName" />
+                    type="text" placeholder="Enter your full name here" v-model="fullName" @keyup.enter="firstB(2)" />
                 <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
                     @click="firstB(2)">
                     &rarr;
@@ -21,7 +41,7 @@
             <div class="relative flex items-center mt-4">
                 <input
                     class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                    type="text" placeholder="Enter your Uni id here" v-model="universityId" />
+                    type="text" placeholder="Enter your Uni id here" v-model="universityId" @keyup.enter="firstB(3)" />
                 <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
                     @click="firstB(3)">
                     &rarr;
@@ -35,7 +55,7 @@
             <div class="relative flex items-center mt-4">
                 <input
                     class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                    type="mobile" placeholder="Enter your mobile number" v-model="phoneNumber" />
+                    type="mobile" placeholder="Enter your mobile number" v-model="phoneNumber" @keyup.enter="firstB(4)" />
                 <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
                     @click="firstB(4)">
                     &rarr;
@@ -49,7 +69,7 @@
             <div class="relative flex items-center mt-4">
                 <input
                     class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                    type="email" placeholder="Enter your email" v-model="email" />
+                    type="email" placeholder="Enter your email" v-model="email" @keyup.enter="firstB(5)" />
                 <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
                     @click="firstB(5)">
                     &rarr;
@@ -84,7 +104,7 @@
             <div class="relative flex items-center mt-4">
                 <input
                     class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                    type="email" placeholder="Ex : CSE" v-model="department" />
+                    type="email" placeholder="Ex : CSE" v-model="department" @keyup.enter="firstB(7)" />
                 <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black hover:bg-gray-300"
                     @click="firstB(7)">
                     &rarr;
@@ -114,27 +134,35 @@
 
         </div>
 
-        <div v-if="showMessage"
+        <!-- <div v-if="showMessage"
             class=" absolute md:top-0 top-0  md:left-1/2 left-1/2  bg-pink-900 w-full rounded-lg p-6 shadow-md">
 
             <p class="text-white text-lg font-semibold mb-2">Success!</p>
             <p class="text-white text-sm">Congragulations for taking this step 🥳.</p>
             <button @click="closeMessage"
                 class="mt-4 text-sm text-white underline cursor-pointer focus:outline-none">Close</button>
-        </div>
+        </div> -->
     </div>
 </template>
   
   
   
 <script>
-import Background from "../assets/images/gavelium.jpg"
+import dragon1 from '../assets/images/dragon1.png'
+import dragon2 from '../assets/images/dragon2.png'
+import Background from "../assets/images/gavelium2.jpg"
+import SOlogo from "../assets/images/SOXVI.jpg"
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import SOLogo from "../components/SOLogo.vue";
 import { collection, addDoc, doc, setDoc } from "firebase/firestore"
+import imageAnimation from "../components/imageAnimation.vue";
 export default {
     name: "AnimatedText",
+    components: {
+        imageAnimation,
+
+    },
     data() {
         return {
             Background: {
@@ -148,6 +176,7 @@ export default {
             fifthV: false,
             sixthV: false,
             seventhV: false,
+            eightV: false,
             fullName: '',
             universityId: '',
             phoneNumber: '',
@@ -156,9 +185,12 @@ export default {
             department: '',
             batch: '',
             showMessage: false,
+            fadeAnimation: false,
+            currentImage: dragon1,
+            sologo: SOlogo,
             first: {
                 typedText: "",
-                fullText: 'Hi Contestant 👋' + ' What is your name?',
+                fullText: 'Hi Contestant 👋 <br />  What is your name?',
                 currentIndex: 0,
             },
             second: {
@@ -190,6 +222,12 @@ export default {
                 typedText: "",
                 fullText: "Hi, what is your university id?",
                 currentIndex: 0,
+            },
+            eight: {
+                typedText: "",
+                fullText: "Your journey is about to begin 🥳",
+
+                currentIndex: 0,
             }
 
         };
@@ -219,7 +257,7 @@ export default {
                 case 3:
                     this.secondV = false
                     this.thirdV = true
-                    this.third.fullText = this.fullName.split(" ")[1] + ", We need your phone number ☎️ (whatsapp preferred)"
+                    this.third.fullText = this.fullName.split(" ")[1] + ', We need your phone number ☎️ <br/> (whatsapp preferred)'
                     this.typeText(this.third);
                     break;
                 case 4:
@@ -243,9 +281,20 @@ export default {
                 case 7:
                     this.sixthV = false
                     this.seventhV = true
-                    this.seventh.fullText = "Final question 😮‍💨 \n" + this.fullName.split(" ")[1] + ", Select your batch"
+                    this.seventh.fullText = 'Final question 😮‍💨  <br/>' + this.fullName.split(" ")[1] + ", Select your batch"
                     this.typeText(this.seventh);
                     break;
+                case 8:
+                    this.seventhV = false;
+                    this.eightV = true;
+                    this.typeText(this.eight);
+                    this.switchImage();
+                    setTimeout(() => {
+                        this.fadeAnimation = true;
+
+                        this.eight.fullText = "Your journey is about to begin 🥳";
+                        this.sologo = SOlogo;
+                    }, 1500);
                 default:
                     break;
             }
@@ -265,7 +314,8 @@ export default {
 
             this.seventhV = false;
             this.submitForm();
-            this.showMessage = true;
+            this.firstB(8);
+            // this.showMessage = true;
         },
         async submitForm() {
             console.log("formRan")
@@ -320,9 +370,18 @@ export default {
             }
             console.log('efewf')
         },
+        switchImage() {
+            // Simulate loading a new image
+            setTimeout(() => {
+                this.currentImage = dragon2;
+            }, 1500); // 1 second
+        },
     },
     mounted() {
+
         this.typeText(this.first);
+
+
     },
 };
 </script>
@@ -335,6 +394,13 @@ export default {
     }
 }
 
+.image {
+    width: 300px;
+    height: 300px;
+    /* filter: blur(1px); */
+    /* Initial blur effect */
+}
+
 .typed {
     display: inline-block;
     overflow: hidden;
@@ -345,6 +411,77 @@ export default {
 @keyframes blink-caret {
     to {
         border-right-color: transparent;
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 2s ease;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active in <2.1.8 */
+    {
+    opacity: 0;
+}
+
+.slide-fade-enter-active {
+    transition: all 0.1s ease-out;
+}
+
+.slide-fade-leave-active {
+    transition: all 2s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+.bounce-enter-active {
+    animation: bounce-in 0.5s;
+}
+
+.bounce-leave-active {
+    animation: bounce-in 0.5s reverse;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bon-enter-active {
+    animation: bounce-in 0.1s;
+}
+
+.bon-leave-active {
+    animation: bounce-in 0.1s reverse;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
 </style>

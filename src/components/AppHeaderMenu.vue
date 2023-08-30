@@ -45,12 +45,12 @@ export default {
         {
           name: "Blogs",
           url: "#blogs",
-          newTab: true,
+          newTab: false,
         },
         {
           name: "Register",
           url: "#form2",
-          newTab: true,
+          newTab: false,
         },
       ],
       activeItem: getActiveItem(),

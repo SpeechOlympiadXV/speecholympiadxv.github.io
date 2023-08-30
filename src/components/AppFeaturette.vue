@@ -1,28 +1,20 @@
 <template>
-  <div class="row featurette hidden">
+  <div class="row featurette ">
     <div :class="'col-md-7 ' + getOrder(index, 0)">
       <h2 class="featurette-heading">
-        <div class="nav-link"
-          >{{ heading }} <span class="text-muted">{{ headingEnd }}</span></div
-        >
+        <div class="nav-link">{{ heading }} <span class="text-muted">{{ headingEnd }}</span></div>
       </h2>
       <p class="lead">{{ text }}</p>
       <div><a class="read-more btn btn-secondary mb-3" :href="urlString">Read more</a></div>
     </div>
     <div :class="'col-md-5 ' + getOrder(index, 1)">
-      <img
-        class="
+      <img class="
           bd-placeholder-img bd-placeholder-img-lg
           featurette-image
           img-fluid
           mx-auto
-        "
-        width="500"
-        height="500"
-        :src="image"
-        alt=""
-        loading="lazy"
-      >
+          w-1/2
+        " :src="image" alt="" loading="lazy">
     </div>
   </div>
   <hr class="featurette-divider" />
@@ -62,7 +54,8 @@ export default {
   -moz-user-select: none;
   user-select: none;
 }
-.read-more{
+
+.read-more {
   text-transform: uppercase;
 }
 
@@ -80,7 +73,8 @@ h2 {
 ------------------------- */
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 5rem 0;
+  /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -111,6 +105,7 @@ h2 {
     padding-top: 2rem;
     font-weight: bold;
   }
+
   .featurette-divider {
     margin: 2rem 0;
   }
