@@ -13,6 +13,10 @@ import Prelis10 from "../assets/images/gallery/prelis10.jpg";
 import Prelis11 from "../assets/images/gallery/prelis11.jpg";
 import Prelis12 from "../assets/images/gallery/prelis12.jpg";
 import Prelis13 from "../assets/images/gallery/prelis13.jpg";
+import judges from "../assets/images/gallery/judges.jpg";
+import group_pic_1 from "../assets/images/gallery/group_pic_1.jpg"
+import crowd_1 from "../assets/images/gallery/crowd_1.jpg"
+
 import Prelis14 from "../assets/images/gallery/prelis14.jpg";
 
 export default {
@@ -33,9 +37,9 @@ export default {
         Prelis9,
         Prelis10,
         Prelis11,
-        Prelis12,
-        Prelis13,
-        Prelis14,
+        crowd_1,
+        group_pic_1,
+        judges,
       ],
     };
   },
