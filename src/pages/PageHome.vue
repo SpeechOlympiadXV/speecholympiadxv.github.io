@@ -15,7 +15,7 @@ import Prelis1 from "../assets/images/gallery/prelis1.jpg";
 import Prelis2 from "../assets/images/gallery/prelis2.jpg";
 import Prelis3 from "../assets/images/gallery/prelis3.jpg";
 import { animateOnScroll } from "../aos.js";
-
+import Blogs from './PageTest.vue';
 export default {
   components: {
     AppFeaturette,
@@ -23,6 +23,7 @@ export default {
     AppCarousel,
     Doodle,
     AppGallery,
+    Blogs
   },
   mounted() {
     var testimonialOut = null;
@@ -42,26 +43,26 @@ export default {
       galleryImages: [Prelis1, Prelis2, Prelis3],
       featurettes: [
         {
-          heading: "What is Speech Olympiad XV ?",
+          heading: "What is Speech Olympiad?",
           headingEnd: "",
-          text: "Learn more about the premier intra-university speech competition of the University of Moratuwa, the structure of the competition and its theme for the year 2022. True excitement awaits as Speech Olympiad returns to a physical context this year!",
+          text: "The Speech Olympiad stands as the flagship occasion hosted by the Gavel Club at the University of Moratuwa. As the sole English language speech competition within the university !",
           image: HomePage_About,
-          urlString: "#about",
-        },
-        {
-          heading: "Walk the Path of a Champion",
-          headingEnd: "",
-          text: "Experience the journey of Speech Olympiad through the story of an ambitious and talented champion. Toastmaster Mohamed Yasir shares his fond memories from Speech Olympiad and invites you to grab your opportunity at SOXV.",
-          image: HomePage_PathOfChampion,
-          urlString: "#champions-story",
-        },
-        {
-          heading: "A Guide to Becoming a Better Speaker",
-          headingEnd: "",
-          text: "From the basic do’s and don’ts of public speaking to the delicate intricacies of a winning speech, the champion of SOIX Dr. Samadhi Poornima guides you through the art of becoming a great public speaker.",
-          image: HomePage_TechnicalTips,
-          urlString: "#technical-tips",
-        },
+          urlString: "#about",}
+        // },
+        // {
+        //   heading: "Walk the Path of a Champion",
+        //   headingEnd: "",
+        //   text: "Experience the journey of Speech Olympiad through the story of an ambitious and talented champion. Toastmaster Mohamed Yasir shares his fond memories from Speech Olympiad and invites you to grab your opportunity at SOXV.",
+        //   image: HomePage_PathOfChampion,
+        //   urlString: "#champions-story",
+        // },
+        // {
+        //   heading: "A Guide to Becoming a Better Speaker",
+        //   headingEnd: "",
+        //   text: "From the basic do’s and don’ts of public speaking to the delicate intricacies of a winning speech, the champion of SOIX Dr. Samadhi Poornima guides you through the art of becoming a great public speaker.",
+        //   image: HomePage_TechnicalTips,
+        //   urlString: "#technical-tips",
+        // },
       ],
       testimonials: [
         {
@@ -119,6 +120,12 @@ export default {
         :urlString="featurette.urlString"
       />
 
+      <div class="col-12 mb-2">
+        <h1 class="featurette-heading mt-0 mb-4">Blogs</h1>
+      </div>
+
+      <Blogs :limit="50" />
+      <br /><br />
       <!--Testimonials-->
       <div class="row mb-5">
         <div class="col-12 mb-2">
@@ -128,17 +135,10 @@ export default {
         <!-- Three columns of cards  -->
         <div class="col-12 mb-2">
           <transition-group name="list" tag="div" class="row">
-            <div
-              class="col-lg-4 d-flex justify-content-center"
-              v-for="testimonial in testimonials"
-              :key="'testimonial' + testimonial.key"
-            >
-              <AppTestimonialCard
-                :title="testimonial.title"
-                :imageSrc="testimonial.imageSrc"
-                :body="testimonial.body"
-                :subtitle="testimonial.subtitle"
-              />
+            <div class="col-lg-4 d-flex justify-content-center" v-for="testimonial in testimonials"
+              :key="'testimonial' + testimonial.key">
+              <AppTestimonialCard :title="testimonial.title" :imageSrc="testimonial.imageSrc" :body="testimonial.body"
+                :subtitle="testimonial.subtitle" />
             </div>
             <!-- /.col-lg-4 -->
           </transition-group>
@@ -169,6 +169,7 @@ export default {
   /* rtl:remove */
   letter-spacing: -0.05rem;
 }
+
 .hidden {
   display: none !important;
 }
@@ -178,10 +179,12 @@ export default {
 .list-leave-active {
   transition: all 0.5s ease;
 }
+
 .list-enter-from,
 .list-leave-to {
   opacity: 0;
 }
+
 .list-leave-active {
   position: absolute;
 }
@@ -203,6 +206,7 @@ export default {
     padding-top: 2rem;
     font-weight: bold;
   }
+
   .app-testimonial-card {
     transition-delay: 0s;
   }
@@ -210,8 +214,7 @@ export default {
 
 .app-testimonial-card {
   /*noinspection CssUnresolvedCustomProperty*/
-  transition-delay: calc(
-    200ms * var(--order)
-  ); /*order is declared as an inline variable*/
+  transition-delay: calc(200ms * var(--order));
+  /*order is declared as an inline variable*/
 }
 </style>

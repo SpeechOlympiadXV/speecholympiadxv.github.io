@@ -1,13 +1,13 @@
 <script>
 const getActiveItem = () => {
   let hashInd = window.location.hash.slice(1);
-      return [
-        "",
-        "about",
-        "champions-story",
-        "technical-tips",
-      ].indexOf(hashInd);
-}
+  return [
+    "",
+    "about",
+    "champions-story",
+    "technical-tips",
+  ].indexOf(hashInd);
+};
 export default {
   data() {
     return {
@@ -15,33 +15,43 @@ export default {
         {
           name: "Home",
           url: "#",
-          newTab: false
+          newTab: false,
         },
         {
           name: "About",
           url: "#about",
-          newTab: false
+          newTab: false,
         },
         {
           name: "Champion's Story",
           url: "#champions-story",
-          newTab: false
+          newTab: false,
         },
         {
           name: "Technical Tips",
           url: "#technical-tips",
-          newTab: false
+          newTab: false,
         },
         {
           name: "Gallery",
           url: "#gallery",
-          newTab: false
+          newTab: false,
         },
         {
           name: "Rules & Regulations",
           url: "https://bit.ly/SOXV_Rules",
-          newTab: true
-        }
+          newTab: true,
+        },
+        {
+          name: "Blogs",
+          url: "#blogs",
+          newTab: false,
+        },
+        {
+          name: "Register",
+          url: "#form2",
+          newTab: false,
+        },
       ],
       activeItem: getActiveItem(),
     };
@@ -51,7 +61,7 @@ export default {
     clickHandler(idx) {
       //collapse navbar for mobile view before changing active item.
       // Click on the button to do so
-      if(window.matchMedia("(max-width: 768px)").matches){
+      if (window.matchMedia("(max-width: 768px)").matches) {
         // Viewport is less or equal to 992 pixels wide (md)
         document.querySelector(".navbar-toggler").click();
       }
@@ -61,7 +71,7 @@ export default {
   mounted() {
     window.addEventListener("hashchange", () => {
       let hashInd = window.location.hash.slice(1);
-      this.activeItem = getActiveItem()
+      this.activeItem = getActiveItem();
     });
   },
 };
@@ -69,16 +79,12 @@ export default {
 
 <template>
   <!-- render menu items from list -->
-  <li class="nav-item" v-for="(item, index) in items" :key="index">
+  <li class="nav-item" v-for="(item, index) in items" :key="index" style="padding : 1px; border: none ;">
     <!-- active class for selected menu item -->
-    <div @click="clickHandler(index)" :class="{ active: index === activeItem }">
-      <a class="nav-link" :href="item.url" :target="item.newTab ? '_blank' : ''" >{{ item.name }}</a>
+    <div @click="clickHandler(index)" :class="{ 'font-bold text-gray-400': index === activeItem }">
+      <a class="nav-link" :href="item.url" :target="item.newTab ? '_blank' : ''">{{ item.name }}</a>
     </div>
   </li>
 </template>
 
-<style scoped>
-.active {
-  font-weight: bold;
-}
-</style>
+<style scoped></style>
