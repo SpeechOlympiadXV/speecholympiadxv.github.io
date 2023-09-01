@@ -22,16 +22,16 @@ export default {
           title: "Contact",
           links: [
             {
-              text: "Umesha Tilakarathna : +94 77 067 6760",
-              href: "tel: +94 77 067 6760",
+              text: "Chemini Mallikarachchi : +94 70 159 6603",
+              href: "tel: +94 70 159 6603",
             },
             {
-              text: "Inodee Fernando : +94 76 603 3004",
-              href: "tel: +94 76 603 3004"
+              text: "Ameera Weerasuriya : +94 71 135 6855",
+              href: "tel: +94 71 135 6855"
             },
             {
-              text: "Email : speecholympiadxv@gmail.com",
-              href: "mailto: speecholympiadxv@gmail.com"
+              text: "Email : speecholympiadxvi@gmail.com",
+              href: "mailto: speecholympiadxvi@gmail.com"
             },
           ],
         },
@@ -107,7 +107,7 @@ export default {
           my-2 my-lg-0
         "
       >
-        <span>© Speech Olympiad 2022</span>
+        <span>© Speech Olympiad 2023</span>
       </div>
       <div class="col-md-8 col-12 order-first order-md-last">
         <div class="row">

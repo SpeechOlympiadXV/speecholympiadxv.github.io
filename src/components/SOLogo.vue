@@ -1,5 +1,5 @@
 <script>
-import SOLogo from "../assets/images/SOXIV_LOGO_White-small.png";
+import SOLogo from "../assets/images/new_logo.png";
 
 export default {
   data() {
