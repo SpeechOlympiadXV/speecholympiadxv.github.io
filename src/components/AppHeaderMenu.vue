@@ -47,11 +47,11 @@ export default {
           url: "#blogs",
           newTab: false,
         },
-        {
-          name: "Register",
-          url: "#form2",
-          newTab: false,
-        },
+        // {
+        //   name: "Register",
+        //   url: "#form2",
+        //   newTab: false,
+        // },
       ],
       activeItem: getActiveItem(),
     };
