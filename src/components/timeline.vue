@@ -47,7 +47,7 @@ export default {
 }
 </script>
 <template>
-    <div class=" w-full justify-center flex  items-center bg-gradient-to-br from-black to-gray-800">
+    <div class=" w-full justify-center flex  items-center bg-gradient-to-br to-transparent from-zinc-900">
         <div class="md:w-1/2 w-full py-4 px-5">
             <v-timeline align="start">
                 <v-timeline-item v-for="(date, i) in years" :key="i" :dot-color="date.color" size="small">

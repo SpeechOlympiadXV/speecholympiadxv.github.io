@@ -47,7 +47,7 @@ export default {
         {
           heading: "What is Speech Olympiad?",
           headingEnd: "",
-          text: "The Speech Olympiad stands as the flagship occasion hosted by the Gavel Club at the University of Moratuwa. As the sole English language speech competition within the university !",
+          text: "Speech Olympiad stands as the flagship occasion hosted by the Gavel Club at the University of Moratuwa. As the sole English language speech competition within the university !",
           image: HomePage_About,
           urlString: "#about",
         }
@@ -121,7 +121,7 @@ export default {
 
       <timeline />
       <div class="col-12 mb-2 mt-6">
-        <h1 class="featurette-heading mt-0 mb-4">Blogs</h1>
+        <h1 class="featurette-heading mt-0 mb-4">Past Experience</h1>
       </div>
 
       <Blogs :limit="2" />
