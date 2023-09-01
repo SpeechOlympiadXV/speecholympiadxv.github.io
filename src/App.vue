@@ -16,7 +16,7 @@ import PageForm from "./pages/PageForm.vue";
 import { useSanityClient } from 'vue-sanity'
 import PageAdmin from "./pages/PageAdmin.vue";
 import PageFormNew from "./pages/PageFormNew.vue";
-import Animation from './components/imageAnimation.vue';
+
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
@@ -27,7 +27,7 @@ const routes = {
   "/form": PageForm,
   "/admin": PageAdmin,
   "/form2": PageFormNew,
-  "/rr": Animation
+
 };
 
 export default {
