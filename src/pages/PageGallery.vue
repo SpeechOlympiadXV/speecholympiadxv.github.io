@@ -14,9 +14,14 @@ import Prelis11 from "../assets/images/gallery/prelis11.jpg";
 import Prelis12 from "../assets/images/gallery/prelis12.jpg";
 import Prelis13 from "../assets/images/gallery/prelis13.jpg";
 import judges from "../assets/images/gallery/judges.jpg";
-import group_pic_1 from "../assets/images/gallery/group_pic_1.jpg"
-import crowd_1 from "../assets/images/gallery/crowd_1.jpg"
-import Prelis14 from "../assets/images/gallery/prelis14.jpg";
+import group_pic_1 from "../assets/images/gallery/group_pic_1.jpg";
+import crowd_1 from "../assets/images/gallery/crowd_1.jpg";
+import crowd_2 from "../assets/images/gallery/crowd_2.jpg";
+import crowd_3 from "../assets/images/gallery/crowd_3.jpeg";
+import trophies from "../assets/images/gallery/trophies.jpg";
+import trophy_2 from "../assets/images/gallery/trophy_2.jpg";
+import trophy_3 from "../assets/images/gallery/trophy_3.jpg";
+import group_pic_2 from "../assets/images/gallery/group_pic_2.jpg";
 
 export default {
   components: {
@@ -25,18 +30,15 @@ export default {
   data() {
     return {
       images: [
-        Prelis1,
-        Prelis2,
-        Prelis3,
-        Prelis4,
-        Prelis5,
-        Prelis6,
-        Prelis7,
-        Prelis8,
-        Prelis9,
-        Prelis10,
-        Prelis11,
+        trophies,
         crowd_1,
+        group_pic_2,
+        crowd_2,
+        trophy_2,
+        crowd_3,
+        Prelis9,
+        Prelis13,
+        trophy_3,
         group_pic_1,
         judges,
       ],
