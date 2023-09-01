@@ -1,28 +1,22 @@
 <script>
 import AppGallery from "../components/AppGallery.vue";
-import Prelis1 from "../assets/images/gallery/prelis1.jpg";
-import Prelis2 from "../assets/images/gallery/prelis2.jpg";
-import Prelis3 from "../assets/images/gallery/prelis3.jpg";
-import Prelis4 from "../assets/images/gallery/prelis4.jpg";
-import Prelis5 from "../assets/images/gallery/prelis5.jpg";
-import Prelis6 from "../assets/images/gallery/prelis6.jpg";
-import Prelis7 from "../assets/images/gallery/prelis7.jpg";
-import Prelis8 from "../assets/images/gallery/prelis8.jpg";
 import Prelis9 from "../assets/images/gallery/prelis9.jpg";
-import Prelis10 from "../assets/images/gallery/prelis10.jpg";
-import Prelis11 from "../assets/images/gallery/prelis11.jpg";
-import Prelis12 from "../assets/images/gallery/prelis12.jpg";
 import Prelis13 from "../assets/images/gallery/prelis13.jpg";
 import judges from "../assets/images/gallery/judges.jpg";
+import award_2 from "../assets/images/gallery/award_2.jpg";
 import group_pic_1 from "../assets/images/gallery/group_pic_1.jpg";
 import crowd_1 from "../assets/images/gallery/crowd_1.jpg";
 import crowd_2 from "../assets/images/gallery/crowd_2.jpg";
 import crowd_3 from "../assets/images/gallery/crowd_3.jpeg";
+import thulasi from "../assets/images/gallery/thulasi_1.jpg";
+import crowd_5 from "../assets/images/gallery/crowd_5.jpg";
 import trophies from "../assets/images/gallery/trophies.jpg";
 import trophy_2 from "../assets/images/gallery/trophy_2.jpg";
 import trophy_3 from "../assets/images/gallery/trophy_3.jpg";
 import group_pic_2 from "../assets/images/gallery/group_pic_2.jpg";
-
+import ceremony_1 from "../assets/images/gallery/ceremony_1.jpg";
+import stage_1 from "../assets/images/gallery/stage_1.jpg";
+import winner_1 from "../assets/images/gallery/winner_1.jpg";
 export default {
   components: {
     AppGallery,
@@ -30,14 +24,19 @@ export default {
   data() {
     return {
       images: [
-        trophies,
+        thulasi,
         crowd_1,
+        trophies,
+        award_2,
         group_pic_2,
         crowd_2,
         trophy_2,
         crowd_3,
         Prelis9,
-        Prelis13,
+        stage_1,
+        ceremony_1,
+        crowd_5,
+        winner_1,
         trophy_3,
         group_pic_1,
         judges,

@@ -11,9 +11,9 @@ import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonia
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
 import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg";
 import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_asitha.jpg";
-import Prelis1 from "../assets/images/gallery/prelis1.jpg";
-import Prelis2 from "../assets/images/gallery/prelis2.jpg";
-import Prelis3 from "../assets/images/gallery/prelis3.jpg";
+import Prelis1 from "../assets/images/gallery/award_2.jpg";
+import Prelis2 from "../assets/images/gallery/trophy_3.jpg";
+import Prelis3 from "../assets/images/gallery/group_pic_1.jpg";
 import timeline from "../components/timeline.vue";
 import { animateOnScroll } from "../aos.js";
 import Blogs from './PageTest.vue';
