@@ -1,186 +1,168 @@
 <template>
-    <div class="border-bottom registration-form">
-        <div class="gavelium-image-wrapper">
-            <img :src="Background.filename" :alt="Background.alt" class="gavelium-image">
-        </div>
-        <div class="cool-form">
-            <div class="form-field"
-            v-if="eightV">
+    <div class="relative min-h-screen bg-black">
+        <img :src="Background.filename" :alt="Background.alt" class="w-full sm:w-1/2 mx-auto">
+        <div class="absolute md:top-1/2 i top-1/2 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex"
+            :style="{ 'display': eightV ? '' : 'none' }">
             <!-- <imageAnimation /> -->
-            
-            <div class="d-flex flex-col h-100 items-center justify-center">
-                <div class="d-flex">
-                    <transition name="bon" mode="out-in">
-                    <img :src="currentImage" :key="currentImage" class="image" />
+            <transition name="bon" mode="out-in">
+                <img :src="currentImage" :key="currentImage" class="image" />
+            </transition>
+            <div class="flex flex-col items-center justify-center ml-4 w-1/2">
+                <transition name="bounce" mode="out-in">
+                    <p class="text-white text-3xl ml-2" v-html="eight.fullText" :key="fadeAnimation"
+                        :hidden="!fadeAnimation">
+                    </p>
                 </transition>
-                </div>
-                <div class="d-flex my-3">
-                    <transition name="bounce" mode="out-in">
-                        <p class="text-5xl font-bold mb-4 text-center" style="line-height: 1.1em;" 
-                        v-html="eight.fullText" :key="fadeAnimation" v-if="fadeAnimation">
-                        </p>
-                    </transition>
-                </div>
 
                 <!-- Additional text elements can be added here -->
 
-                <div class="d-flex w-100 justify-content-center align-items-center">
-                    <div class="">
-                        <transition name="slide-fade" mode="out-in">
-                    <img :src="sologo" class="soLogo" style="
-                    aspect-ratio: 1/1;" :key="fadeAnimation" v-if="fadeAnimation" />
+                <transition name="slide-fade" mode="out-in">
+                    <img :src="sologo" class="w-32" :key="fadeAnimation" :hidden="!fadeAnimation" />
                 </transition>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="form-field"
-                v-if="firstV">
-
-                <div class="question">
-                    <p class="" v-html="first.typedText"></p>
-                </div>
-                <div class="answer">
-                    <input
-                        class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                        type="text" placeholder="Enter your full name here" v-model="fullName" @keyup.enter="firstB(2)" />
-                    <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                        @click="firstB(2)">
-                        &rarr;
-                    </button>
-                </div>
-
-            </div>
-            <div class="form-field"
-                v-if="secondV">
-                <div class="question">
-                    <p class="" v-html="second.typedText"></p>
-                </div>
-                <div class="answer">
-                    <input
-                        class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                        type="text" placeholder="Enter your Uni id here" v-model="universityId" @keyup.enter="firstB(3)" />
-                    <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                        @click="firstB(3)">
-                        &rarr;
-                    </button>
-                </div>
-
-            </div>
-            <div class="form-field"
-                v-if="thirdV">
-                <div class="question">
-                    <p class="" v-html="third.typedText"></p>
-                </div>
-                <div class="answer">
-                    <input
-                        class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                        type="mobile" placeholder="Enter your mobile number" v-model="phoneNumber" @keyup.enter="firstB(4)" />
-                    <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                        @click="firstB(4)">
-                        &rarr;
-                    </button>
-                </div>
-
-            </div>
-            <div class="form-field"
-                v-if="fourthV">
-                <div class="question">
-                    <p class="" v-html="fourth.typedText"></p>
-                </div>
-                <div class="answer">
-                    <input
-                        class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                        type="email" placeholder="Enter your email" v-model="email" @keyup.enter="firstB(5)" />
-                    <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                        @click="firstB(5)">
-                        &rarr;
-                    </button>
-                </div>
-
-            </div>
-            <div class="form-field"
-                v-if="fifthV">
-                <div class="question">
-                    <p class="" v-html="fifth.typedText"></p>
-                </div>
-                <div class="answer">
-
-                    <select v-model="faculty"
-                        class="block appearance-none w-full border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14"
-                        id="grid-state">
-                        <option>Faculty of Engineering</option>
-                        <option>Faculty of Information Technology</option>
-                        <option>Faculty of Architecture</option>
-                        <option>Faculty of Business</option>
-                        <option>Faculty of Medicine</option>
-                    </select>
-                    <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                        @click="firstB(6)">
-                        &rarr;
-                    </button>
-                </div>
-
-            </div>
-            <div class="form-field"
-                v-if="sixthV">
-                <div class="question">
-                    <p class="" v-html="sixth.typedText"></p>
-                </div>
-                <div class="answer">
-                    <input
-                        class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                        type="email" placeholder="Ex : CSE" v-model="department" @keyup.enter="firstB(7)" />
-                    <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black hover:bg-gray-300"
-                        @click="firstB(7)">
-                        &rarr;
-                    </button>
-                </div>
-
-            </div>
-            <div class="form-field"
-                v-if="seventhV">
-                <div class="question">
-                    <p class="" v-html="seventh.typedText"></p>
-                </div>
-                <div class="answer">
-
-                    <select v-model="batch"
-                        class="block appearance-none w-full border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14"
-                        id="grid-state">
-
-                        <option>2019</option>
-                        <option>2020</option>
-                        <option>2021</option>
-                        <option>2022</option>
-                    </select>
-                    <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                        @click="finish">
-                        &rarr;
-                    </button>
-                </div>
-
             </div>
         </div>
+
+        <div class="absolute md:top-1/3 i top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+            v-if="firstV">
+
+            <p class="text-3xl  text-gray-200 bg-black" v-html="first.typedText"></p>
+            <div class="relative flex items-center mt-4">
+                <input
+                    class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
+                    type="text" placeholder="Enter your full name here" v-model="fullName" @keyup.enter="firstB(2)" />
+                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
+                    @click="firstB(2)">
+                    &rarr;
+                </button>
+            </div>
+
+        </div>
+        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+            v-if="secondV">
+            <p class="text-3xl  text-gray-200 bg-black" v-html="second.typedText"></p>
+            <div class="relative flex items-center mt-4">
+                <input
+                    class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
+                    type="text" placeholder="Enter your Uni id here" v-model="universityId" @keyup.enter="firstB(3)" />
+                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
+                    @click="firstB(3)">
+                    &rarr;
+                </button>
+            </div>
+
+        </div>
+        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+            v-if="thirdV">
+            <p class="text-3xl  text-gray-200 bg-black" v-html="third.typedText"></p>
+            <div class="relative flex items-center mt-4">
+                <input
+                    class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
+                    type="mobile" placeholder="Enter your mobile number" v-model="phoneNumber" @keyup.enter="firstB(4)" />
+                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
+                    @click="firstB(4)">
+                    &rarr;
+                </button>
+            </div>
+
+        </div>
+        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+            v-if="fourthV">
+            <p class="text-3xl text-gray-200 bg-black" v-html="fourth.typedText"></p>
+            <div class="relative flex items-center mt-4">
+                <input
+                    class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
+                    type="email" placeholder="Enter your email" v-model="email" @keyup.enter="firstB(5)" />
+                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
+                    @click="firstB(5)">
+                    &rarr;
+                </button>
+            </div>
+
+        </div>
+        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+            v-if="fifthV">
+            <p class="text-3xl text-gray-200 bg-black" v-html="fifth.typedText"></p>
+            <div class="relative flex items-center mt-4">
+
+                <select v-model="faculty"
+                    class="block appearance-none w-full border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14"
+                    id="grid-state">
+                    <option>Faculty of Engineering</option>
+                    <option>Faculty of Information Technology</option>
+                    <option>Faculty of Architecture</option>
+                    <option>Faculty of Business</option>
+                    <option>Faculty of Medicine</option>
+                </select>
+                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
+                    @click="firstB(6)">
+                    &rarr;
+                </button>
+            </div>
+
+        </div>
+        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+            v-if="sixthV">
+            <p class="text-3xl  text-gray-200 bg-black" v-html="sixth.typedText"></p>
+            <div class="relative flex items-center mt-4">
+                <input
+                    class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
+                    type="email" placeholder="Ex : CSE" v-model="department" @keyup.enter="firstB(7)" />
+                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black hover:bg-gray-300"
+                    @click="firstB(7)">
+                    &rarr;
+                </button>
+            </div>
+
+        </div>
+        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+            v-if="seventhV">
+            <p class="text-3xl text-gray-200 bg-black" v-html="seventh.typedText"></p>
+            <div class="relative flex items-center mt-4">
+
+                <select v-model="batch"
+                    class="block appearance-none w-full border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14"
+                    id="grid-state">
+
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                </select>
+                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
+                    @click="finish">
+                    &rarr;
+                </button>
+            </div>
+
+        </div>
+
+        <!-- <div v-if="showMessage"
+            class=" absolute md:top-0 top-0  md:left-1/2 left-1/2  bg-pink-900 w-full rounded-lg p-6 shadow-md">
+
+            <p class="text-white text-lg font-semibold mb-2">Success!</p>
+            <p class="text-white text-sm">Congragulations for taking this step 🥳.</p>
+            <button @click="closeMessage"
+                class="mt-4 text-sm text-white underline cursor-pointer focus:outline-none">Close</button>
+        </div> -->
     </div>
 </template>
   
   
   
 <script>
-import dragon1 from '../assets/images/dragon1.png'
-import dragon2 from '../assets/images/dragon2.png'
+import dragon1 from '../assets/images/dragon1-2.png'
+import dragon2 from '../assets/images/dragon2-2.png'
 import Background from "../assets/images/gavelium2.jpg"
 import SOlogo from "../assets/images/SOXVI.jpg"
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import SOLogo from "../components/SOLogo.vue";
 import { collection, addDoc, doc, setDoc } from "firebase/firestore"
-import imageAnimation from "../components/imageAnimation.vue";
+
 export default {
     name: "AnimatedText",
     components: {
-        imageAnimation,
+
 
     },
     data() {
@@ -408,84 +390,6 @@ export default {
   
   
 <style scoped>
-.registration-form{
-    display: flex;
-}
-.gavelium-image{
-    display: flex;
-    flex:1;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
-    width: auto;
-    object-fit: contain;
-    object-position: top;
-}
-.gavelium-image-wrapper{
-    /* opacity reduce from halfway through from left to right */
-    background-color: linear-gradient();
-}
-
-.cool-form{
-    flex: 1;
-    padding: 3rem;
-    display: flex;
-}
-.cool-form .form-field{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.cool-form .form-field > .question{
-    display: flex;
-    align-items: end;
-    margin-bottom: 1.25rem;
-    height: 50%;
-}
-
-.question p{
-    font-weight: bold;
-    font-size: 3.5em;
-    line-height: 1.2em;
-    letter-spacing: -0.5%;
-    overflow-wrap: break-word;
-    @media (max-width: 1024px) {
-        font-size: 2em;
-    }
-    @media (max-width: 768px) {
-        font-size: 2em;
-    }
-}
-
-.cool-form .form-field > .answer {
-    align-items: start;
-    height: auto;
-}
-
-.soLogo{
-    width: 200px;
-}
-
-@media (max-width: 768px) {
-    .soLogo{
-        width: 100px;
-    }
-    .gavelium-image{
-        height: 95vh;
-        object-fit: fill;
-    }
-    .cool-form{
-        position: absolute;
-        top: 0;
-        left:0;
-        height: 100%;
-        padding: 1.5rem;
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 100%;
-    }
-}
-
 @keyframes typing {
     from {
         width: 0;

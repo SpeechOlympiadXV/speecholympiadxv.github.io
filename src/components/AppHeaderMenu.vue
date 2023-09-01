@@ -39,7 +39,7 @@ export default {
         },
         {
           name: "Rules & Regulations",
-          url: "https://bit.ly/SOXV_Rules",
+          url: "https://bit.ly/45vWx1K",
           newTab: true,
         },
         {
@@ -47,11 +47,11 @@ export default {
           url: "#blogs",
           newTab: false,
         },
-        {
-          name: "Register",
-          url: "#form2",
-          newTab: false,
-        },
+        // {
+        //   name: "Register",
+        //   url: "#form2",
+        //   newTab: false,
+        // },
       ],
       activeItem: getActiveItem(),
     };
