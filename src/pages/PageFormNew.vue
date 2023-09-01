@@ -397,10 +397,8 @@ export default {
 }
 
 .image {
-    width: 230px;
-    height: 300px;
-    margin-left: 3rem;
-    ;
+    height: 350px;
+    object-fit: cover;
     /* filter: blur(1px); */
     /* Initial blur effect */
 }
