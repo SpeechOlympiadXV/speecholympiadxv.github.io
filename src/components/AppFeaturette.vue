@@ -83,6 +83,7 @@ h2 {
   line-height: 1;
   /* rtl:remove */
   letter-spacing: -0.05rem;
+  font-size: 30px;
 }
 
 /* RESPONSIVE CSS

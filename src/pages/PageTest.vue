@@ -92,7 +92,7 @@ export default {
     </div>
 </template>
   
-  
+
 <script>
 import sanity from "../assets/client";
 import AppTestimonialCard from "../components/AppTestimonialCard.vue";
@@ -104,9 +104,12 @@ const imageBuilder = imageUrlBuilder(sanity);
 
 
 export default {
-    name: "Home",
+    name: "Blogs",
     props: {
-        limit: Number
+        limit: {
+            type: Number,
+            default: 50 // Set a default value here if needed
+        }
     },
     data() {
         return {
@@ -117,7 +120,7 @@ export default {
             posts: [],
             post: [],
             blocks: [],
-            limit: 50
+
         };
     },
 

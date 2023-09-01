@@ -95,7 +95,7 @@ let doodle = {
       // }
     },
     setPathStrokeColor: function (p) {
-      p.style.stroke = this.colorScheme === "dark" ? "white" : "black";
+      p.style.stroke = this.colorScheme === "dark" ? "gold" : "black";
     },
     drawPath: function (path) {
       // Get length of path

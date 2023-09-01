@@ -124,7 +124,7 @@ export default {
         <h1 class="featurette-heading mt-0 mb-4">Blogs</h1>
       </div>
 
-      <Blogs :limit="50" />
+      <Blogs :limit="2" />
       <br /><br />
       <!--Testimonials-->
       <div class="row mb-5">
