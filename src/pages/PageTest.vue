@@ -66,18 +66,18 @@ export default {
         </div>
         <div v-if="loadBlog" class="grid grid-cols-2 md:grid-cols- lg:grid-cols-3 gap-2 px-4 w-full">
             <div v-for="post in posts" :key="post._id" class="post-item">
-                <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div class="max-w-sm border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700">
                     <a href="#">
                         <img class="w-full h-auto" :src="imageUrlFor(post.image)" alt="" />
                     </a>
                     <div class="p-2">
                         <a href="#">
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ post.title
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">{{ post.title
                             }}</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ post.description }}</p>
+                        <p class="mb-3 font-normal text-gray-400">{{ post.description }}</p>
                         <a @click="handleReadmore(post.slug.current)"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white  rounded-lg  focus:ring-4 focus:outline-none  bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">
                             Read more
                             <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 14 10">
