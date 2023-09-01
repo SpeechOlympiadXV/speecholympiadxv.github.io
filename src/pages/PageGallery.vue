@@ -17,6 +17,7 @@ import group_pic_2 from "../assets/images/gallery/group_pic_2.jpg";
 import ceremony_1 from "../assets/images/gallery/ceremony_1.jpg";
 import stage_1 from "../assets/images/gallery/stage_1.jpg";
 import winner_1 from "../assets/images/gallery/winner_1.jpg";
+
 export default {
   components: {
     AppGallery,
