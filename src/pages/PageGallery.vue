@@ -16,7 +16,6 @@ import Prelis13 from "../assets/images/gallery/prelis13.jpg";
 import judges from "../assets/images/gallery/judges.jpg";
 import group_pic_1 from "../assets/images/gallery/group_pic_1.jpg"
 import crowd_1 from "../assets/images/gallery/crowd_1.jpg"
-
 import Prelis14 from "../assets/images/gallery/prelis14.jpg";
 
 export default {
