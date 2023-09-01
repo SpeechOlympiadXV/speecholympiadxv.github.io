@@ -14,6 +14,7 @@ import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_a
 import Prelis1 from "../assets/images/gallery/prelis1.jpg";
 import Prelis2 from "../assets/images/gallery/prelis2.jpg";
 import Prelis3 from "../assets/images/gallery/prelis3.jpg";
+import timeline from "../components/timeline.vue";
 import { animateOnScroll } from "../aos.js";
 import Blogs from './PageTest.vue';
 export default {
@@ -23,7 +24,8 @@ export default {
     AppCarousel,
     Doodle,
     AppGallery,
-    Blogs
+    Blogs,
+    timeline
   },
   mounted() {
     var testimonialOut = null;
@@ -47,7 +49,8 @@ export default {
           headingEnd: "",
           text: "The Speech Olympiad stands as the flagship occasion hosted by the Gavel Club at the University of Moratuwa. As the sole English language speech competition within the university !",
           image: HomePage_About,
-          urlString: "#about",}
+          urlString: "#about",
+        }
         // },
         // {
         //   heading: "Walk the Path of a Champion",
@@ -109,18 +112,15 @@ export default {
     <div class="container marketing">
       <Doodle />
       <!-- START THE FEATURETTES -->
-      <AppFeaturette
-        v-for="(featurette, i) in featurettes"
-        :index="i"
-        :key="i"
-        :heading="featurette.heading"
-        :heading-end="featurette.headingEnd"
-        :text="featurette.text"
-        :image="featurette.image"
-        :urlString="featurette.urlString"
-      />
+      <AppFeaturette v-for="(featurette, i) in featurettes" :index="i" :key="i" :heading="featurette.heading"
+        :heading-end="featurette.headingEnd" :text="featurette.text" :image="featurette.image"
+        :urlString="featurette.urlString" />
+      <div class="col-12 mb-2 mt-6">
+        <h1 class="featurette-heading mt-0 mb-4">Timeline</h1>
+      </div>
 
-      <div class="col-12 mb-2">
+      <timeline />
+      <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Blogs</h1>
       </div>
 
@@ -187,6 +187,10 @@ export default {
 
 .list-leave-active {
   position: absolute;
+}
+
+.featurette-heading {
+  font-size: 30px;
 }
 
 @media (min-width: 40em) {
