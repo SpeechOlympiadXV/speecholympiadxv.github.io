@@ -2,24 +2,26 @@
     <div class="relative min-h-screen bg-black">
         <img :src="Background.filename" :alt="Background.alt" class="w-full sm:w-1/2 mx-auto">
         <div class="absolute md:top-1/2 i top-1/2 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex"
-            v-if="eightV">
+            :style="{ 'display': eightV ? '' : 'none' }">
             <!-- <imageAnimation /> -->
             <transition name="bon" mode="out-in">
                 <img :src="currentImage" :key="currentImage" class="image" />
             </transition>
             <div class="flex flex-col items-center justify-center ml-4 w-1/2">
                 <transition name="bounce" mode="out-in">
-                    <p class="text-white text-3xl ml-2" v-html="eight.fullText" :key="fadeAnimation" v-if="fadeAnimation">
+                    <p class="text-white text-3xl ml-2" v-html="eight.fullText" :key="fadeAnimation"
+                        :hidden="!fadeAnimation">
                     </p>
                 </transition>
 
                 <!-- Additional text elements can be added here -->
 
                 <transition name="slide-fade" mode="out-in">
-                    <img :src="sologo" class="w-32" :key="fadeAnimation" v-if="fadeAnimation" />
+                    <img :src="sologo" class="w-32" :key="fadeAnimation" :hidden="!fadeAnimation" />
                 </transition>
             </div>
         </div>
+
         <div class="absolute md:top-1/3 i top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="firstV">
 
@@ -148,8 +150,8 @@
   
   
 <script>
-import dragon1 from '../assets/images/dragon1.png'
-import dragon2 from '../assets/images/dragon2.png'
+import dragon1 from '../assets/images/dragon1-2.png'
+import dragon2 from '../assets/images/dragon2-2.png'
 import Background from "../assets/images/gavelium2.jpg"
 import SOlogo from "../assets/images/SOXVI.jpg"
 import { initializeApp } from "firebase/app";
@@ -395,8 +397,10 @@ export default {
 }
 
 .image {
-    width: 300px;
+    width: 230px;
     height: 300px;
+    margin-left: 3rem;
+    ;
     /* filter: blur(1px); */
     /* Initial blur effect */
 }

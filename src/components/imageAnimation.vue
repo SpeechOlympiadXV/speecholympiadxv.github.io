@@ -1,56 +1,43 @@
-<template>
-    <div class="w-full">
-        <!-- <transition name="image-fade" mode="out-in"> -->
-        <img :src="currentImage" :key="currentImage" class="image" />
-        <!-- </transition> -->
-    </div>
-</template>
-  
 <script>
-import dragon1 from '../assets/images/dragon1.png'
-import dragon2 from '../assets/images/dragon2.png'
 export default {
-
-    data() {
-        return {
-            currentImage: dragon1,
-        };
-    },
-    methods: {
-        switchImage() {
-            // Simulate loading a new image
-            setTimeout(() => {
-                this.currentImage = dragon2;
-            }, 1500); // 1 second
-        },
-    },
-    mounted() {
-        this.switchImage();
-    },
-};
+    data: () => ({
+        items: [
+            {
+                color: 'red-lighten-2',
+                icon: 'mdi-star',
+            },
+            {
+                color: 'purple-lighten-2',
+                icon: 'mdi-book-variant',
+            },
+            {
+                color: 'green-lighten-1',
+                icon: 'mdi-airballoon',
+            },
+            {
+                color: 'indigo-lighten-2',
+                icon: 'mdi-layers-triple',
+            },
+        ],
+    }),
+}
 </script>
-  
-<style>
-.image {
-    width: 300px;
-    height: 300px;
-    /* filter: blur(1px); */
-    /* Initial blur effect */
-}
-
-.image-fade-enter-active,
-.image-fade-leave-active {
-    transition: opacity 2s, filter 1s;
-}
-
-.image-fade-enter,
-.image-fade-leave-to
-
-/* .image-fade-leave-active in <2.1.8 */
-    {
-    opacity: 100;
-    filter: blur(0px);
-    /* Remove blur effect when fading out */
-}
-</style>
-  
+<template>
+    <v-timeline align="start">
+        <v-timeline-item v-for="(item, i) in items" :key="i" :dot-color="item.color" :icon="item.icon" fill-dot>
+            <v-card>
+                <v-card-title :class="['text-h6', `bg-${item.color}`]">
+                    Lorem Ipsum Dolor
+                </v-card-title>
+                <v-card-text class="bg-white text--primary">
+                    <p>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod
+                        convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an
+                        salutandi sententiae.</p>
+                    <v-btn :color="item.color" variant="outlined">
+                        Button
+                    </v-btn>
+                </v-card-text>
+            </v-card>
+        </v-timeline-item>
+    </v-timeline>
+</template>
