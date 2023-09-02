@@ -14,7 +14,7 @@ import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_a
 import Prelis1 from "../assets/images/gallery/award_2.jpg";
 import Prelis2 from "../assets/images/gallery/trophy_3.jpg";
 import Prelis3 from "../assets/images/gallery/group_pic_1.jpg";
-import timeline from "../components/timeline.vue";
+// import timeline from "../components/timeline.vue";
 import { animateOnScroll } from "../aos.js";
 import Blogs from './PageTest.vue';
 export default {
@@ -25,7 +25,7 @@ export default {
     Doodle,
     AppGallery,
     Blogs,
-    timeline
+    // timeline
   },
   mounted() {
     var testimonialOut = null;
@@ -116,7 +116,7 @@ export default {
         :heading-end="featurette.headingEnd" :text="featurette.text" :image="featurette.image"
         :urlString="featurette.urlString" />
       <div class="col-12 mb-2 mt-6">
-        <h1 class="featurette-heading mt-0 mb-4">Timeline</h1>
+        <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       </div>
 
       <timeline />
