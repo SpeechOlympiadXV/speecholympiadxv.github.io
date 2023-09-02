@@ -1,5 +1,5 @@
 <template>
-  <div class="row gallery">
+  <div class="row gallery mx-1">
     <div class="img-container" :style="getOrder(i)" :key="i" v-for="(image, i) in getImages()">
       <div @click="preview(image)" class="overlay">
         <h5 class="center">See full image</h5>
