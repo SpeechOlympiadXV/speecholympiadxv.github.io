@@ -121,7 +121,7 @@ export default {
 
       <timeline />
       <div class="col-12 mb-2 mt-6">
-        <h1 class="featurette-heading mt-0 mb-4">Past Experience</h1>
+        <h1 class="featurette-heading mt-0 mb-4">Past Experiences</h1>
       </div>
 
       <Blogs :limit="2" />
