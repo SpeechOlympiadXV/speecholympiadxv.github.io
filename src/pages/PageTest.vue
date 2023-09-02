@@ -43,7 +43,7 @@ export default {
 
             <div v-if="post" class="content px-4 py-4">
                 <button @click="closePost"
-                    class="bg-gray-800 text-white p-4 rounded-full hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+                    class="bg-gray-800 text-white p-4 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd"
                             d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
@@ -74,11 +74,14 @@ export default {
                     <BlockContent :blocks="child" v-for="child in blocks" v-bind:key="child._id" />
                 </div> -->
                 <h6 class="flex items-center ">
-                    <img v-if="post.authorImage" :src="imageUrlFor(post.authorImage)" class="w-16 h-16 rounded-full mr-2" />
-                    Compiled By: {{ post.name }}
+                    By:
+
+                    {{ post.name }}
+                    <img v-if="post.authorImage" :src="imageUrlFor(post.authorImage)"
+                        class="w-16 h-16  rounded-full ml-2" />
                 </h6>
 
-
+                <h2 class="text-2xl py-4">Blog Photos</h2>
                 <!-- Gallery -->
                 <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4">
                     <div v-for="(imageC, index) in post.images" :key="index" class="image-container">
@@ -94,7 +97,7 @@ export default {
                     <div class="modal-container bg-transparent mx-auto rounded-lg p-4 max-w-screen-lg">
                         <!-- Close Button -->
                         <button @click="closeImageModal"
-                            class=" bg-orange-800 text-white p-2 m-2 rounded-full hover:bg-orange-700 hover:text-gray-800">
+                            class=" bg-amber-800 text-white p-2 m-2 rounded-full hover:bg-orange-700 hover:text-gray-800">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

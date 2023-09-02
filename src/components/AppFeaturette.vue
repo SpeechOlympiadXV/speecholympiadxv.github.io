@@ -5,7 +5,8 @@
         <div class="nav-link">{{ heading }} <span class="text-muted">{{ headingEnd }}</span></div>
       </h2>
       <p class="lead">{{ text }}</p>
-      <div><a class="read-more btn btn-secondary mb-3" :href="urlString">Read more</a></div>
+      <div><a class="read-more btn btn-secondary bg-amber-600 hover:bg-amber-700 mb-3" :href="urlString">Read more</a>
+      </div>
     </div>
     <div :class="'col-md-5 ' + getOrder(index, 1)">
       <img class="
