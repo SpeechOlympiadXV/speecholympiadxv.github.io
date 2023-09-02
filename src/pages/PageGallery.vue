@@ -50,10 +50,8 @@ export default {
 <template>
   <main>
     <div class="container">
-      <div class="row mb-5">
-        <AppGallery
-          :images="images"
-        />
+      <div class="row mb-5 p-2">
+        <AppGallery :images="images" />
       </div>
     </div>
   </main>
