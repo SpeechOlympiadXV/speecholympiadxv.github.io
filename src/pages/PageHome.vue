@@ -50,7 +50,7 @@ export default {
         {
           heading: "What is Speech Olympiad?",
           headingEnd: "",
-          text: "Speech Olympiad stands as the flagship occasion hosted by the Gavel Club at the University of Moratuwa. As the sole English language speech competition within the university !",
+          text: "Speech Olympiad stands as the flagship occasion hosted by the Gavel Club at the University of Moratuwa. As the sole English language speech competition within the university...",
           image: HomePage_About,
           urlString: "#about",
         }
