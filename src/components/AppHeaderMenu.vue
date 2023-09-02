@@ -37,11 +37,11 @@ export default {
           url: "#gallery",
           newTab: false,
         },
-        {
-          name: "Rules & Regulations",
-          url: "https://bit.ly/45vWx1K",
-          newTab: true,
-        },
+        // {
+        //   name: "Rules & Regulations",
+        //   url: "https://bit.ly/45vWx1K",
+        //   newTab: true,
+        // },
         {
           name: "Blogs",
           url: "#blogs",

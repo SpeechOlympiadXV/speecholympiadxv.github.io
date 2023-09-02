@@ -61,7 +61,7 @@ export default {
         believe, break the silence, and redefine the power of words.
       </p> -->
 
-      <img class="article-img" alt="" src="../assets/images/gallery/trophy_3.jpg" loading="lazy" />
+      <img class="article-img" alt="" src="../assets/images/gallery/trophy_4.jpg" loading="lazy" />
     </AppArticle>
   </main>
 </template>
