@@ -4,16 +4,19 @@ import AppGallery from "../components/AppGallery.vue";
 import AppFeaturette from "../components/AppFeaturette.vue";
 import AppTestimonialCard from "../components/AppTestimonialCard.vue";
 import Doodle from "../components/Doodle.vue";
-import HomePage_About from "../assets/images/HomePage_About.jpg";
+import HomePage_About from "../assets/images/What is SO - Home page .png";
+
 import HomePage_PathOfChampion from "../assets/images/HomePage_PathOfChampion.jpg";
 import HomePage_TechnicalTips from "../assets/images/HomePage_TechnicalTips.jpg";
 import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonial_sirimevan.jpg";
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
 import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg";
 import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_asitha.jpg";
+
 import Prelis1 from "../assets/images/gallery/award_2.jpg";
 import Prelis2 from "../assets/images/gallery/trophy_3.jpg";
 import Prelis3 from "../assets/images/gallery/group_pic_1.jpg";
+
 // import timeline from "../components/timeline.vue";
 import { animateOnScroll } from "../aos.js";
 import Blogs from './PageTest.vue';
