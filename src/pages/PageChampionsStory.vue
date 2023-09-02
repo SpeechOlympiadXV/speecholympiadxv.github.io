@@ -2,8 +2,9 @@
 import AppHeroSection from "../components/AppHeroSection.vue";
 import AppArticle from "../components/AppArticle.vue";
 import ArticleInterview from "../components/ArticleInterview.vue";
-import PathOfChampion_title_mobile from "../assets/images/PathOfChampion_title_mobile.jpg"
-import PathOfChampion_title_desktop from "../assets/images/PathOfChampion_title_desktop.jpg"
+import PathOfChampion_title_mobile from "../assets/images/Champion's_story.png"
+import PathOfChampion_title_desktop from "../assets/images/Champion's_story.png"
+
 import PathOfChampion_image1_mobile from "../assets/images/PathOfChampion_image1_mobile.jpg"
 import PathOfChampion_image1_desktop from "../assets/images/PathOfChampion_image1_desktop.jpg"
 import PathOfChampion_image2_mobile from "../assets/images/PathOfChampion_image2_mobile.jpg"

@@ -3,9 +3,13 @@ import GavelLogo from "./GavelLogo.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
+  faChrome,
   faFacebook,
   faInstagram,
   faLinkedin,
+  faWeebly,
+  faWeibo,
+  faWordpress,
 } from "@fortawesome/free-brands-svg-icons";
 // TODO: Check svg core bundle size
 library.add(faInstagram, faFacebook, faLinkedin);
@@ -52,6 +56,11 @@ export default {
           icon: faLinkedin,
           link: "https://www.linkedin.com/company/gavel-club-of-university-of-moratuwa/",
         },
+        {
+          profile: "Website",
+          icon: faWordpress,
+          link: "http://gavel.mrt.ac.lk/",
+        },
       ],
     };
   },
@@ -62,23 +71,18 @@ export default {
 <template>
   <div class="container-fluid app-footer">
     <div class="row">
-      <div
-          class="
+      <div class="
           col-12 col-md-3
           d-flex
           align-items-center
           justify-content-center justify-content-md-start
           my-md-0 my-4
-        "
-      >
+        ">
         <GavelLogo />
       </div>
       <div class="col-12 col-md-9">
         <div class="row justify-content-end">
-          <div
-              v-for="menu in footer_menus"
-              class="col-md-4 col-12 text-center text-md-start"
-          >
+          <div v-for="menu in footer_menus" class="col-md-4 col-12 text-center text-md-start">
             <div class="footer-menu-title mt-2 mb-1">{{ menu.title }}</div>
             <div class="row">
               <div v-for="link in menu.links" class="col-12">
@@ -93,45 +97,34 @@ export default {
     </div>
     <div class="row">
       <div class="col">
-        <hr/>
+        <hr />
       </div>
     </div>
     <div class="row">
-      <div
-          class="
+      <div class="
           col-md-4 col-12
           d-flex
           justify-content-center justify-content-md-start
           align-items-center
           order-last order-md-first
           my-2 my-lg-0
-        "
-      >
+        ">
         <span>© Speech Olympiad 2023</span>
       </div>
       <div class="col-md-8 col-12 order-first order-md-last">
         <div class="row">
-          <div
-              class="
+          <div class="
               col-12 col-md-6
               my-2 my-md-0
               d-flex
               justify-content-center justify-content-md-end
               align-items-center
-            "
-          >
+            ">
             <span>Follow us on</span>
           </div>
-          <div
-              v-for="social_media in social_media_profiles"
-              class="col my-2 my-md-0 d-flex justify-content-center"
-          >
+          <div v-for="social_media in social_media_profiles" class="col my-2 my-md-0 d-flex justify-content-center">
             <a :href="social_media.link">
-              <FontAwesomeIcon
-                  :icon="social_media.icon"
-                  size="2x"
-                  class="icon-color"
-              />
+              <FontAwesomeIcon :icon="social_media.icon" size="2x" class="icon-color" />
             </a>
           </div>
         </div>
@@ -154,13 +147,13 @@ export default {
   color: var(--color-text);
 }
 
-.footer-link{
-  color:var(--color-text);
+.footer-link {
+  color: var(--color-text);
   text-decoration: none;
   font-style: italic;
 }
-.footer-link:hover{
-}
+
+.footer-link:hover {}
 
 .app-footer {
   margin-top: auto;
