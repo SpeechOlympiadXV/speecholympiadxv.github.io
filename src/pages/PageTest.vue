@@ -113,7 +113,7 @@ export default {
         <div v-if="loadBlog" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 px-4 w-full">
             <div v-for="post in posts" :key="post._id" class="post-item">
                 <div
-                    class="max-w-sm border mt-4 border-gray-200 rounded-lg shadow bg-gray-700 bg-opacity-25 border-gray-700">
+                    class="max-w-sm border mt-4 border-gray-200 rounded-lg shadow bg-gray-800 bg-opacity-25 border-gray-700">
                     <a href="#">
                         <img class="w-full h-auto" :src="imageUrlFor(post.image)" alt="" />
                     </a>
@@ -124,7 +124,7 @@ export default {
                         </a>
                         <p class="mb-3 font-normal text-gray-400">{{ post.description }}</p>
                         <a @click="handleReadmore(post.slug.current)"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white  rounded-lg  focus:ring-4 focus:outline-none  bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white  rounded-lg  focus:ring-4 focus:outline-none  bg-amber-600 hover:bg-amber-700 focus:ring-amber-800">
                             Read more
                             <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 14 10">
