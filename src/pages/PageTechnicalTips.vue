@@ -4,7 +4,8 @@ import AppHeroSection from "../components/AppHeroSection.vue";
 import ArticleInterview from "../components/ArticleInterview.vue";
 import TechnicalTips_title_mobile from "../assets/images/TechnicalTips_title_mobile.jpg"
 import TechnicalTips_title_desktop from "../assets/images/Technical_Tips.png"
-import TechnicalTips_portrait from "../assets/images/Technical_Tips.png"
+import TechnicalTips_portrait from "../assets/images/TechnicalTips_portrait.jpeg"
+
 
 export default {
   data() {
