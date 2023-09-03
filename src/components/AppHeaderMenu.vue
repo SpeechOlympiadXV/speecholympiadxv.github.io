@@ -43,6 +43,11 @@ export default {
         //   newTab: true,
         // },
         {
+          name: "Rules & Regulations",
+          url: "#rules",
+          newTab: true,
+        },
+        {
           name: "Blogs",
           url: "#blogs",
           newTab: false,

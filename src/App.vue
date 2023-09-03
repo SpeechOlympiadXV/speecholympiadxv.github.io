@@ -1,7 +1,7 @@
 <script >
 import AppFooter from "./components/AppFooter.vue";
 import AppHeader from "./components/AppHeader.vue";
-
+import PageRules from "./pages/PageRules.vue";
 import PageHome from "./pages/PageHome.vue";
 import PageAbout from "./pages/PageAbout.vue";
 import PageTechnicalTips from "./pages/PageTechnicalTips.vue";
@@ -27,7 +27,7 @@ const routes = {
   "/form": PageForm,
   "/admin": PageAdmin,
   "/register": PageFormNew,
-
+  "/rules": PageRules
 };
 
 export default {
