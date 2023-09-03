@@ -10,7 +10,7 @@
             <div class="flex flex-col items-center justify-center ml-4 w-1/2">
 
                 <transition name="bounce" mode="out-in">
-                    <p class="text-white text-3xl ml-2" v-html="eight.fullText" :key="fadeAnimation"
+                    <p class="text-white p-3 text-3xl ml-2" v-html="eight.fullText" :key="fadeAnimation"
                         :hidden="!fadeAnimation">
                     </p>
                 </transition>
@@ -28,7 +28,7 @@
 
         <div class="absolute md:top-1/3 i top-1/3 bg-gradient-to-r to-zinc-800 from-black  md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="firstV">
-            <p class="text-3xl  text-gray-200 bg-transparent" v-html="first.typedText"></p>
+            <p class="text-3xl p-3  text-gray-200 bg-transparent" v-html="first.typedText"></p>
 
             <div class="relative flex items-center mt-4">
                 <input
@@ -45,7 +45,7 @@
         </div>
         <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black  md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="secondV">
-            <p class="text-3xl  text-gray-200 bg-transparent" v-html="second.typedText"></p>
+            <p class="text-3xl p-3  text-gray-200 bg-transparent" v-html="second.typedText"></p>
             <div class="relative flex items-center mt-4">
                 <input
                     class="w-full placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
@@ -62,7 +62,7 @@
         </div>
         <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="thirdV">
-            <p class="text-3xl  text-gray-200 bg-transparent" v-html="third.typedText"></p>
+            <p class="text-3xl p-3  text-gray-200 bg-transparent" v-html="third.typedText"></p>
             <div class="relative flex items-center mt-4">
                 <input
                     class="w-full placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
@@ -78,7 +78,7 @@
         </div>
         <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="fourthV">
-            <p class="text-3xl text-gray-200 bg-transparent" v-html="fourth.typedText"></p>
+            <p class="text-3xl p-3 text-gray-200 bg-transparent" v-html="fourth.typedText"></p>
             <div class="relative flex items-center mt-4">
                 <input
                     class="w-full placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
@@ -95,7 +95,7 @@
         </div>
         <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="fifthV">
-            <p class="text-3xl text-gray-200 bg-transparent" v-html="fifth.typedText"></p>
+            <p class="text-3xl p-3 text-gray-200 bg-transparent" v-html="fifth.typedText"></p>
             <div class="relative flex items-center mt-4">
 
                 <select v-model="faculty"
@@ -118,7 +118,7 @@
         </div>
         <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="sixthV">
-            <p class="text-3xl  text-gray-200 bg-transparent" v-html="sixth.typedText"></p>
+            <p class="text-3xl p-3 text-gray-200 bg-transparent" v-html="sixth.typedText"></p>
             <div class="relative flex items-center mt-4">
                 <input
                     class="w-full placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
@@ -134,7 +134,7 @@
         </div>
         <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="seventhV">
-            <p class="text-3xl text-gray-200 bg-transparent" v-html="seventh.typedText"></p>
+            <p class="text-3xl p-3 text-gray-200 bg-transparent" v-html="seventh.typedText"></p>
             <div class="relative flex items-center mt-4">
 
                 <select v-model="batch"
