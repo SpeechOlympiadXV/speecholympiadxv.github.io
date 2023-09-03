@@ -1,13 +1,14 @@
 <template>
-    <div class="relative min-h-screen bg-black">
+    <div class="relative min-h-screen bg-zinc-950">
         <img :src="Background.filename" :alt="Background.alt" class="w-full sm:w-1/2 mx-auto">
-        <div class="absolute md:top-1/2 i top-1/2 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex"
+        <div class="absolute md:top-1/3 i top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex"
             :style="{ 'display': eightV ? '' : 'none' }">
             <!-- <imageAnimation /> -->
             <transition name="bon" mode="out-in">
                 <img :src="currentImage" :key="currentImage" class="image" />
             </transition>
             <div class="flex flex-col items-center justify-center ml-4 w-1/2">
+
                 <transition name="bounce" mode="out-in">
                     <p class="text-white text-3xl ml-2" v-html="eight.fullText" :key="fadeAnimation"
                         :hidden="!fadeAnimation">
@@ -19,73 +20,86 @@
                 <transition name="slide-fade" mode="out-in">
                     <img :src="sologo" class="w-32" :key="fadeAnimation" :hidden="!fadeAnimation" />
                 </transition>
+                <p class="text-sm text-green-300 p-1" v-if="success">You have registered successfully</p>
             </div>
+
         </div>
 
-        <div class="absolute md:top-1/3 i top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+
+        <div class="absolute md:top-1/3 i top-1/3 bg-gradient-to-r to-zinc-800 from-black  md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="firstV">
+            <p class="text-3xl  text-gray-200 bg-transparent" v-html="first.typedText"></p>
 
-            <p class="text-3xl  text-gray-200 bg-black" v-html="first.typedText"></p>
             <div class="relative flex items-center mt-4">
                 <input
-                    class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
+                    class="w-full placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
                     type="text" placeholder="Enter your full name here" v-model="fullName" @keyup.enter="firstB(2)" />
-                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                    @click="firstB(2)">
+                <button :class="{
+                    'absolute right-0 top-0 h-full px-4 bg-amber-200 text-black hover:bg-amber-300': !error,
+                    'absolute right-0 top-0 h-full px-4 bg-red-600 text-black hover:bg-red-700': error
+                }" @click="firstB(2)">
                     &rarr;
                 </button>
             </div>
-
+            <p class="text-lg text-red-400 p-1" v-if="error">{{ errorMsg }}</p>
         </div>
-        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+        <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black  md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="secondV">
-            <p class="text-3xl  text-gray-200 bg-black" v-html="second.typedText"></p>
+            <p class="text-3xl  text-gray-200 bg-transparent" v-html="second.typedText"></p>
             <div class="relative flex items-center mt-4">
                 <input
-                    class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
+                    class="w-full placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
                     type="text" placeholder="Enter your Uni id here" v-model="universityId" @keyup.enter="firstB(3)" />
-                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                    @click="firstB(3)">
+                <button :class="{
+                    'absolute right-0 top-0 h-full px-4 bg-amber-200 text-black hover:bg-amber-300': !error,
+                    'absolute right-0 top-0 h-full px-4 bg-red-600 text-black hover:bg-red-700': error
+                }" @click="firstB(3)">
                     &rarr;
                 </button>
             </div>
+            <p class="text-lg text-red-400 p-1" v-if="error">{{ errorMsg }}</p>
 
         </div>
-        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+        <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="thirdV">
-            <p class="text-3xl  text-gray-200 bg-black" v-html="third.typedText"></p>
+            <p class="text-3xl  text-gray-200 bg-transparent" v-html="third.typedText"></p>
             <div class="relative flex items-center mt-4">
                 <input
-                    class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
+                    class="w-full placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
                     type="mobile" placeholder="Enter your mobile number" v-model="phoneNumber" @keyup.enter="firstB(4)" />
-                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                    @click="firstB(4)">
+                <button :class="{
+                    'absolute right-0 top-0 h-full px-4 bg-amber-200 text-black hover:bg-amber-300': !error,
+                    'absolute right-0 top-0 h-full px-4 bg-red-600 text-black hover:bg-red-700': error
+                }" @click="firstB(4)">
                     &rarr;
                 </button>
             </div>
-
+            <p class="text-lg text-red-400 p-1" v-if="error">{{ errorMsg }}</p>
         </div>
-        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+        <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="fourthV">
-            <p class="text-3xl text-gray-200 bg-black" v-html="fourth.typedText"></p>
+            <p class="text-3xl text-gray-200 bg-transparent" v-html="fourth.typedText"></p>
             <div class="relative flex items-center mt-4">
                 <input
-                    class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
+                    class="w-full placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
                     type="email" placeholder="Enter your email" v-model="email" @keyup.enter="firstB(5)" />
-                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                    @click="firstB(5)">
+                <button :class="{
+                    'absolute right-0 top-0 h-full px-4 bg-amber-200 text-black hover:bg-amber-300': !error,
+                    'absolute right-0 top-0 h-full px-4 bg-red-600 text-black hover:bg-red-700': error
+                }" @click="firstB(5)">
                     &rarr;
                 </button>
             </div>
+            <p class="text-lg text-red-400 p-1" v-if="error">{{ errorMsg }}</p>
 
         </div>
-        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+        <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="fifthV">
-            <p class="text-3xl text-gray-200 bg-black" v-html="fifth.typedText"></p>
+            <p class="text-3xl text-gray-200 bg-transparent" v-html="fifth.typedText"></p>
             <div class="relative flex items-center mt-4">
 
                 <select v-model="faculty"
-                    class="block appearance-none w-full border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14"
+                    class="block appearance-none w-full border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14"
                     id="grid-state">
                     <option>Faculty of Engineering</option>
                     <option>Faculty of Information Technology</option>
@@ -93,34 +107,38 @@
                     <option>Faculty of Business</option>
                     <option>Faculty of Medicine</option>
                 </select>
-                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                    @click="firstB(6)">
+                <button :class="{
+                    'absolute right-0 top-0 h-full px-4 bg-amber-200 text-black hover:bg-amber-300': !error,
+                    'absolute right-0 top-0 h-full px-4 bg-red-600 text-black hover:bg-red-700': error
+                }" @click="firstB(6)">
                     &rarr;
                 </button>
             </div>
-
+            <p class="text-lg text-red-400 p-1" v-if="error">{{ errorMsg }}</p>
         </div>
-        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+        <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="sixthV">
-            <p class="text-3xl  text-gray-200 bg-black" v-html="sixth.typedText"></p>
+            <p class="text-3xl  text-gray-200 bg-transparent" v-html="sixth.typedText"></p>
             <div class="relative flex items-center mt-4">
                 <input
-                    class="w-full placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
+                    class="w-full placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
                     type="email" placeholder="Ex : CSE" v-model="department" @keyup.enter="firstB(7)" />
-                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black hover:bg-gray-300"
-                    @click="firstB(7)">
+                <button :class="{
+                    'absolute right-0 top-0 h-full px-4 bg-amber-200 text-black hover:bg-amber-300': !error,
+                    'absolute right-0 top-0 h-full px-4 bg-red-600 text-black hover:bg-red-700': error
+                }" @click="firstB(7)">
                     &rarr;
                 </button>
             </div>
-
+            <p class="text-lg text-red-400 p-1" v-if="error">{{ errorMsg }}</p>
         </div>
-        <div class="absolute md:top-1/3 top-1/3 bg-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
+        <div class="absolute md:top-1/3 top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="seventhV">
-            <p class="text-3xl text-gray-200 bg-black" v-html="seventh.typedText"></p>
+            <p class="text-3xl text-gray-200 bg-transparent" v-html="seventh.typedText"></p>
             <div class="relative flex items-center mt-4">
 
                 <select v-model="batch"
-                    class="block appearance-none w-full border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 placeholder-gray-200::placeholder text-xl bg-black text-gray-200 p-4 rounded-md pr-14"
+                    class="block appearance-none w-full border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14"
                     id="grid-state">
 
                     <option>2019</option>
@@ -128,12 +146,14 @@
                     <option>2021</option>
                     <option>2022</option>
                 </select>
-                <button class="absolute right-0 top-0 h-full px-4 bg-gray-200 text-black  hover:bg-gray-300"
-                    @click="finish">
+                <button :class="{
+                    'absolute right-0 top-0 h-full px-4 bg-amber-200 text-black hover:bg-amber-300': !error,
+                    'absolute right-0 top-0 h-full px-4 bg-red-600 text-black hover:bg-red-700': error
+                }" @click="finish">
                     &rarr;
                 </button>
             </div>
-
+            <p class="text-lg text-red-400 p-1" v-if="error">{{ errorMsg }}</p>
         </div>
 
         <!-- <div v-if="showMessage"
@@ -152,8 +172,8 @@
 <script>
 import dragon1 from '../assets/images/dragon1-2.png'
 import dragon2 from '../assets/images/dragon2-2.png'
-import Background from "../assets/images/gavelium2.jpg"
-import SOlogo from "../assets/images/SOXVI.jpg"
+import Background from "../assets/images/gavelium.jpg"
+import SOlogo from "../assets/images/new_logo.png"
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import SOLogo from "../components/SOLogo.vue";
@@ -186,13 +206,16 @@ export default {
             faculty: '',
             department: '',
             batch: '',
+            errorMsg: '',
+            error: false,
+            success: true,
             showMessage: false,
             fadeAnimation: false,
             currentImage: dragon1,
             sologo: SOlogo,
             first: {
                 typedText: "",
-                fullText: 'Hi Contestant 👋 <br />  What is your name?',
+                fullText: 'Hi Contestant 👋 <br />  What is your full name?',
                 currentIndex: 0,
             },
             second: {
@@ -240,10 +263,24 @@ export default {
                 obj.typedText = obj.fullText.slice(0, obj.currentIndex);
                 obj.currentIndex++;
 
-                setTimeout(() => this.typeText(obj), 50);
+                setTimeout(() => this.typeText(obj), 20);
             }
 
 
+        },
+        verifyMobileNumber(number) {
+            // Define a regular expression pattern
+            const pattern = /^(0|\+94)[0-9+]{9,}$/;
+
+            // Test the number against the pattern
+            return pattern.test(number);
+        },
+        isValidEmail(email) {
+            // Define a regular expression pattern for a valid email address
+            const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            // Test the email against the pattern
+            return pattern.test(email);
         },
         closeMessage() {
             this.showMessage = false;
@@ -251,42 +288,92 @@ export default {
         firstB(th) {
             switch (th) {
                 case 2:
-                    this.firstV = false
-                    this.secondV = true
-                    this.second.fullText = this.fullName.split(" ")[1] + ", What is your University ID ? 🎓"
-                    this.typeText(this.second);
+                    this.error = false;
+
+                    if (!this.fullName.split(" ")[1]) {
+                        this.error = true;
+                        this.errorMsg = "You must enter your full name"
+
+                    } else {
+                        this.firstV = false
+                        this.secondV = true
+                        this.second.fullText = this.fullName.split(" ")[1] + ", What is your University ID ? 🎓"
+                        this.typeText(this.second);
+                    }
+
                     break;
                 case 3:
-                    this.secondV = false
-                    this.thirdV = true
-                    this.third.fullText = this.fullName.split(" ")[1] + ', We need your phone number ☎️ <br/> (whatsapp preferred)'
-                    this.typeText(this.third);
+                    this.error = false;
+
+                    if (!this.universityId) {
+                        this.error = true;
+                        this.errorMsg = "You must enter your university ID"
+
+                    } else {
+                        this.secondV = false
+                        this.thirdV = true
+                        this.third.fullText = this.fullName.split(" ")[1] + ', We need your phone number ☎️ <br/> (whatsapp preferred)'
+                        this.typeText(this.third);
+                    }
                     break;
                 case 4:
-                    this.thirdV = false
-                    this.fourthV = true
-                    this.fourth.fullText = " What is your Email 📧 ?"
-                    this.typeText(this.fourth);
+                    this.error = false;
+
+                    if (!this.phoneNumber) {
+                        this.error = true;
+                        this.errorMsg = "You must enter your MobileNumber"
+
+                    } else if (!this.verifyMobileNumber(this.phoneNumber)) {
+                        this.error = true;
+                        this.errorMsg = "You must enter a valid MobileNumber"
+                    } else {
+                        this.thirdV = false
+                        this.fourthV = true
+                        this.fourth.fullText = " What is your Email 📧 ?"
+                        this.typeText(this.fourth);
+                    }
                     break;
                 case 5:
-                    this.fourthV = false
-                    this.fifthV = true
-                    this.fifth.fullText = this.fullName.split(" ")[1] + ", In which faculty do you study ?"
-                    this.typeText(this.fifth);
+                    this.error = false;
+
+                    if (!this.email) {
+                        this.error = true;
+                        this.errorMsg = "You must enter your Email"
+
+                    } else if (!this.isValidEmail(this.email)) {
+                        this.error = true;
+                        this.errorMsg = "You must enter a valid Email"
+                    } else {
+                        this.fourthV = false
+                        this.fifthV = true
+                        this.fifth.fullText = this.fullName.split(" ")[1] + ", In which faculty do you study ?"
+                        this.typeText(this.fifth);
+                    }
                     break;
                 case 6:
-                    this.fifthV = false
-                    this.sixthV = true
-                    this.sixth.fullText = "What is your department ?"
-                    this.typeText(this.sixth);
+                    this.error = false;
+
+                    if (!this.faculty) {
+                        this.error = true;
+                        this.errorMsg = "Don't skip buddy select your faculty"
+
+                    } else {
+                        this.fifthV = false
+                        this.sixthV = true
+                        this.sixth.fullText = "What is your department ?"
+                        this.typeText(this.sixth);
+                    }
                     break;
                 case 7:
                     this.sixthV = false
                     this.seventhV = true
-                    this.seventh.fullText = 'Final question 😮‍💨  <br/>' + this.fullName.split(" ")[1] + ", Select your batch"
+                    this.seventh.fullText = "Select your batch"
                     this.typeText(this.seventh);
                     break;
                 case 8:
+
+
+
                     this.seventhV = false;
                     this.eightV = true;
                     this.typeText(this.eight);
@@ -297,6 +384,10 @@ export default {
                         this.eight.fullText = "Your journey is about to begin 🥳";
                         this.sologo = SOlogo;
                     }, 1500);
+                    setTimeout(() => {
+                        this.success = true
+                    }, 2500);
+
                 default:
                     break;
             }
@@ -397,8 +488,8 @@ export default {
 }
 
 .image {
-    height: 350px;
-    object-fit: cover;
+    width: 150px;
+    margin-left: 20px;
     /* filter: blur(1px); */
     /* Initial blur effect */
 }
