@@ -7,6 +7,7 @@
             Download Data
         </button>
         <div class="overflow-x-auto">
+            <p>Latest First</p>
             <table class="min-w-full border divide-y divide-gray-300">
                 <thead class="bg-gray-100 text-black">
                     <tr>
@@ -22,8 +23,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="registration in registrations" :key="registration.id">
-                        <td class="py-2 px-4">{{ registration.fullName }}</td>
+                    <tr v-for="registration in sortedRegistrationsD" :key="registration.id">
+                        <td class=" py-2 px-4">{{ registration.fullName }}</td>
                         <td class="py-2 px-4">{{ registration.universityId }}</td>
                         <td class="py-2 px-4">{{ registration.email }}</td>
                         <td class="py-2 px-4">{{ registration.faculty }}</td>
@@ -50,10 +51,24 @@ export default {
             registrations: []
         };
     },
+    computed: {
+        sortedRegistrationsD(order) {
+
+            return this.registrations.slice().sort((a, b) => b.time - a.time);
+
+        },
+        sortedRegistrationsA(order) {
+
+            // Sort by time in ascending order
+            return this.registrations.slice().sort((a, b) => a.time - b.time);
+
+        },
+
+    },
     methods: {
         downloadCsvFile() {
             let fileName = 'RegistrationData.csv'
-            let csvData = this.convertJsonToCsv(this.registrations)
+            let csvData = this.convertJsonToCsv(this.sortedRegistrationsA)
             const blob = new Blob([csvData], { type: 'text/csv' });
             const url = URL.createObjectURL(blob);
 
@@ -122,7 +137,7 @@ export default {
         this.registrations = querySnapshot.docs.map((doc) => {
             const data = doc.data();
             return {
-                id: doc.id,
+
                 fullName: data.fullName,
                 universityId: data.universityId,
                 phoneNumber: data.phoneNumber,

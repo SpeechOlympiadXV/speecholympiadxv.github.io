@@ -1,5 +1,5 @@
 <template>
-    <div class="relative min-h-screen bg-zinc-950">
+    <div class="relative bg-zinc-950">
         <img :src="Background.filename" :alt="Background.alt" class="w-full sm:w-1/2 mx-auto">
         <div class="absolute md:top-1/3 i top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex"
             :style="{ 'display': eightV ? '' : 'none' }">
@@ -386,7 +386,7 @@ export default {
                     }, 1500);
                     setTimeout(() => {
                         this.success = true
-                    }, 1000);
+                    }, 4000);
                     break;
                 default:
                     break;
@@ -488,7 +488,9 @@ export default {
 }
 
 .image {
-    width: 150px;
+    width: 10rem;
+    height: 15rem;
+
     margin-left: 20px;
     /* filter: blur(1px); */
     /* Initial blur effect */

@@ -114,6 +114,7 @@ export default {
 
     <div class="container marketing">
       <Doodle />
+
       <!-- START THE FEATURETTES -->
       <AppFeaturette v-for="(featurette, i) in featurettes" :index="i" :key="i" :heading="featurette.heading"
         :heading-end="featurette.headingEnd" :text="featurette.text" :image="featurette.image"
@@ -121,7 +122,17 @@ export default {
       <div class="col-12 mb-2 mt-6">
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       </div>
-
+      <div class="text-center button-container">
+        <p class="text-3xl "> Did not register yet?</p>
+        <br />
+        <a class="button" href="#register">
+          Register &rarr;
+        </a>
+      </div>
+      <hr class="featurette-divider" />
+      <div class="col-12 mb-2 mt-6">
+        <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
+      </div>
       <timeline />
       <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Past Experiences</h1>
@@ -166,6 +177,36 @@ export default {
 
 <style scoped>
 /* Thin out the marketing headings */
+/* Custom styles for the amber-themed outlined button */
+.button-container {
+  text-align: center;
+}
+
+.button {
+  border: 3px solid #ff9d00;
+  /* Amber border color */
+  color: #ff9d00;
+  font-size: xx-large;
+  border-radius: 20%;
+  /* Amber text color */
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: #ff8000;
+  /* Amber background color on hover */
+  color: #fff;
+  /* White text color on hover */
+}
+
+.button:focus {
+  outline: none;
+  /* Remove focus outline */
+}
+
 .featurette-heading {
   font-weight: 300;
   line-height: 1;
@@ -223,5 +264,10 @@ export default {
   /*noinspection CssUnresolvedCustomProperty*/
   transition-delay: calc(200ms * var(--order));
   /*order is declared as an inline variable*/
+}
+
+.featurette-divider {
+  margin: 5rem 0;
+  /* Space out the Bootstrap <hr> more */
 }
 </style>
