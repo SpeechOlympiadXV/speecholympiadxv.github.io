@@ -176,12 +176,9 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import SOLogo from "../components/SOLogo.vue";
 import { collection, addDoc, doc, setDoc } from "firebase/firestore"
-import imageAnimation from "../components/imageAnimation.vue";
 export default {
     name: "AnimatedText",
     components: {
-        imageAnimation,
-
     },
     data() {
         return {
