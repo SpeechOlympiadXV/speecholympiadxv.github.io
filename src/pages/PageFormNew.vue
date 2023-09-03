@@ -208,7 +208,7 @@ export default {
             batch: '',
             errorMsg: '',
             error: false,
-            success: true,
+            success: false,
             showMessage: false,
             fadeAnimation: false,
             currentImage: dragon1,
@@ -386,8 +386,8 @@ export default {
                     }, 1500);
                     setTimeout(() => {
                         this.success = true
-                    }, 2500);
-
+                    }, 1000);
+                    break;
                 default:
                     break;
             }
