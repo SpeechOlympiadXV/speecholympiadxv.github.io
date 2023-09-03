@@ -3,7 +3,7 @@ export default {
     data: () => ({
         years: [
             {
-                title: "Registrations Open ",
+                title: "Registrations Open",
                 color: 'amber-lighten-4',
                 date: '',
             },
@@ -44,6 +44,24 @@ export default {
             },
         ],
     }),
+    methods: {
+        handleClick(title) {
+            switch (title) {
+                case "Registrations Open":
+                    const currentURLWithoutHash = window.location.href.split('#')[0];
+
+                    // Combine the current URL with the desired fragment identifier
+                    const newURL = currentURLWithoutHash + '#register';
+
+                    // Navigate to the new URL
+                    window.location.href = newURL;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
 }
 </script>
 <template>
@@ -52,7 +70,8 @@ export default {
             <v-timeline align="start">
                 <v-timeline-item v-for="(date, i) in years" :key="i" :dot-color="date.color" size="small">
                     <template v-slot:opposite>
-                        <h2 :class="`mt-n1 text-xl headline font-weight-light mb-4 text-${date.color}`">
+                        <h2 :class="`mt-n1 text-xl  cursor-pointer headline font-weight-light mb-4 text-${date.color}`"
+                            @click="handleClick(date.title)">
                             {{ date.title }}
                         </h2>
                     </template>

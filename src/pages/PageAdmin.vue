@@ -1,5 +1,19 @@
 <template>
-    <div>
+    <div class="mb-4 p-6" v-if="!admin">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Password
+        </label>
+        <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password" type="password" placeholder="Enter your password" v-model="password" />
+        <div class="mb-4">
+            <button class="bg-transparent    text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                @click="login">
+                Get In &rarr;
+            </button>
+        </div>
+    </div>
+    <div v-if="admin">
         <h1 class="text-2xl font-semibold mb-4">Registrations</h1>
         <button
             class="bg-gray-500 w-64 m-3 hover:bg-gray-600 text-gray-300 border-gray-200 font-bold py-2 px-4 outline-1 rounded focus:outline-none focus:shadow-outline"
@@ -7,6 +21,7 @@
             Download Data
         </button>
         <div class="overflow-x-auto">
+            <p>Latest First</p>
             <table class="min-w-full border divide-y divide-gray-300">
                 <thead class="bg-gray-100 text-black">
                     <tr>
@@ -22,8 +37,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="registration in registrations" :key="registration.id">
-                        <td class="py-2 px-4">{{ registration.fullName }}</td>
+                    <tr v-for="registration in sortedRegistrationsD" :key="registration.id">
+                        <td class=" py-2 px-4">{{ registration.fullName }}</td>
                         <td class="py-2 px-4">{{ registration.universityId }}</td>
                         <td class="py-2 px-4">{{ registration.email }}</td>
                         <td class="py-2 px-4">{{ registration.faculty }}</td>
@@ -47,13 +62,34 @@ import { initializeApp } from "firebase/app";
 export default {
     data() {
         return {
-            registrations: []
+            registrations: [],
+            password: '',
+            admin: false
         };
     },
+    computed: {
+        sortedRegistrationsD(order) {
+
+            return this.registrations.slice().sort((a, b) => b.time - a.time);
+
+        },
+        sortedRegistrationsA(order) {
+
+            // Sort by time in ascending order
+            return this.registrations.slice().sort((a, b) => a.time - b.time);
+
+        },
+
+    },
     methods: {
+        login() {
+            if (this.password == "Speechsoso") {
+                this.admin = true;
+            }
+        },
         downloadCsvFile() {
             let fileName = 'RegistrationData.csv'
-            let csvData = this.convertJsonToCsv(this.registrations)
+            let csvData = this.convertJsonToCsv(this.sortedRegistrationsA)
             const blob = new Blob([csvData], { type: 'text/csv' });
             const url = URL.createObjectURL(blob);
 
@@ -122,7 +158,7 @@ export default {
         this.registrations = querySnapshot.docs.map((doc) => {
             const data = doc.data();
             return {
-                id: doc.id,
+
                 fullName: data.fullName,
                 universityId: data.universityId,
                 phoneNumber: data.phoneNumber,
