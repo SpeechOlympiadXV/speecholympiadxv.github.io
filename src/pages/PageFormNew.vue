@@ -34,7 +34,7 @@
             <div class="relative flex items-center mt-4">
                 <input
                     class="w-full placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                    type="text" placeholder="Enter your full name here" v-model="fullName" @keyup.enter="firstB(2)" />
+                    type="text" placeholder="Ex : John Perera" v-model="fullName" @keyup.enter="firstB(2)" />
                 <button :class="{
                     'absolute right-0 top-0 h-full px-4 bg-amber-200 text-black hover:bg-amber-300': !error,
                     'absolute right-0 top-0 h-full px-4 bg-red-600 text-black hover:bg-red-700': error
@@ -168,7 +168,7 @@
             <p>Upon signing up for the competition, you are expected to adhere to the regulations and guidelines associated
                 with Speech Olympiad XVI.
 
-                Please review the rules and proceed</p>
+                Please review the rules and proceed.</p>
             <PageRules />
         </div>
 
@@ -369,14 +369,14 @@ export default {
                     } else {
                         this.fifthV = false
                         this.sixthV = true
-                        this.sixth.fullText = this.fullName.split(" ")[1] + " ,Please mention your department."
+                        this.sixth.fullText = this.fullName.split(" ")[1] + ", Please mention your department."
                         this.typeText(this.sixth);
                     }
                     break;
                 case 7:
                     this.sixthV = false
                     this.seventhV = true
-                    this.seventh.fullText = "Final Question 😮‍💨. <br/> Which batch are you from?"
+                    this.seventh.fullText = "Final Question! <br/> Which batch are you from?"
                     this.typeText(this.seventh);
                     break;
                 case 8:
@@ -390,7 +390,7 @@ export default {
                     setTimeout(() => {
                         this.fadeAnimation = true;
 
-                        this.eight.fullText = "Thankyou & Good luck on your journey! 🥳";
+                        this.eight.fullText = "Thank you & Good luck on your journey!";
                         this.sologo = SOlogo;
                     }, 1500);
                     setTimeout(() => {
