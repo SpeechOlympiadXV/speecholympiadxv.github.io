@@ -224,7 +224,7 @@ export default {
             sologo: SOlogo,
             first: {
                 typedText: "",
-                fullText: 'Greetings contestant! Congratulations on taking your first step towards Speech Olympiad XVI. Let\'s proceed! <br/> Please provide your full name?',
+                fullText: 'Greetings contestant! Congratulations on taking your first step towards Speech Olympiad XVI. Let\'s proceed! <br/> Please provide your full name.',
                 currentIndex: 0,
             },
             second: {
@@ -299,14 +299,14 @@ export default {
                 case 2:
                     this.error = false;
 
-                    if (!this.fullName.split(" ")[1]) {
+                    if (!this.fullName.split(" ")[0]) {
                         this.error = true;
                         this.errorMsg = "You must enter your full name"
 
                     } else {
                         this.firstV = false
                         this.secondV = true
-                        this.second.fullText = this.fullName.split(" ")[1] + ", Kindly enter your university index number."
+                        this.second.fullText = this.fullName.split(" ")[0] + ", kindly enter your university index number."
                         this.typeText(this.second);
                     }
 
@@ -369,7 +369,7 @@ export default {
                     } else {
                         this.fifthV = false
                         this.sixthV = true
-                        this.sixth.fullText = this.fullName.split(" ")[1] + ", Please mention your department."
+                        this.sixth.fullText = this.fullName.split(" ")[0] + ", please mention your department."
                         this.typeText(this.sixth);
                     }
                     break;

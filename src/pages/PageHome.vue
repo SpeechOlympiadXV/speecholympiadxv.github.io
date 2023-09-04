@@ -123,7 +123,7 @@ export default {
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       </div>
       <div class="text-center button-container">
-        <p class="text-3xl "> Did not register yet?</p>
+        <p class="text-3xl "> Didn't register yet?</p>
         <br />
         <a class="button" href="#register">
           Register &rarr;
