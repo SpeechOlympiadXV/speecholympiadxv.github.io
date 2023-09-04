@@ -1,5 +1,6 @@
 <template>
     <div class="relative bg-zinc-950">
+
         <img :src="Background.filename" :alt="Background.alt" class="w-full sm:w-1/2 mx-auto">
         <div class="absolute md:top-1/3 i top-1/3 bg-gradient-to-r to-zinc-800 from-black md:left-1/2 w-full sm:w-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex"
             :style="{ 'display': eightV ? '' : 'none' }">
@@ -28,7 +29,7 @@
 
         <div class="absolute md:top-1/3 i top-1/3 bg-gradient-to-r to-zinc-800 from-black  md:left-1/2 w-full sm:w-[50%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 text-center"
             v-if="firstV">
-            <p class="text-3xl p-3  text-gray-200 bg-transparent" v-html="first.typedText"></p>
+            <p class="text-2xl p-3  text-gray-200 bg-transparent" v-html="first.typedText"></p>
 
             <div class="relative flex items-center mt-4">
                 <input
@@ -49,7 +50,8 @@
             <div class="relative flex items-center mt-4">
                 <input
                     class="w-full placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14 focus:outline-none"
-                    type="text" placeholder="Enter your Uni id here" v-model="universityId" @keyup.enter="firstB(3)" />
+                    type="text" placeholder="Enter your University index number here" v-model="universityId"
+                    @keyup.enter="firstB(3)" />
                 <button :class="{
                     'absolute right-0 top-0 h-full px-4 bg-amber-200 text-black hover:bg-amber-300': !error,
                     'absolute right-0 top-0 h-full px-4 bg-red-600 text-black hover:bg-red-700': error
@@ -141,10 +143,10 @@
                     class="block appearance-none w-full border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 placeholder-gray-200::placeholder text-xl bg-amber-600 bg-opacity-5 text-gray-200 p-4 rounded-md pr-14"
                     id="grid-state">
 
-                    <option>2019</option>
-                    <option>2020</option>
-                    <option>2021</option>
-                    <option>2022</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
                 </select>
                 <button :class="{
                     'absolute right-0 top-0 h-full px-4 bg-amber-200 text-black hover:bg-amber-300': !error,
@@ -156,14 +158,20 @@
             <p class="text-lg text-red-400 p-1" v-if="error">{{ errorMsg }}</p>
         </div>
 
-        <!-- <div v-if="showMessage"
-            class=" absolute md:top-0 top-0  md:left-1/2 left-1/2  bg-pink-900 w-full rounded-lg p-6 shadow-md">
+        <div v-if="showRulesModal"
+            class="absolute md:top-0 top-0 md:left-0 left-0 bg-zinc-700 w-full h-full rounded-lg p-6 shadow-md"
+            style="overflow: auto; "> <!-- You can adjust max-height as needed -->
+            <button @click="closeRulesModal"
+                class="bg-amber-600 text-white p-2 m-2 border-radius-50 hover:bg-orange-700 hover:text-gray-800">
+                I Agree &rarr;
+            </button>
+            <p>Upon signing up for the competition, you are expected to adhere to the regulations and guidelines associated
+                with Speech Olympiad XVI.
 
-            <p class="text-white text-lg font-semibold mb-2">Success!</p>
-            <p class="text-white text-sm">Congragulations for taking this step 🥳.</p>
-            <button @click="closeMessage"
-                class="mt-4 text-sm text-white underline cursor-pointer focus:outline-none">Close</button>
-        </div> -->
+                Please review the rules and proceed</p>
+            <PageRules />
+        </div>
+
     </div>
 </template>
   
@@ -178,12 +186,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import SOLogo from "../components/SOLogo.vue";
 import { collection, addDoc, doc, setDoc } from "firebase/firestore"
-
+import PageRules from './PageRules.vue';
 export default {
     name: "AnimatedText",
     components: {
 
-
+        PageRules
     },
     data() {
         return {
@@ -210,12 +218,13 @@ export default {
             error: false,
             success: false,
             showMessage: false,
+            showRulesModal: true,
             fadeAnimation: false,
             currentImage: dragon1,
             sologo: SOlogo,
             first: {
                 typedText: "",
-                fullText: 'Hi Contestant 👋 <br />  What is your full name?',
+                fullText: 'Greetings contestant! Congratulations on taking your first step towards Speech Olympiad XVI. Let\'s proceed! <br/> Please provide your full name?',
                 currentIndex: 0,
             },
             second: {
@@ -250,7 +259,7 @@ export default {
             },
             eight: {
                 typedText: "",
-                fullText: "Your journey is about to begin 🥳",
+                fullText: "Thankyou & Good luck on your journey! 🥳",
 
                 currentIndex: 0,
             }
@@ -297,7 +306,7 @@ export default {
                     } else {
                         this.firstV = false
                         this.secondV = true
-                        this.second.fullText = this.fullName.split(" ")[1] + ", What is your University ID ? 🎓"
+                        this.second.fullText = this.fullName.split(" ")[1] + ", Kindly enter your university index number."
                         this.typeText(this.second);
                     }
 
@@ -312,7 +321,7 @@ export default {
                     } else {
                         this.secondV = false
                         this.thirdV = true
-                        this.third.fullText = this.fullName.split(" ")[1] + ', We need your phone number ☎️ <br/> (whatsapp preferred)'
+                        this.third.fullText = '2 down 5 to go! <br/> Could you please provide your phone number, preferably your WhatsApp contact number?'
                         this.typeText(this.third);
                     }
                     break;
@@ -329,7 +338,7 @@ export default {
                     } else {
                         this.thirdV = false
                         this.fourthV = true
-                        this.fourth.fullText = " What is your Email 📧 ?"
+                        this.fourth.fullText = "May we kindly request your email address?"
                         this.typeText(this.fourth);
                     }
                     break;
@@ -346,7 +355,7 @@ export default {
                     } else {
                         this.fourthV = false
                         this.fifthV = true
-                        this.fifth.fullText = this.fullName.split(" ")[1] + ", In which faculty do you study ?"
+                        this.fifth.fullText = "Great! You're almost there. <br/> In which faculty are you currently enrolled?"
                         this.typeText(this.fifth);
                     }
                     break;
@@ -355,19 +364,19 @@ export default {
 
                     if (!this.faculty) {
                         this.error = true;
-                        this.errorMsg = "Don't skip buddy select your faculty"
+                        this.errorMsg = "you must select your faculty"
 
                     } else {
                         this.fifthV = false
                         this.sixthV = true
-                        this.sixth.fullText = "What is your department ?"
+                        this.sixth.fullText = this.fullName.split(" ")[1] + " ,Please mention your department."
                         this.typeText(this.sixth);
                     }
                     break;
                 case 7:
                     this.sixthV = false
                     this.seventhV = true
-                    this.seventh.fullText = "Select your batch"
+                    this.seventh.fullText = "Final Question 😮‍💨. <br/> Which batch are you from?"
                     this.typeText(this.seventh);
                     break;
                 case 8:
@@ -381,7 +390,7 @@ export default {
                     setTimeout(() => {
                         this.fadeAnimation = true;
 
-                        this.eight.fullText = "Your journey is about to begin 🥳";
+                        this.eight.fullText = "Thankyou & Good luck on your journey! 🥳";
                         this.sologo = SOlogo;
                     }, 1500);
                     setTimeout(() => {
@@ -469,6 +478,13 @@ export default {
                 this.currentImage = dragon2;
             }, 1500); // 1 second
         },
+        openRulesModal() {
+            this.showRulesModal = true;
+        },
+        closeRulesModal() {
+            this.showRulesModal = false;
+        },
+
     },
     mounted() {
 
@@ -578,5 +594,25 @@ export default {
     100% {
         transform: scale(1);
     }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 </style>
