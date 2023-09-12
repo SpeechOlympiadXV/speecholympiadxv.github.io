@@ -1,17 +1,18 @@
 <template>
     <div class="flex justify-center mt-7">
         <div class="timeline md:w-4/6 w-full">
-            <div class="timeline-item left animate-elementL " ref="ele1" :class="{ 'animate-fade-in': ele1.view }">
+            <div class="timeline-item left animate-elementL " ref="ele1" :class="{ 'animate-fade-in': ele1.view }"
+                @click="handleClick(1)">
                 <div class=" timeline-content ">
 
                     <img :src="registrationsOpen" alt="registration open" class="w-1/2 image-to-overlay" />
 
                     <h3
-                        class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-50 via-amber-100 to-amber-100">
+                        class="text-4xl opacity-60 text-transparent bg-clip-text bg-gradient-to-r from-amber-50 via-amber-100 to-amber-100">
                         Registrations Open</h3>
 
                     <p
-                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-50 to-amber-100">
+                        class="text-2xl mt-1 opacity-60 text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-50 to-amber-100">
                         01.09.2023</p>
                     <div class="w-full flex justify-start">
                         <countdown-timer targetDate='2023-09-01'></countdown-timer>
@@ -79,12 +80,12 @@
                     <img :src="announcingSemi" alt="registration open" class="w-1/2 image-to-overlay" />
                     <h3
                         class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-200 to-amber-300">
-                        Announcing Semi Finalists</h3>
+                        Semi Finalists Announced</h3>
                     <p
                         class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-200 to-amber-300">
-                        XX.XX.2023</p>
+                        01.10.2023</p>
                     <div class="w-full flex justify-start">
-                        <countdown-timer targetDate='2023-12-31'></countdown-timer>
+                        <countdown-timer targetDate='2023-10-01'></countdown-timer>
                     </div>
                     <!-- Add any other content you want to display here -->
                 </div>
@@ -100,9 +101,9 @@
                         Semi Finals</h3>
                     <p
                         class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400">
-                        XX.XX.2023</p>
+                        15.10.2023</p>
                     <div class="w-full flex justify-end">
-                        <countdown-timer targetDate='2023-12-31'></countdown-timer>
+                        <countdown-timer targetDate='2023-10-15'></countdown-timer>
                     </div>
                     <!-- Add any other content you want to display here -->
                 </div>
@@ -113,12 +114,12 @@
                     <img :src="finalistsAnounced" alt="registration open" class="w-1/2 image-to-overlay" />
                     <h3
                         class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
-                        Announcing Finalists</h3>
+                        Finalists Announced</h3>
                     <p
                         class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
-                        XX.XX.2023</p>
+                        15.10.2023</p>
                     <div class="w-full flex justify-start">
-                        <countdown-timer targetDate='2023-12-31'></countdown-timer>
+                        <countdown-timer targetDate='2023-10-15'></countdown-timer>
                     </div>
                     <!-- Add any other content you want to display here -->
                 </div>
@@ -134,10 +135,10 @@
                         Finals</h3>
                     <p
                         class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">
-                        XX.XX.2023</p>
-                    <div class="w-full flex justify-end">
+                        TBD</p>
+                    <!-- <div class="w-full flex justify-end">
                         <countdown-timer targetDate='2023-12-31'></countdown-timer>
-                    </div>
+                    </div> -->
                     <!-- Add any other content you want to display here -->
                 </div>
             </div>
@@ -147,13 +148,13 @@
                     <img :src="winners" alt="registration open" class="w-1/2 image-to-overlay" />
                     <h3
                         class=" mt-1 text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-600 to-amber-500">
-                        Announcing Winners</h3>
+                        Winners Announced </h3>
                     <p
                         class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-600 to-amber-500">
-                        XX.XX.2023</p>
-                    <div class="w-full flex justify-start">
+                        TBD</p>
+                    <!-- <div class="w-full flex justify-start">
                         <countdown-timer targetDate='2023-12-31'></countdown-timer>
-                    </div>
+                    </div> -->
                     <!-- Add any other content you want to display here -->
                 </div>
             </div>
@@ -179,12 +180,14 @@ export default {
         CountdownTimer,
     },
     methods: {
+
         handleScroll() {
             const element = this.$el;
             const rect = element.getBoundingClientRect();
             const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
             const offset = windowHeight / 2;
+
             // Check if the element is in the viewport
             if (rect.top + this.ele2.height + offset < windowHeight) {
                 this.ele2.view = true;
@@ -209,6 +212,22 @@ export default {
                 this.ele7.view = true;
             }
         },
+        handleClick(title) {
+            switch (title) {
+                case 1:
+                    const currentURLWithoutHash = window.location.href.split('#')[0];
+
+                    // Combine the current URL with the desired fragment identifier
+                    const newURL = currentURLWithoutHash + '#register';
+
+                    // Navigate to the new URL
+                    window.location.href = newURL;
+                    break;
+
+                default:
+                    break;
+            }
+        }
     },
     mounted() {
 
