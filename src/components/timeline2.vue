@@ -11,8 +11,11 @@
                         Registrations Open</h3>
 
                     <p
-                        class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-50 to-amber-100">
+                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-50 to-amber-100">
                         01.09.2023</p>
+                    <div class="w-full flex justify-start">
+                        <countdown-timer targetDate='2023-09-01'></countdown-timer>
+                    </div>
                     <!-- Add any other content you want to display here -->
                 </div>
             </div>
@@ -60,8 +63,11 @@
                             Preliminary Round
                         </h3>
                         <p
-                            class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">
+                            class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">
                             01.10.2023</p>
+                        <div class="w-full flex justify-end">
+                            <countdown-timer targetDate='2023-10-01'></countdown-timer>
+                        </div>
                         <!-- Add any other content you want to display here -->
                     </div>
                 </div>
@@ -77,6 +83,9 @@
                     <p
                         class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-200 to-amber-300">
                         XX.XX.2023</p>
+                    <div class="w-full flex justify-start">
+                        <countdown-timer targetDate='2023-12-31'></countdown-timer>
+                    </div>
                     <!-- Add any other content you want to display here -->
                 </div>
             </div>
@@ -92,6 +101,9 @@
                     <p
                         class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400">
                         XX.XX.2023</p>
+                    <div class="w-full flex justify-end">
+                        <countdown-timer targetDate='2023-12-31'></countdown-timer>
+                    </div>
                     <!-- Add any other content you want to display here -->
                 </div>
             </div>
@@ -105,6 +117,9 @@
                     <p
                         class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
                         XX.XX.2023</p>
+                    <div class="w-full flex justify-start">
+                        <countdown-timer targetDate='2023-12-31'></countdown-timer>
+                    </div>
                     <!-- Add any other content you want to display here -->
                 </div>
             </div>
@@ -120,6 +135,9 @@
                     <p
                         class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">
                         XX.XX.2023</p>
+                    <div class="w-full flex justify-end">
+                        <countdown-timer targetDate='2023-12-31'></countdown-timer>
+                    </div>
                     <!-- Add any other content you want to display here -->
                 </div>
             </div>
@@ -133,6 +151,9 @@
                     <p
                         class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-600 to-amber-500">
                         XX.XX.2023</p>
+                    <div class="w-full flex justify-start">
+                        <countdown-timer targetDate='2023-12-31'></countdown-timer>
+                    </div>
                     <!-- Add any other content you want to display here -->
                 </div>
             </div>
@@ -141,6 +162,7 @@
 </template>
   
 <script >
+import CountdownTimer from './countdown.vue';
 import registrationsOpen from "../assets/images/Registrations_open.png";
 import prelis from "../assets/images/Prelis.png";
 import announcingSemi from "../assets/images/Semi_Finalists_announced.png"
@@ -153,6 +175,9 @@ import winners from "../assets/images/winners_announced.png"
 
 
 export default {
+    components: {
+        CountdownTimer,
+    },
     methods: {
         handleScroll() {
             const element = this.$el;
