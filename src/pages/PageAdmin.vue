@@ -156,7 +156,10 @@ export default {
         //         batch: this.batch,
         //         time: new Date()
         this.registrations = querySnapshot.docs.map((doc) => {
+
             const data = doc.data();
+
+
             return {
 
                 fullName: data.fullName,

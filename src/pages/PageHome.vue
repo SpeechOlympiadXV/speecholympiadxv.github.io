@@ -5,7 +5,7 @@ import AppFeaturette from "../components/AppFeaturette.vue";
 import AppTestimonialCard from "../components/AppTestimonialCard.vue";
 import Doodle from "../components/Doodle.vue";
 import HomePage_About from "../assets/images/What is SO - Home page .png";
-
+import timeline2 from "../components/timeline2.vue"
 import HomePage_PathOfChampion from "../assets/images/HomePage_PathOfChampion.jpg";
 import HomePage_TechnicalTips from "../assets/images/HomePage_TechnicalTips.jpg";
 import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonial_sirimevan.jpg";
@@ -20,6 +20,13 @@ import Prelis3 from "../assets/images/gallery/8.jpg";
 import timeline from "../components/timeline.vue";
 import { animateOnScroll } from "../aos.js";
 import Blogs from './PageTest.vue';
+import registrationsOpen from "../assets/images/Registrations_open.png"
+import prelis from "../assets/images/Prelis.png"
+import announcingSemi from "../assets/images/Semi_Finalists_announced.png"
+import semiFinal from "../assets/images/Semi_Finals.png"
+import finalistsAnounced from "../assets/images/Finalists_announced.png"
+import finals from "../assets/images/Finals.png"
+import winners from "../assets/images/winners_announced.png"
 export default {
   components: {
     AppFeaturette,
@@ -28,7 +35,8 @@ export default {
     Doodle,
     AppGallery,
     Blogs,
-    timeline
+    timeline,
+    timeline2
   },
   mounted() {
     var testimonialOut = null;
@@ -46,6 +54,13 @@ export default {
   data() {
     return {
       galleryImages: [Prelis1, Prelis2, Prelis3],
+      registrationsOpen,
+      prelis,
+      announcingSemi,
+      semiFinal,
+      finalistsAnounced,
+      finals,
+      winners,
       featurettes: [
         {
           heading: "What is Speech Olympiad?",
@@ -53,6 +68,7 @@ export default {
           text: "Speech Olympiad stands as the flagship occasion hosted by the Gavel Club at the University of Moratuwa. As the sole English language speech competition within the university...",
           image: HomePage_About,
           urlString: "#about",
+
         }
         // },
         // {
@@ -133,7 +149,11 @@ export default {
       <div class="col-12 mb-2 mt-6">
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       </div>
-      <!-- <timeline /> -->
+      <div class="col-12 mb-2 mt-6">
+        <h1 class="featurette-heading mt-0 mb-4">Timeline</h1>
+      </div>
+
+      <timeline2 />
       <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Past Experiences</h1>
       </div>
@@ -269,5 +289,23 @@ export default {
 .featurette-divider {
   margin: 5rem 0;
   /* Space out the Bootstrap <hr> more */
+}
+
+/* styles.css */
+
+.gradient-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.gradient-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  pointer-events: none;
 }
 </style>
