@@ -82,7 +82,7 @@
                         class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-200 to-amber-300">
                         Semi Finalists Announced</h3>
                     <p
-                        class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-200 to-amber-300">
+                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-200 to-amber-300">
                         01.10.2023</p>
                     <div class="w-full flex justify-start">
                         <countdown-timer targetDate='2023-10-01'></countdown-timer>
@@ -100,7 +100,7 @@
                         class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400">
                         Semi Finals</h3>
                     <p
-                        class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400">
+                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400">
                         15.10.2023</p>
                     <div class="w-full flex justify-end">
                         <countdown-timer targetDate='2023-10-15'></countdown-timer>
@@ -116,7 +116,7 @@
                         class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
                         Finalists Announced</h3>
                     <p
-                        class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
+                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
                         15.10.2023</p>
                     <div class="w-full flex justify-start">
                         <countdown-timer targetDate='2023-10-15'></countdown-timer>
@@ -134,7 +134,7 @@
                         class=" mt-1 text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">
                         Finals</h3>
                     <p
-                        class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">
+                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">
                         TBD</p>
                     <!-- <div class="w-full flex justify-end">
                         <countdown-timer targetDate='2023-12-31'></countdown-timer>
@@ -150,7 +150,7 @@
                         class=" mt-1 text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-600 to-amber-500">
                         Winners Announced </h3>
                     <p
-                        class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-600 to-amber-500">
+                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-600 to-amber-500">
                         TBD</p>
                     <!-- <div class="w-full flex justify-start">
                         <countdown-timer targetDate='2023-12-31'></countdown-timer>
@@ -230,6 +230,20 @@ export default {
         }
     },
     mounted() {
+        if (this.$refs.ele1 && this.$refs.ele2 && this.$refs.ele3 && this.$refs.ele4 && this.$refs.ele5 && this.$refs.ele6 && this.$refs.ele7) {
+            // Get the height of the element
+            this.ele1.height = this.$refs.ele1.offsetHeight;
+            this.ele2.height = this.$refs.ele2.offsetHeight;
+            this.ele3.height = this.$refs.ele3.offsetHeight;
+            this.ele4.height = this.$refs.ele4.offsetHeight;
+            this.ele5.height = this.$refs.ele5.offsetHeight;
+            this.ele6.height = this.$refs.ele6.offsetHeight;
+            this.ele7.height = this.$refs.ele7.offsetHeight;
+            // Log the height to the console (or use it as needed)
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            console.log('Element height:', this.ele1.height, this.ele7.height, windowHeight);
+        }
+        window.addEventListener('scroll', this.handleScroll);
 
         window.onload = () => {
             // Check if the element exists
