@@ -12,8 +12,11 @@
                         Registrations Open</h3>
 
                     <p
-                        class="text-2xl mt-1 opacity-60 text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-50 to-amber-100">
-                        01.09.2023</p>
+                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">
+                        1<sup
+                            class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">st</sup>
+                        September 2023
+                    </p>
                     <div class="w-full flex justify-start">
                         <countdown-timer targetDate='2023-09-01'></countdown-timer>
                     </div>
@@ -65,7 +68,12 @@
                         </h3>
                         <p
                             class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">
-                            01.10.2023</p>
+                            1<sup
+                                class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">st</sup>
+                            October 2023
+                        </p>
+
+
                         <div class="w-full flex justify-end">
                             <countdown-timer targetDate='2023-10-01'></countdown-timer>
                         </div>
@@ -80,10 +88,13 @@
                     <img :src="announcingSemi" alt="registration open" class="w-1/2 image-to-overlay" />
                     <h3
                         class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-200 to-amber-300">
-                        Semi Finalists Announced</h3>
+                        Announcing Semi Finalists</h3>
                     <p
-                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-200 to-amber-300">
-                        01.10.2023</p>
+                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">
+                        1<sup
+                            class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">st</sup>
+                        October 2023
+                    </p>
                     <div class="w-full flex justify-start">
                         <countdown-timer targetDate='2023-10-01'></countdown-timer>
                     </div>
@@ -100,8 +111,11 @@
                         class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400">
                         Semi Finals</h3>
                     <p
-                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400">
-                        15.10.2023</p>
+                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">
+                        15<sup
+                            class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">th</sup>
+                        October 2023
+                    </p>
                     <div class="w-full flex justify-end">
                         <countdown-timer targetDate='2023-10-15'></countdown-timer>
                     </div>
@@ -114,10 +128,13 @@
                     <img :src="finalistsAnounced" alt="registration open" class="w-1/2 image-to-overlay" />
                     <h3
                         class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
-                        Finalists Announced</h3>
+                        Announcing Finalists </h3>
                     <p
-                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
-                        15.10.2023</p>
+                        class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">
+                        15<sup
+                            class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">th</sup>
+                        October 2023
+                    </p>
                     <div class="w-full flex justify-start">
                         <countdown-timer targetDate='2023-10-15'></countdown-timer>
                     </div>
@@ -230,23 +247,7 @@ export default {
         }
     },
     mounted() {
-        if (this.$refs.ele1 && this.$refs.ele2 && this.$refs.ele3 && this.$refs.ele4 && this.$refs.ele5 && this.$refs.ele6 && this.$refs.ele7) {
-            // Get the height of the element
-            this.ele1.height = this.$refs.ele1.offsetHeight;
-            this.ele2.height = this.$refs.ele2.offsetHeight;
-            this.ele3.height = this.$refs.ele3.offsetHeight;
-            this.ele4.height = this.$refs.ele4.offsetHeight;
-            this.ele5.height = this.$refs.ele5.offsetHeight;
-            this.ele6.height = this.$refs.ele6.offsetHeight;
-            this.ele7.height = this.$refs.ele7.offsetHeight;
-            // Log the height to the console (or use it as needed)
-            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-            console.log('Element height:', this.ele1.height, this.ele7.height, windowHeight);
-        }
-        window.addEventListener('scroll', this.handleScroll);
-
-        window.onload = () => {
-            // Check if the element exists
+        setTimeout(() => {
             if (this.$refs.ele1 && this.$refs.ele2 && this.$refs.ele3 && this.$refs.ele4 && this.$refs.ele5 && this.$refs.ele6 && this.$refs.ele7) {
                 // Get the height of the element
                 this.ele1.height = this.$refs.ele1.offsetHeight;
@@ -261,7 +262,26 @@ export default {
                 console.log('Element height:', this.ele1.height, this.ele7.height, windowHeight);
             }
             window.addEventListener('scroll', this.handleScroll);
-        }
+        }, 100);
+
+
+        // window.onload = () => {
+        //     // Check if the element exists
+        //     if (this.$refs.ele1 && this.$refs.ele2 && this.$refs.ele3 && this.$refs.ele4 && this.$refs.ele5 && this.$refs.ele6 && this.$refs.ele7) {
+        //         // Get the height of the element
+        //         this.ele1.height = this.$refs.ele1.offsetHeight;
+        //         this.ele2.height = this.$refs.ele2.offsetHeight;
+        //         this.ele3.height = this.$refs.ele3.offsetHeight;
+        //         this.ele4.height = this.$refs.ele4.offsetHeight;
+        //         this.ele5.height = this.$refs.ele5.offsetHeight;
+        //         this.ele6.height = this.$refs.ele6.offsetHeight;
+        //         this.ele7.height = this.$refs.ele7.offsetHeight;
+        //         // Log the height to the console (or use it as needed)
+        //         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        //         console.log('Element height:', this.ele1.height, this.ele7.height, windowHeight);
+        //     }
+        //     window.addEventListener('scroll', this.handleScroll);
+        // }
         // Optionally, you can call handleScroll() initially if the element is already in the viewport.
         // this.handleScroll();
     },
