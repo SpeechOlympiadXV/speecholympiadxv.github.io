@@ -9,7 +9,7 @@
 
                     <h3
                         class="text-4xl opacity-60 text-transparent bg-clip-text bg-gradient-to-r from-amber-50 via-amber-100 to-amber-100">
-                        Registrations Open</h3>
+                        Registrations Opened</h3>
 
                     <p
                         class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">
