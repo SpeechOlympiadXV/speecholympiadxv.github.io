@@ -22,14 +22,14 @@ const routes = {
   "/": PageHome,
   "/about": PageAbout,
   "/champions-story": PageChampionsStory,
-  "/technical-tips": PageTechnicalTips,
+  "/technical-tips": PageTT,
   "/gallery": PageGallery,
   "/blogs": PageTest,
   "/form": PageForm,
   "/admin": PageAdmin,
   "/register": PageFormNew,
   "/rules": PageRules,
-  "/tips": PageTT
+
 };
 
 export default {
