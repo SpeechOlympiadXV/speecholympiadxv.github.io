@@ -13,7 +13,7 @@
                 <p>{{ introductorySession }}</p>
 
 
-                <iframe class="w-full h-80" src="https://www.youtube.com/embed/HSxRUYzGuug?si=yGchZu65h2WudLDt"
+                <iframe class="yt" src="https://www.youtube.com/embed/HSxRUYzGuug?si=yGchZu65h2WudLDt"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
@@ -136,6 +136,19 @@ li {
     /* border: none; */
 
 
+
+}
+
+.yt {
+    width: 560px;
+    height: 315px;
+}
+
+@media only screen and (max-width: 767px) {
+    .yt {
+        width: 380px;
+        height: 220px;
+    }
 }
 </style>
   
