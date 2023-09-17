@@ -13,10 +13,12 @@
             <div class="introductory-session mb-6">
                 <p>{{ introductorySession }}</p>
 
-                <iframe width="100%" height="500" src="https://www.youtube.com/embed/HSxRUYzGuug?si=yGchZu65h2WudLDt"
+                <iframe class="w-full h-80" src="https://www.youtube.com/embed/HSxRUYzGuug?si=yGchZu65h2WudLDt"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
+
+
 
                 <!-- The Art of Storytelling -->
                 <h2 class="text-2xl font-bold mt-4">{{ storytellingTitle }}</h2>
