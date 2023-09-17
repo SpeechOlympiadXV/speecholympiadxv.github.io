@@ -33,6 +33,8 @@
                 <ul>
                     <li v-for="(point, index) in deliveringPoints" :key="index">{{ point }}</li>
                 </ul>
+                <p>Managing these elements especially in the first 40 seconds and throughout your speech produces an
+                    interesting and effective presentation.</p>
                 <img class="article-img article-img-resize" alt="" :src="Madutshika2" loading="lazy" />
                 <!-- Where to Find Stories -->
                 <h2 class="text-2xl font-bold mt-4">{{ findingStoriesTitle }}</h2>
@@ -49,7 +51,7 @@
                 <p>{{ evaluationCriteriaContent }}</p>
                 <img class="article-img article-img-resize" alt="" :src="Madutshika3" loading="lazy" />
                 <!-- Conclusion -->
-                <h2 class="text-2xl font-bold mt-4">{{ conclusionTitle }}</h2>
+
                 <p>{{ conclusionContent }}</p>
 
             </div>
@@ -91,11 +93,11 @@ export default {
             title: "Embarking Eloquence: An In-depth Look at the Introductory Session of Speech Olympiad 16 by Gavel Mora",
             introductorySession: "The introductory session of Speech Olympiad 16 by Gavel Mora, helmed by the insightful Toastmaster Madushika Munasingha, delved into the intricacies of public speaking, providing attendees with a comprehensive workshop. The session covered essential aspects of effective communication, from the art of storytelling and structuring speeches, to delivering them.",
             storytellingTitle: "The Art of Storytelling",
-            storytellingContent: "Storytelling is a subtle skill that involves more than just relaying events. She underlined the significance of engaging the audience's emotions, engrossing them in the story, and forging a bond...",
+            storytellingContent: "Storytelling is a subtle skill that involves more than just relaying events. She underlined the significance of engaging the audience's emotions, engrossing them in the story, and forging a bond. Understanding the audience's demographics and interests is the first step in crafting a tale that will speak to their experiences, worldviews, or aspirations. The story comes alive when relatable characters, striking imagery, and intense conflicts are present. This has a significant effect on the listeners.",
             structuringTitle: "Structuring Your Speech",
-            structuringContent: "A well-structured speech is akin to a well-designed building—it has a strong foundation and a logical flow...",
+            structuringContent: "A well-structured speech is akin to a well-designed building—it has a strong foundation and a logical flow.  The introduction sets the tone, grabbing the audience's attention with a compelling hook or a thought-provoking question. The body of the speech elaborates on the key points, employing a coherent and organized structure. Each point should seamlessly transition into the next, guiding the audience through the storyline. Finally, the conclusion should summarize the speech's essence, leaving a memorable impression and potentially inciting action or contemplation.",
             deliveringTitle: "Delivering Your Speech",
-            deliveringContent: "Your first 40 seconds of a speech are crucial to captivating your audience. During this vital time, delivery is key...",
+            deliveringContent: "Your first 40 seconds of a speech are crucial to captivating your audience. During this vital time, delivery is key.  Eye contact connects you with the audience and draws them into your story. Sincere, well-placed gazes express confidence, genuineness, and rapport.",
             deliveringPoints: [
                 "In combination with captivating eye contact, body language is dynamic. Your posture, gestures, and facial emotions should support your statements, magnifying them. The appropriate body language emphasises essential themes, shows excitement, and makes your speech memorable.",
                 "The melody that complements the text is vocal variety. Like a story, your voice should change pitch, tempo, and loudness to keep listeners engaged. Different vocal tones offer depth, emotion, and emphasis, making even an average speech compelling.",
@@ -108,9 +110,9 @@ export default {
                 "Coherence ensures that ideas flow logically and smoothly from one point to the next, aiding comprehension. Conciseness involves presenting the speech in a way that is both comprehensive and to the point, respecting the audience's time and attention.",
             ],
             evaluationCriteriaTitle: "Evaluation Criteria of Gavel",
-            evaluationCriteriaContent: "To continuously improve as a speaker, one must embrace feedback and constructive criticism. Gavel Mora's evaluation criteria encompass a holistic view of a speech...",
+            evaluationCriteriaContent: "To continuously improve as a speaker, one must embrace feedback and constructive criticism. Gavel Mora's evaluation criteria encompass a holistic view of a speech.  Content is evaluated for its relevance, depth, and originality. The organisation is assessed to ensure a clear structure and effective transitions. Delivery focuses on the speaker's presence, charisma, and connection with the audience. Language evaluates the choice of words, grammar, and overall articulation. Lastly, overall impact assesses how well the speech achieves its intended purpose and resonates with the audience.",
             conclusionTitle: "In conclusion",
-            conclusionContent: "The introductory session of Speech Olympiad 16 by Gavel Mora, under the guidance of Toastmaster Madushika Munasingha Toastmaster, provided invaluable insights into the art of eloquence...",
+            conclusionContent: "In conclusion, the introductory session of Speech Olympiad XVI by Gavel Mora, under the guidance of Toastmaster Madushika Munasingha, provided invaluable insights into the art of eloquence. Aspiring speakers can utilise these profound insights to refine their storytelling abilities, enhance speech structures, master effective delivery, curate compelling stories, craft impactful speeches, and understand the critical evaluation criteria. Armed with this knowledge, speakers can elevate their public speaking skills and captivate audiences, ultimately leaving a lasting impression in the realm of oratory.",
             author: "Adeepa Kularathna",
         };
     },
