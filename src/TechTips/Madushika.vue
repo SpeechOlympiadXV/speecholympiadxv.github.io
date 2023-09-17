@@ -140,13 +140,13 @@ li {
 }
 
 .yt {
-    width: 560px;
-    height: 315px;
+    width: 100%;
+    height: 500px;
 }
 
 @media only screen and (max-width: 767px) {
     .yt {
-        width: 380px;
+        width: 100%;
         height: 220px;
     }
 }
