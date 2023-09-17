@@ -1,7 +1,6 @@
 <template>
     <div class="speech-olympiad">
-        <AppHeroSection :imagePath="MadutshikaTitle
-            ">
+        <AppHeroSection :imagePath="MadutshikaTitle">
             <!-- <div class="hero-text">
         <h1>A Guide to Becoming a Better Speaker</h1>
       </div> -->
@@ -56,7 +55,7 @@
             </div>
 
             <!-- Author -->
-            <ArticleInterview :author-name="author" interviewee-name="Madushika Manasinghe"
+            <ArticleInterview :author-name="author" interviewee-name="Madushika Munasinghe"
                 :intervieweeImg="MadushikaPortrait" />
         </AppArticle>
 
@@ -74,6 +73,7 @@ import Madutshika3 from "../assets/images/Madushika3.jpeg";
 import ArticleInterview from "../components/ArticleInterview.vue";
 import TechnicalTips_portrait from "../assets/images/TechnicalTips_portrait.jpeg"
 import MadushikaPortrait from "../assets/images/Madushika_portrait.jpg"
+import MaduashikaTitleMobile from "../assets/images/Madushika_title_mobile.png"
 export default {
     name: "Madushika",
     components: { AppArticle, AppHeroSection, ArticleInterview },
@@ -81,6 +81,7 @@ export default {
     data() {
         return {
             TechnicalTips_portrait,
+            MaduashikaTitleMobile,
             Madutshika1,
             Madutshika2,
             Madutshika3,
