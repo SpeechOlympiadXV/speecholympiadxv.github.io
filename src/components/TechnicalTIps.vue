@@ -1,6 +1,6 @@
 <template>
     <div
-        :class="[backgroundColorClass, 'border', 'border-gray-200', 'bg-opacity-80', 'hover:bg-opacity-100', 'rounded-lg', 'p-4', 'my-3', 'md:my-0', 'w-full']">
+        :class="[backgroundColorClass, 'border', 'border-gray-200', 'bg-opacity-80', 'hover:bg-opacity-100', 'rounded-lg', 'p-4', 'my-3', 'md:my-0', 'w-full', 'cursor-pointer']">
         <h5 class="text-left font-bold text-amber-100 text-4xl mb-2 border-b-2 border-zinc-500 pb-2" v-html="title"></h5>
         <div class="md:flex ">
             <div class="md:w-1/3 md:flex md:justify-center my-4">
