@@ -16,15 +16,15 @@ export default {
                     imageSrc: TechnicalTips_portrait,
                     title: "A guide to becoming a better speaker",
                     subtitle: "Tips from Dr.Samadhi Poornima, champion of Speech Olympiad IX",
-                    backgroundColorClass: "bg-cyan-500",
+                    backgroundColorClass: "bg-amber-600",
                     body: "Speech Olympiad is more than a mere speaking contest, it is a culmination of people, experiences and exposure. I cherish to this date, every moment of the competition which was a gateway to self-reflection that enhanced my capabilities in the corporate world and beyond.",
                 },
                 {
                     key: "2",
                     imageSrc: MadushikaPortrait,
-                    title: 'Embarking Eloquence <br/>  ',
-                    subtitle: "Madushika Manasinghe",
-                    backgroundColorClass: "bg-lime-500",
+                    title: 'Embarking <br/> On <br/> Eloquence <br/>  ',
+                    subtitle: "Tips from Toastmaster Madushika Munasinghe, Semi Finalist of Speech Olympiad XIII, Former Vice President Membership",
+                    backgroundColorClass: "bg-orange-600",
                     body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
                 }
             ]
