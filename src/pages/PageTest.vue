@@ -89,6 +89,16 @@ export default {
                             :src="convertImageUrl(imageC.image.asset._ref)" class="w-full h-auto rounded cursor-pointer" />
                     </div>
                 </div>
+                <button @click="closePost"
+                    class="bg-gray-800 text-white p-4 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+
+                </button>
 
                 <!-- Image Modal -->
                 <div v-if="showModal" class="fixed inset-0 flex items-center justify-center z-50">
