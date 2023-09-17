@@ -12,11 +12,11 @@
             <div class="introductory-session mb-6">
                 <p>{{ introductorySession }}</p>
 
+
                 <iframe class="w-full h-80" src="https://www.youtube.com/embed/HSxRUYzGuug?si=yGchZu65h2WudLDt"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
-
 
 
                 <!-- The Art of Storytelling -->
@@ -54,6 +54,7 @@
 
             </div>
 
+
             <!-- Author -->
             <ArticleInterview :author-name="author" interviewee-name="Madushika Munasinghe"
                 :intervieweeImg="MadushikaPortrait" />
@@ -73,7 +74,7 @@ import Madutshika3 from "../assets/images/Madushika3.jpeg";
 import ArticleInterview from "../components/ArticleInterview.vue";
 import TechnicalTips_portrait from "../assets/images/TechnicalTips_portrait.jpeg"
 import MadushikaPortrait from "../assets/images/Madushika_portrait.jpg"
-import MaduashikaTitleMobile from "../assets/images/Madushika_title_mobile.png"
+
 export default {
     name: "Madushika",
     components: { AppArticle, AppHeroSection, ArticleInterview },
@@ -81,14 +82,14 @@ export default {
     data() {
         return {
             TechnicalTips_portrait,
-            MaduashikaTitleMobile,
+
             Madutshika1,
             Madutshika2,
             Madutshika3,
             MadutshikaTitle,
             MadushikaPortrait,
             title: "Embarking Eloquence: An In-depth Look at the Introductory Session of Speech Olympiad 16 by Gavel Mora",
-            introductorySession: "The introductory session of Speech Olympiad 16 by Gavel Mora, helmed by the insightful Toastmaster Madushika Munasingha, delved into the intricacies of public speaking, providing attendees with a comprehensive workshop...",
+            introductorySession: "The introductory session of Speech Olympiad 16 by Gavel Mora, helmed by the insightful Toastmaster Madushika Munasingha, delved into the intricacies of public speaking, providing attendees with a comprehensive workshop. The session covered essential aspects of effective communication, from the art of storytelling and structuring speeches, to delivering them.",
             storytellingTitle: "The Art of Storytelling",
             storytellingContent: "Storytelling is a subtle skill that involves more than just relaying events. She underlined the significance of engaging the audience's emotions, engrossing them in the story, and forging a bond...",
             structuringTitle: "Structuring Your Speech",
