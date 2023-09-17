@@ -16,18 +16,20 @@ import PageForm from "./pages/PageForm.vue";
 import { useSanityClient } from 'vue-sanity'
 import PageAdmin from "./pages/PageAdmin.vue";
 import PageFormNew from "./pages/PageFormNew.vue";
-
+import Tips from "./components/tips.vue";
+import PageTT from "./pages/PageTechTips.vue";
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
   "/champions-story": PageChampionsStory,
-  "/technical-tips": PageTechnicalTips,
+  "/technical-tips": PageTT,
   "/gallery": PageGallery,
   "/blogs": PageTest,
   "/form": PageForm,
   "/admin": PageAdmin,
   "/register": PageFormNew,
-  "/rules": PageRules
+  "/rules": PageRules,
+
 };
 
 export default {

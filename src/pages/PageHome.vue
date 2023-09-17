@@ -18,6 +18,7 @@ import Prelis2 from "../assets/images/gallery/3.jpg";
 import Prelis3 from "../assets/images/gallery/8.jpg";
 
 import timeline from "../components/timeline.vue";
+
 import { animateOnScroll } from "../aos.js";
 import Blogs from './PageTest.vue';
 import registrationsOpen from "../assets/images/Registrations_open.png"
@@ -27,6 +28,8 @@ import semiFinal from "../assets/images/Semi_Finals.png"
 import finalistsAnounced from "../assets/images/Finalists_announced.png"
 import finals from "../assets/images/Finals.png"
 import winners from "../assets/images/winners_announced.png"
+
+import PageTT from "./PageTechTips.vue"
 export default {
   components: {
     AppFeaturette,
@@ -36,7 +39,9 @@ export default {
     AppGallery,
     Blogs,
     timeline,
-    timeline2
+
+    timeline2,
+    PageTT
   },
   mounted() {
     var testimonialOut = null;
@@ -86,6 +91,7 @@ export default {
         //   urlString: "#technical-tips",
         // },
       ],
+
       testimonials: [
         {
           key: "1",
@@ -160,7 +166,8 @@ export default {
 
       <Blogs :limit="2" />
       <br /><br />
-      <!--Testimonials-->
+      <PageTT />
+
       <div class="row mb-5">
         <div class="col-12 mb-2">
           <h1 class="featurette-heading mt-0 mb-4">Testimonials</h1>
