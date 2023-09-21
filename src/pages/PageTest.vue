@@ -41,7 +41,7 @@ export default {
                 {{ error }}
             </div>
 
-            <div v-if="post" class="content px-4 py-4">
+            <div v-if="post" class="content px-4 py-4 w-full md:w-1/2">
                 <button @click="closePost"
                     class="bg-gray-800 text-white p-4 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
@@ -261,8 +261,27 @@ export default {
             );
         },
         fetchData() {
+            let query = "";
+            if (this.limit == 2) {
+                // || slug == "so-xv-the-grand-finale" || slug == "the-preliminary-round-of-speech-olympiad-xv") && slug == "speech-olympiad-xv-the-semi-final-round" 
+                query = ` *[_type == "post" && (slug.current == "so-xv-the-grand-finale" || slug.current == "the-preliminary-round-of-speech-olympiad-xv" || slug.current == "speech-olympiad-xv-the-semi-final-round"  )] {
+              _id,
+              title,
+              slug,
+              description,
+              "image": mainImage {
+                asset-> {
+                  _id,
+                  url
+                }
+              },
+              "name": author->name,
+              excerpt
+            }  `;
+            }
+            else {
 
-            let query = `*[_type == "post"]{
+                query = `*[_type == "post"]{
     _id,
     title,
     slug,
@@ -278,6 +297,7 @@ export default {
 
     excerpt
   }[0..${this.limit}]`;
+            }
             console.log(this.limit)
 
             this.error = this.post = null;
@@ -341,5 +361,37 @@ h6 {
 .image-expanded img {
     max-width: 90%;
     max-height: 90%;
+}
+
+ul {
+
+
+    margin-left: 20px;
+
+    padding-left: 20px;
+
+}
+
+p {
+    text-indent: 1em;
+
+
+    /* Vertical margin between paragraphs */
+
+    /* Space before the first line of each paragraph */
+    line-height: 1.5;
+    /* Line height for improved readability (adjust as needed) */
+    padding-bottom: 1em;
+}
+
+
+
+li {
+
+    margin-bottom: 5px;
+    /* border: none; */
+
+
+
 }
 </style>

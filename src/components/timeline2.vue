@@ -290,21 +290,7 @@ export default {
     },
     data() {
         return {
-            timelineItems: [
-                {
-                    title: 'Event 1',
-                    description: 'Description for Event 1',
-                },
-                {
-                    title: 'Event 2',
-                    description: 'Description for Event 2',
-                },
-                {
-                    title: 'Event 3',
-                    description: 'Description for Event 3',
-                },
-                // Add more timeline items as needed
-            ],
+
             registrationsOpen,
             prelis,
             announcingSemi,

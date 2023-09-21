@@ -76,7 +76,6 @@ import Madutshika3 from "../assets/images/Madushika3.jpeg";
 import ArticleInterview from "../components/ArticleInterview.vue";
 import TechnicalTips_portrait from "../assets/images/TechnicalTips_portrait.jpeg"
 import MadushikaPortrait from "../assets/images/Madushika_portrait.jpg"
-
 export default {
     name: "Madushika",
     components: { AppArticle, AppHeroSection, ArticleInterview },
@@ -84,7 +83,6 @@ export default {
     data() {
         return {
             TechnicalTips_portrait,
-
             Madutshika1,
             Madutshika2,
             Madutshika3,
