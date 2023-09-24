@@ -24,7 +24,7 @@ export default {
                     imageSrc: MadushikaPortrait,
                     title: 'Embarking <br/> On <br/> Eloquence <br/>  ',
                     subtitle: "Tips from Toastmaster Madushika Munasinghe, Semi Finalist of Speech Olympiad XIII, Former Vice President Membership",
-                    backgroundColorClass: "bg-orange-600",
+                    backgroundColorClass: "bg-orange-300",
                     body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
                 }
             ]
@@ -115,6 +115,7 @@ export default {
         </button>
     </div>
 </template>
+
 <style >
 .featurette-heading {
     font-size: 30px;
