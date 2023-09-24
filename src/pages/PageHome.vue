@@ -30,6 +30,10 @@ import finals from "../assets/images/Finals.png"
 import winners from "../assets/images/winners_announced.png"
 
 import PageTT from "./PageTechTips.vue"
+
+import pageChamp from "./PageChampionsStory.vue"
+
+
 export default {
   components: {
     AppFeaturette,
@@ -41,7 +45,9 @@ export default {
     timeline,
 
     timeline2,
-    PageTT
+    PageTT,
+
+    pageChamp
   },
   mounted() {
     var testimonialOut = null;
@@ -168,10 +174,13 @@ export default {
       <br /><br />
       <PageTT />
 
+      <page-champ />
+
       <div class="row mb-5">
         <div class="col-12 mb-2">
           <h1 class="featurette-heading mt-0 mb-4">Testimonials</h1>
         </div>
+
 
         <!-- Three columns of cards  -->
         <div class="col-12 mb-2">
