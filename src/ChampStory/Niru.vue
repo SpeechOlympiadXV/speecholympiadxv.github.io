@@ -2,9 +2,9 @@
 import AppHeroSection from "../components/AppHeroSection.vue";
 import AppArticle from "../components/AppArticle.vue";
 import ArticleInterview from "../components/ArticleInterview.vue";
-import NiruthikaMid from "../assets/images/mid img niru.png"
-import Niru_champ_story from "../assets/images/Niru Champ story.png"
-import NiruthikaPortrait from "../assets/images/niru profile img.png"
+import NiruthikaMid from "../assets/images/mid_img_niru.png"
+import Niru_champ_story from "../assets/images/Niru_Champ_story.png"
+import NiruthikaPortrait from "../assets/images/Niru_profile_img.png"
 
 export default {
   data() {

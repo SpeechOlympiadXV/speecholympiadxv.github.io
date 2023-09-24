@@ -2,7 +2,7 @@
 import TechnicalTips from "../components/TechnicalTips.vue";
 import Yasir from "../ChampStory/Yasir.vue"
 import Niruthika from "../ChampStory/Niru.vue"
-import NiruthikaPortrait from "../assets/images/niru profile img.png"
+import NiruthikaPortrait from "../assets/images/Niru_profile_img.png"
 import YasirPortrait from "../assets/images/PathOfChampion_portrait.jpg"
 export default {
     data() {
