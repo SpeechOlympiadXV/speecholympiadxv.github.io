@@ -51,12 +51,8 @@ export default {
           name: "Blogs",
           url: "#blogs",
           newTab: false,
-        },
-        {
-          name: "Register",
-          url: "#register",
-          newTab: false,
-        },
+        }
+
       ],
       activeItem: getActiveItem(),
     };
