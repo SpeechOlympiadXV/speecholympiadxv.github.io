@@ -150,14 +150,8 @@ export default {
       <div class="col-12 mb-2 mt-6">
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       </div>
-      <div class="text-center button-container">
-        <p class="text-3xl "> Didn't register yet?</p>
-        <br />
-        <a class="button" href="#register">
-          Register &rarr;
-        </a>
-      </div>
-      <hr class="featurette-divider" />
+
+
       <div class="col-12 mb-2 mt-6">
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       </div>
@@ -166,16 +160,18 @@ export default {
       </div>
 
       <timeline2 />
+      <hr class="featurette-divider" />
       <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Past Experiences</h1>
       </div>
 
       <Blogs :limit="2" />
       <br /><br />
+      <hr class="featurette-divider" />
       <PageTT />
-
+      <hr class="featurette-divider" />
       <page-champ />
-
+      <hr class="featurette-divider" />
       <div class="row mb-5">
         <div class="col-12 mb-2">
           <h1 class="featurette-heading mt-0 mb-4">Testimonials</h1>
@@ -195,7 +191,7 @@ export default {
         </div>
         <!-- /.row -->
       </div>
-
+      <hr class="featurette-divider" />
       <!--Prelis images-->
       <div class="row mb-5">
         <div class="col-12 mb-2">
