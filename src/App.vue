@@ -28,7 +28,7 @@ const routes = {
   "/blogs": PageTest,
   "/form": PageForm,
   "/admin": PageAdmin,
-  "/register": PageFormNew,
+
   "/rules": PageRules,
   "/blog2": PageBlog2
 };
