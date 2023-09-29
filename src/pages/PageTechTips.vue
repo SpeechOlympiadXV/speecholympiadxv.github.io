@@ -1,10 +1,12 @@
 <script>
 import TechnicalTips_portrait from "../assets/images/TechnicalTips_portrait.jpeg"
 import TechnicalTips from "../components/TechnicalTips.vue";
-import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
+import Yasir from "../TechTips/Yasir_techtip.vue"
 import Samadhi from "../TechTips/Samadhi.vue"
 import Madushika from "../TechTips/Madushika.vue"
 import MadushikaPortrait from "../assets/images/Madushika_portrait.jpg"
+import yasirPortrait from "../assets/images/PathOfChampion_portrait.jpg"
+
 export default {
     data() {
 
@@ -16,7 +18,7 @@ export default {
                     imageSrc: TechnicalTips_portrait,
                     title: "A guide to becoming a better speaker",
                     subtitle: "Tips from Dr.Samadhi Poornima, champion of Speech Olympiad IX",
-                    backgroundColorClass: "bg-amber-600",
+                    backgroundColorClass: "bg-amber-900", // Use a custom CSS class
                     body: "Speech Olympiad is more than a mere speaking contest, it is a culmination of people, experiences and exposure. I cherish to this date, every moment of the competition which was a gateway to self-reflection that enhanced my capabilities in the corporate world and beyond.",
                 },
                 {
@@ -24,7 +26,17 @@ export default {
                     imageSrc: MadushikaPortrait,
                     title: 'Embarking <br/> On <br/> Eloquence <br/>  ',
                     subtitle: "Tips from Toastmaster Madushika Munasinghe, Semi Finalist of Speech Olympiad XIII, Former Vice President Membership",
-                    backgroundColorClass: "bg-orange-300",
+                    style: {
+                        backgroundColor: "bg-amber",
+                            },
+                    body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
+                },
+                {
+                    key: "3",
+                    imageSrc: yasirPortrait,
+                    title: 'Crafting Compelling Speeches',
+                    subtitle: "Tips on how to craft and structure your speech from DTM Mohamed Yasir, Champion of Speech Olympiad VIII",
+                    backgroundColorClass: "bg-amber-900",
                     body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
                 }
             ]
@@ -41,7 +53,8 @@ export default {
     components: {
         TechnicalTips,
         Samadhi,
-        Madushika
+        Madushika,
+        Yasir
     },
 
 }
@@ -114,6 +127,31 @@ export default {
 
         </button>
     </div>
+
+    <div v-if="key == '3'">
+        <button @click="closePost"
+            class="bg-amber-800 m-4 text-white p-4 w-36 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
+                    clip-rule="evenodd" />
+            </svg>
+
+
+        </button>
+        <yasir />
+        <button @click="closePost"
+            class="bg-amber-800 m-4 text-white p-4 w-36 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
+                    clip-rule="evenodd" />
+            </svg>
+
+
+        </button>
+    </div>
+
 </template>
 
 <style >
@@ -139,4 +177,6 @@ export default {
         font-weight: bold;
     }
 }
+
+
 </style>
