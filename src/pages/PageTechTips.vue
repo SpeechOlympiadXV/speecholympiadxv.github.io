@@ -28,7 +28,7 @@ export default {
           title: "Embarking <br/> On <br/> Eloquence <br/>  ",
           subtitle:
             "Tips from Toastmaster Madushika Munasinghe, Semi Finalist of Speech Olympiad XIII, Former Vice President Membership",
-          backgroundColorHash: "#BB280F", // Use a custom background color
+          backgroundColorHash: "#D6280F", // Use a custom background color
           body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
         },
         {

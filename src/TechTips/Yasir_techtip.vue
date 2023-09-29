@@ -76,7 +76,7 @@ export default {
           to keep your audience engaged.
       </p>
       
-      <iframe class="yt" src="https://www.youtube.com/embed/AZHEQmR-nqI"
+      <iframe class="yt" src="https://www.youtube.com/embed/NqqDsnBvuuI?si=XHg1VdoGyX13IUip"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
