@@ -1,5 +1,5 @@
 @import "./base.css";
-
+@import url(https://themes.googleusercontent.com/fonts/css?kit=69-a5FUctkP2aXDfjm7OFbkrmU7UMp682phjRe6EgFN3fmNQn5QXidju6YcFSZBL);
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
