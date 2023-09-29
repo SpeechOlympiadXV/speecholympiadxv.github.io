@@ -15,7 +15,7 @@ export default {
                     imageSrc: YasirPortrait,
                     title: "Walk the Path of a Champion",
                     subtitle: "The story of Mohamed Yasir, champion of Speech Olympiad VIII",
-                    backgroundColorClass: "bg-yellow-600",
+                    backgroundColorClass: "bg-yellow-300",
                     // body: "Speech Olympiad is more than a mere speaking contest, it is a culmination of people, experiences and exposure. I cherish to this date, every moment of the competition which was a gateway to self-reflection that enhanced my capabilities in the corporate world and beyond.",
                 },
                 {
@@ -23,7 +23,7 @@ export default {
                     imageSrc: NiruthikaPortrait,
                     title: 'The Transformative Journey of a Champion',
                     subtitle: "The story of Niruththika Sritharan, Champion of Speech Olympiad  XIV",
-                    backgroundColorClass: "bg-orange-900",
+                    backgroundColorClass: "bg-orange-400",
                     body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
                 }
             ]

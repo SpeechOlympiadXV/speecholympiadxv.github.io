@@ -11,14 +11,14 @@
     'cursor-pointer',
     'technical-tips'
   ]" :style="[backgroundColorHash ? { backgroundColor: backgroundColorHash } : '']">
-    <h5 class="text-left font-bold text-amber-100 text-4xl selector mb-2 border-b-2 border-zinc-500 pb-2" v-html="title">
+    <h5 class="text-left font-bold text-zinc-800 text-4xl selector mb-2 border-b-2 border-zinc-500 pb-2" v-html="title">
     </h5>
     <div class="md:flex">
       <div class="md:w-1/3 md:flex md:justify-center my-4">
         <img alt="" :src="imageSrc" class="w-24 h-24 rounded-full mx-auto" loading="lazy" />
       </div>
-      <div class="md:w-2/3 card-body bg-slate-600 bg-opacity-30">
-        <h6 class="text-left text-gray-200 mt-3 mb-2">{{ subtitle }}</h6>
+      <div class="md:w-2/3 card-body bg-slate-600  bg-opacity-30">
+        <h6 class="text-left text-gray-200 text-zinc-800 mt-3 mb-2">{{ subtitle }}</h6>
       </div>
     </div>
   </div>
@@ -48,6 +48,6 @@ export default {
 }
 
 .selector {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(73, 73, 73, 0.5);
 }
 </style>
