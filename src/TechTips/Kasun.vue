@@ -47,7 +47,9 @@ export default {
                         Delivery</span>
                 </p>
                 <p class="c0 c5"><span class="c1"></span></p>
-                <p class="c0"><span class="c1">&ldquo;Speech delivery is giving a message to someone close to you and having
+                <p class="c0 box p-4"><span class="c1 ">&ldquo;Speech delivery is giving a message to someone close to you
+                        and
+                        having
                         them
                         take that message home and change their life&rdquo;</span></p>
                 <p class="c0 c5"><span class="c1"></span></p>
