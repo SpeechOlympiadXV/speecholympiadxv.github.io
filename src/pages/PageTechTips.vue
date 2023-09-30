@@ -17,7 +17,7 @@ export default {
         {
           key: "1",
           imageSrc: TechnicalTips_portrait,
-          title: "A guide to becoming a better speaker",
+          title: "A guide <br/>  to becoming a  <br/> better speaker",
           subtitle:
             "Tips from Dr.Samadhi Poornima, champion of Speech Olympiad IX",
           backgroundColorClass: "bg-amber-900", // Use a custom CSS class
@@ -36,7 +36,7 @@ export default {
         {
           key: "3",
           imageSrc: yasirPortrait,
-          title: "Crafting Compelling Speeches",
+          title: "Crafting <br/>  Compelling <br/>  Speeches",
           subtitle:
             "Tips on how to craft and structure your speech from DTM Mohamed Yasir, Champion of Speech Olympiad VIII",
           backgroundColorClass: "bg-amber-900",
@@ -46,7 +46,7 @@ export default {
         {
           key: "4",
           imageSrc: KasunPortrait,
-          title: "The Art Of Winning",
+          title: "The Art  <br/> Of <br/>  Winning",
           subtitle:
             "Tips from Kasun Ranasinghe, Champion of Speech Olympiad X",
           backgroundColorClass: "bg-amber-900",

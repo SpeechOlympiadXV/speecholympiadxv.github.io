@@ -5,7 +5,9 @@ import ArticleInterview from "../components/ArticleInterview.vue";
 import TechnicalTips_title_mobile from "../assets/images/kasunayyamobile.jpg"
 import TechnicalTips_title_desktop from "../assets/images/kasunayyawebsite.jpg"
 import TechnicalTips_portrait from "../assets/images/kasunayya.jpg"
-
+import artofw2 from '../assets/images/artofw2.jpg'
+import artofw1 from '../assets/images/artofw1.jpg'
+import artofw3 from '../assets/images/artofw3.jpg'
 
 export default {
     data() {
@@ -13,6 +15,9 @@ export default {
             TechnicalTips_title_mobile,
             TechnicalTips_title_desktop,
             TechnicalTips_portrait,
+            artofw2,
+            artofw1,
+            artofw3
         }
     },
     components: { AppArticle, AppHeroSection, ArticleInterview },
@@ -49,7 +54,7 @@ export default {
                     Perfecting Speech Delivery&rdquo;. Throughout the session, invaluable advice on how to improve speech
                     delivery were shared with the audience, </span></p>
             <p class="c0 c5"><span class="c1"></span></p>
-            <iframe class="yt" src="https://www.youtube.com/embed/HSxRUYzGuug?si=yGchZu65h2WudLDt"
+            <iframe class="yt" src="https://www.youtube.com/embed/vOpEEHQlGZw?si=2GX8MCSd43rDVfu9"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
@@ -91,7 +96,9 @@ export default {
                     your speech, then wear it with pride. It may be a hiker, a Dracula, a musician, or even a cat, as long
                     as it
                     fits the speech. </span></p>
+
             <p class="c0 c5"><span class="c1"></span></p>
+            <img class="article-img article-img-resize" alt="" :src="artofw2" loading="lazy" />
             <p class="c0 c2 subtitle" id="h.buih014187ap"><span class="c3">How your body moves</span></p>
             <p class="c0 c5"><span class="c1"></span></p>
             <p class="c0"><span class="c1">The art of effective communication is not confined to words alone; it extends to
@@ -153,6 +160,7 @@ export default {
                     variation as well as other details such as the height difference can be incorporated.</span></p>
             <p class="c0 c5"><span class="c1"></span></p>
             <p class="c0 c5"><span class="c1"></span></p>
+            <img class="article-img article-img-resize" alt="" :src="artofw3" loading="lazy" />
             <ol class="c9 lst-kix_7ko1h4v9zlih-0" start="2">
                 <li class="c7 c2 c8 li-bullet-0">
                     <h2 id="h.cod6w868s6iq" style="display:inline"><span class="c10">Voice</span></h2>
@@ -210,12 +218,15 @@ export default {
                     ways to portray your confidence is by interacting with your audience. Here are a few ways on how to
                     interact
                     with the audience:</span></p>
+
             <ul class="c9 lst-kix_4uv93r2jcapf-0 start">
                 <li class="c0 c7 li-bullet-0"><span class="c1">Ask questions</span></li>
                 <li class="c0 c7 li-bullet-0"><span class="c1">Take examples from the audience</span></li>
                 <li class="c0 c7 li-bullet-0"><span class="c1">React to the audience</span></li>
                 <li class="c0 c7 li-bullet-0"><span class="c1">Maintain eye contact</span></li>
             </ul>
+            <br />
+            <img class="article-img article-img-resize" alt="" :src="artofw1" loading="lazy" />
             <p class="c0 c5"><span class="c1"></span></p>
             <p class="c0 c2 subtitle" id="h.c3ieq2r65e5u"><span class="c3">Asking questions</span></p>
             <p class="c0 c5"><span class="c1"></span></p>
