@@ -7,7 +7,7 @@ import Madushika from "../TechTips/Madushika.vue";
 import Kasun from "../TechTips/Kasun.vue";
 import MadushikaPortrait from "../assets/images/Madushika_portrait.jpg";
 import yasirPortrait from "../assets/images/PathOfChampion_portrait.jpg";
-import KasunPortrait from "../assets/images/kasunayya.jpg"
+import KasunPortrait from "../assets/images/Kasunayya.jpg"
 
 export default {
   data() {
