@@ -32,7 +32,6 @@
   
 <script>
 
-import semi1 from '../assets/images/kasunayya.jpg'
 import afra from '../assets/images/SemiFinalists/Afra.jpg'
 import chathura from '../assets/images/SemiFinalists/Chathura.jpg'
 import damsith from '../assets/images/SemiFinalists/Damsith Adikari.jpeg'
