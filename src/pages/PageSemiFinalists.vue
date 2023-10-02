@@ -7,9 +7,9 @@
         <div v-for="(item, index) in gridData" :key="index"
             class="bg-transparent  border-2 border-yellow-700 p-2 rounded-lg shadow-lg  animate-fade-in"
             :class="{ 'animate-elementL': (number >= item.number) }">
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center justify-center md:p-2">
                 <img :src="item.image" alt="Image" class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-2" />
-                <p class="text-center">{{ item.text }}</p>
+                <span class="text-center md:text-lg">{{ item.text }}</span>
             </div>
         </div>
 
@@ -23,8 +23,7 @@
             class="bg-transparent  border-2 border-yellow-900 p-2 rounded-lg shadow-lg animate-fade-inL"
             :class="{ 'animate-elementL': (number >= item.number) }">
             <div class="flex flex-col items-center">
-
-                <p class="text-center">{{ item.text }}</p>
+                <span class="text-center md:text-lg">{{ item.text }}</span>
             </div>
         </div>
 
