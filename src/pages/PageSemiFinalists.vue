@@ -7,9 +7,9 @@
         <div v-for="(item, index) in gridData" :key="index"
             class="bg-transparent  border-2 border-yellow-700 p-2 rounded-lg shadow-lg  animate-fade-in"
             :class="{ 'animate-elementL': (number >= item.number) }">
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center justify-center md:p-2">
                 <img :src="item.image" alt="Image" class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-2" />
-                <p class="text-center">{{ item.text }}</p>
+                <span class="text-center md:text-lg px-4">{{ item.text }}</span>
             </div>
         </div>
 
@@ -23,8 +23,7 @@
             class="bg-transparent  border-2 border-yellow-900 p-2 rounded-lg shadow-lg animate-fade-inL"
             :class="{ 'animate-elementL': (number >= item.number) }">
             <div class="flex flex-col items-center">
-
-                <p class="text-center">{{ item.text }}</p>
+                <span class="text-center md:text-lg">{{ item.text }}</span>
             </div>
         </div>
 
@@ -36,9 +35,9 @@
 import afra from '../assets/images/SemiFinalists/Afra.jpg'
 import chathura from '../assets/images/SemiFinalists/Chathura.jpg'
 import damsith from '../assets/images/SemiFinalists/Damsith Adikari.jpeg'
-import adeepa from '../assets/images/SemiFinalists/Adeepa.jpg'
+import adeepa from '../assets/images/SemiFinalists/Adeepa_.jpg'
 import hasindu from '../assets/images/SemiFinalists/Hasindu Warnapura.jpg'
-import lakindu from '../assets/images/SemiFinalists/lakindu.png'
+import lakindu from '../assets/images/SemiFinalists/Lakindu.png'
 import oshan from '../assets/images/SemiFinalists/Oshan Yalegama.jpg'
 import pasindu from '../assets/images/SemiFinalists/Pasindu_M..png'
 import varun from '../assets/images/SemiFinalists/Poobalaraja Varun .jpg'

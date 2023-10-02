@@ -17,8 +17,8 @@
       <div class="md:w-1/3 md:flex md:justify-center my-4">
         <img alt="" :src="imageSrc" class="w-24 h-24 rounded-full mx-auto" loading="lazy" />
       </div>
-      <div class="md:w-2/3 card-body bg-slate-600  bg-opacity-30">
-        <h6 class="text-left text-gray-200 text-zinc-800 mt-3 mb-2">{{ subtitle }}</h6>
+      <div class="md:w-2/3 card-body rounded-lg bg-slate-600 bg-opacity-30">
+        <h6 class="text-left text-zinc-800">{{ subtitle }}</h6>
       </div>
     </div>
   </div>

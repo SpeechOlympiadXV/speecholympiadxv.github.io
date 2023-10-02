@@ -95,12 +95,12 @@ export default {
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row my-2 md:my-2">
       <div class="col">
         <hr />
       </div>
     </div>
-    <div class="row">
+    <div class="row md:my-2">
       <div class="
           col-md-4 col-12
           d-flex
@@ -122,7 +122,7 @@ export default {
             ">
             <span>Follow us on</span>
           </div>
-          <div v-for="social_media in social_media_profiles" class="col my-2 my-md-0 d-flex justify-content-center">
+          <div v-for="social_media in social_media_profiles" class="col my-2 d-flex justify-content-center">
             <a :href="social_media.link">
               <FontAwesomeIcon :icon="social_media.icon" size="2x" class="icon-color" />
             </a>

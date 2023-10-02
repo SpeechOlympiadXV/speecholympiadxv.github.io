@@ -13,7 +13,7 @@ export default {
                 {
                     key: "1",
                     imageSrc: YasirPortrait,
-                    title: "Walk the Path of a Champion",
+                    title: "Walk the Path <br class='hidden md:block' /> of a <br class='hidden md:block' /> Champion",
                     subtitle: "The story of Mohamed Yasir, champion of Speech Olympiad VIII",
                     backgroundColorClass: "bg-yellow-300",
                     // body: "Speech Olympiad is more than a mere speaking contest, it is a culmination of people, experiences and exposure. I cherish to this date, every moment of the competition which was a gateway to self-reflection that enhanced my capabilities in the corporate world and beyond.",
