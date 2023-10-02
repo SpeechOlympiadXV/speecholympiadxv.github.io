@@ -18,8 +18,10 @@ import PageAdmin from "./pages/PageAdmin.vue";
 import PageFormNew from "./pages/PageFormNew.vue";
 import Tips from "./components/tips.vue";
 import PageTT from "./pages/PageTechTips.vue";
+
 import PageBlog2 from "./pages/PageBlog2.vue"
 import PageKasun from "./TechTips/Kasun.vue";
+import Semi from "./pages/PageSemiFinalists.vue";
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
@@ -29,7 +31,7 @@ const routes = {
   "/blogs": PageTest,
   "/form": PageForm,
   "/admin": PageAdmin,
-  "/kasun": PageKasun,
+  "/semi": Semi,
   "/rules": PageRules,
   "/blog2": PageBlog2
 };
