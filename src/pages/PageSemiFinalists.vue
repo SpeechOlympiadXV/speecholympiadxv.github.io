@@ -2,7 +2,7 @@
     <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Semi Finalists</h1>
     </div>
-    <div class="grid grid-cols-3 md:grid-cols-4 gap-4 p-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
         <!-- Grid items -->
         <div v-for="(item, index) in gridData" :key="index"
             class="bg-transparent  border-2 border-yellow-700 p-2 rounded-lg shadow-lg  animate-fade-in"
@@ -17,13 +17,13 @@
     <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4"> Reserved Semi Finalists</h1>
     </div>
-    <div class="grid grid-cols-3 md:grid-cols-4 gap-4 p-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
         <!-- Grid items -->
         <div v-for="(item, index) in reserved" :key="index"
             class="bg-transparent  border-2 border-yellow-900 p-2 rounded-lg shadow-lg animate-fade-inL"
             :class="{ 'animate-elementL': (number >= item.number) }">
             <div class="flex flex-col items-center">
-                <img :src="item.image" alt="Image" class="w-24 h-24  md:w-32 md:h-32 rounded-full mb-2" />
+
                 <p class="text-center">{{ item.text }}</p>
             </div>
         </div>
@@ -34,29 +34,41 @@
 <script>
 
 import semi1 from '../assets/images/kasunayya.jpg'
+import afra from '../assets/images/SemiFinalists/Afra.jpg'
+import chathura from '../assets/images/SemiFinalists/Chathura.jpg'
+import damsith from '../assets/images/SemiFinalists/Damsith Adikari.jpeg'
+import adeepa from '../assets/images/SemiFinalists/Adeepa.jpg'
+import hasindu from '../assets/images/SemiFinalists/Hasindu Warnapura.jpg'
+import lakindu from '../assets/images/SemiFinalists/lakindu.png'
+import oshan from '../assets/images/SemiFinalists/Oshan Yalegama.jpg'
+import pasindu from '../assets/images/SemiFinalists/Pasindu_M..png'
+import varun from '../assets/images/SemiFinalists/Poobalaraja Varun .jpg'
+import saai from '../assets/images/SemiFinalists/Saai Syvendra.jpg'
+import sasindi from '../assets/images/SemiFinalists/Sasindi.jpg'
+import ami from '../assets/images/SemiFinalists/ami.jpg'
 export default {
     data() {
         return {
             gridData: [
-                { text: "Item 1", image: semi1, number: 0 },
-                { text: "Item 2", image: semi1, number: 1 },
-                { text: "Item 3", image: semi1, number: 2 },
-                { text: "Item 4", image: semi1, number: 3 },
-                { text: "Item 5", image: semi1, number: 4 },
-                { text: "Item 6", image: semi1, number: 5 },
-                { text: "Item 7", image: semi1, number: 6 },
-                { text: "Item 8", image: semi1, number: 7 },
-                { text: "Item 9", image: semi1, number: 8 },
-                { text: "Item 10", image: semi1, number: 9 },
-                { text: "Item 11", image: semi1, number: 10 },
-                { text: "Item 12", image: semi1, number: 11 },
+                { text: "Adeepa Kularathne", image: adeepa, number: 0 },
+                { text: "Afrah Rumie", image: afra, number: 1 },
+                { text: "Amirthavarshani Ananthan", image: ami, number: 2 },
+                { text: "Chathura Gunasekara", image: chathura, number: 3 },
+                { text: "Damsith Adikari", image: damsith, number: 4 },
+                { text: "Hasindu Warnapura", image: hasindu, number: 5 },
+                { text: "Lakindu Kariyawasam", image: lakindu, number: 6 },
+                { text: "Oshan Yalegama", image: oshan, number: 7 },
+                { text: "Pasindu Weerasinghe", image: pasindu, number: 8 },
+                { text: "Poobalaraja Varun", image: varun, number: 9 },
+                { text: "Saai Syvendra", image: saai, number: 10 },
+                { text: "Sasindi Peiris", image: sasindi, number: 11 },
                 // Add more items as needed
             ],
             reserved: [
-                { text: "Item 1", image: semi1, number: 12 },
-                { text: "Item 2", image: semi1, number: 13 },
-                { text: "Item 3", image: semi1, number: 14 },
-                { text: "Item 4", image: semi1, number: 15 },
+                { text: "Hesandu Hemal", number: 12 },
+                { text: "Inodee Fernando", number: 13 },
+                { text: "Safnas Kaldeen", number: 14 },
+                { text: "Savinu Aththanayake", number: 15 },
 
                 // Add more items as needed
             ],
