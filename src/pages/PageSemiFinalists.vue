@@ -9,7 +9,7 @@
             :class="{ 'animate-elementL': (number >= item.number) }">
             <div class="flex flex-col items-center justify-center md:p-2">
                 <img :src="item.image" alt="Image" class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-2" />
-                <span class="text-center md:text-lg">{{ item.text }}</span>
+                <span class="text-center md:text-lg px-4">{{ item.text }}</span>
             </div>
         </div>
 
