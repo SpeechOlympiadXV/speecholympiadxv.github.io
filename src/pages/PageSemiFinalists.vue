@@ -35,7 +35,7 @@
 import afra from '../assets/images/SemiFinalists/Afra.jpg'
 import chathura from '../assets/images/SemiFinalists/Chathura.jpg'
 import damsith from '../assets/images/SemiFinalists/Damsith Adikari.jpeg'
-import adeepa from '../assets/images/SemiFinalists/Adeepa.jpg'
+import adeepa from '../assets/images/SemiFinalists/Adeepa_.jpg'
 import hasindu from '../assets/images/SemiFinalists/Hasindu Warnapura.jpg'
 import lakindu from '../assets/images/SemiFinalists/lakindu.png'
 import oshan from '../assets/images/SemiFinalists/Oshan Yalegama.jpg'
