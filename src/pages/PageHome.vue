@@ -12,7 +12,7 @@ import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonia
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
 import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg";
 import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_asitha.jpg";
-
+import PageSemi from "./PageSemiFinalists.vue"
 import Prelis1 from "../assets/images/gallery/1.png";
 import Prelis2 from "../assets/images/gallery/3.jpg";
 import Prelis3 from "../assets/images/gallery/8.jpg";
@@ -36,6 +36,7 @@ import pageChamp from "./PageChampionsStory.vue"
 
 export default {
   components: {
+    PageSemi,
     AppFeaturette,
     AppTestimonialCard,
     AppCarousel,
@@ -151,7 +152,7 @@ export default {
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       </div>
 
-
+      <PageSemi />
       <div class="col-12 mb-2 mt-6">
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       </div>

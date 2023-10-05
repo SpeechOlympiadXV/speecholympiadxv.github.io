@@ -51,6 +51,11 @@ export default {
           name: "Blogs",
           url: "#blogs",
           newTab: false,
+        },
+        {
+          name: "Semi Finalists",
+          url: "#semi",
+          newTab: false,
         }
 
       ],
