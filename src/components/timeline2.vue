@@ -1,11 +1,11 @@
 <template>
     <div class="flex justify-center mt-7">
         <div class="timeline md:w-4/6 w-full">
-            <div class="timeline-item left animate-elementL " ref="ele1" :class="{ 'animate-fade-in': ele1.view }"
-                @click="handleClick(1)">
+            <div class="timeline-item left animate-elementL  opacity-60" ref="ele1"
+                :class="{ 'animate-fade-in': ele1.view }" @click="handleClick(1)">
                 <div class=" timeline-content ">
 
-                    <img :src="registrationsOpen" alt="registration open" class="w-1/2 image-to-overlay" />
+                    <img :src="registrationsOpen" alt="registration open" class="w-1/2 image-to-overlay " />
 
                     <h3
                         class="text-4xl opacity-60 text-transparent bg-clip-text bg-gradient-to-r from-amber-50 via-amber-100 to-amber-100">
@@ -55,15 +55,15 @@
 
                 </div>
             </div> -->
-            <div class="timeline-item right animate-elementR " ref="ele2" :class="{ 'animate-fade-in': ele2.view }">
+            <div class="timeline-item right animate-elementR  " ref="ele2" :class="{ 'animate-fade-in': ele2.view }">
                 <div class="timeline-content relative">
                     <div class="w-full flex justify-end">
-                        <img :src="prelis" alt="registration open" class="w-1/2" />
+                        <img :src="prelis" alt="registration open" class="w-1/2 opacity-60" />
                     </div>
 
                     <div class="text-right">
                         <h3
-                            class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-50 via-amber-100 to-amber-200">
+                            class="text-4xl opacity-60 text-transparent bg-clip-text bg-gradient-to-r from-amber-50 via-amber-100 to-amber-200">
                             Preliminary Round
                         </h3>
                         <p
@@ -85,9 +85,9 @@
 
             <div class="timeline-item left animate-elementL " ref="ele3" :class="{ 'animate-fade-in': ele3.view }">
                 <div class="timeline-content">
-                    <img :src="announcingSemi" alt="registration open" class="w-1/2 image-to-overlay" />
+                    <img :src="announcingSemi" alt="registration open" class="w-1/2 image-to-overlay opacity-60" />
                     <h3
-                        class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-200 to-amber-300">
+                        class="text-4xl opacity-60 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-200 to-amber-300">
                         Announcing Semi Finalists</h3>
                     <p
                         class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-100 to-amber-200">
@@ -105,7 +105,7 @@
             <div class="timeline-item right animate-elementR " ref="ele4" :class="{ 'animate-fade-in': ele4.view }">
                 <div class="timeline-content">
                     <div class="w-full flex justify-end">
-                        <img :src="semiFinal" alt="registration open" class="w-1/2" />
+                        <img :src="semiFinal" alt="registration open" class="w-1/2 " />
                     </div>
                     <h3
                         class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400">
@@ -152,10 +152,12 @@
                         Finals</h3>
                     <p
                         class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">
-                        TBD</p>
-                    <!-- <div class="w-full flex justify-end">
-                        <countdown-timer targetDate='2023-12-31'></countdown-timer>
-                    </div> -->
+                        24<sup
+                            class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r  from-amber-400 via-amber-500 to-amber-600">th</sup>
+                        October 2023</p>
+                    <div class="w-full flex justify-end">
+                        <countdown-timer targetDate='2023-10-24'></countdown-timer>
+                    </div>
                     <!-- Add any other content you want to display here -->
                 </div>
             </div>
@@ -168,10 +170,12 @@
                         Winners Announced </h3>
                     <p
                         class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-600 to-amber-500">
-                        TBD</p>
-                    <!-- <div class="w-full flex justify-start">
-                        <countdown-timer targetDate='2023-12-31'></countdown-timer>
-                    </div> -->
+                        24<sup
+                            class="text-lg mt-1 text-transparent  bg-clip-text bg-gradient-to-r from-amber-600 via-amber-600 to-amber-500">th</sup>
+                        October 2023</p>
+                    <div class="w-full flex justify-start">
+                        <countdown-timer targetDate='2023-10-24'></countdown-timer>
+                    </div>
                     <!-- Add any other content you want to display here -->
                 </div>
             </div>
