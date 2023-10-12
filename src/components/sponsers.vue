@@ -8,7 +8,7 @@
 
         <!-- Official Banking Partner -->
         <div class=" p-4 rounded-lg flex flex-col items-center ">
-            <h2 class="md:text-2xl text-center text-sm font-semibold mb-2">Official Banking Partner</h2>
+            <h2 class="md:text-2xl text-center text-sm font-semibold mb-2">Exclusive Banking Partner</h2>
             <img :src="combank" alt="Official Banking Partner" class="w-full md:w-1/2 h-auto">
         </div>
     </div>
