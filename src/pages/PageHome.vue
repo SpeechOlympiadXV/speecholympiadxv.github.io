@@ -16,7 +16,7 @@ import PageSemi from "./PageSemiFinalists.vue"
 import Prelis1 from "../assets/images/gallery/1.png";
 import Prelis2 from "../assets/images/gallery/3.jpg";
 import Prelis3 from "../assets/images/gallery/8.jpg";
-
+import sponserDisplay from "../components/sponsers.vue";
 import timeline from "../components/timeline.vue";
 
 import { animateOnScroll } from "../aos.js";
@@ -44,7 +44,7 @@ export default {
     AppGallery,
     Blogs,
     timeline,
-
+    sponserDisplay,
     timeline2,
     PageTT,
 
@@ -151,8 +151,10 @@ export default {
       <div class="col-12 mb-2 mt-6">
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       </div>
-
+      <sponserDisplay />
+      <hr class="featurette-divider" />
       <PageSemi />
+      <hr class="featurette-divider" />
       <div class="col-12 mb-2 mt-6">
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       </div>
