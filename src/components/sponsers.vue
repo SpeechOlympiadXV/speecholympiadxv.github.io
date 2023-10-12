@@ -2,13 +2,13 @@
     <div class="grid grid-cols-2 gap-4  w-full">
         <!-- Official Strategic Partner -->
         <div class=" p-4 flex flex-col items-center rounded-lg ">
-            <h2 class="text-2xl font-semibold mb-2">Official Strategic Partner</h2>
+            <h2 class="md:text-2xl  text-center text-sm font-semibold mb-2">Official Strategic Partner</h2>
             <img :src="uniliver" alt="Official Strategic Partner" class="w-full md:w-1/2 h-auto">
         </div>
 
         <!-- Official Banking Partner -->
-        <div class=" p-4 rounded-lg  flex flex-col items-center ">
-            <h2 class="text-2xl  font-semibold mb-2">Official Banking Partner</h2>
+        <div class=" p-4 rounded-lg flex flex-col items-center ">
+            <h2 class="md:text-2xl text-center text-sm font-semibold mb-2">Official Banking Partner</h2>
             <img :src="combank" alt="Official Banking Partner" class="w-full md:w-1/2 h-auto">
         </div>
     </div>
