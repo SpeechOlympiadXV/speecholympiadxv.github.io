@@ -6,8 +6,8 @@ import AppTestimonialCard from "../components/AppTestimonialCard.vue";
 import Doodle from "../components/Doodle.vue";
 import HomePage_About from "../assets/images/What is SO - Home page .png";
 import timeline2 from "../components/timeline2.vue"
-import HomePage_PathOfChampion from "../assets/images/HomePage_PathOfChampion.jpg";
-import HomePage_TechnicalTips from "../assets/images/HomePage_TechnicalTips.jpg";
+
+
 import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonial_sirimevan.jpg";
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
 import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg";

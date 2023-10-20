@@ -53,7 +53,7 @@ export default {
           newTab: false,
         },
         {
-          name: "Semi Finalists",
+          name: "Finalists",
           url: "#semi",
           newTab: false,
         }
