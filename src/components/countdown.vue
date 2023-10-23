@@ -20,7 +20,8 @@ export default {
     },
     methods: {
         updateCountdown() {
-            const targetDate = new Date(this.targetDate).getTime();
+            const targetDate = new Date(this.targetDate)
+            targetDate.setHours(17, 0, 0, 0)
             const currentDate = new Date().getTime();
             const timeDifference = targetDate - currentDate;
 
