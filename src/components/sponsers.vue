@@ -15,7 +15,7 @@
 </template>
   
 <script>
-import combank from '../assets/logos/combank.png'
+import combank from '../assets/logos/combank copy.png'
 import uniliver from '../assets/logos/uniliver.png'
 export default {
     name: 'SponsorDisplay',

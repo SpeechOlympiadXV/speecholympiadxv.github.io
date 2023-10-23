@@ -152,11 +152,11 @@
                         Finals</h3>
                     <p
                         class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">
-                        24<sup
+                        25<sup
                             class="text-lg mt-1 text-transparent bg-clip-text bg-gradient-to-r  from-amber-400 via-amber-500 to-amber-600">th</sup>
-                        October 2023</p>
+                        October 2023 at 5.00 PM</p>
                     <div class="w-full flex justify-end">
-                        <countdown-timer targetDate='2023-10-24'></countdown-timer>
+                        <countdown-timer targetDate='2023-10-25'></countdown-timer>
                     </div>
                     <!-- Add any other content you want to display here -->
                 </div>
@@ -170,11 +170,11 @@
                         Winners Announced </h3>
                     <p
                         class="text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-600 to-amber-500">
-                        24<sup
+                        25<sup
                             class="text-lg mt-1 text-transparent  bg-clip-text bg-gradient-to-r from-amber-600 via-amber-600 to-amber-500">th</sup>
-                        October 2023</p>
+                        October 2023 at 5.00 PM</p>
                     <div class="w-full flex justify-start">
-                        <countdown-timer targetDate='2023-10-24'></countdown-timer>
+                        <countdown-timer targetDate='2023-10-25'></countdown-timer>
                     </div>
                     <!-- Add any other content you want to display here -->
                 </div>
