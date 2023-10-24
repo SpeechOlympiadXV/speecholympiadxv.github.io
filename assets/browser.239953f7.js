@@ -1,5 +1,0 @@
-<<<<<<<< HEAD:dist/assets/browser.d7affda5.js
-import{e as a}from"./index.a11440c6.js";function c(t,s){for(var o=0;o<s.length;o++){const e=s[o];if(typeof e!="string"&&!Array.isArray(e)){for(const r in e)if(r!=="default"&&!(r in t)){const n=Object.getOwnPropertyDescriptor(e,r);n&&Object.defineProperty(t,r,n.get?n:{enumerable:!0,get:()=>e[r]})}}}return Object.freeze(Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}))}var f=a.exports.EventSourcePolyfill;const l=c({__proto__:null,default:f},[f]);export{l as b};
-========
-import{e as a}from"./index.c0794d67.js";function c(t,s){for(var o=0;o<s.length;o++){const e=s[o];if(typeof e!="string"&&!Array.isArray(e)){for(const r in e)if(r!=="default"&&!(r in t)){const n=Object.getOwnPropertyDescriptor(e,r);n&&Object.defineProperty(t,r,n.get?n:{enumerable:!0,get:()=>e[r]})}}}return Object.freeze(Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}))}var f=a.exports.EventSourcePolyfill;const l=c({__proto__:null,default:f},[f]);export{l as b};
->>>>>>>> a0c1376288cb9640c72779ae56d830bd8fd4963e:dist/assets/browser.239953f7.js
