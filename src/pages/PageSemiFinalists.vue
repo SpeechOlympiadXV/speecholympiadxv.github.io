@@ -1,4 +1,16 @@
 <template>
+    <!-- <div class="flex justify-center items-center w-full">
+        <button
+            class="relative px-8 py-4 border-4 border-yellow-500 featurette-heading text-yellow-500 text-4xl rounded-full hover:bg-golden hover:text-white transition-all">
+            <h1 class="text-xl">Click Me</h1>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class=" w-6 absolute right-4 top-1/2 transform -translate-y-1/2"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+    </div> -->
+
     <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Finalists</h1>
     </div>
@@ -15,19 +27,19 @@
 
     </div>
 
-    
+
     <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4"> Reserved Finalist</h1>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
 
-    <div class="bg-transparent border-2 border-red-900 p-2 rounded-lg shadow-lg animate-fade-inL"
-         :class="{ 'animate-elementL': (number >= reserved_1[0].number) }">
-        <div class="flex flex-col items-center">
-            <span class="text-center md:text-lg">{{ reserved_1[0].text }}</span>
+        <div class="bg-transparent border-2 border-red-900 p-2 rounded-lg shadow-lg animate-fade-inL"
+            :class="{ 'animate-elementL': (number >= reserved_1[0].number) }">
+            <div class="flex flex-col items-center">
+                <span class="text-center md:text-lg">{{ reserved_1[0].text }}</span>
+            </div>
         </div>
-    </div>
 
     </div>
 
@@ -124,6 +136,8 @@ export default {
                 // Add more items as needed
             ],
             animate: false,
+            final: false,
+            semi: false,
             number: -1
         };
     },
