@@ -33,7 +33,6 @@
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
-        <!-- Grid items  .... check this grid  ....-->
 
         <div class="bg-transparent border-2 border-red-900 p-2 rounded-lg shadow-lg animate-fade-inL"
             :class="{ 'animate-elementL': (number >= reserved_1[0].number) }">
@@ -124,7 +123,8 @@ export default {
                 // Add more items as needed
             ],
             reserved_1: [
-                { text: "Adeepa Kularathne", number: 12 },
+            { text: "Adeepa Kularathne", number: 12 },
+
             ],
 
             reserved_2: [

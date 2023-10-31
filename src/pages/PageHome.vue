@@ -6,7 +6,7 @@ import AppTestimonialCard from "../components/AppTestimonialCard.vue";
 import Doodle from "../components/Doodle.vue";
 import HomePage_About from "../assets/images/What is SO - Home page .png";
 import timeline2 from "../components/timeline2.vue"
-
+import sove from "../assets/images/souvenir.jpeg";
 
 import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonial_sirimevan.jpg";
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
@@ -18,6 +18,8 @@ import Prelis2 from "../assets/images/gallery/3.jpg";
 import Prelis3 from "../assets/images/gallery/8.jpg";
 import sponserDisplay from "../components/sponsers.vue";
 import timeline from "../components/timeline.vue";
+
+
 
 import { animateOnScroll } from "../aos.js";
 import Blogs from './PageTest.vue';
@@ -74,29 +76,24 @@ export default {
       finals,
       winners,
       featurettes: [
-        {
+
+      {
           heading: "What is Speech Olympiad?",
           headingEnd: "",
           text: "Speech Olympiad stands as the flagship occasion hosted by the Gavel Club at the University of Moratuwa. As the sole English language speech competition within the university...",
           image: HomePage_About,
           urlString: "#about",
 
+        },
+        {
+          heading: "Get the e-souvenir of SO XVI now! ",
+          headingEnd: "",
+          image: sove,
+          urlString: "https://drive.google.com/drive/folders/1cgRxBgzpUKh4nvYecXVgzRsBsQTCYenI?usp=sharing",
+          link: "https://drive.google.com/drive/folders/your-folder-id-here",
+
         }
-        // },
-        // {
-        //   heading: "Walk the Path of a Champion",
-        //   headingEnd: "",
-        //   text: "Experience the journey of Speech Olympiad through the story of an ambitious and talented champion. Toastmaster Mohamed Yasir shares his fond memories from Speech Olympiad and invites you to grab your opportunity at SOXV.",
-        //   image: HomePage_PathOfChampion,
-        //   urlString: "#champions-story",
-        // },
-        // {
-        //   heading: "A Guide to Becoming a Better Speaker",
-        //   headingEnd: "",
-        //   text: "From the basic do’s and don’ts of public speaking to the delicate intricacies of a winning speech, the champion of SOIX Dr. Samadhi Poornima guides you through the art of becoming a great public speaker.",
-        //   image: HomePage_TechnicalTips,
-        //   urlString: "#technical-tips",
-        // },
+
       ],
 
       testimonials: [
@@ -147,7 +144,9 @@ export default {
       <!-- START THE FEATURETTES -->
       <AppFeaturette v-for="(featurette, i) in featurettes" :index="i" :key="i" :heading="featurette.heading"
         :heading-end="featurette.headingEnd" :text="featurette.text" :image="featurette.image"
-        :urlString="featurette.urlString" />
+        :urlString="featurette.urlString" 
+        />
+
       <div class="col-12 mb-2 mt-6">
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       </div>
