@@ -1,4 +1,5 @@
 <script >
+import Navbar from "./components/Navbar.vue";
 import AppFooter from "./components/AppFooter.vue";
 import AppHeader from "./components/AppHeader.vue";
 import PageRules from "./pages/PageRules.vue";
@@ -46,6 +47,7 @@ export default {
   components: {
     AppHeader,
     AppFooter,
+    Navbar
   },
   computed: {
     currentView() {
@@ -77,8 +79,8 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-
+  <!-- <AppHeader /> -->
+  <Navbar />
   <component :is="currentView" />
 
   <AppFooter />
