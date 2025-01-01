@@ -4,26 +4,53 @@ import AppGallery from "../components/AppGallery.vue";
 import AppFeaturette from "../components/AppFeaturette.vue";
 import AppTestimonialCard from "../components/AppTestimonialCard.vue";
 import Doodle from "../components/Doodle.vue";
-import HomePage_About from "../assets/images/HomePage_About.jpg";
-import HomePage_PathOfChampion from "../assets/images/HomePage_PathOfChampion.jpg";
-import HomePage_TechnicalTips from "../assets/images/HomePage_TechnicalTips.jpg";
+import HomePage_About from "../assets/images/What is SO - Home page .png";
+import timeline2 from "../components/timeline2.vue"
+import sove from "../assets/images/souvenir.jpeg";
+
 import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonial_sirimevan.jpg";
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
 import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg";
 import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_asitha.jpg";
-import Prelis1 from "../assets/images/gallery/prelis1.jpg";
-import Prelis2 from "../assets/images/gallery/prelis2.jpg";
-import Prelis3 from "../assets/images/gallery/prelis3.jpg";
+import PageSemi from "./PageSemiFinalists.vue"
+import Prelis1 from "../assets/images/gallery/1.png";
+import Prelis2 from "../assets/images/gallery/3.jpg";
+import Prelis3 from "../assets/images/gallery/8.jpg";
+import sponserDisplay from "../components/sponsers.vue";
+import timeline from "../components/timeline.vue";
+
+
+
 import { animateOnScroll } from "../aos.js";
 import Blogs from './PageTest.vue';
+import registrationsOpen from "../assets/images/Registrations_open.png"
+import prelis from "../assets/images/Prelis.png"
+import announcingSemi from "../assets/images/Semi_Finalists_announced.png"
+import semiFinal from "../assets/images/Semi_Finals.png"
+import finalistsAnounced from "../assets/images/Finalists_announced.png"
+import finals from "../assets/images/Finals.png"
+import winners from "../assets/images/winners_announced.png"
+
+import PageTT from "./PageTechTips.vue"
+
+import pageChamp from "./PageChampionsStory.vue"
+
+
 export default {
   components: {
+    PageSemi,
     AppFeaturette,
     AppTestimonialCard,
     AppCarousel,
     Doodle,
     AppGallery,
-    Blogs
+    Blogs,
+    timeline,
+    sponserDisplay,
+    timeline2,
+    PageTT,
+
+    pageChamp
   },
   mounted() {
     var testimonialOut = null;
@@ -41,29 +68,34 @@ export default {
   data() {
     return {
       galleryImages: [Prelis1, Prelis2, Prelis3],
+      registrationsOpen,
+      prelis,
+      announcingSemi,
+      semiFinal,
+      finalistsAnounced,
+      finals,
+      winners,
       featurettes: [
-        {
-          heading: "What is Speech Olympiad XV ?",
+
+      {
+          heading: "What is Speech Olympiad?",
           headingEnd: "",
-          text: "Learn more about the premier intra-university speech competition of the University of Moratuwa, the structure of the competition and its theme for the year 2022. True excitement awaits as Speech Olympiad returns to a physical context this year!",
+          text: "Speech Olympiad stands as the flagship occasion hosted by the Gavel Club at the University of Moratuwa. As the sole English language speech competition within the university...",
           image: HomePage_About,
           urlString: "#about",
+
         },
         {
-          heading: "Walk the Path of a Champion",
+          heading: "Get the e-souvenir of SO XVI now! ",
           headingEnd: "",
-          text: "Experience the journey of Speech Olympiad through the story of an ambitious and talented champion. Toastmaster Mohamed Yasir shares his fond memories from Speech Olympiad and invites you to grab your opportunity at SOXV.",
-          image: HomePage_PathOfChampion,
-          urlString: "#champions-story",
-        },
-        {
-          heading: "A Guide to Becoming a Better Speaker",
-          headingEnd: "",
-          text: "From the basic do’s and don’ts of public speaking to the delicate intricacies of a winning speech, the champion of SOIX Dr. Samadhi Poornima guides you through the art of becoming a great public speaker.",
-          image: HomePage_TechnicalTips,
-          urlString: "#technical-tips",
-        },
+          image: sove,
+          urlString: "https://drive.google.com/drive/folders/1cgRxBgzpUKh4nvYecXVgzRsBsQTCYenI?usp=sharing",
+          link: "https://drive.google.com/drive/folders/your-folder-id-here",
+
+        }
+
       ],
+
       testimonials: [
         {
           key: "1",
@@ -108,29 +140,45 @@ export default {
 
     <div class="container marketing">
       <Doodle />
-      <!-- START THE FEATURETTES -->
-      <!-- <AppFeaturette
-        v-for="(featurette, i) in featurettes"
-        :index="i"
-        :key="i"
-        :heading="featurette.heading"
-        :heading-end="featurette.headingEnd"
-        :text="featurette.text"
-        :image="featurette.image"
-        :urlString="featurette.urlString"
-      /> -->
 
-      <div class="col-12 mb-2">
-        <h1 class="featurette-heading mt-0 mb-4">Blogs</h1>
+      <!-- START THE FEATURETTES -->
+      <AppFeaturette v-for="(featurette, i) in featurettes" :index="i" :key="i" :heading="featurette.heading"
+        :heading-end="featurette.headingEnd" :text="featurette.text" :image="featurette.image"
+        :urlString="featurette.urlString" 
+        />
+
+      <div class="col-12 mb-2 mt-6">
+        <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
+      </div>
+      <sponserDisplay />
+      <hr class="featurette-divider" />
+      <PageSemi />
+      <hr class="featurette-divider" />
+      <div class="col-12 mb-2 mt-6">
+        <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
+      </div>
+      <div class="col-12 mb-2 mt-6">
+        <h1 class="featurette-heading mt-0 mb-4">Timeline</h1>
       </div>
 
-      <Blogs :limit="50" />
+      <timeline2 />
+      <hr class="featurette-divider" />
+      <div class="col-12 mb-2 mt-6">
+        <h1 class="featurette-heading mt-0 mb-4">Past Experiences</h1>
+      </div>
+
+      <Blogs :limit="2" />
       <br /><br />
-      <!--Testimonials-->
+      <hr class="featurette-divider" />
+      <PageTT />
+      <hr class="featurette-divider" />
+      <page-champ />
+      <hr class="featurette-divider" />
       <div class="row mb-5">
         <div class="col-12 mb-2">
           <h1 class="featurette-heading mt-0 mb-4">Testimonials</h1>
         </div>
+
 
         <!-- Three columns of cards  -->
         <div class="col-12 mb-2">
@@ -145,7 +193,7 @@ export default {
         </div>
         <!-- /.row -->
       </div>
-
+      <hr class="featurette-divider" />
       <!--Prelis images-->
       <div class="row mb-5">
         <div class="col-12 mb-2">
@@ -163,6 +211,36 @@ export default {
 
 <style scoped>
 /* Thin out the marketing headings */
+/* Custom styles for the amber-themed outlined button */
+.button-container {
+  text-align: center;
+}
+
+.button {
+  border: 3px solid #ff9d00;
+  /* Amber border color */
+  color: #ff9d00;
+  font-size: xx-large;
+  border-radius: 20%;
+  /* Amber text color */
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: #ff8000;
+  /* Amber background color on hover */
+  color: #fff;
+  /* White text color on hover */
+}
+
+.button:focus {
+  outline: none;
+  /* Remove focus outline */
+}
+
 .featurette-heading {
   font-weight: 300;
   line-height: 1;
@@ -187,6 +265,10 @@ export default {
 
 .list-leave-active {
   position: absolute;
+}
+
+.featurette-heading {
+  font-size: 30px;
 }
 
 @media (min-width: 40em) {
@@ -216,5 +298,28 @@ export default {
   /*noinspection CssUnresolvedCustomProperty*/
   transition-delay: calc(200ms * var(--order));
   /*order is declared as an inline variable*/
+}
+
+.featurette-divider {
+  margin: 5rem 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+/* styles.css */
+
+.gradient-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.gradient-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  pointer-events: none;
 }
 </style>

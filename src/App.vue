@@ -1,7 +1,7 @@
 <script >
 import AppFooter from "./components/AppFooter.vue";
 import AppHeader from "./components/AppHeader.vue";
-
+import PageRules from "./pages/PageRules.vue";
 import PageHome from "./pages/PageHome.vue";
 import PageAbout from "./pages/PageAbout.vue";
 import PageTechnicalTips from "./pages/PageTechnicalTips.vue";
@@ -16,16 +16,24 @@ import PageForm from "./pages/PageForm.vue";
 import { useSanityClient } from 'vue-sanity'
 import PageAdmin from "./pages/PageAdmin.vue";
 import PageFormNew from "./pages/PageFormNew.vue";
+import Tips from "./components/tips.vue";
+import PageTT from "./pages/PageTechTips.vue";
+
+import PageBlog2 from "./pages/PageBlog2.vue"
+import PageKasun from "./TechTips/Kasun.vue";
+import Semi from "./pages/PageSemiFinalists.vue";
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
   "/champions-story": PageChampionsStory,
-  "/technical-tips": PageTechnicalTips,
+  "/technical-tips": PageTT,
   "/gallery": PageGallery,
   "/blogs": PageTest,
   "/form": PageForm,
   "/admin": PageAdmin,
-  "/form2": PageFormNew
+  "/semi": Semi,
+  "/rules": PageRules,
+  "/blog2": PageBlog2
 };
 
 export default {

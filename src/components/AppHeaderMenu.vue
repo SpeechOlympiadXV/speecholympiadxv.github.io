@@ -37,16 +37,27 @@ export default {
           url: "#gallery",
           newTab: false,
         },
+        // {
+        //   name: "Rules & Regulations",
+        //   url: "https://bit.ly/45vWx1K",
+        //   newTab: true,
+        // },
         {
           name: "Rules & Regulations",
-          url: "https://bit.ly/SOXV_Rules",
+          url: "#rules",
           newTab: true,
         },
         {
           name: "Blogs",
           url: "#blogs",
-          newTab: true,
+          newTab: false,
         },
+        {
+          name: "Finalists",
+          url: "#semi",
+          newTab: false,
+        }
+
       ],
       activeItem: getActiveItem(),
     };
@@ -74,14 +85,14 @@ export default {
 
 <template>
   <!-- render menu items from list -->
-  <li class="nav-item" v-for="(item, index) in items" :key="index">
+  <li class="nav-item" v-for="(item, index) in     items    " :key="index" style="padding : 1px; border: none ;">
     <!-- active class for selected menu item -->
-    <div @click="clickHandler(index)" :class="{ 'font-bold': index === activeItem }">
-      <a class="nav-link" :href="item.url" :target="item.newTab ? '_blank' : ''">{{ item.name }}</a>
+    <div @click="clickHandler(index)" :class="{ 'font-bold text-gray-400': index === activeItem }">
+      <a :class="(item.name === 'Register') ? 'nav-link text-amber-500 hover:text-amber-600' : 'nav-link'"
+        :href="item.url" :target="item.newTab ? '_blank' : ''">{{ item.name }}</a>
+
     </div>
   </li>
 </template>
 
-<style scoped>
-/* No need for .active class as we're using tailwind's 'font-bold' utility directly */
-</style>
+<style scoped></style>

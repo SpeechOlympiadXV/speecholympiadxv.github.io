@@ -2,7 +2,7 @@
   <div class="headerbar">
     <nav class="bg-dark">
       <div class="container mx-auto px-4 py-2">
-        <div class="flex items-center justify-between">
+        <div class="flex items-start justify-between">
           <div id="logo" class="w-8 h-8 md:w-20 md:h-8">
             <a class="navbar-brand" href="/#">
               <!-- Change the logo to the correct source -->
@@ -18,6 +18,7 @@
               <path d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
           </button>
+
 
           <div class="hidden md:block">
             <ul class="flex space-x-4">

@@ -4,7 +4,8 @@ import HomePage_carousel1_desktop from "../assets/images/HomePage_carousel1_desk
 import HomePage_carousel2_mobile from "../assets/images/HomePage_carousel2_mobile.jpg"
 import HomePage_carousel2_desktop from "../assets/images/HomePage_carousel2_desktop.jpg"
 import HomePage_carousel3_mobile from "../assets/images/HomePage_carousel3_mobile.jpg"
-import HomePage_carousel3_desktop from "../assets/images/HomePage_carousel3_desktop.jpg"
+import HomePage_carousel3_desktop from "../assets/images/carousel_image_new.jpg"
+
 
 export default {
   data() {

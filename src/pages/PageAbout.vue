@@ -22,59 +22,54 @@ export default {
 
 <template>
   <main>
-    <AppHeroSection
-      :imagePath="
-        isMobile
-          ? About_title_mobile
-          : About_title_desktop
-      "
-    >
+    <AppHeroSection :imagePath="isMobile
+      ? About_title_mobile
+      : About_title_desktop
+      ">
       <!-- <div class="hero-text">
         <h1>What is Speech Olympiad XV?</h1>
       </div> -->
     </AppHeroSection>
     <AppArticle>
       <p class="mt-3 first-letter">
-        The Gavel Club of the University of Moratuwa is excited to announce that
-        Speech Olympiad, the most coveted intra-university speech competition is
-        back for the 15th iteration and this year, it’s all about being bold
-        enough to make a difference. 2022 in particular, has been an
-        extraordinary year which has proven that any form of change is possible,
-        be it changing one’s self or changing the system. Staying true to this,
-        Speech Olympiad XV is driven upon the belief that change can be inspired
-        by something as simple as an individual voice.
+        Speech Olympiad stands as the flagship occasion hosted by the Gavel Club of University of Moratuwa. 
+        As the sole English language speech competition within the university, it garners participants from all 
+        five faculties. Since its establishment in 2005, this event has progressively gained momentum, evolving 
+        into one of the most highly anticipated phenomenon on the university calendar. In an era where effective 
+        communication is paramount in any industry, The Speech Olympiad championship has become a coveted goal 
+        pursued by all young undergraduates. The enthusiasm instilled by faculty members to engage their students 
+        in this competition has led to a consistent rise in participation from all academic departments.
+        While the Speech Olympiad championship certainly holds prestige, it transcends above a title. 
+        It provides a platform for personal growth and the potential to ignite transformative change 
+        not only within oneself but also among peers.
+      </p>
+      
+      <p>
+        <br/>
       </p>
 
       <p>
-        The excitement of stepping onto an actual stage and speaking in front of
-        a live audience returns to Speech Olympiad XV as all three rounds, The
-        Preliminary Round, the Semi-Final, and the Grand Finale will be held
-        physically. The contestant is expected to deliver a prepared speech for
-        the Preliminary Round, whilst the other two rounds require the
-        contestant to deliver a prepared speech as well as an impromptu speech.
+
+  
+        Throughout the span of the last 15 years, there has been a 
+        consistent demonstration of the event’s ability to unveil hidden 
+        talents within the university’s undergraduates. The recipients of awards 
+        and those who reach the final stages encompass a broad spectrum of backgrounds, 
+        highlighting the event’s widespread appeal through all academic disciplines. Countless  
+        participants of Speech Olympiad have then proceeded to dominate the National and International 
+        stages throughout the past decade, emerging as well-rounded impactful speakers who touch the hearts of many.
+
       </p>
 
-      <p>
-        We at Gavel Mora passionately believe that so much can be done through
-        speech. Hence, we invite you to set aside your fears of “not being
-        heard” and raise your voice, even if it shakes. Because the moment you
-        do so is the moment you make change happen.
-      </p>
-
-      <p>
+      <!-- <p>
         Registrations for Speech Olympiad XV are open now, presenting you with
         the chance to spark a change, with your voice. Stand up for what you
         believe, break the silence, and redefine the power of words.
-      </p>
-      <img
-        class="article-img"
-        alt=""
-        src="../assets/images/about_SO_article_image_1.jpg"
-        loading="lazy"
-      />
+      </p> -->
+
+      <img class="article-img" alt="" src="../assets/images/gallery/trophy_4.jpg" loading="lazy" />
     </AppArticle>
   </main>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

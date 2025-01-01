@@ -1,11 +1,6 @@
 <template>
-  <div class="row gallery">
-    <div
-      class="img-container"
-      :style="getOrder(i)"
-      :key="i"
-      v-for="(image, i) in getImages()"
-    >
+  <div class="row gallery mx-1">
+    <div class="img-container" :style="getOrder(i)" :key="i" v-for="(image, i) in getImages()">
       <div @click="preview(image)" class="overlay">
         <h5 class="center">See full image</h5>
       </div>
@@ -17,12 +12,10 @@
   </div>
   <!-- Creates the bootstrap modal where the image will appear -->
   <div class="img-modal" v-show="isShowModal">
-    <button
-      @click="closeModal"
-      type="button"
-      class="btn-close btn-close-white"
-      aria-label="Close"
-    ></button>
+    <button @click="closeModal" type="button" class="btn-close " aria-label="Close">
+      &#x2715;
+    </button>
+
     <img :src="previewImage" class="center" loading="lazy" />
   </div>
 </template>
@@ -53,7 +46,7 @@ export default {
       return this.currentImage !== "";
     },
   },
-  mounted() {},
+  mounted() { },
   methods: {
     closeModal(event) {
       if (event.target.tagName === "IMG") return;
@@ -95,12 +88,14 @@ export default {
   left: 0;
   z-index: 10;
 }
+
 .img-modal img {
   max-height: 75%;
   max-width: 75%;
   object-fit: contain;
   opacity: 1 !important;
 }
+
 .img-modal button {
   position: absolute;
   height: 3rem;
@@ -111,6 +106,7 @@ export default {
   transform: translate(-50%, 50%);
   z-index: 10;
 }
+
 /*End modal*/
 
 /*Gallery image*/
@@ -124,10 +120,12 @@ export default {
   z-index: 2;
   text-align: center;
 }
+
 .overlay:hover {
   opacity: 1;
   cursor: pointer;
 }
+
 .img-container {
   display: flex;
   justify-content: center;
@@ -137,21 +135,42 @@ export default {
   transition-delay: calc(200ms * var(--order)) !important;
   position: relative;
 }
+
+/* Custom classes for close button */
+.btn-close {
+  /* Add your button styles here, e.g., padding, background-color, border, etc. */
+
+
+
+  border: none;
+  color: white;
+
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  /* Add hover styles here, e.g., change background-color on hover */
+  background-color: #555;
+}
+
 .link-container {
   padding: 10px 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .gallery-link {
   font-weight: bold;
   font-size: 1.2rem;
   color: var(--color-text);
   text-decoration: none;
 }
+
 .gallery-link:hover {
   color: var(--vt-c-indigo);
 }
+
 img {
   width: 100%;
   object-fit: cover;
@@ -177,6 +196,7 @@ img {
     transition-delay: 0ms !important;
     width: 100%;
   }
+
   img {
     width: 100%;
     opacity: 1;

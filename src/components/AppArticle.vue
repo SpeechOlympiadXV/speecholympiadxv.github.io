@@ -32,7 +32,7 @@ export default {
 .box {
   background-color: var(--color-background-mute);
   padding: 1rem;
-  text-align: center;
+  text-align: left;
   font-style: italic;
 }
 

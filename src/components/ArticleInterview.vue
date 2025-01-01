@@ -8,7 +8,8 @@
       {{ intervieweeName }}
     </div>
   </div>
-  <p>Compiled by {{ authorName }}</p>
+
+  <p v-if="compiledBy != '0'">Compiled by {{ authorName }}</p>
 </template>
 <script>
 export default {
@@ -17,6 +18,7 @@ export default {
     authorName: String,
     intervieweeName: String,
     intervieweeImg: String,
+    compiledBy: String,
   },
 };
 </script>
