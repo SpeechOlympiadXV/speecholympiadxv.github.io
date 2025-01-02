@@ -5,7 +5,7 @@
 
     setTimeout(() => {
         heroAnimationsDone.value = true
-    }, 5000)
+    }, 3000)
 </script>
 
 <template>
@@ -66,8 +66,12 @@ svg {
     transition: opacity 1s;
 }
 
-.fade-in-enter, .fade-in-leave-to {
+.fade-in-enter-from {
     opacity: 0;
+}
+
+.fade-in-enter-to {
+    opacity: 1;
 }
 
 </style>
