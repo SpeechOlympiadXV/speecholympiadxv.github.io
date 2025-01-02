@@ -44,7 +44,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 svg {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;

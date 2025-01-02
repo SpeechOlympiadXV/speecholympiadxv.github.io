@@ -32,11 +32,11 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] background-gradient flex flex-col lg:flex-row items-center justify-fill relative overflow-hidden">
+    <div class="w-full h-[78vh] sm:h-[82vh] md:h-[86vh] lg:h-[90vh] background-gradient flex flex-col lg:flex-row items-center justify-fill relative overflow-hidden">
         <div v-if="textAnimationDone" class="absolute inset-0">
           <div v-for="star in stars" :key="star.id" :style="star.style" class="star"></div>
         </div>
-        <div class="absolute w-auto h-auto z-0 -translate-x-20 opacity-[30%] left-1/4 lg:translate-y-1 -translate-y-32">
+        <div class="absolute w-auto h-auto z-0 -translate-x-20 opacity-[30%] left-1/4 -translate-y-32 md:-translate-y-4 lg:translate-y-1">
             <WingedAward />
         </div>
         <div class="w-full lg:w-[78%] xl:w-[69%] h-full flex flex-col items-end justify-center p-2">
@@ -45,12 +45,12 @@ onMounted(() => {
                     <!-- Animate this div when the page loads -->
                     <div v-if="!isLoaded" class="absolute w-full h-full bg-black z-20"></div>
                 </Transition>
-                <div class="font-thin italic">Stories</div>
-                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl font-semibold">Unveiled</div>
+                <div class="font-thin italic text-md md:text-2xl">Stories</div>
+                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-stone-200">Unveiled</div>
             </div>
             <div class="flex flex-row justify-center items-baseline p-2 overflow-hidden">
                 <Transition name="unleashed-animation">
-                    <div v-if="isLoaded" class="font-thin italic">Wings</div>
+                    <div v-if="isLoaded" class="font-thin italic text-md md:text-2xl">Wings</div>
                 </Transition>
                 <Transition name="unleashed-animation">
                     <div v-if="isLoaded" class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold">Unleashed</div>
@@ -63,7 +63,7 @@ onMounted(() => {
                 <Transition name="unbound-slide-right">
                     <div v-if="!isLoaded" class="absolute w-1/2 h-full right-0 bg-black z-20"></div>
                 </Transition>
-                <div class="font-thin italic">Limits</div>
+                <div class="font-thin italic text-md md:text-2xl">Limits</div>
                 <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold">Unbound</div>
             </div>
         </div>
