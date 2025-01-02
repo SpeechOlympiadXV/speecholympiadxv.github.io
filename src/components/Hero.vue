@@ -46,14 +46,14 @@ onMounted(() => {
                     <div v-if="!isLoaded" class="absolute w-full h-full bg-black z-20"></div>
                 </Transition>
                 <div class="font-thin italic text-md md:text-2xl">Stories</div>
-                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-stone-200">Unveiled</div>
+                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-[#FF7900]">Unveiled</div>
             </div>
             <div class="flex flex-row justify-center items-baseline p-2 overflow-hidden">
                 <Transition name="unleashed-animation">
                     <div v-if="isLoaded" class="font-thin italic text-md md:text-2xl">Wings</div>
                 </Transition>
                 <Transition name="unleashed-animation">
-                    <div v-if="isLoaded" class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold">Unleashed</div>
+                    <div v-if="isLoaded" class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold my-shadow">Unleashed</div>
                 </Transition>
             </div>
             <div class="flex flex-row justify-center items-baseline p-2">
@@ -64,7 +64,7 @@ onMounted(() => {
                     <div v-if="!isLoaded" class="absolute w-1/2 h-full right-0 bg-black z-20"></div>
                 </Transition>
                 <div class="font-thin italic text-md md:text-2xl">Limits</div>
-                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold">Unbound</div>
+                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold text-[#EBCD55]">Unbound</div>
             </div>
         </div>
     </div>
@@ -73,6 +73,11 @@ onMounted(() => {
 
 
 <style>
+
+.my-shadow {
+    /* text-shadow: 0 0 10px rgba(235, 205, 85, 1); */
+    text-shadow: 0 0 10px #ffffffaa;
+}
 
 .star {
   position: absolute;
