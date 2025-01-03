@@ -66,33 +66,53 @@
         </div>
 
         <!-- Contact Persons -->
-        <div class="text-center">
+        <div class="text-center flex flex-col items-center mt-1">
           <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
-          <ul class="space-y-2">
-              <li v-for="link in contactsPersons.links" :key="link.text" class="border-0 p-0">
-                  <a :href="link.href" class="text-white">{{ link.text }}</a>
-              </li>
-          </ul>
+          <div class="w-2/3 lg:w-3/4">
+            <ul class="flex flex-col items-start">
+                <li v-for="link in contactsPersons.links" :key="link.text" class="border-0 p-0 m-b-4">
+                    <a :href="link.href" class="text-gray-400 m-0 p-0">{{ link.text }}</a>
+                </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Social Links --> 
         <div class="flex flex-col items-center">
           <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
           <div class="flex space-x-4 text-4xl">
-            <a v-for="s in socialMedia" :href="s.link" class="text-white">
-              <font-awesome-icon :icon="s.icon" class="hover:text-gray-500 transition-colors"/>
+            <a v-for="s in socialMedia" :href="s.link" class="text-gray-400" :key="s.profile">
+              <font-awesome-icon :icon="s.icon"/>
               <span class="sr-only">{{ s.profile }}</span>
             </a>
           </div>
         </div>
       </div>
     </div>
-    <p class="text-sm w-full text-gray-500 text-center">
+    <p class="text-sm w-full text-gray-400 text-center">
       © Speach Olympiad 2025.
     </p>
   </footer>
 </template>
   
 <style scoped>
+
+font-awsome-icon {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+font-awsome-icon:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #bbbbbb;
+}
+
+a {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #bbbbbb;
+}
 
 </style>

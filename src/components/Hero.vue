@@ -46,7 +46,7 @@ onMounted(() => {
                     <div v-if="!isLoaded" class="absolute w-full h-full bg-black z-20"></div>
                 </Transition>
                 <div class="font-thin italic text-md md:text-2xl">Stories</div>
-                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-[#FF7900]">Unveiled</div>
+                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-[#FF7900] ">Unveiled</div>
             </div>
             <div class="flex flex-row justify-center items-baseline p-2 overflow-hidden">
                 <Transition name="unleashed-animation">
