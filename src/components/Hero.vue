@@ -7,7 +7,7 @@ const textAnimationDone = ref(false);
 const stars = ref([])
 
 onMounted(() => {
-    // Trigger the animation when the component is mounted
+    // Trigger the animation when the component is n
     setTimeout(() => {
         isLoaded.value = true;
     }, 0.1); // Slight delay to allow the DOM to render
@@ -16,7 +16,7 @@ onMounted(() => {
         textAnimationDone.value = true;
     }, 3000);
 
-    const starCount = 100;
+    const starCount = 75;
     for (let i = 0; i < starCount; i++) {
         stars.value.push({
         id: i,
@@ -46,14 +46,14 @@ onMounted(() => {
                     <div v-if="!isLoaded" class="absolute w-full h-full bg-black z-20"></div>
                 </Transition>
                 <div class="font-thin italic text-md md:text-2xl">Stories</div>
-                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-[#FF7900] ">Unveiled</div>
+                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl font-semibold text-white">Unveiled</div>
             </div>
             <div class="flex flex-row justify-center items-baseline p-2 overflow-hidden">
                 <Transition name="unleashed-animation">
-                    <div v-if="isLoaded" class="font-thin italic text-md md:text-2xl">Wings</div>
+                    <div v-if="isLoaded" class="font-thin italic text-md md:text-2xl unleashed-shadow">Wings</div>
                 </Transition>
                 <Transition name="unleashed-animation">
-                    <div v-if="isLoaded" class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold my-shadow">Unleashed</div>
+                    <div v-if="isLoaded" class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold unleashed-shadow ">Unleashed</div>
                 </Transition>
             </div>
             <div class="flex flex-row justify-center items-baseline p-2">
@@ -63,8 +63,8 @@ onMounted(() => {
                 <Transition name="unbound-slide-right">
                     <div v-if="!isLoaded" class="absolute w-1/2 h-full right-0 bg-black z-20"></div>
                 </Transition>
-                <div class="font-thin italic text-md md:text-2xl">Limits</div>
-                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold text-[#EBCD55]">Unbound</div>
+                <div class="font-thin italic text-md md:text-2xl text-[#EDC001]">Limits</div>
+                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold text-[#EDC001] unbound-text-shadow">Unbound</div>
             </div>
         </div>
     </div>
@@ -74,9 +74,13 @@ onMounted(() => {
 
 <style>
 
-.my-shadow {
-    /* text-shadow: 0 0 10px rgba(235, 205, 85, 1); */
-    text-shadow: 0 0 10px #ffffffaa;
+.unleashed-shadow {
+    text-shadow: 0 0 10px #BC9C23;
+    /* text-shadow: 0 0 5px #FF7900ff; */
+}
+
+.unbound-text-shadow {
+    text-shadow: 0 0 10px #BC9C23;
 }
 
 .star {
