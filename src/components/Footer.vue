@@ -46,8 +46,8 @@
           href: "tel: +94 71 135 6855"
       },
       {
-          text: "Email : speecholympiadxvi@gmail.com",
-          href: "mailto: speecholympiadxvi@gmail.com"
+          text: "Email : speecholympiadxvii@gmail.com",
+          href: "mailto: speecholympiadxvii@gmail.com"
       },
       ],
   }

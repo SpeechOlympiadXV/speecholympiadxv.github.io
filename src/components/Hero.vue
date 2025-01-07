@@ -16,7 +16,7 @@ onMounted(() => {
         textAnimationDone.value = true;
     }, 3000);
 
-    const starCount = 75;
+    const starCount = 100;
     for (let i = 0; i < starCount; i++) {
         stars.value.push({
         id: i,
