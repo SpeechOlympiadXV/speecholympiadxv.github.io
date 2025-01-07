@@ -89,7 +89,7 @@
         </div>
       </div>
     </div>
-    <p class="text-sm w-full text-gray-400 text-center">
+    <p class="text-sm w-full text-gray-400 text-center pb-4">
       © Speach Olympiad 2025.
     </p>
   </footer>

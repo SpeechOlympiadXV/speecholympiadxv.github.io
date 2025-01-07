@@ -1,6 +1,6 @@
 <template>
   <!-- OLD SHADOW: backdrop-brightness-150 bg-gradient-to-b md:bg-gradient-to-r from-[#282828] to-black shadow-md -->
-    <div class="m-10 flex flex-col md:flex-row gap-6 w-[90%] md:w-[80%] rounded-2xl mx-auto bg-gradient-to-br from-[#282828] to-[#EDC00111] shadow-black relative">
+    <div class="m-10 flex flex-col md:flex-row gap-6 w-[90%] md:w-[80%] rounded-2xl mx-auto bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm shadow-black relative">
       <!-- Content Section -->
       <div class="flex-1 space-y-4 p-9">
         <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
@@ -56,7 +56,7 @@ function click(urlString) {
 }
 </script>
 
-<style scoped>
+<style>
   .hover-effect {
     transition: all 0.3s;
   }
