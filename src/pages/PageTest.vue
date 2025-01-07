@@ -1,397 +1,296 @@
-<!-- <template>
-    <div>
-        <h1>
-            {{ title[1].mainImage.asset._ref }}
-        </h1>
-        <img src={{urlFor(title[1].mainImage.asset._ref).width(200).url()}} />
-
-
-    </div>
-</template>
-  
-<script>
-import { useSanityFetcher } from 'vue-sanity'
-import imageUrlBuilder from '@sanity/image-url'
-import client from './sanityClient'
-export default {
-    setup() {
-        const builder = imageUrlBuilder(client)
-        function urlFor(source) {
-            return builder.image(source)
-        }
-        // OR use a factory function
-        // const { data: title } = useSanityFetcher('*[_type == "post"].{title,body}')
-        const { data: title } = useSanityFetcher(
-            () => `*[_type == 'post']`
-        )
-        console.log(title)
-        return { title, urlFor }
-    },
-}
-</script> -->
-
 <template>
-    <div class="home ">
-        <!-- <h1 class="text-center text-3xl">Blog Posts</h1> -->
-        <br />
+    <div :class="['transition-all min-h-screen bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm text-gray-100 mt-10 mb-10 rounded-lg mr-auto', post ? 'w-[98%] ml-[1%] md:w-[95%] md:ml-[2.5%]' : 'w-[90%] ml-[5%] md:w-[80%] md:ml-[10%]']">
+      <div class="container mx-auto px-4 py-8 w-full">
+        <div class="w-full flex flex-col items-start mb-9">
+          <div class="pl-4 text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white">
+            Past Experiences
+          </div>
+        </div>
         <div v-if="slug">
-            <div class="loading" v-if="loading2">Loading...</div>
-
-            <div v-if="error" class="error">
-                {{ error }}
-            </div>
-
-            <div v-if="post" class="content px-4 py-4 w-full md:w-1/2">
-                <button @click="closePost"
-                    class="bg-gray-800 text-white p-4 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-
-                </button>
-
-                <img v-if="post.coverImage" :src="imageUrlFor(post.coverImage)" class="w-full h-auto" />
-
-                <!-- <button @click="goBackToMenu"
-                    class="bg-orange-500 hover:bg-orange-700 absolute top-2 right-2 text-white text-xl p-3 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform rotate-180" viewBox="0 0 20 20"
-                        fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M6.293 6.293a1 1 0 011.414 0L10 8.586l2.293-2.293a1 1 0 111.414 1.414L11.414 10l2.293 2.293a1 1 0 11-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 01-1.414-1.414L8.586 10 6.293 7.707a1 1 0 010-1.414z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                </button> -->
-                <br />
-                <h1 class="text-5xl">{{ post.title }}</h1>
-                <br />
-
-                <SanityBlocks :blocks="blocks" />
-                <!-- <div class="content">
-                    <BlockContent :blocks="child" v-for="child in blocks" v-bind:key="child._id" />
-                </div> -->
-                <h6 class="flex items-center ">
-                    By:
-
-                    {{ post.name }}
-                    <img v-if="post.authorImage" :src="imageUrlFor(post.authorImage)"
-                        class="w-16 h-16  rounded-full ml-2" />
-                </h6>
-
-                <h2 class="text-2xl py-4">Blog Photos</h2>
-                <!-- Gallery -->
-                <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4">
-                    <div v-for="(imageC, index) in post.images" :key="index" class="image-container">
-                        <img @click="showImageModal(convertImageUrl(imageC.image.asset._ref))"
-                            :src="convertImageUrl(imageC.image.asset._ref)" class="w-full h-auto rounded cursor-pointer" />
-                    </div>
-                </div>
-                <button @click="closePost"
-                    class="bg-gray-800 text-white p-4 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-
-                </button>
-
-                <!-- Image Modal -->
-                <div v-if="showModal" class="fixed inset-0 flex items-center justify-center z-50">
-                    <div class="modal-overlay fixed inset-0 bg-black opacity-50"></div>
-
-                    <div class="modal-container bg-transparent mx-auto rounded-lg p-4 max-w-screen-lg">
-                        <!-- Close Button -->
-                        <button @click="closeImageModal"
-                            class=" bg-amber-800 text-white p-2 m-2 rounded-full hover:bg-orange-700 hover:text-gray-800">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-
-                        <!-- Display the clicked image -->
-                        <img :src="modalImageUrl" class="w-full max-h-96 mx-auto" />
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-        <div v-if="loadBlog" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 px-4 w-full">
-            <div v-for="post in posts" :key="post._id" class="post-item">
-                <div
-                    class="max-w-sm border mt-4 border-gray-200 rounded-lg shadow bg-gray-800 bg-opacity-25 border-gray-700">
-                    <a href="#">
-                        <img class="w-full h-auto" :src="imageUrlFor(post.image)" alt="" />
-                    </a>
-                    <div class="p-2">
-                        <a href="#">
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">{{ post.title
-                            }}</h5>
-                        </a>
-                        <p class="mb-3 font-normal text-gray-400">{{ post.description }}</p>
-                        <a @click="handleReadmore(post.slug.current)"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white  rounded-lg  focus:ring-4 focus:outline-none  bg-amber-600 hover:bg-amber-700 focus:ring-amber-800">
-                            Read more
-                            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
+          <div v-if="loading2" class="text-center text-2xl font-semibold">Loading...</div>
   
-
-<script>
-import sanity from "../assets/client";
-import AppTestimonialCard from "../components/AppTestimonialCard.vue";
-import { SanityBlocks } from "sanity-blocks-vue-component";
-
-import imageUrlBuilder from "@sanity/image-url";
-import AppFeaturette from "../components/AppFeaturette.vue";
-const imageBuilder = imageUrlBuilder(sanity);
-
-
-export default {
-    name: "Blogs",
+          <div v-if="error" class="bg-red-800 border-l-4 border-red-500 text-white p-4" role="alert">
+            <p class="font-bold">Error</p>
+            <p>{{ error }}</p>
+          </div>
+  
+          <div v-if="post" class="backdrop-brightness-150 bg-opacity-50 rounded-lg shadow-lg overflow-hidden">
+            <button @click="closePost" class="absolute z-30 top-4 left-4 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-600 transition duration-300 ease-in-out">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+            </button>
+  
+            <div class="p-4 mt-4">
+              <img v-if="post.coverImage" :src="imageUrlFor(post.coverImage)" class="w-full h-64 object-cover rounded-lg" />
+            </div>
+  
+            <div class="p-6">
+              <h1 class="text-4xl font-bold mb-4 text-white">{{ post.title }}</h1>
+              <SanityBlocks :blocks="blocks" class="prose prose-invert max-w-none" />
+              
+              <div class="mt-6 flex items-center">
+                <img v-if="post.authorImage" :src="imageUrlFor(post.authorImage)" class="w-12 h-12 rounded-full mr-4" />
+                <p class="text-sm text-gray-300">By: {{ post.name }}</p>
+              </div>
+            </div>
+  
+            <div class="px-6 py-4">
+              <h2 class="text-2xl font-semibold mb-4 text-white">Blog Photos</h2>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div v-for="(imageC, index) in post.images" :key="index" class="aspect-w-1 aspect-h-1">
+                  <img 
+                    @click="showImageModal(convertImageUrl(imageC.image.asset._ref))"
+                    :src="convertImageUrl(imageC.image.asset._ref)" 
+                    class="w-full h-full object-cover rounded-lg cursor-pointer transition duration-300 ease-in-out transform hover:scale-[1.01]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Image Modal -->
+          <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center">
+            <div class="absolute inset-0 bg-black opacity-75"></div>
+            <div class="relative z-10 max-w-4xl w-full">
+              <button @click="closeImageModal" class="absolute top-4 right-4 z-40 text-white hover:text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <img :src="modalImageUrl" class="w-full h-auto max-h-screen" />
+            </div>
+          </div>
+        </div>
+  
+        <div v-if="loadBlog" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pl-4 pr-4">
+          <div v-for="post in posts" :key="post._id" class="backdrop-brightness-150 bg-opacity-50 rounded-lg shadow-lg overflow-hidden transition duration-300 ease-in-out transform hover:scale-[1.01]">
+            <div class="p-4">
+              <img class="w-full h-48 object-cover rounded-lg" :src="imageUrlFor(post.image)" :alt="post.title" />
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-semibold mb-2 text-white">{{ post.title }}</h2>
+              <p class="text-gray-300 mb-4">{{ post.description }}</p>
+              <button 
+                @click="handleReadmore(post.slug.current)"
+                class="bg-[#EDC001cc] hover-effect text-gray-100 font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+              >
+                Read more
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  import sanity from "../assets/client";
+  import { SanityBlocks } from "sanity-blocks-vue-component";
+  import imageUrlBuilder from "@sanity/image-url";
+  
+  const imageBuilder = imageUrlBuilder(sanity);
+  
+  export default {
+    name: "EnhancedBlogComponent",
+    components: { SanityBlocks },
     props: {
-        limit: {
-            type: Number,
-            default: 50 // Set a default value here if needed
-        }
+      limit: {
+        type: Number,
+        default: 50
+      }
     },
     data() {
-        return {
-            loading: true,
-            loading2: true,
-            loadBlog: true,
-            slug: '',
-            posts: [],
-            post: [],
-            blocks: [],
-            showModal: false, // To control whether the modal is shown or hidden
-            modalImageUrl: '',
-
-        };
+      return {
+        loading: true,
+        loading2: true,
+        loadBlog: true,
+        slug: '',
+        posts: [],
+        post: null,
+        blocks: [],
+        showModal: false,
+        modalImageUrl: '',
+        error: null
+      };
     },
-
     created() {
-        this.fetchData();
+      this.fetchData();
     },
-    components: {
-        AppTestimonialCard, AppFeaturette, SanityBlocks
+    mounted(){
+        const options = {
+            root: null, // Use the viewport as the root
+            threshold: 0.1, // Trigger when 10% of the component is visible
+        };
+
+        this.observer = new IntersectionObserver(this.handleIntersection, options);
+        this.observer.observe(this.$el); // Observe the component's root element
+    },
+    unmounted() {
+        // Cleanup: disconnect the observer
+        if (this.observer) {
+        this.observer.disconnect();
+        }
+        // Ensure event listeners are removed
+        this.removeEventListeners();
     },
     methods: {
-        imageUrlFor(source) {
-            return imageBuilder.image(source);
-        },
-        showImageModal(imageUrl) {
-            this.modalImageUrl = imageUrl;
-            this.showModal = true;
-        },
-        closeImageModal() {
-            this.modalImageUrl = '';
-            this.showModal = false;
-        },
-        convertImageUrl(imageUrl) {
-            // Replace "image-" with an empty string
-            let modifiedUrl = imageUrl.replace("image-", "");
-
-            // Replace the last "-" with a "."
-            modifiedUrl = modifiedUrl.replace("-jpg", ".jpg");
-            modifiedUrl = modifiedUrl.replace("-png", ".png");
-            console.log('https://cdn.sanity.io/images/i32b0q2c/production/' + modifiedUrl)
-            return 'https://cdn.sanity.io/images/i32b0q2c/production/' + modifiedUrl;
-        },
-        closePost() {
-            console.log("clicked")
-            this.slug = null;
-            this.loadBlog = true;
-            this.post = null;
-        },
-        handleReadmore(slug) {
-            console.log("button clicked" + slug)
-            console.log(slug)
-            const query = `*[slug.current == $slug] {
-    _id,
-    title,
-    slug,
-    body, 
-   "image": mainImage{
-    asset->{
-    _id,
-    url
-  }
-  },
-  "coverImage": coverImage{
-    asset->{
-    _id,
-    url
-  }
-  },
-  "name":author->name,
-  images,
-  "authorImage":author->image
-  }[0]
-  `;
-            this.slug = slug
-            this.loadBlog = false;
-            sanity.fetch(query, { slug: this.slug }).then(
-                (post) => {
-                    this.loading2 = false;
-                    this.post = post;
-                    this.blocks = post.body;
-                    console.log(post.images[1].image.asset._ref)
-
-                },
-                (error) => {
-                    this.error = error;
+        handleIntersection(entries) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                // Component is in the viewport, add event listeners
+                this.addEventListeners();
+                } else {
+                // Component is out of the viewport, remove event listeners
+                this.removeEventListeners();
                 }
-            );
+            });
         },
-        fetchData() {
-            let query = "";
-            if (this.limit == 2) {
-                // || slug == "so-xv-the-grand-finale" || slug == "the-preliminary-round-of-speech-olympiad-xv") && slug == "speech-olympiad-xv-the-semi-final-round" 
-                query = ` *[_type == "post" && (slug.current == "so-xv-the-grand-finale" || slug.current == "the-preliminary-round-of-speech-olympiad-xv" || slug.current == "speech-olympiad-xv-the-semi-final-round"  )] {
-              _id,
-              title,
-              slug,
-              description,
-              "image": mainImage {
-                asset-> {
-                  _id,
-                  url
-                }
-              },
+        addEventListeners() {
+            // Add touch and key event listeners
+            console.log("Adding event listenrs to blogs")
+            window.addEventListener('keydown', this.handleKeyPress);
+            window.addEventListener('touchstart', this.handleTouchStart);
+            window.addEventListener('touchend', this.handleTouchEnd);
+        },
+        removeEventListeners() {
+            // Remove touch and key event listeners
+            console.log("removing event listenrs from blogs")
+            window.removeEventListener('keydown', this.handleKeyPress);
+            window.removeEventListener('touchstart', this.handleTouchStart);
+            window.removeEventListener('touchend', this.handleTouchEnd);
+        },
+        handleKeyPress(event) {
+            event.stopPropagation();
+            // Close the post when the Escape key is pressed
+            if (event.key === 'Escape') {
+                this.closePost();
+            }
+        },
+        handleTouchStart(event) {
+            event.stopPropagation();
+            // Record the initial touch point
+            this.touchStartX = event.changedTouches[0].screenX;
+        },
+        handleTouchEnd(event) {
+            event.stopPropagation();
+            // Record the final touch point
+            this.touchEndX = event.changedTouches[0].screenX;
+            this.detectSwipe();
+        },
+        detectSwipe() {
+            const threshold = 50; // Minimum distance for swipe detection
+            const swipeDistance = this.touchEndX - this.touchStartX;
+
+            if (swipeDistance > threshold) {
+                // Swipe right detected
+                this.closePost();
+            }
+        },
+      imageUrlFor(source) {
+        return imageBuilder.image(source);
+      },
+      showImageModal(imageUrl) {
+        this.modalImageUrl = imageUrl;
+        this.showModal = true;
+      },
+      closeImageModal() {
+        this.modalImageUrl = '';
+        this.showModal = false;
+      },
+      convertImageUrl(imageUrl) {
+        let modifiedUrl = imageUrl.replace("image-", "").replace(/-(?!.*-)/, ".");
+        return `https://cdn.sanity.io/images/i32b0q2c/production/${modifiedUrl}`;
+      },
+      closePost() {
+        this.slug = null;
+        this.loadBlog = true;
+        this.post = null;
+      },
+      handleReadmore(slug) {
+        const query = `*[slug.current == $slug] {
+          _id, title, slug, body, 
+          "image": mainImage.asset->,
+          "coverImage": coverImage.asset->,
+          "name": author->name,
+          images,
+          "authorImage": author->image
+        }[0]`;
+        
+        this.slug = slug;
+        this.loadBlog = false;
+        this.loading2 = true;
+        
+        sanity.fetch(query, { slug: this.slug }).then(
+          (post) => {
+            this.loading2 = false;
+            this.post = post;
+            this.blocks = post.body;
+          },
+          (error) => {
+            this.error = error;
+            this.loading2 = false;
+          }
+        );
+      },
+      fetchData() {
+        const query = this.limit === 2
+          ? `*[_type == "post" && (slug.current in ["so-xv-the-grand-finale", "the-preliminary-round-of-speech-olympiad-xv", "speech-olympiad-xv-the-semi-final-round"])] {
+              _id, title, slug, description,
+              "image": mainImage.asset->,
               "name": author->name,
               excerpt
-            }  `;
-            }
-            else {
-
-                query = `*[_type == "post"]{
-    _id,
-    title,
-    slug,
-    description,
-    "image": mainImage{
-    asset->{
-    _id,
-    url
-  }
-},
-
-"name":author->name,
-
-    excerpt
-  }[0..${this.limit}]`;
-            }
-            console.log(this.limit)
-
-            this.error = this.post = null;
-            this.loading = true;
-            sanity.fetch(query).then(
-                (posts) => {
-                    this.loading = false;
-                    this.posts = posts;
-                    console.log(posts)
-
-                },
-                (error) => {
-                    this.error = error;
-                }
-            );
-        },
-    },
-};
-</script>
+            }`
+          : `*[_type == "post"] {
+              _id, title, slug, description,
+              "image": mainImage.asset->,
+              "name": author->name,
+              excerpt
+            }[0..${this.limit}]`;
   
-<style >
-.content {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 72em;
-}
-
-h1 {
-    text-align: center;
-}
-
-h6 {
-    color: #aaa;
-    padding: 1em;
-}
-
-.image-container {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-container:hover {
-    transform: scale(1.05);
-}
-
-.image-expanded {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-.image-expanded img {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-ul {
-
-
-    margin-left: 20px;
-
-    padding-left: 20px;
-
-}
-
-p {
-    text-indent: 1em;
-
-
-    /* Vertical margin between paragraphs */
-
-    /* Space before the first line of each paragraph */
-    line-height: 1.5;
-    /* Line height for improved readability (adjust as needed) */
-    padding-bottom: 1em;
-}
-
-
-
-li {
-
-    margin-bottom: 5px;
-    /* border: none; */
-
-
-
-}
-</style>
+        this.loading = true;
+        sanity.fetch(query).then(
+          (posts) => {
+            this.loading = false;
+            this.posts = posts;
+          },
+          (error) => {
+            this.error = error;
+            this.loading = false;
+          }
+        );
+      },
+    },
+  };
+  </script>
+  
+  <style>
+  @import 'tailwindcss/base';
+  @import 'tailwindcss/components';
+  @import 'tailwindcss/utilities';
+  
+  /* Additional custom styles */
+  .prose {
+    @apply text-gray-100;
+  }
+  
+  .prose img {
+    @apply rounded-lg shadow-md;
+  }
+  
+  .prose a {
+    @apply text-amber-400 hover:text-amber-300;
+  }
+  
+  .prose h2, .prose h3, .prose h4 {
+    @apply font-semibold mt-6 mb-4 text-white;
+  }
+  
+  .prose ul, .prose ol {
+    @apply my-4 ml-6 text-gray-200;
+  }
+  
+  .prose li {
+    @apply mb-2;
+  }
+  </style>
