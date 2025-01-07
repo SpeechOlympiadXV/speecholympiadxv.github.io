@@ -295,4 +295,15 @@ export default {
     aspect-ratio: 1/1;
     background-color: grey;
 }
+
+li {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border : none;
+}
+
+p {
+    @apply font-extralight mt-2 mb-2
+}
 </style>

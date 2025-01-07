@@ -74,9 +74,9 @@ export default {
 };
 </script>
 <template>
-  <div class="row mb-5 p-4">
-    <div class="col-12 mb-2">
-      <h1 class="featurette-heading mt-0 mb-4">Technical Tips</h1>
+<div :class="['row pb-4 px-4 py-8 mb-8 rounded-lg transition-all', key === '0' ? 'bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm w-[90%] ml-[5%] mr-auto' : 'w-full']">
+    <div class="text-3xl mb-9 lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white">
+      Technical Tips
     </div>
 
     <!-- Three columns of cards  -->
@@ -95,7 +95,7 @@ export default {
   <!-- Samadhi -->
   <div v-if="key == '1'">
     <button @click="closePost"
-      class="bg-amber-800 m-4 text-white p-4 w-36 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+      class="bg-amber-800 m-4 text-white p-4 w-20 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
           d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
@@ -104,7 +104,7 @@ export default {
     </button>
     <Samadhi />
     <button @click="closePost"
-      class="bg-amber-800 m-4 text-white p-4 w-36 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+      class="bg-amber-800 m-4 text-white p-4 w-20 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
           d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
@@ -116,7 +116,7 @@ export default {
   <!-- madushika -->
   <div v-if="key == '2'">
     <button @click="closePost"
-      class="bg-amber-800 m-4 text-white p-4 w-36 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+      class="bg-amber-800 m-4 text-white p-4 w-20 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
           d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
@@ -125,7 +125,7 @@ export default {
     </button>
     <Madushika />
     <button @click="closePost"
-      class="bg-amber-800 m-4 text-white p-4 w-36 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+      class="bg-amber-800 m-4 text-white p-4 w-20 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
           d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
@@ -136,7 +136,7 @@ export default {
 
   <div v-if="key == '3'">
     <button @click="closePost"
-      class="bg-amber-800 m-4 text-white p-4 w-36 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+      class="bg-amber-800 m-4 text-white p-4 w-20 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
           d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
@@ -145,7 +145,7 @@ export default {
     </button>
     <yasir />
     <button @click="closePost"
-      class="bg-amber-800 m-4 text-white p-4 w-36 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+      class="bg-amber-800 m-4 text-white p-4 w-20 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
           d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
@@ -155,7 +155,7 @@ export default {
   </div>
   <div v-if="key == '4'">
     <button @click="closePost"
-      class="bg-amber-800 m-4 text-white p-4 w-36 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+      class="bg-amber-800 m-4 text-white p-4 w-20 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
           d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"
@@ -164,7 +164,7 @@ export default {
     </button>
     <Kasun />
     <button @click="closePost"
-      class="bg-amber-800 m-4 text-white p-4 w-36 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+      class="bg-amber-800 m-4 text-white p-4 w-20 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
           d="M9.293 5.293a1 1 0 011.414 1.414L7.414 10l3.293 3.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 010 1.414z"

@@ -1,11 +1,12 @@
 <script>
 import SOLogo from "../assets/images/new_logo.png";
+import SOXVIILogo from "../assets/images/SOXVII_LOGO_White.png";
 
 export default {
   data() {
     return {
       logo: {
-        filename: SOLogo,
+        filename: SOXVIILogo,
         alt: "Speech Olympiad Logo",
       },
     };

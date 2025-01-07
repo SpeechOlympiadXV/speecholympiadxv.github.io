@@ -49,9 +49,12 @@ export default {
 }
 </script>
 <template>
-    <div class="row mb-5 p-4">
-        <div class="col-12 mb-2">
+    <div :class="['row pb-4 mb-9 p-4 rounded-lg transition-all', key === '0' ? 'bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm w-[90%] ml-[5%]  mr-auto' : 'w-full']">
+        <!-- <div class="col-12 mb-2">
             <h1 class="featurette-heading mt-0 mb-4">Champion's Story</h1>
+        </div> -->
+        <div class="text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
+            Champion's Story
         </div>
 
         <!-- Three columns of cards  -->

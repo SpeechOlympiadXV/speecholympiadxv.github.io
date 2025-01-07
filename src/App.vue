@@ -1,4 +1,5 @@
 <script >
+import Navbar from "./components/Navbar.vue";
 import AppFooter from "./components/AppFooter.vue";
 import AppHeader from "./components/AppHeader.vue";
 import PageRules from "./pages/PageRules.vue";
@@ -22,6 +23,7 @@ import PageTT from "./pages/PageTechTips.vue";
 import PageBlog2 from "./pages/PageBlog2.vue"
 import PageKasun from "./TechTips/Kasun.vue";
 import Semi from "./pages/PageSemiFinalists.vue";
+import Footer from "./components/Footer.vue";
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
@@ -29,11 +31,11 @@ const routes = {
   "/technical-tips": PageTT,
   "/gallery": PageGallery,
   "/blogs": PageTest,
-  "/form": PageForm,
-  "/admin": PageAdmin,
-  "/semi": Semi,
-  "/rules": PageRules,
-  "/blog2": PageBlog2
+  // "/form": PageForm, 
+  // "/admin": PageAdmin,
+  // "/semi": Semi,
+  // "/rules": PageRules,
+  // "/blog2": PageBlog2
 };
 
 export default {
@@ -46,6 +48,8 @@ export default {
   components: {
     AppHeader,
     AppFooter,
+    Navbar,
+    Footer
   },
   computed: {
     currentView() {
@@ -77,11 +81,12 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-
+  <!-- <AppHeader /> -->
+  <Navbar />
   <component :is="currentView" />
 
-  <AppFooter />
+  <!-- <AppFooter /> -->
+  <Footer></Footer>
 </template>
 
 <style ></style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="row featurette ">
+  <div class="row featurette">
     <div :class="'col-md-7 ' + getOrder(index, 0)">
       <h2 class="featurette-heading">
         <div class="nav-link">{{ heading }} <span class="text-muted">{{ headingEnd }}</span></div>
@@ -82,6 +82,7 @@ h2 {
 .featurette-heading {
   font-weight: 300;
   line-height: 1;
+  font-weight: bold;
   /* rtl:remove */
   letter-spacing: -0.05rem;
   font-size: 30px;
@@ -105,7 +106,6 @@ h2 {
 @media (max-width: 62em) {
   .featurette-heading {
     padding-top: 2rem;
-    font-weight: bold;
   }
 
   .featurette-divider {

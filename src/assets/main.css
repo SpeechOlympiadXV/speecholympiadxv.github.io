@@ -5,7 +5,7 @@
 @import 'tailwindcss/utilities';
 
 #app {
-  width: 100%;
+  width: screen;
   height: 100%;
   min-height: 100vh;
   margin: 0 auto;

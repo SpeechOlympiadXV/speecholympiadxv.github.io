@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid article-container">
+  <div class="container-fluid article-container rounded-2xl p-9 md:p-14 mt-9 mb-9">
     <div class="article column pb-2">
       <slot></slot>
     </div>
@@ -14,7 +14,10 @@ export default {
 /*Since the content is defined in parent components style is not scoped*/
 .article-container {
   display: flex;
+  width: 90%;
+  background: linear-gradient(45deg, #282828 , #EDC00111);
   justify-content: center;
+  border : 1px solid #585858;
 }
 
 .article {
@@ -43,7 +46,11 @@ export default {
 
 @media (min-width: 768px) {
   .article {
-    width: 70%;
+    width: 100%;
+  }
+
+  .article-container {
+    width: 80%;
   }
   
   .hero h4 {
