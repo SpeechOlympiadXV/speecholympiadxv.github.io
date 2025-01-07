@@ -25,6 +25,7 @@ onMounted(() => {
             top: `${Math.random() * 100}%`,
             animationDelay: `${Math.random() * 5}s`,
             filter : `blur(${Math.random() * 5}px)`,
+            backgroundColor : `${Math.random() > 0.5 ? 'white' : '#EDC001'}`
         }
      })
     }

@@ -62,6 +62,6 @@ function click(urlString) {
 
   .hover-effect:hover {
     background-color: #EDC001aa;
-    text-shadow: 0 0 1px #bbbbbb;
+    text-shadow: 0 0 1px #ffffff;
   }
 </style>

@@ -34,6 +34,8 @@ import winners from "../assets/images/winners_announced.png"
 import PageTT from "./PageTechTips.vue"
 
 import pageChamp from "./PageChampionsStory.vue"
+import Hero from "../components/Hero.vue";
+import Feature from "../components/Feature.vue";
 
 
 export default {
@@ -49,7 +51,8 @@ export default {
     sponserDisplay,
     timeline2,
     PageTT,
-
+    Hero,
+    Feature,
     pageChamp
   },
   mounted() {
@@ -133,7 +136,8 @@ export default {
 
 <template>
   <main>
-    <AppCarousel />
+    <!-- <AppCarousel /> -->
+    <Hero />
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -142,14 +146,17 @@ export default {
       <Doodle />
 
       <!-- START THE FEATURETTES -->
-      <AppFeaturette v-for="(featurette, i) in featurettes" :index="i" :key="i" :heading="featurette.heading"
+      <!-- <AppFeaturette v-for="(featurette, i) in featurettes" :index="i" :key="i" :heading="featurette.heading"
         :heading-end="featurette.headingEnd" :text="featurette.text" :image="featurette.image"
         :urlString="featurette.urlString" 
-        />
+        /> -->
+      <Feature v-for="(featurette, i) in featurettes" :key="i" :heading="featurette.heading"
+        :heading-end="featurette.headingEnd" :text="featurette.text" :image="featurette.image"
+        :urlString="featurette.urlString"/>
 
-      <div class="col-12 mb-2 mt-6">
+      <!-- <div class="col-12 mb-2 mt-6"> -->
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
-      </div>
+      <!-- </div> -->
       <sponserDisplay />
       <hr class="featurette-divider" />
       <PageSemi />

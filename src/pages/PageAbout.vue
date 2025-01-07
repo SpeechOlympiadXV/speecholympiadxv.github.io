@@ -26,13 +26,16 @@ export default {
       ? About_title_mobile
       : About_title_desktop
       ">
-      <!-- <div class="hero-text">
+      <div class="hero-text">
         <h1>What is Speech Olympiad XV?</h1>
-      </div> -->
+      </div>
     </AppHeroSection>
+    <div>
+      
+    </div>
     <AppArticle>
-      <p class="mt-3 first-letter">
-        Speech Olympiad stands as the flagship occasion hosted by the Gavel Club of University of Moratuwa. 
+      <p class="font-extralight text-justify pt-1">
+        <span class="font-semibold text-xl text-[#EDC001] drop-shadow-3xl">Speech Olympiad</span> stands as the flagship occasion hosted by the Gavel Club of University of Moratuwa. 
         As the sole English language speech competition within the university, it garners participants from all 
         five faculties. Since its establishment in 2005, this event has progressively gained momentum, evolving 
         into one of the most highly anticipated phenomenon on the university calendar. In an era where effective 
@@ -48,7 +51,7 @@ export default {
         <br/>
       </p>
 
-      <p>
+      <p class="font-extralight text-justify">
 
   
         Throughout the span of the last 15 years, there has been a 

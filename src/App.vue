@@ -23,6 +23,7 @@ import PageTT from "./pages/PageTechTips.vue";
 import PageBlog2 from "./pages/PageBlog2.vue"
 import PageKasun from "./TechTips/Kasun.vue";
 import Semi from "./pages/PageSemiFinalists.vue";
+import Footer from "./components/Footer.vue";
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
@@ -47,7 +48,8 @@ export default {
   components: {
     AppHeader,
     AppFooter,
-    Navbar
+    Navbar,
+    Footer
   },
   computed: {
     currentView() {
@@ -83,7 +85,8 @@ export default {
   <Navbar />
   <component :is="currentView" />
 
-  <AppFooter />
+  <!-- <AppFooter /> -->
+  <Footer></Footer>
 </template>
 
 <style ></style>
