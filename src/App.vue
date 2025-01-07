@@ -31,10 +31,10 @@ const routes = {
   "/technical-tips": PageTT,
   "/gallery": PageGallery,
   "/blogs": PageTest,
-  "/form": PageForm,
-  "/admin": PageAdmin,
-  "/semi": Semi,
-  "/rules": PageRules,
+  // "/form": PageForm, 
+  // "/admin": PageAdmin,
+  // "/semi": Semi,
+  // "/rules": PageRules,
   "/blog2": PageBlog2
 };
 
