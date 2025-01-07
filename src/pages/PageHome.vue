@@ -16,7 +16,7 @@ import PageSemi from "./PageSemiFinalists.vue"
 import Prelis1 from "../assets/images/gallery/1.png";
 import Prelis2 from "../assets/images/gallery/3.jpg";
 import Prelis3 from "../assets/images/gallery/8.jpg";
-import sponserDisplay from "../components/sponsers.vue";
+// import sponserDisplay from "../components/sponsers.vue";
 import timeline from "../components/timeline.vue";
 
 
@@ -48,7 +48,7 @@ export default {
     AppGallery,
     Blogs,
     timeline,
-    sponserDisplay,
+    // sponserDisplay,
     timeline2,
     PageTT,
     Hero,
@@ -160,8 +160,8 @@ export default {
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       <!-- </div> -->
 
-      <!-- ==SPONSORS== -->
-      <sponserDisplay />
+      <!-- ==SPONSERS== -->
+      <!-- <sponserDisplay /> -->
       <!-- <hr class="featurette-divider" /> -->
       <!-- <PageSemi /> -->
       <!-- <hr class="featurette-divider" /> -->
