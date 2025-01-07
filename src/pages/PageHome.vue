@@ -88,14 +88,14 @@ export default {
           urlString: "#about",
 
         },
-        {
-          heading: "Get the e-souvenir of SO XVI now! ",
-          headingEnd: "",
-          image: sove,
-          urlString: "https://drive.google.com/drive/folders/1cgRxBgzpUKh4nvYecXVgzRsBsQTCYenI?usp=sharing",
-          link: "https://drive.google.com/drive/folders/your-folder-id-here",
+        // {
+        //   heading: "Get the e-souvenir of SO XVI now! ",
+        //   headingEnd: "",
+        //   image: sove,
+        //   urlString: "https://drive.google.com/drive/folders/1cgRxBgzpUKh4nvYecXVgzRsBsQTCYenI?usp=sharing",
+        //   link: "https://drive.google.com/drive/folders/your-folder-id-here",
 
-        }
+        // }
 
       ],
 
@@ -150,6 +150,8 @@ export default {
         :heading-end="featurette.headingEnd" :text="featurette.text" :image="featurette.image"
         :urlString="featurette.urlString" 
         /> -->
+
+      <!-- FEATURES -->
       <Feature v-for="(featurette, i) in featurettes" :key="i" :heading="featurette.heading"
         :heading-end="featurette.headingEnd" :text="featurette.text" :image="featurette.image"
         :urlString="featurette.urlString"/>
@@ -157,33 +159,44 @@ export default {
       <!-- <div class="col-12 mb-2 mt-6"> -->
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
       <!-- </div> -->
+
+      <!-- ==SPONSORS== -->
       <sponserDisplay />
-      <hr class="featurette-divider" />
-      <PageSemi />
-      <hr class="featurette-divider" />
-      <div class="col-12 mb-2 mt-6">
+      <!-- <hr class="featurette-divider" /> -->
+      <!-- <PageSemi /> -->
+      <!-- <hr class="featurette-divider" /> -->
+      <!-- <div class="col-12 mb-2 mt-6"> -->
         <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
-      </div>
-      <div class="col-12 mb-2 mt-6">
+      <!-- </div> -->
+      
+      <!-- ==TIMELINE== -->
+      <!-- <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Timeline</h1>
       </div>
 
-      <timeline2 />
-      <hr class="featurette-divider" />
-      <div class="col-12 mb-2 mt-6">
-        <h1 class="featurette-heading mt-0 mb-4">Past Experiences</h1>
+      <timeline2 /> -->
+      <div class="row mb-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
+        <div class="text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
+            Timeline
+        </div>
+        <p class="p-4 text-gray-300 italic text-center">Coming soon, stay tuned...</p>
       </div>
 
+      <!-- <hr class="featurette-divider" />
+      <div class="col-12 mb-2 mt-6">
+        <h1 class="featurette-heading mt-0 mb-4">Past Experiences</h1>
+      </div> -->
+
       <Blogs :limit="2" />
-      <br /><br />
-      <hr class="featurette-divider" />
+      <!-- <br /><br />
+      <hr class="featurette-divider" /> -->
       <PageTT />
-      <hr class="featurette-divider" />
+      <!-- <hr class="featurette-divider" /> -->
       <page-champ />
-      <hr class="featurette-divider" />
-      <div class="row mb-5">
-        <div class="col-12 mb-2">
-          <h1 class="featurette-heading mt-0 mb-4">Testimonials</h1>
+      <!-- <hr class="featurette-divider" /> -->
+      <div class="row mb-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
+        <div class="text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
+            Testimonials
         </div>
 
 
@@ -200,11 +213,11 @@ export default {
         </div>
         <!-- /.row -->
       </div>
-      <hr class="featurette-divider" />
+      <!-- <hr class="featurette-divider" /> -->
       <!--Prelis images-->
-      <div class="row mb-5">
-        <div class="col-12 mb-2">
-          <h1 class="featurette-heading mt-0 mb-4">Gallery</h1>
+      <div class="row mb-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
+        <div class="text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
+            Gallery
         </div>
         <div class="col-12 mb-2">
           <AppGallery :images="galleryImages" :showLink="true" />
