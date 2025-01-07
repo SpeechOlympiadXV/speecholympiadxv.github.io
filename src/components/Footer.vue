@@ -38,16 +38,16 @@
       title: "Contact",
       links: [
       {
+          text: "Akindu Kalhara : +94 70 722 9859",
+          href: "tel: +94 70 722 9859"
+      },
+      {
           text: "Saai Syvendra : +94 71 535 2524",
           href: "tel: +94 71 535 2524",
       },
       {
           text: "Sasindi Peiris : +94 77 348 3696",
           href: "tel: +94 71 77 348 3696"
-      },
-      {
-          text: "Akindu Kalhara : +94 70 722 9859",
-          href: "tel: +94 70 722 9859"
       },
       {
           text: "Email : speecholympiadxvii@gmail.com",
@@ -94,7 +94,7 @@
       </div>
     </div>
     <p class="text-sm w-full text-gray-400 text-center pb-4">
-      © Speach Olympiad 2025.
+      © Speech Olympiad 2025.
     </p>
   </footer>
 </template>
