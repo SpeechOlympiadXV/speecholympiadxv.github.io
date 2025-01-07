@@ -6,7 +6,7 @@ const navigation = [
   { name: 'Home', href: '#', current: true },
   { name: 'About', href: '#about', current: false },
   { name: "Champion's Story", href: "#champions-story", current: false },
-  { name: 'Techincal Tips', href: '#technical-tips', current: false },
+  { name: 'Technical Tips', href: '#technical-tips', current: false },
   { name: 'Gallery', href: '#gallery', current: false },
   // { name: 'Rules & Regulations', href: '#rules', current: false },
   { name: 'Blogs', href: '#blogs', current: false },
