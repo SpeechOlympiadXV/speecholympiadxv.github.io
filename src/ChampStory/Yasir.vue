@@ -187,4 +187,14 @@ export default {
 </template>
 
 <style scoped>
+li {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border : none;
+}
+
+p {
+    @apply font-extralight mt-2 mb-2
+}
 </style>
