@@ -43,16 +43,16 @@ export default {
           backgroundColorHash: "#F4B183", // Use a custom background color
           body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
         },
-        {
-          key: "4",
-          imageSrc: KasunPortrait,
-          title: "The Art  <br/> Of <br/>  Winning",
-          subtitle:
-            "Tips from Kasun Ranasinghe, Champion of Speech Olympiad X",
-          backgroundColorClass: "bg-amber-900",
-          backgroundColorHash: "#DFA67B", // Use a custom background color
-          body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
-        },
+        // {
+        //   key: "4",
+        //   imageSrc: KasunPortrait,
+        //   title: "The Art  <br/> Of <br/>  Winning",
+        //   subtitle:
+        //     "Tips from Kasun Ranasinghe, Champion of Speech Olympiad X",
+        //   backgroundColorClass: "bg-amber-900",
+        //   backgroundColorHash: "#DFA67B", // Use a custom background color
+        //   body: "My Speech Olympiad experience has enabled me to become the storyteller I am today. I work in advertising where I get to present new ideas and unique concepts to both my team and clients on a daily basis. I developed my presenting skills thanks to the support and knowledge I got from Speech Olympiad and the Gavel Club of University of Moratuwa.",
+        // },
       ],
     };
   },
