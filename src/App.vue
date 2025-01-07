@@ -35,7 +35,7 @@ const routes = {
   // "/admin": PageAdmin,
   // "/semi": Semi,
   // "/rules": PageRules,
-  "/blog2": PageBlog2
+  // "/blog2": PageBlog2
 };
 
 export default {
