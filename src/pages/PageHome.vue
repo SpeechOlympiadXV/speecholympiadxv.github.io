@@ -194,7 +194,7 @@ export default {
       <!-- <hr class="featurette-divider" /> -->
       <page-champ />
       <!-- <hr class="featurette-divider" /> -->
-      <div class="row mb-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
+      <div class="row mb-9 px-4 py-8 w-[90%] ml-[5%] mr-auto bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
         <div class="text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
             Testimonials
         </div>
@@ -215,7 +215,7 @@ export default {
       </div>
       <!-- <hr class="featurette-divider" /> -->
       <!--Prelis images-->
-      <div class="row mb-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
+      <div class="row mb-9 px-4 py-8 w-[90%] ml-[5%] mr-auto bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
         <div class="text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
             Gallery
         </div>

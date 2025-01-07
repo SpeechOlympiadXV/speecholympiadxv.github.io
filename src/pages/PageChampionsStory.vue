@@ -49,7 +49,7 @@ export default {
 }
 </script>
 <template>
-    <div :class="['row pb-4 mb-9 p-4 rounded-lg transition-all', key === '0' ? 'bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm w-[90%] ml-[5%] md:w-[80%] md:ml-[10%] mr-auto' : 'w-full']">
+    <div :class="['row pb-4 mb-9 p-4 rounded-lg transition-all', key === '0' ? 'bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm w-[90%] ml-[5%]  mr-auto' : 'w-full']">
         <!-- <div class="col-12 mb-2">
             <h1 class="featurette-heading mt-0 mb-4">Champion's Story</h1>
         </div> -->

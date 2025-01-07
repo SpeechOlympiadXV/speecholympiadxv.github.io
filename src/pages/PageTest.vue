@@ -1,5 +1,5 @@
 <template>
-    <div :class="['transition-all min-h-screen bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm text-gray-100 mt-10 mb-10 rounded-lg mr-auto', post ? 'w-[98%] ml-[1%] md:w-[95%] md:ml-[2.5%]' : 'w-[90%] ml-[5%] md:w-[80%] md:ml-[10%]']">
+    <div :class="['transition-all min-h-screen bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm text-gray-100 mt-10 mb-10 rounded-lg mr-auto', post ? 'w-[98%] ml-[1%] md:w-[95%] md:ml-[2.5%]' : 'w-[90%] ml-[5%]']">
       <div class="container mx-auto px-4 py-8 w-full">
         <div class="w-full flex flex-col items-start mb-9">
           <div class="pl-4 text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white">

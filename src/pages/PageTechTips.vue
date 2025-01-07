@@ -74,7 +74,7 @@ export default {
 };
 </script>
 <template>
-<div :class="['row pb-4 px-4 py-8 mb-8 rounded-lg transition-all', key === '0' ? 'bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm w-[90%] ml-[5%] md:w-[80%] md:ml-[10%] mr-auto' : 'w-full']">
+<div :class="['row pb-4 px-4 py-8 mb-8 rounded-lg transition-all', key === '0' ? 'bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm w-[90%] ml-[5%] mr-auto' : 'w-full']">
     <div class="text-3xl mb-9 lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white">
       Technical Tips
     </div>
