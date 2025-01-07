@@ -38,12 +38,16 @@
       title: "Contact",
       links: [
       {
-          text: "Chemini Mallikarachchi : +94 70 159 6603",
-          href: "tel: +94 70 159 6603",
+          text: "Saai Syvendra : +94 71 535 2524",
+          href: "tel: +94 71 535 2524",
       },
       {
-          text: "Ameera Weerasuriya : +94 71 135 6855",
-          href: "tel: +94 71 135 6855"
+          text: "Sasindi Peiris : +94 77 348 3696",
+          href: "tel: +94 71 77 348 3696"
+      },
+      {
+          text: "Akindu Kalhara : +94 70 722 9859",
+          href: "tel: +94 70 722 9859"
       },
       {
           text: "Email : speecholympiadxvii@gmail.com",
