@@ -24,6 +24,9 @@ import PageBlog2 from "./pages/PageBlog2.vue"
 import PageKasun from "./TechTips/Kasun.vue";
 import Semi from "./pages/PageSemiFinalists.vue";
 import Footer from "./components/Footer.vue";
+import RibbonNotice from "./components/RibbonNotice.vue";
+import ToastButton from "./components/ToastButton.vue";
+
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
@@ -49,7 +52,9 @@ export default {
     AppHeader,
     AppFooter,
     Navbar,
-    Footer
+    Footer,
+    RibbonNotice,
+    ToastButton
   },
   computed: {
     currentView() {
@@ -82,10 +87,12 @@ export default {
 
 <template>
   <!-- <AppHeader /> -->
+  <RibbonNotice message="Preliminary Round Registrations are Open!!!"></RibbonNotice>
   <Navbar />
   <component :is="currentView" />
 
   <!-- <AppFooter /> -->
+  <ToastButton href="https://forms.gle/FkeHg1AnZ1LpR32q7" message="Register For SOXVII"/>
   <Footer></Footer>
 </template>
 
