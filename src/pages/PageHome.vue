@@ -156,9 +156,18 @@ export default {
         :heading-end="featurette.headingEnd" :text="featurette.text" :image="featurette.image"
         :urlString="featurette.urlString"/>
 
-      <!-- <div class="col-12 mb-2 mt-6"> -->
-        <!-- <h1 class="featurette-heading mt-0 mb-4">Timeline</h1> -->
-      <!-- </div> -->
+      <!-- Registration Section -->
+      <div class="w-[90%] md:w-[80%] h-auto mx-auto my-8 p-9 rounded-2xl bg-gradient-to-br from-[#282828] to-[#EDC00133] backdrop-blur-sm shadow-black border-[1px] border-[#EDC001] border-animation">
+        <div class="text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#EDC001] tracking-[-2px] leading-2 h-11 w-fit pr-1">Register Now</div>
+        <div class="text-gray-300 leading-6 text-left text-lg font-thin mt-4">
+          Registrations for <span class="font-bold">Speech Olympiad XVII</span> are open now, presenting you with
+          the chance to spark a change, with your voice. Stand up for what you
+          believe, break the silence, and redefine the power of words.
+        </div>
+        <div class="w-full flex justify-center mt-4" id="registration">
+          <a href="https://forms.gle/FkeHg1AnZ1LpR32q7" target="_blank" class="hover:shadow-md hover:shadow-[#edc00155] text-white bg-gradient-to-br hover:border-[#edc001aa] border-1 border-[#edc00100] transition-all duration-500 from-[#EDC001aa] via-[#EDC001] to-[#EDC001aa] px-2 py-4 w-36 text-center rounded-lg text-xl font-bold">Register</a>
+        </div>
+      </div>
 
       <!-- ==SPONSERS== -->
       <!-- <sponserDisplay /> -->
@@ -175,7 +184,7 @@ export default {
       </div>
 
       <timeline2 /> -->
-      <div class="row mb-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
+      <div class="row m-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-xl">
         <div class="text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
             Timeline
         </div>
@@ -230,6 +239,22 @@ export default {
 
 
 <style scoped>
+.border-animation {
+  animation: border-animate 3s ease-in-out 0s infinite;
+}
+
+@keyframes border-animate {
+  0% {
+    border-color: #EDC001;
+  }
+  50% {
+    border-color: #ffe77d;
+  }
+  100% {
+    border-color: #EDC001;
+  }
+}
+
 /* Thin out the marketing headings */
 /* Custom styles for the amber-themed outlined button */
 .button-container {
