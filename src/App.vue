@@ -56,6 +56,15 @@ export default {
     RibbonNotice,
     ToastButton
   },
+  methods : {
+    // Might be usefull later for routes like /#about/param1/param2
+    getHash() {
+      return window.location.hash.split("/")[0];
+    },
+    getNthParam(n) {
+      return window.location.hash.split("/")[n];
+    }
+  },
   computed: {
     currentView() {
       //scroll to page top before changing the view
