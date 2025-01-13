@@ -37,7 +37,7 @@ const routes = {
   // "/form": PageForm, 
   // "/admin": PageAdmin,
   // "/semi": Semi,
-  // "/rules": PageRules,
+  "/rules": PageRules,
   // "/blog2": PageBlog2
 };
 
