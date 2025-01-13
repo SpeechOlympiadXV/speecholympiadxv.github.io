@@ -36,6 +36,8 @@ import PageTT from "./PageTechTips.vue"
 import pageChamp from "./PageChampionsStory.vue"
 import Hero from "../components/Hero.vue";
 import Feature from "../components/Feature.vue";
+// import BlogIndex from "../components/BlogIndex.vue";
+// import CompetitionTimeline from "../components/CompetitionTimeline.vue";
 
 
 export default {
@@ -53,7 +55,9 @@ export default {
     PageTT,
     Hero,
     Feature,
-    pageChamp
+    pageChamp,
+    // BlogIndex,
+    // CompetitionTimeline
   },
   mounted() {
     var testimonialOut = null;
@@ -157,7 +161,7 @@ export default {
         :urlString="featurette.urlString"/>
 
       <!-- Registration Section -->
-      <div class="w-[90%] md:w-[80%] h-auto mx-auto my-8 p-9 rounded-2xl bg-gradient-to-br from-[#282828] to-[#EDC00133] backdrop-blur-sm shadow-black border-[1px] border-[#EDC001] border-animation">
+      <div class="w-[90%] md:w-[80%] h-auto mx-auto my-9 p-9 rounded-2xl bg-gradient-to-br from-[#282828] to-[#EDC00133] backdrop-blur-sm shadow-black border-[1px] border-[#EDC001] border-animation">
         <div class="text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#EDC001] tracking-[-2px] leading-2 h-11 w-fit pr-1">Register Now</div>
         <div class="text-gray-300 leading-6 text-left text-lg font-thin mt-4">
           Registrations for <span class="font-bold">Speech Olympiad XVII</span> are open now, presenting you with
@@ -179,13 +183,14 @@ export default {
       <!-- </div> -->
       
       <!-- ==TIMELINE== -->
+      <!-- <CompetitionTimeline /> -->
       <!-- <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Timeline</h1>
       </div>
 
       <timeline2 /> -->
       <div class="row m-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-xl">
-        <div class="text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
+        <div class="text-3xl pl-5 lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
             Timeline
         </div>
         <p class="p-4 text-gray-300 italic text-center">Coming soon, stay tuned...</p>
@@ -197,20 +202,21 @@ export default {
       </div> -->
 
       <Blogs :limit="2" />
+      <!-- <BlogIndex :limit="2"/> -->
       <!-- <br /><br />
       <hr class="featurette-divider" /> -->
       <PageTT />
       <!-- <hr class="featurette-divider" /> -->
       <page-champ />
       <!-- <hr class="featurette-divider" /> -->
-      <div class="row mb-9 px-4 py-8 w-[90%] ml-[5%] mr-auto bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
-        <div class="text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
+      <div class="m-8 px-4 py-8 w-[90%] ml-[5%] mr-auto bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
+        <div class="pl-4 text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
             Testimonials
         </div>
 
 
         <!-- Three columns of cards  -->
-        <div class="col-12 mb-2">
+        <div class="col-12 mb-2 p-3">
           <transition-group name="list" tag="div" class="row">
             <div class="col-lg-4 d-flex justify-content-center" v-for="testimonial in testimonials"
               :key="'testimonial' + testimonial.key">
@@ -224,11 +230,11 @@ export default {
       </div>
       <!-- <hr class="featurette-divider" /> -->
       <!--Prelis images-->
-      <div class="row mb-9 px-4 py-8 w-[90%] ml-[5%] mr-auto bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
-        <div class="text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
+      <div class="m-9 px-4 py-8 w-[90%] ml-[5%] mr-auto bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
+        <div class="pl-4 text-3xl lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
             Gallery
         </div>
-        <div class="col-12 mb-2">
+        <div class="col-12 mb-2 p-2">
           <AppGallery :images="galleryImages" :showLink="true" />
         </div>
       </div>
