@@ -66,7 +66,7 @@
         {
           id : 2,
           name: "Semi Finals",
-          date: "7th February, 2025",
+          date: "9th February, 2025",
           upcoming : true,
           lineStyle: 'bg-gradient-to-b from-[#edc001] to-gray-600/50',
           diamondStyle: 'bg-[#fce683]',
