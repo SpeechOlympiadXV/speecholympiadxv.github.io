@@ -37,7 +37,7 @@ import pageChamp from "./PageChampionsStory.vue"
 import Hero from "../components/Hero.vue";
 import Feature from "../components/Feature.vue";
 // import BlogIndex from "../components/BlogIndex.vue";
-// import CompetitionTimeline from "../components/CompetitionTimeline.vue";
+import CompetitionTimeline from "../components/CompetitionTimeline.vue";
 
 
 export default {
@@ -57,7 +57,7 @@ export default {
     Feature,
     pageChamp,
     // BlogIndex,
-    // CompetitionTimeline
+    CompetitionTimeline
   },
   mounted() {
     var testimonialOut = null;
@@ -183,7 +183,7 @@ export default {
       <!-- </div> -->
       
       <!-- ==TIMELINE== -->
-      <!-- <CompetitionTimeline /> -->
+      <CompetitionTimeline />
       <!-- <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Timeline</h1>
       </div>
