@@ -23,9 +23,9 @@ import PageTT from "./pages/PageTechTips.vue";
 import PageBlog2 from "./pages/PageBlog2.vue"
 import PageKasun from "./TechTips/Kasun.vue";
 import Semi from "./pages/PageSemiFinalists.vue";
-// import Footer from "./components/Footer.vue";
+import Footer from "./components/Footer.vue";
 // import RibbonNotice from "./components/RibbonNotice.vue";
-import ToastButton from "./components/ToastButton.vue";
+// import ToastButton from "./components/ToastButton.vue";
 
 const routes = {
   "/": PageHome,
