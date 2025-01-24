@@ -1,0 +1,100 @@
+<template>
+    <div class="p-9 m-9 bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-xl w-[90%] ml-[5%] md:w-[80%] md:ml-[10%] mr-auto">
+    <div class="">
+        <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2 w-[80%] text-wrap">
+        Timeline
+        </h2>
+        <p class="mt-4 text-gray-300 leading-6 text-left text-lg font-thin">
+        Key stages and dates
+        </p>
+    </div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative">
+            
+        <div
+        v-for="(stage, index) in stages"
+        :key="stage.name"
+        class="relative my-8 w-full sm:w-[100%] mx-auto"
+        >
+            <!-- Vertical line -->
+            <div :class="['absolute overflow-visible top-12 sm:left-[52%] md:left-[51.5%] lg:left-[50.5%] xl:left-[48.5%] transform sm:-translate-x-1/2 w-[1px] ', stage.id === stages.length ? 'h-0' : 'h-[120%]', stage.lineStyle]"></div>
+            
+            <!-- Diamond shape -->
+            <div
+              :class="['absolute top-12 sm:left-[52%] md:left-[51.5%] lg:left-[50.5%] xl:left-[48.5%] transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rotate-45', stage.diamondStyle]"
+            >
+          </div>
+            
+            <div
+              class="sm:ml-8 flex flex-col sm:flex-row items-center sm:justify-between sm:items-start mb-4"
+            >
+              <div class="pl-[10%] w-[90%] sm:pl-8">
+                <div :class="['flex w-[100%] items-center mb-2', stage.id % 2 == 0 ? 'justify-start' : 'justify-end']">
+                  <div :class="['ml-0 w-full sm:w-[45%] p-4 flex flex-col mb-5 rounded-lg', stage.id % 2 == 0 ? 'sm:text-end' : '', stage.upcoming === true ? 'backdrop-brightness-200 border-[1px] border-[#edc00155]' : 'backdrop-brightness-125']">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4" :class="[stage.upcoming ? 'text-transparent bg-clip-text bg-gradient-to-r from-white to-[#EDC001]' : 'text-gray-400']">
+                      {{ stage.name }}
+                    </h3>
+                    <time class="text-sm lg:text-md" :class="[stage.upcoming ? 'text-gray-200' : 'text-gray-400']">
+                      {{ stage.date }}
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  import { defineComponent, ref } from "vue";
+//   import { CalendarDays, Flag, Medal, Trophy, Users } from "lucide-vue-next";
+  
+  export default defineComponent({
+    name: "EnhancedVerticalCompetitionTimeline",
+    setup() {
+      const stages = ref([
+        {
+          id : 1,
+          name: "Preliminary Round",
+          date: "19th January, 2025",
+          upcoming : false,
+          lineStyle: 'bg-gradient-to-b from-[#edc00133] to-[#edc001]',
+          diamondStyle: 'bg-[#594d1b]',
+        },
+        {
+          id : 2,
+          name: "Semi Finals",
+          date: "9th February, 2025",
+          upcoming : true,
+          lineStyle: 'bg-gradient-to-b from-[#edc001] to-gray-600/50',
+          diamondStyle: 'bg-[#fce683]',
+        },
+        {
+          id : 3,
+          name: "Finals",
+          date: "To be Decided",
+          upcoming : false,
+          lineStyle: 'bg-gradient-to-b from-[#edc001] to-gray-600/50',
+          diamondStyle: 'bg-[#594d1b]',
+        },
+      ]);
+  
+      return { stages };
+    },
+  });
+  </script>
+  
+<style scoped>
+.visibiliy {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .visibiliy {
+        display: block;
+    }
+}
+</style>
+  

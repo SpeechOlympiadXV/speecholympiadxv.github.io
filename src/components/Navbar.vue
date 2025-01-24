@@ -8,7 +8,7 @@ const navigation = [
   { name: "Champion's Story", href: "#champions-story", current: false },
   { name: 'Technical Tips', href: '#technical-tips', current: false },
   { name: 'Gallery', href: '#gallery', current: false },
-  // { name: 'Rules & Regulations', href: '#rules', current: false },
+  { name: 'Rules & Regulations', href: '#rules', current: false },
   { name: 'Blogs', href: '#blogs', current: false },
   // { name: 'Finalists', href: '#semi', current: false },
 ]

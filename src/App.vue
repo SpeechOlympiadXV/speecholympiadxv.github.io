@@ -24,8 +24,8 @@ import PageBlog2 from "./pages/PageBlog2.vue"
 import PageKasun from "./TechTips/Kasun.vue";
 import Semi from "./pages/PageSemiFinalists.vue";
 import Footer from "./components/Footer.vue";
-import RibbonNotice from "./components/RibbonNotice.vue";
-import ToastButton from "./components/ToastButton.vue";
+// import RibbonNotice from "./components/RibbonNotice.vue";
+// import ToastButton from "./components/ToastButton.vue";
 
 const routes = {
   "/": PageHome,
@@ -36,7 +36,7 @@ const routes = {
   "/blogs": PageTest,
   // "/form": PageForm, 
   // "/admin": PageAdmin,
-   "/semi": Semi,
+  // "/semi": Semi,
   // "/rules": PageRules,
   // "/blog2": PageBlog2
 };
@@ -53,8 +53,17 @@ export default {
     AppFooter,
     Navbar,
     Footer,
-    RibbonNotice,
-    ToastButton
+    // RibbonNotice,
+    // ToastButton
+  },
+  methods : {
+    // Might be usefull later for routes like /#about/param1/param2
+    getHash() {
+      return window.location.hash.split("/")[0];
+    },
+    getNthParam(n) {
+      return window.location.hash.split("/")[n];
+    }
   },
   computed: {
     currentView() {
@@ -87,12 +96,12 @@ export default {
 
 <template>
   <!-- <AppHeader /> -->
-  <RibbonNotice message="Preliminary Round Registrations are Open!!!"></RibbonNotice>
+  <!-- <RibbonNotice message="Preliminary Round Registrations are Open!!!"></RibbonNotice> -->
   <Navbar />
   <component :is="currentView" />
 
   <!-- <AppFooter /> -->
-  <ToastButton href="https://forms.gle/FkeHg1AnZ1LpR32q7" message="Register For SOXVII"/>
+  <!-- <ToastButton href="https://forms.gle/FkeHg1AnZ1LpR32q7" message="Register For SOXVII"/> -->
   <Footer></Footer>
 </template>
 
