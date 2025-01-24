@@ -80,9 +80,9 @@ export default {
     </div>
 
     <!-- Three columns of cards  -->
-    <div class="col-12 col-md-12 mb-2 w-full" v-if="key == '0'">
+    <div class="w-full" v-if="key == '0'">
       <transition-group name="list" tag="div" class="row">
-        <div class="w-full md:w-1/3 d-flex justify-content-center" v-for="technicalTip in technicalTips"
+        <div class="w-full md:w-1/2 xl:w-1/3 d-flex justify-content-center" v-for="technicalTip in technicalTips"
           :key="'testimonial' + technicalTip.key" @click="handleClick(technicalTip.key)">
           <TechnicalTips :title="technicalTip.title" :imageSrc="technicalTip.imageSrc" :body="technicalTip.body"
             :subtitle="technicalTip.subtitle" :backgroundColorClass="technicalTip.backgroundColorClass"
