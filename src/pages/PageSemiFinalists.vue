@@ -11,11 +11,11 @@
         </button>
     </div> -->
 
-    <div class="col-12 mb-2 mt-6">
+   <!---- <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Finalists</h1>
     </div>
     <div class="grid grid-cols-4 md:grid-cols-4 gap-4 p-4">
-        <!-- Grid items -->
+     
         <div v-for="(item, index) in gridData_1" :key="index"
         class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-1 ease-out animate-fade-in" 
         :class="{ 'animate-elementL': (number >= item.number) }">
@@ -23,41 +23,50 @@
                 <img :src="item.image" alt="Image" class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-2" />
                 <span class="text-center md:text-lg px-4">{{ item.text }}</span>
             </div>
+        </div> 
+
+    </div> -->
+
+    <div class="col-12 mb-2 mt-6 px-4"> 
+    <h1 class="featurette-heading mt-0 mb-4">Semi Finalists</h1>
+    </div>
+            <div class="flex h-full w-full items-center justify-center px-4">
+            <div class="w-[100%] max-w-full px-4">
+                <ul class="flex flex-row gap-10 justify-center flex-wrap"> 
+                    <li
+                        v-for="(item, index) in gridData_1"
+                        :key="`item-${index}`"
+                        :class="['w-8 h-8 rounded-2xl bg-c9c6c7 overflow-hidden transition-all duration-300 ease-in-out', 
+                                { 'w-[15%]': hoverIndex !== index, 
+                                'w-[30%]': hoverIndex === index }]"
+                        :aria-current="hoverIndex === index ? 'true' : 'false'"
+                        @mouseenter="hoverIndex = index"
+                        @mouseleave="hoverIndex = null"
+                    >
+                        <img class="h-full w-full object-cover" :src="item.image" />
+                        <div v-show="hoverIndex === index" class="absolute top-0 left-0 right-0 flex items-center justify-center p-4 bg-opacity-50 ">
+                            <p class="typing-effect" style="color :ghostwhite;">{{ item.text }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-    </div>
-
-    
-    <div class="col-12 mb-2 mt-6">
-        <h1 class="featurette-heading mt-0 mb-4">Finalists</h1>
-    </div>
-    <div class="flex h-full w-full items-center justify-center">
-        <!-- Grid items -->
-        <div class="w-[100%] max-w-full">
-            <ul class="group flex flex-row gap-10 justify-center">
-                <li
-                    v-for="(item, index) in gridData_1":key="item.text"
-                    :class="['w-8 h-8  rounded-2xl bg-c9c6c7 first:w-[5%] last:w-[5%] overflow-hidden transistion-[width] hover:w-[15%] [&:not(:hover),:&:not(:first)],&:not(:last):group-hover:w-[7%]' , { '[&[aria-current=true]]:w-[48%]': activeItem === index } ]"
-                    :aria-current="activeItem === index ? 'true' : 'false'" @click="setActive(index)"> <img class=" h-full w-full object-cover ":src="item.image" />
-                </li>     
 
 
-            </ul>
-                    
-                
-        </div>
-            
-    
 
-    </div>
 
-    <!---------------->
+
+
+
+
+    <!--------------
 
     <div class="flex h-full w-full items-center justify-center">
     <div class="w-full flex justify-center">
         <ul class="group flex flex-row gap-10 justify-center">
             <li v-for="(item, index) in gridData_1" :key="item.text"
-                class="w-8 h-8 rounded-2xl bg-c9c6c7 overflow-hidden relative transition-all duration-300 cursor-pointer"
+                class="w-8 h-8 rounded-2xl bg-c9c6c7 overflow-hidden relative transition-all duration-300 cursor-pointer { '[&[aria-current=true]]:w-[48%]': activeItem === index }"
                 :aria-current="activeItem === index ? 'true' : 'false'"
                 @click="toggleActive(index)">
                 <img class="h-full w-full object-cover" :src="item.image">
@@ -72,7 +81,7 @@
 
 
     <div class="col-12 mb-2 mt-6">
-        <h1 class="featurette-heading mt-0 mb-4"> Reserved Finalist</h1>
+        <h1 class="featurette-heading mt-0 mb-4"> Reserved Semi Finalist</h1>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
@@ -81,6 +90,27 @@
             :class="{ 'animate-elementL': (number >= reserved_1[0].number) }">
             <div class="flex flex-col items-center">
                 <span class="text-center md:text-lg">{{ reserved_1[0].text }}</span>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
+            :class="{ 'animate-elementL': (number >= reserved_1[1].number) }">
+            <div class="flex flex-col items-center">
+                <span class="text-center md:text-lg">{{ reserved_1[1].text }}</span>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
+            :class="{ 'animate-elementL': (number >= reserved_1[2].number) }">
+            <div class="flex flex-col items-center">
+                <span class="text-center md:text-lg">{{ reserved_1[2].text }}</span>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
+            :class="{ 'animate-elementL': (number >= reserved_1[3].number) }">
+            <div class="flex flex-col items-center">
+                <span class="text-center md:text-lg">{{ reserved_1[3].text }}</span>
             </div>
         </div>
 
@@ -131,14 +161,18 @@ import pasindu from '../assets/images/SemiFinalists/Pasindu_M..png'
 import varun from '../assets/images/SemiFinalists/Poobalaraja Varun .jpg'
 import saai from '../assets/images/SemiFinalists/Saai Syvendra.jpg'
 import sasindi from '../assets/images/SemiFinalists/Sasindi.jpg'
-import ami from '../assets/images/SemiFinalists/ami.jpg'
 
+
+import aloka from '../assets/images/finalists/aloka.png'
 import afra_f from '../assets/images/finalists/afra.png'
-import lakindu_f from '../assets/images/finalists/lakindu.jpg'
-import damsith_f from '../assets/images/finalists/damsith.jpg'
-import saai_f from '../assets/images/finalists/saai.jpg'
-import ami_f from '../assets/images/finalists/ami.jpg'
-
+import neela from '../assets/images/finalists/neela.png'
+import anuja from '../assets/images/finalists/anuja.png'
+import harshi  from '../assets/images/finalists/harshi.png'
+import ranuja from '../assets/images/finalists/ranuja.png'
+import ravitha from '../assets/images/finalists/ravitha.png'
+import thulasi from '../assets/images/finalists/thulasi.png'
+import unduli from '../assets/images/finalists/unduli.png'
+import ami from '../assets/images/finalists/ami.png'
 
 export default {
 
@@ -147,6 +181,7 @@ export default {
         
         return {
             activeItem: null ,
+            hoverIndex: null ,
 
 
             gridData_2: [
@@ -165,15 +200,27 @@ export default {
                 // Add more items as needed
             ],
             gridData_1: [
-                { text: "Afrah Rumie", image: afra_f, number: 0 },
-                { text: "Amirthavarshani Ananthan", image: ami_f, number: 1 },
-                { text: "Damsith Adikari", image: damsith_f, number: 2 },
-                { text: "Lakindu Kariyawasam", image: lakindu_f, number: 3 },
-                { text: "Saai Syvendra", image: saai_f, number: 4 },
+                
+                { text: "Afrah Rumie", image: afra_f, number: 1 },
+                { text: "Anuja Mahamalage", image:anuja, number: 3 },
+                { text: "Aloka Fernando", image: aloka, number: 4 },
+                { text: "Harshi Gunawardhane", image: harshi , number: 5 },
+                { text: "Neelayadhakshi Priyadhakshan", image: neela, number: 6 },
+                { text: "Ranuja Jayawardena", image: ranuja, number: 7 },
+                { text: "Ravitha Perera", image: ravitha, number: 8 },
+                { text: "Thulasithan Gnanenthiram", image: thulasi, number: 10 },
+                { text: "Unduli Senadheera", image: unduli, number: 11 },
+                { text: "Amirthavarshani Ananthan", image: ami, number: 12 },
+
+
                 // Add more items as needed
             ],
+
             reserved_1: [
-            { text: "Adeepa Kularathne", number: 12 },
+            { text: "Hasith Nettikumara", number: 13 },
+            { text: "Rasika Gunasekera", number: 14 },
+            { text: "Sadil Jayatilaka", number: 15 },
+            { text: "Thilakshan Balakrishnan", number: 16 },
 
             ],
 
@@ -205,9 +252,18 @@ export default {
         setActive(index) {
             this.activeItem = index;},
 
-            toggleActive(index) {
-        this.activeItem = this.activeItem === index ? null : index;
-    }
+        toggleActive(index) {
+            console.log("Index clicked:", index);
+            this.activeItem = this.activeItem === index ? null : index;
+            console.log("Active clicked:", this.activeItem);
+        },
+        hoverItem(index) {
+            this.hoverIndex = index;
+        },
+        unhoverItem() {
+            this.hoverIndex = null;
+        }
+
 
 
     },
@@ -220,10 +276,10 @@ export default {
   
 <style scoped>
     .w-8 {
-    width: 18%; /* 32px */
+    width: 19%; /* 32px */
     }
     .h-8 {
-    height: 640px; /* 32px */
+    height: 80%; /* 32px */
     }
     .rounded-2xl {
     border-radius: 1rem; /* 16px */
@@ -233,31 +289,21 @@ export default {
     }
 
     li {
-    transition: width 0.3s ease; /* Ensures smooth transition for width changes */
-    width: 7%; /* Default width for all items */
+    transition: width 0.5s ease; /* Ensures smooth transition for width changes */
+    width: 100%; /* Default width for all items */
     }
 
     li:hover {
         width: 15%; /* Width on hover for all items */
     }
 
-    .group:hover li:not(:hover) {
-        width: 5%; /* Reduce width of non-hovered items */
-    }
-
     li[aria-current="true"] {
-        width: 48%; /* Active item width */
+        width: 25%; /* Active item width */
     }
 
-    /* Ensure first and last items also receive the hover effects */
-    li:first-child, li:last-child {
-        transition: width 0.3s ease;
-    }
 
     /* Specific hover styles for first and last items if needed */
-    li:first-child:hover, li:last-child:hover {
-        width: 15%; /* You can adjust this value if you want different behavior */
-    }
+
 
 
 
@@ -311,5 +357,27 @@ export default {
         transition-delay: 0s;
     }
 }
+    @keyframes typing {
+    0% {
+        max-width: 0;
+    }
+    100% {
+        max-width: 100%;
+    }
+    }
+
+    
+
+    .typing-effect {
+        font-family: 'Courier New', monospace;
+        border-right: none; /* Caret color */
+        white-space: nowrap;
+        overflow: hidden; /* Keeps the content from spilling outside the container */
+        display: inline-block;
+        font-weight: bold; /* Making sure the font is bold */
+        font-size: 24px; /* Adjust font size as needed */
+        animation: typing 2s steps(20, end) ;
+    }
+
 </style>
   
