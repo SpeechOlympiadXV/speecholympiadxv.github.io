@@ -23,6 +23,9 @@
             <div
               :class="['absolute top-12 sm:left-[52%] md:left-[51.5%] lg:left-[50.5%] xl:left-[48.5%] transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rotate-45', stage.diamondStyle]"
             >
+              <!-- inner diamond for non focused sections-->
+              <div class="absolute w-2 h-2 bg-[#272722] left-[25%] top-[25%]" :class="[stage.upcoming && 'hidden']">
+              </div>
           </div>
             
             <div
@@ -31,10 +34,10 @@
               <div class="pl-[10%] w-[90%] sm:pl-8">
                 <div :class="['flex w-[100%] items-center mb-2', stage.id % 2 == 0 ? 'justify-start' : 'justify-end']">
                   <div :class="['ml-0 w-full sm:w-[45%] p-4 flex flex-col mb-5 rounded-lg', stage.id % 2 == 0 ? 'sm:text-end' : '', stage.upcoming === true ? 'backdrop-brightness-200 border-[1px] border-[#edc00155]' : 'backdrop-brightness-125']">
-                    <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4" :class="[stage.upcoming ? 'text-transparent bg-clip-text bg-gradient-to-r from-white to-[#EDC001]' : 'text-gray-400']">
+                    <h3 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-4" :class="[stage.upcoming ? 'text-transparent bg-clip-text bg-gradient-to-r from-white to-[#EDC001]' : 'text-gray-400']">
                       {{ stage.name }}
                     </h3>
-                    <time class="text-sm lg:text-md" :class="[stage.upcoming ? 'text-gray-200' : 'text-gray-400']">
+                    <time class="text-sm xl:text-md" :class="[stage.upcoming ? 'text-gray-200' : 'text-gray-400']">
                       {{ stage.date }}
                     </time>
                   </div>
@@ -44,15 +47,24 @@
           </div>
         </div>
       </div>
+      <!-- <section class="mt-8">
+        <button class="flex items-center justify-center w-56 h-12 bg-[#a78e1d] text-gray-100 rounded-lg hover:bg-[#7d6c22] transition-colors hover:text-white" @click="click('#semi')">
+          Current Standings
+        </button>
+      </section> -->
     </div>
   </template>
   
   <script>
   import { defineComponent, ref } from "vue";
-//   import { CalendarDays, Flag, Medal, Trophy, Users } from "lucide-vue-next";
   
   export default defineComponent({
     name: "EnhancedVerticalCompetitionTimeline",
+    methods : {
+      click(urlString) {
+        window.location.href = urlString
+      }
+    },
     setup() {
       const stages = ref([
         {
@@ -68,8 +80,8 @@
           name: "Semi Finals",
           date: "9th February, 2025",
           upcoming : true,
-          lineStyle: 'bg-gradient-to-b from-[#edc001] to-gray-600/50',
-          diamondStyle: 'bg-[#fce683]',
+          lineStyle: 'bg-gradient-to-b from-[#edc001] to-[#edc00133]',
+          diamondStyle: 'color-pulse',
         },
         {
           id : 3,
@@ -89,6 +101,25 @@
 <style scoped>
 .visibiliy {
     display: none;
+}
+
+.color-pulse {
+  background-color: #edc001;
+  animation: color-pulse 5s linear infinite;
+}
+
+@keyframes color-pulse {
+  40% {
+    background-color: #edc001;
+  }
+
+  50% {
+    background-color: #ffe675;
+  }
+
+  60% {
+    background-color: #edc001;
+  }
 }
 
 @media (min-width: 640px) {

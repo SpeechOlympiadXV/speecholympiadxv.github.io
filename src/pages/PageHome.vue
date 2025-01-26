@@ -189,12 +189,12 @@ export default {
       </div>
 
       <timeline2 /> -->
-      <div class="row m-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-xl">
+      <!-- <div class="row m-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-xl">
         <div class="text-3xl pl-5 lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
             Timeline
         </div>
         <p class="p-4 text-gray-300 italic text-center">Coming soon, stay tuned...</p>
-      </div>
+      </div> -->
 
       <!-- <hr class="featurette-divider" />
       <div class="col-12 mb-2 mt-6">
