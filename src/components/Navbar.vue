@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Gallery', href: '#gallery', current: false },
   { name: 'Rules & Regulations', href: '#rules', current: false },
   { name: 'Blogs', href: '#blogs', current: false },
-  // { name: 'Finalists', href: '#semi', current: false },
+  { name: 'Current Standings', href: '#semi', current: false },
 ]
 
 // const activeItemIndex = ref(getActiveItem());
@@ -33,7 +33,7 @@ window.addEventListener("hashchange", () => {
         <div class="flex-shrink-0">
           <SOLogo class="w-auto h-24" />
         </div>
-        <div class="hidden lg:block ml-auto">
+        <div class="hidden xl:block ml-auto">
           <div class="flex items-center space-x-4">
             <a 
               v-for="item in navigation" 
@@ -49,7 +49,7 @@ window.addEventListener("hashchange", () => {
             </a>
           </div>
         </div>
-        <div class="lg:hidden">
+        <div class="xl:hidden">
           <button 
             @click="mobileMenuOpen = !mobileMenuOpen" 
             type="button" 

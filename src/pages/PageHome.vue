@@ -37,7 +37,7 @@ import pageChamp from "./PageChampionsStory.vue"
 import Hero from "../components/Hero.vue";
 import Feature from "../components/Feature.vue";
 // import BlogIndex from "../components/BlogIndex.vue";
-// import CompetitionTimeline from "../components/CompetitionTimeline.vue";
+import CompetitionTimeline from "../components/CompetitionTimeline.vue";
 
 
 export default {
@@ -57,7 +57,7 @@ export default {
     Feature,
     pageChamp,
     // BlogIndex,
-    // CompetitionTimeline
+    CompetitionTimeline
   },
   mounted() {
     var testimonialOut = null;
@@ -161,7 +161,7 @@ export default {
         :urlString="featurette.urlString"/>
 
       <!-- Registration Section -->
-      <div class="w-[90%] md:w-[80%] h-auto mx-auto my-9 p-9 rounded-2xl bg-gradient-to-br from-[#282828] to-[#EDC00133] backdrop-blur-sm shadow-black border-[1px] border-[#EDC001] border-animation">
+      <!-- <div class="w-[90%] md:w-[80%] h-auto mx-auto my-9 p-9 rounded-2xl bg-gradient-to-br from-[#282828] to-[#EDC00133] backdrop-blur-sm shadow-black border-[1px] border-[#EDC001] border-animation">
         <div class="text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#EDC001] tracking-[-2px] leading-2 h-11 w-fit pr-1">Register Now</div>
         <div class="text-gray-300 leading-6 text-left text-lg font-thin mt-4">
           Registrations for <span class="font-bold">Speech Olympiad XVII</span> are open now, presenting you with
@@ -171,7 +171,7 @@ export default {
         <div class="w-full flex justify-center mt-4" id="registration">
           <a href="https://forms.gle/FkeHg1AnZ1LpR32q7" target="_blank" class="hover:shadow-md hover:shadow-[#edc00155] text-white bg-gradient-to-br hover:border-[#edc001aa] border-1 border-[#edc00100] transition-all duration-500 from-[#EDC001aa] via-[#EDC001] to-[#EDC001aa] px-2 py-4 w-36 text-center rounded-lg text-xl font-bold">Register</a>
         </div>
-      </div>
+      </div> -->
 
       <!-- ==SPONSERS== -->
       <!-- <sponserDisplay /> -->
@@ -183,18 +183,20 @@ export default {
       <!-- </div> -->
       
       <!-- ==TIMELINE== -->
-      <!-- <CompetitionTimeline /> -->
+      <CompetitionTimeline />
       <!-- <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Timeline</h1>
       </div>
 
       <timeline2 /> -->
-      <div class="row m-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-xl">
+      <!-- <div class="row m-9 px-4 py-8 w-[90%] ml-[5%] mr-auto md:w-[80%] md:ml-[10%] bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-xl">
         <div class="text-3xl pl-5 lg:text-4xl font-semibold tracking-[-2px] leading-2 text-white mb-4">
             Timeline
         </div>
         <p class="p-4 text-gray-300 italic text-center">Coming soon, stay tuned...</p>
-      </div>
+      </div> -->
+
+      <PageSemi />
 
       <!-- <hr class="featurette-divider" />
       <div class="col-12 mb-2 mt-6">

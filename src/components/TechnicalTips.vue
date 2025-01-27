@@ -11,14 +11,14 @@
     'cursor-pointer',
     'technical-tips'
   ]" :style="[backgroundColorHash ? { backgroundColor: backgroundColorHash } : '']">
-    <h5 class="text-left font-bold text-zinc-800 text-4xl selector mb-2 border-b-2 border-zinc-500 pb-2" v-html="title">
+    <h5 class="text-left font-bold text-zinc-800 text-2xl sm:text-3xl xl:text-4xl  selector mb-2 border-b-2 border-zinc-500 pb-2" v-html="title">
     </h5>
     <div class="md:flex">
       <div class="md:w-1/3 md:flex md:justify-center my-4">
         <img alt="" :src="imageSrc" class="w-24 h-24 rounded-full mx-auto" loading="lazy" />
       </div>
       <div class="md:w-2/3 card-body rounded-lg p-4">
-        <h6 class="text-left text-zinc-800">{{ subtitle }}</h6>
+        <h6 class="text-left text-zinc-800 text-xs">{{ subtitle }}</h6>
       </div>
     </div>
   </div>

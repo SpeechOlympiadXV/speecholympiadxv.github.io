@@ -40,7 +40,7 @@ onMounted(() => {
         <div class="absolute w-auto h-auto z-0 -translate-x-20 opacity-[30%] left-1/4 -translate-y-32 md:-translate-y-4 lg:translate-y-1">
             <WingedAward />
         </div>
-        <div class="w-full lg:w-[78%] xl:w-[69%] h-full flex flex-col items-end justify-center p-2">
+        <div class="w-full lg:w-[78%] xl:w-[73%] 2xl:w-[69%] h-full flex flex-col items-end justify-center p-2">
             <div class="flex flex-row justify-center items-baseline p-2 relative overflow-hidden">
                 <Transition name="unveiled-animation">
                     <!-- Animate this div when the page loads -->

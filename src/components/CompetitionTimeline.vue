@@ -14,97 +14,82 @@
         <div
         v-for="(stage, index) in stages"
         :key="stage.name"
-        class="relative my-8 w-full sm:w-[90%] mx-auto"
+        class="relative my-8 w-full sm:w-[100%] mx-auto"
         >
             <!-- Vertical line -->
-            <div :class="['absolute overflow-visible top-8 left-0 sm:left-1 transform sm:-translate-x-1/2 w-[1px] bg-[#fee680] backdrop-brightness-200 ', stage.end ? 'h-0' : 'h-[120%]']"></div>
+            <div :class="['absolute overflow-visible top-12 sm:left-[52%] md:left-[51.5%] lg:left-[50.5%] xl:left-[48.5%] transform sm:-translate-x-1/2 w-[1px] ', stage.id === stages.length ? 'h-0' : 'h-[120%]', stage.lineStyle]"></div>
             
             <!-- Diamond shape -->
             <div
-              class="absolute top-8 left-0 sm:left-1 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-gradient-to-r from-[#edc001] to-[#fee680] rotate-45"
-            ></div>
+              :class="['absolute top-12 sm:left-[52%] md:left-[51.5%] lg:left-[50.5%] xl:left-[48.5%] transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rotate-45', stage.diamondStyle]"
+            >
+              <!-- inner diamond for non focused sections-->
+              <div class="absolute w-2 h-2 bg-[#272722] left-[25%] top-[25%]" :class="[stage.upcoming && 'hidden']">
+              </div>
+          </div>
             
             <div
-              class="flex flex-col sm:flex-row items-center sm:justify-between sm:items-start mb-4"
+              class="sm:ml-8 flex flex-col sm:flex-row items-center sm:justify-between sm:items-start mb-4"
             >
-              <div class="pl-[10%] w-[90%] sm:w-2/3 sm:pl-8 mb-4">
-                <div class="flex items-center mb-2">
-                  <!-- <div
-                    class="flex-shrink-0 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center z-10"
-                  >
-                    <component
-                      :is="stage.icon"
-                      class="w-8 h-8 text-white"
-                    ></component>
-                  </div> -->
-                  <div class="ml-0">
-                    <h3 class="text-xl font-semibold text-gray-200">
+              <div class="pl-[10%] w-[90%] sm:pl-8">
+                <div :class="['flex w-[100%] items-center mb-2', stage.id % 2 == 0 ? 'justify-start' : 'justify-end']">
+                  <div :class="['ml-0 w-full sm:w-[45%] p-4 flex flex-col mb-5 rounded-lg', stage.id % 2 == 0 ? 'sm:text-end' : '', stage.upcoming === true ? 'backdrop-brightness-200 border-[1px] border-[#edc00155]' : 'backdrop-brightness-125']">
+                    <h3 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-4" :class="[stage.upcoming ? 'text-transparent bg-clip-text bg-gradient-to-r from-white to-[#EDC001]' : 'text-gray-400']">
                       {{ stage.name }}
                     </h3>
-                    <time class="text-sm text-gray-300">
+                    <time class="text-sm xl:text-md" :class="[stage.upcoming ? 'text-gray-200' : 'text-gray-400']">
                       {{ stage.date }}
                     </time>
                   </div>
                 </div>
-                <p class="mt-2 text-base text-gray-300 text-wrap text-justify">
-                  {{ stage.description }}
-                </p>
-              </div>
-              <div class="visibiliy sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 bg-slate-500 rounded-lg">
-                <img :src="'https://placehold.co/600x600'" class="w-full h-full object-cover rounded-lg">
-                </img>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- <section class="mt-8">
+        <button class="flex items-center justify-center w-56 h-12 bg-[#a78e1d] text-gray-100 rounded-lg hover:bg-[#7d6c22] transition-colors hover:text-white" @click="click('#semi')">
+          Current Standings
+        </button>
+      </section> -->
     </div>
   </template>
   
   <script>
   import { defineComponent, ref } from "vue";
-//   import { CalendarDays, Flag, Medal, Trophy, Users } from "lucide-vue-next";
   
   export default defineComponent({
     name: "EnhancedVerticalCompetitionTimeline",
+    methods : {
+      click(urlString) {
+        window.location.href = urlString
+      }
+    },
     setup() {
       const stages = ref([
         {
-          name: "Registration",
-        //   icon: Users,
-          date: "Jan 1 - Jan 31, 2025",
-          heading: "Open for Entries",
-          description:
-            "Register your team and submit your initial project proposal. Early bird discounts available until January 15th.",
-          image: "/placeholder.svg?height=200&width=200",
+          id : 1,
+          name: "Preliminary Round",
+          date: "19th January, 2025",
+          upcoming : false,
+          lineStyle: 'bg-gradient-to-b from-[#edc00133] to-[#edc001]',
+          diamondStyle: 'bg-[#594d1b]',
         },
         {
-          name: "Preliminary",
-        //   icon: Flag,
-          date: "Feb 15 - Feb 28, 2025",
-          heading: "First Round Judging",
-          description:
-            "Submit your detailed project plan. Top 50% of entries will advance to the semi-finals.",
-          image: "/placeholder.svg?height=200&width=200",
-        },
-        {
+          id : 2,
           name: "Semi Finals",
-        //   icon: Medal,
-          date: "Mar 15 - Mar 16, 2025",
-          heading: "Pitch Presentations",
-          description:
-            "Present your project to our panel of expert judges. Top 10 teams will advance to the grand finals.",
-          image: "/placeholder.svg?height=200&width=200",
+          date: "9th February, 2025",
+          upcoming : true,
+          lineStyle: 'bg-gradient-to-b from-[#edc001] to-[#edc00133]',
+          diamondStyle: 'color-pulse',
         },
         {
-          name: "Grand Finals",
-        //   icon: Trophy,
-          date: "Apr 1, 2025",
-          heading: "Final Showdown",
-          description:
-            "Showcase your completed project to industry leaders. Winners will be announced and prizes awarded.",
-          image: "/placeholder.svg?height=200&width=200",
-          end : true
+          id : 3,
+          name: "Finals",
+          date: "To be Decided",
+          upcoming : false,
+          lineStyle: 'bg-gradient-to-b from-[#edc001] to-gray-600/50',
+          diamondStyle: 'bg-[#594d1b]',
         },
       ]);
   
@@ -116,6 +101,25 @@
 <style scoped>
 .visibiliy {
     display: none;
+}
+
+.color-pulse {
+  background-color: #edc001;
+  animation: color-pulse 3s linear infinite;
+}
+
+@keyframes color-pulse {
+  40% {
+    background-color: #edc001;
+  }
+
+  50% {
+    background-color: #ffe675;
+  }
+
+  80% {
+    background-color: #edc001;
+  }
 }
 
 @media (min-width: 640px) {
