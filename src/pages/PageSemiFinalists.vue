@@ -194,6 +194,8 @@ import ravitha from '../assets/images/finalists/ravitha.png'
 import thulasi from '../assets/images/finalists/thulasi.png'
 import unduli from '../assets/images/finalists/unduli.png'
 import ami from '../assets/images/finalists/ami.png'
+import nethu from  '../assets/images/finalists/nethu.png'
+import hemi from  '../assets/images/finalists/hemi.png'
 
 export default {
 
@@ -232,6 +234,8 @@ export default {
                 { text: "Thulasithan Gnanenthiram", image: thulasi, number: 10 },
                 { text: "Unduli Senadheera", image: unduli, number: 11 },
                 { text: "Amirthavarshani Ananthan", image: ami, number: 12 },
+                { text: "Nethu Lamahewa", image: nethu, number: 13 },
+                { text: "Hemindi Kalubovila", image: hemi, number: 14 },
 
 
                 // Add more items as needed
