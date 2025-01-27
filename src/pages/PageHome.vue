@@ -196,6 +196,8 @@ export default {
         <p class="p-4 text-gray-300 italic text-center">Coming soon, stay tuned...</p>
       </div> -->
 
+      <PageSemi />
+
       <!-- <hr class="featurette-divider" />
       <div class="col-12 mb-2 mt-6">
         <h1 class="featurette-heading mt-0 mb-4">Past Experiences</h1>
