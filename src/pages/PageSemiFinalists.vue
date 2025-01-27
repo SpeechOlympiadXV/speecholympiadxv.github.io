@@ -1,33 +1,6 @@
 <template>
-    <!-- <div class="flex justify-center items-center w-full">
-        <button
-            class="relative px-8 py-4 border-4 border-yellow-500 featurette-heading text-yellow-500 text-4xl rounded-full hover:bg-golden hover:text-white transition-all">
-            <h1 class="text-xl">Click Me</h1>
-
-            <svg xmlns="http://www.w3.org/2000/svg" class=" w-6 absolute right-4 top-1/2 transform -translate-y-1/2"
-                fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-        </button>
-    </div> -->
-
-   <!---- <div class="col-12 mb-2 mt-6">
-        <h1 class="featurette-heading mt-0 mb-4">Finalists</h1>
-    </div>
-    <div class="grid grid-cols-4 md:grid-cols-4 gap-4 p-4">
-     
-        <div v-for="(item, index) in gridData_1" :key="index"
-        class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-1 ease-out animate-fade-in" 
-        :class="{ 'animate-elementL': (number >= item.number) }">
-            <div class="flex flex-col items-center justify-center md:p-2">
-                <img :src="item.image" alt="Image" class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-2" />
-                <span class="text-center md:text-lg px-4">{{ item.text }}</span>
-            </div>
-        </div> 
-
-    </div> -->
-
-    <div class="w-[90%] sm:w-[85%] px-4 py-8 mx-auto"> 
+    <div class="w-[90%] sm:w-[80%] rounded-xl mx-auto my-9 bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm">
+    <div class="px-9 py-9 mx-auto"> 
         <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
             Semi Finalists
         </h2>
@@ -39,67 +12,38 @@
             Now, the journey to be <span class="text-xl sm:text-2xl italic font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#edc001] to-[#ff5e5e]">unleashed</span>, begins.
         </div>
     </div>
-        <div class="flex h-full w-full items-center justify-center px-4">
-            <div class="w-[100%] max-w-full px-4"> 
-                <ul
-                    name="fade"
-                    tag="ul"
-                    class="flex flex-row gap-10 justify-center flex-wrap"
+    <div class="flex h-full w-full items-center justify-center px-4">
+        <div class="w-[100%] max-w-full px-4"> 
+            <ul
+                name="fade"
+                tag="ul"
+                class="flex flex-row gap-10 justify-center flex-wrap"
+            >
+                <li
+                v-for="(item, index) in gridData_1"
+                :key="`item-${index}`"
+                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-2']"
+                :aria-current="hoverIndex === index ? 'true' : 'false'"
+                @mouseenter="hoverIndex = index"
+                @mouseleave="hoverIndex = null"
                 >
-                    <li
-                    v-for="(item, index) in gridData_1"
-                    :key="`item-${index}`"
-                    :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-2']"
-                    :aria-current="hoverIndex === index ? 'true' : 'false'"
-                    @mouseenter="hoverIndex = index"
-                    @mouseleave="hoverIndex = null"
-                    >
-                    <img class="h-full w-full object-cover rounded-lg" :src="item.image" />
-                    <div
-                        v-show="hoverIndex === index"
-                        class="hidden sm:flex absolute top-0 left-0 right-0 items-center justify-center p-4 bg-opacity-50"
-                    >
-                        <p class="typing-effect" style="color: ghostwhite">{{ item.text }}</p>
-                    </div>
-                    <div class="block sm:hidden absolute left-0 bottom-2 text-xs w-full" style="color: ghostwhite">
-                        <p class="w-[90%] mx-auto text-center text-[#edc001] p-2 bg-gray-900 bg-opacity-40 h-16">
-                        {{ item.text }}
-                        </p>
-                    </div>
-                    </li>
-                </ul>
-            </div>
+                <img class="h-full w-full object-cover rounded-lg" :src="item.image" />
+                <div
+                    v-show="hoverIndex === index"
+                    class="hidden sm:flex absolute top-0 left-0 right-0 items-center justify-center p-4 bg-opacity-50"
+                >
+                    <p class="typing-effect" style="color: ghostwhite">{{ item.text }}</p>
+                </div>
+                <div class="block sm:hidden absolute left-0 bottom-2 text-xs w-full" style="color: ghostwhite">
+                    <p class="w-[90%] mx-auto text-center text-[#edc001] p-2 bg-gray-900 bg-opacity-40 h-16 font-extrabold">
+                    {{ item.text }}
+                    </p>
+                </div>
+                </li>
+            </ul>
         </div>
-
-
-
-
-
-
-
-
-
-    <!--------------
-
-    <div class="flex h-full w-full items-center justify-center">
-    <div class="w-full flex justify-center">
-        <ul class="group flex flex-row gap-10 justify-center">
-            <li v-for="(item, index) in gridData_1" :key="item.text"
-                class="card-width h-8 rounded-2xl bg-c9c6c7 overflow-hidden relative transition-all duration-300 cursor-pointer { '[&[aria-current=true]]:w-[48%]': activeItem === index }"
-                :aria-current="activeItem === index ? 'true' : 'false'"
-                @click="toggleActive(index)">
-                <img class="h-full w-full object-cover" :src="item.image">
-            </li>
-        </ul>
     </div>
-</div>
-
-
-
-<!---------------------------------->
-
-
-    <div class="w-[95%] sm:w-[85%] px-4 py-8 mx-auto"> 
+    <div class="px-9 py-9 mx-auto"> 
         <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
             Reserved Semi Finalists
         </h2>
@@ -134,39 +78,7 @@
             </div>
         </div>
     </div>
-
-
-
-    <!-- <div class="col-12 mb-2 mt-6">
-        <h1 class="featurette-heading mt-0 mb-4">Semi Finalists</h1>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4"> -->
-        <!-- Grid items -->
-        <!-- <div v-for="(item, index) in gridData_2" :key="index"
-            class="bg-transparent  border-2 border-yellow-700 p-2 rounded-lg shadow-lg  animate-fade-in"
-            :class="{ 'animate-elementL': (number >= item.number) }">
-            <div class="flex flex-col items-center justify-center md:p-2">
-                <img :src="item.image" alt="Image" class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-2" />
-                <span class="text-center md:text-lg px-4">{{ item.text }}</span>
-            </div>
-        </div>
-
-    </div> -->
-
-    <!-- <div class="col-12 mb-2 mt-6">
-        <h1 class="featurette-heading mt-0 mb-4"> Reserved Semi Finalists</h1>
-    </div> -->
-    <!-- <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4"> -->
-        <!-- Grid items -->
-        <!-- <div v-for="(item, index) in reserved_2" :key="index"
-            class="bg-transparent  border-2 border-yellow-900 p-2 rounded-lg shadow-lg animate-fade-inL"
-            :class="{ 'animate-elementL': (number >= item.number) }">
-            <div class="flex flex-col items-center">
-                <span class="text-center md:text-lg">{{ item.text }}</span>
-            </div>
-        </div>
-
-    </div> -->
 </template>
   
 <script>
@@ -361,7 +273,7 @@ export default {
     }
     @media (min-width: 1280px) { /* xl */
         li[aria-current="true"] {
-            width: 25%; /* Active item width for xl screens */
+            width: 22%; /* Active item width for xl screens */
         }
     }
     
@@ -445,6 +357,8 @@ export default {
         border-right: none; /* Caret color */
         white-space: nowrap;
         overflow: hidden; /* Keeps the content from spilling outside the container */
+        text-wrap: wrap;
+        text-align: center;
         display: inline-block;
         font-weight: bold; /* Making sure the font is bold */
         font-size: 24px; /* Adjust font size as needed */
