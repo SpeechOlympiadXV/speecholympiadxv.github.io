@@ -17,7 +17,7 @@
             <ul
                 name="fade"
                 tag="ul"
-                class="flex flex-row gap-10 justify-center flex-wrap"
+                class="flex flex-row gap-7 justify-center flex-wrap"
             >
                 <li
                 v-for="(item, index) in gridData_1"
