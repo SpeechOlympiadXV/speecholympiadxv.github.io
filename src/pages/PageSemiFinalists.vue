@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[90%] sm:w-[80%] rounded-xl mx-auto my-9 bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm">
+    <div class="max-w-[1288px] w-[90%] sm:w-[80%] rounded-xl mx-auto my-9 bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm">
     <div class="px-9 py-9 mx-auto"> 
         <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
             Semi Finalists
@@ -22,7 +22,7 @@
                 <li
                 v-for="(item, index) in gridData_1"
                 :key="`item-${index}`"
-                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-2']"
+                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-1 sm:p-2']"
                 :aria-current="hoverIndex === index ? 'true' : 'false'"
                 @mouseenter="hoverIndex = index"
                 @mouseleave="hoverIndex = null"
@@ -34,7 +34,7 @@
                 >
                     <p class="typing-effect" style="color: ghostwhite">{{ item.text }}</p>
                 </div>
-                <div class="block sm:hidden absolute left-0 bottom-2 text-xs w-full" style="color: ghostwhite">
+                <div class="block sm:hidden absolute left-0 bottom-1 sm:bottom-2 text-xs w-full" style="color: ghostwhite">
                     <p class="w-[90%] mx-auto text-center text-[#edc001] p-2 bg-gray-900 bg-opacity-40 h-16 font-extrabold">
                     {{ item.text }}
                     </p>
@@ -137,17 +137,17 @@ export default {
             gridData_1: [
                 
                 { text: "Afrah Rumie", image: afra_f, number: 1 },
-                { text: "Anuja Mahamalage", image:anuja, number: 3 },
                 { text: "Aloka Fernando", image: aloka, number: 4 },
+                { text: "Amirthavarshani Ananthan", image: ami, number: 12 },
+                { text: "Anuja Mahamalage", image:anuja, number: 3 },
                 { text: "Harshi Gunawardhane", image: harshi , number: 5 },
+                { text: "Hemindi Kalubovila", image: hemi, number: 14 },
                 { text: "Neelayadhakshi Priyadhakshan", image: neela, number: 6 },
+                { text: "Nethu Lamahewa", image: nethu, number: 13 },
                 { text: "Ranuja Jayawardena", image: ranuja, number: 7 },
                 { text: "Ravitha Perera", image: ravitha, number: 8 },
                 { text: "Thulasithan Gnanenthiram", image: thulasi, number: 10 },
                 { text: "Unduli Senadheera", image: unduli, number: 11 },
-                { text: "Amirthavarshani Ananthan", image: ami, number: 12 },
-                { text: "Nethu Lamahewa", image: nethu, number: 13 },
-                { text: "Hemindi Kalubovila", image: hemi, number: 14 },
 
 
                 // Add more items as needed

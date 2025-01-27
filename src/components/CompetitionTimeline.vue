@@ -105,7 +105,7 @@
 
 .color-pulse {
   background-color: #edc001;
-  animation: color-pulse 5s linear infinite;
+  animation: color-pulse 3s linear infinite;
 }
 
 @keyframes color-pulse {
@@ -117,7 +117,7 @@
     background-color: #ffe675;
   }
 
-  60% {
+  80% {
     background-color: #edc001;
   }
 }
