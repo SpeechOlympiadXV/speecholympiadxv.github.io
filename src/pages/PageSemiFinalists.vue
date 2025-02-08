@@ -22,7 +22,7 @@
                 <li
                 v-for="(item, index) in gridData_1"
                 :key="`item-${index}`"
-                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-1 sm:p-2']"
+                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-[1px]']"
                 :aria-current="hoverIndex === index ? 'true' : 'false'"
                 @mouseenter="hoverIndex = index"
                 @mouseleave="hoverIndex = null"
@@ -34,8 +34,8 @@
                 >
                     <p class="typing-effect" style="color: ghostwhite">{{ item.text }}</p>
                 </div>
-                <div class="block sm:hidden absolute left-0 bottom-1 sm:bottom-2 text-xs w-full" style="color: ghostwhite">
-                    <p class="w-[90%] mx-auto text-center text-[#edc001] p-2 bg-gray-900 bg-opacity-40 h-16 font-extrabold">
+                <div class="block sm:hidden absolute left-0 bottom-0 sm:bottom-2  w-full" style="color: ghostwhite">
+                    <p class="w-[90%] mx-auto text-center text-[#edc001] p-2 bg-gray-900 bg-opacity-40 h-12 sm:h-16 font-normal sm:font-extrabold text-[10px] sm:text-xs">
                     {{ item.text }}
                     </p>
                 </div>
@@ -47,7 +47,7 @@
         <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
             Reserved Semi Finalists
         </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
     
             <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
                 :class="{ 'animate-elementL': (number >= reserved_1[0].number) }">
