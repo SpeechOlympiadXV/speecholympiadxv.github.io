@@ -24,6 +24,7 @@ import PageBlog2 from "./pages/PageBlog2.vue"
 import PageKasun from "./TechTips/Kasun.vue";
 import Semi from "./pages/PageSemiFinalists.vue";
 import Footer from "./components/Footer.vue";
+import PageVote from "./pages/PageVote.vue";
 // import RibbonNotice from "./components/RibbonNotice.vue";
 // import ToastButton from "./components/ToastButton.vue";
 
@@ -38,7 +39,12 @@ const routes = {
   // "/admin": PageAdmin,
   "/semi": Semi,
   "/rules": PageRules,
-  // "/blog2": PageBlog2
+  // "/blog2": PageBlog2,
+  "/thulasithan": PageVote,
+  "/aloka" : PageVote,
+  "/amirthavarshani" : PageVote,
+  "/neelayadhakshi" : PageVote,
+  "/afrah" : PageVote 
 };
 
 export default {
