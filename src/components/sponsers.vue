@@ -37,12 +37,13 @@
 
 <script setup>
 import { ref } from 'vue'
+import combankLogo from '../assets/logos/combanklogo.png'
 
 const sponsors = ref([
   {
     id: 1,
     name: 'Commercial Bank',
-    imageUrl: "src/assets/logos/combanklogo.png",
+    imageUrl: combankLogo,
     partnershipType: 'Silver'
   }
 ])

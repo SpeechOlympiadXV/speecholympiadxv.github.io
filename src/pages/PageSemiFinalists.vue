@@ -277,8 +277,8 @@ export default {
         }
     }
     
-    
 
+    
     .gradient-border {
         border-image: linear-gradient(to bottom right, rgba(132,106,0,1), rgba(132,0,30,1));
         border-image-slice: 1;
@@ -361,7 +361,7 @@ export default {
         text-align: center;
         display: inline-block;
         font-weight: bold; /* Making sure the font is bold */
-        font-size: 24px; /* Adjust font size as needed */
+        font-size: 20px; /* Adjust font size as needed */
         animation: typing 2s steps(20, end) ;
     }
 
