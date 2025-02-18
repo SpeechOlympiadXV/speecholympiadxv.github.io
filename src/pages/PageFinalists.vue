@@ -6,10 +6,10 @@
         </h2>
 
         <div class="text-gray-300 leading-6 text-left text-md sm:text-lg font-thin mt-8">
-            With grace and passion, you've emerged into the spotlight—each word you've spoken has been magic.
+            With unwavering spirit and brilliance, you've conquered the stage—each moment a testament to your talent.
         </div>
         <div class="text-gray-300 leading-6 text-left text-md sm:text-lg font-thin mt-1">
-            Now, the journey to be <span class="text-xl sm:text-2xl italic font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#edc001] to-[#ff5e5e]">unleashed</span>, begins.
+            Now, the final stage awaits—where your journey becomes <span class="text-xl sm:text-2xl italic font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#edc001] to-[#ff5e5e]">unbound</span>.
         </div>
     </div>
     <div class="flex h-full w-full items-center justify-center px-4">
@@ -49,11 +49,10 @@
             Reserved Finalists
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
-    
             <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
                 :class="{ 'animate-elementL': (number >= reserved_1[0].number) }">
                 <div class="flex flex-col items-center">
-                    <span class="text-center md:text-lg">{{ reserved_1[0].text }}</span>
+                    <span class="text-center text-md md:text-lg">{{ reserved_1[0].text }}</span>
                 </div>
             </div>
     
@@ -93,6 +92,7 @@ export default {
         return {
             activeItem: null ,
             hoverIndex: null ,
+ 
 
 
             // gridData_2: [
@@ -210,7 +210,7 @@ export default {
     
     .card-background {
         /* background: rgb(237,192,1); */
-        background: linear-gradient(166deg, rgba(132,106,0,1) 0%, rgba(132,0,30,1) 100%);
+        background: linear-gradient(166deg, rgb(219, 169, 4) 0%, rgb(0, 0, 0) 100%);
     }
 
     .overflow-hidden {
@@ -253,6 +253,11 @@ export default {
         }
     }
     
+    .text-ellipsis {
+        overflow: hidden;    /* Ensures content that exceeds the bounds is hidden */
+        text-overflow: ellipsis; /* Adds '...' at the end if the content overflows */
+        white-space: nowrap; /* Prevents text from wrapping to the next line */
+        }
     
 
     .gradient-border {
@@ -264,8 +269,7 @@ export default {
 
     /* Specific hover styles for first and last items if needed */
 
-
-
+    
 
 .animate-fade-in {
     opacity: 0;
