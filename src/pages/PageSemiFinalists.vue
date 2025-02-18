@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[90%] sm:w-[80%] rounded-xl mx-auto my-9 bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm">
+    <div class="max-w-[1288px] w-[90%] sm:w-[80%] rounded-xl mx-auto my-9 bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm">
     <div class="px-9 py-9 mx-auto"> 
         <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
             Semi Finalists
@@ -17,12 +17,12 @@
             <ul
                 name="fade"
                 tag="ul"
-                class="flex flex-row gap-10 justify-center flex-wrap"
+                class="flex flex-row gap-7 justify-center flex-wrap"
             >
                 <li
                 v-for="(item, index) in gridData_1"
                 :key="`item-${index}`"
-                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-2']"
+                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-[1px]']"
                 :aria-current="hoverIndex === index ? 'true' : 'false'"
                 @mouseenter="hoverIndex = index"
                 @mouseleave="hoverIndex = null"
@@ -34,8 +34,8 @@
                 >
                     <p class="typing-effect" style="color: ghostwhite">{{ item.text }}</p>
                 </div>
-                <div class="block sm:hidden absolute left-0 bottom-2 text-xs w-full" style="color: ghostwhite">
-                    <p class="w-[90%] mx-auto text-center text-[#edc001] p-2 bg-gray-900 bg-opacity-40 h-16 font-extrabold">
+                <div class="block sm:hidden absolute left-0 bottom-0 sm:bottom-2  w-full" style="color: ghostwhite">
+                    <p class="w-[90%] mx-auto text-center text-[#edc001] p-2 bg-gray-900 bg-opacity-40 h-12 sm:h-16 font-normal sm:font-extrabold text-[10px] sm:text-xs">
                     {{ item.text }}
                     </p>
                 </div>
@@ -47,7 +47,7 @@
         <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
             Reserved Semi Finalists
         </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
     
             <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
                 :class="{ 'animate-elementL': (number >= reserved_1[0].number) }">
@@ -137,17 +137,17 @@ export default {
             gridData_1: [
                 
                 { text: "Afrah Rumie", image: afra_f, number: 1 },
-                { text: "Anuja Mahamalage", image:anuja, number: 3 },
                 { text: "Aloka Fernando", image: aloka, number: 4 },
+                { text: "Amirthavarshani Ananthan", image: ami, number: 12 },
+                { text: "Anuja Mahamalage", image:anuja, number: 3 },
                 { text: "Harshi Gunawardhane", image: harshi , number: 5 },
+                { text: "Hemindi Kalubovila", image: hemi, number: 14 },
                 { text: "Neelayadhakshi Priyadhakshan", image: neela, number: 6 },
+                { text: "Nethu Lamahewa", image: nethu, number: 13 },
                 { text: "Ranuja Jayawardena", image: ranuja, number: 7 },
                 { text: "Ravitha Perera", image: ravitha, number: 8 },
                 { text: "Thulasithan Gnanenthiram", image: thulasi, number: 10 },
                 { text: "Unduli Senadheera", image: unduli, number: 11 },
-                { text: "Amirthavarshani Ananthan", image: ami, number: 12 },
-                { text: "Nethu Lamahewa", image: nethu, number: 13 },
-                { text: "Hemindi Kalubovila", image: hemi, number: 14 },
 
 
                 // Add more items as needed
@@ -277,8 +277,8 @@ export default {
         }
     }
     
-    
 
+    
     .gradient-border {
         border-image: linear-gradient(to bottom right, rgba(132,106,0,1), rgba(132,0,30,1));
         border-image-slice: 1;
@@ -361,7 +361,7 @@ export default {
         text-align: center;
         display: inline-block;
         font-weight: bold; /* Making sure the font is bold */
-        font-size: 24px; /* Adjust font size as needed */
+        font-size: 20px; /* Adjust font size as needed */
         animation: typing 2s steps(20, end) ;
     }
 

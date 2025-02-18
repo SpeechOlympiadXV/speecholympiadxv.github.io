@@ -121,7 +121,7 @@ export default {
             ],
 
             reserved_1: [
-            { text: "Unduli", number: 13 },
+            { text: "Unduli Senadheera", number: 13 },
             ],
 
             reserved_2: [

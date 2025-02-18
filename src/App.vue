@@ -25,6 +25,7 @@ import PageKasun from "./TechTips/Kasun.vue";
 import Semi from "./pages/PageSemiFinalists.vue";
 import Final from "./pages/PageFinalists.vue";
 import Footer from "./components/Footer.vue";
+import PageVote from "./pages/PageVote.vue";
 // import RibbonNotice from "./components/RibbonNotice.vue";
 // import ToastButton from "./components/ToastButton.vue";
 
@@ -40,7 +41,12 @@ const routes = {
   "/semi": Semi,
   "/final": Final,
   "/rules": PageRules,
-  // "/blog2": PageBlog2
+  // "/blog2": PageBlog2,
+  "/thulasithan": PageVote,
+  "/aloka" : PageVote,
+  "/amirthavarshani" : PageVote,
+  "/neelayadhakshi" : PageVote,
+  "/afrah" : PageVote 
 };
 
 export default {
