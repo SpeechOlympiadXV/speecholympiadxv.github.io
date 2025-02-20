@@ -210,7 +210,7 @@ export default {
     
     .card-background {
         /* background: rgb(237,192,1); */
-        background: linear-gradient(166deg, rgba(132,106,0,1) 0%, rgba(132,0,30,1) 100%);
+        background: linear-gradient(166deg, #e5be06 0%, #0991b0 100%);
     }
 
     li {

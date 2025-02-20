@@ -22,7 +22,7 @@
                 <li
                 v-for="(item, index) in grid_data_finals"
                 :key="`item-${index}`"
-                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-[1px]']"
+                :class="['card-width card-height rounded-lg card-background-final overflow-hidden transition-all duration-300 ease-in-out p-[1px]']"
                 :aria-current="hoverIndex === index ? 'true' : 'false'"
                 @mouseenter="hoverIndex = index"
                 @mouseleave="hoverIndex = null"
@@ -81,7 +81,7 @@
                 <li
                 v-for="(item, index) in gridData_1"
                 :key="`item-${index}`"
-                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-[1px]']"
+                :class="['card-width card-height rounded-lg card-background-semi overflow-hidden transition-all duration-300 ease-in-out p-[1px]']"
                 :aria-current="hoverIndex === index ? 'true' : 'false'"
                 @mouseenter="hoverIndex = index"
                 @mouseleave="hoverIndex = null"
@@ -323,9 +323,14 @@ export default {
         height: 80%;
     }
     
-    .card-background {
+    .card-background-semi {
         /* background: rgb(237,192,1); */
         background: linear-gradient(166deg, rgba(132,106,0,1) 0%, rgba(132,0,30,1) 100%);
+    }
+
+    .card-background-final {
+        /* background: rgb(237,192,1); */
+        background: linear-gradient(166deg, #e5be06 0%, #0991b0 100%);
     }
 
     li {
