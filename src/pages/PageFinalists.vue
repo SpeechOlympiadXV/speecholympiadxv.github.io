@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-[1288px] w-[90%] sm:w-[80%] rounded-xl mx-auto my-9 bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm">
+<div class="w-[90%] sm:w-[80%] rounded-xl mx-auto my-9 bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm">
     <div class="px-9 py-9 mx-auto"> 
         <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
             Finalists
@@ -20,9 +20,9 @@
                 class="flex flex-row gap-7 justify-center flex-wrap"
             >
                 <li
-                v-for="(item, index) in grid_data_finals"
+                v-for="(item, index) in gridData_1"
                 :key="`item-${index}`"
-                :class="['card-width card-height rounded-lg card-background-final overflow-hidden transition-all duration-300 ease-in-out p-[1px]']"
+                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-[1px]']"
                 :aria-current="hoverIndex === index ? 'true' : 'false'"
                 @mouseenter="hoverIndex = index"
                 @mouseleave="hoverIndex = null"
@@ -50,94 +50,16 @@
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
             <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
-                :class="{ 'animate-elementL': (number >= reserved_f[0].number) }">
-                <div class="flex flex-col items-center">
-                    <span class="text-center text-md md:text-lg">{{ reserved_f[0].text }}</span>
-                </div>
-            </div>
-    
-        </div>
-    </div>
-    
-        <div class="px-9 py-9 mx-auto"> 
-        <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
-            Semi Finalists
-        </h2>
-
-        <div class="text-gray-300 leading-6 text-left text-md sm:text-lg font-thin mt-8">
-            With grace and passion, you've emerged into the spotlight—each word you've spoken has been magic.
-        </div>
-        <div class="text-gray-300 leading-6 text-left text-md sm:text-lg font-thin mt-1">
-            Now, the journey to be <span class="text-xl sm:text-2xl italic font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#edc001] to-[#ff5e5e]">Unleashed</span>, begins.
-        </div>
-    </div>
-    <div class="flex h-full w-full items-center justify-center px-4">
-        <div class="w-[100%] max-w-full px-4"> 
-            <ul
-                name="fade"
-                tag="ul"
-                class="flex flex-row gap-7 justify-center flex-wrap"
-            >
-                <li
-                v-for="(item, index) in gridData_1"
-                :key="`item-${index}`"
-                :class="['card-width card-height rounded-lg card-background-semi overflow-hidden transition-all duration-300 ease-in-out p-[1px]']"
-                :aria-current="hoverIndex === index ? 'true' : 'false'"
-                @mouseenter="hoverIndex = index"
-                @mouseleave="hoverIndex = null"
-                >
-                <img class="h-full w-full object-cover rounded-lg" :src="item.image" />
-                <div
-                    v-show="hoverIndex === index"
-                    class="hidden sm:flex absolute top-0 left-0 right-0 items-center justify-center p-4 bg-opacity-50"
-                >
-                    <p class="typing-effect" style="color: ghostwhite">{{ item.text }}</p>
-                </div>
-                <div class="block sm:hidden absolute left-0 bottom-0 sm:bottom-2  w-full" style="color: ghostwhite">
-                    <p class="w-[90%] mx-auto text-center text-[#edc001] p-2 bg-gray-900 bg-opacity-40 h-12 sm:h-16 font-normal sm:font-extrabold text-[10px] sm:text-xs">
-                    {{ item.text }}
-                    </p>
-                </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="px-9 py-9 mx-auto"> 
-        <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
-            Reserved Semi Finalists
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
-    
-            <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
                 :class="{ 'animate-elementL': (number >= reserved_1[0].number) }">
                 <div class="flex flex-col items-center">
                     <span class="text-center md:text-lg">{{ reserved_1[0].text }}</span>
                 </div>
             </div>
     
-            <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
-                :class="{ 'animate-elementL': (number >= reserved_1[1].number) }">
-                <div class="flex flex-col items-center">
-                    <span class="text-center md:text-lg">{{ reserved_1[1].text }}</span>
-                </div>
-            </div>
-    
-            <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
-                :class="{ 'animate-elementL': (number >= reserved_1[2].number) }">
-                <div class="flex flex-col items-center">
-                    <span class="text-center text-md md:text-lg">{{ reserved_1[2].text }}</span>
-                </div>
-            </div>
-    
-            <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
-                :class="{ 'animate-elementL': (number >= reserved_1[3].number) }">
-                <div class="flex flex-col items-center">
-                    <p class="text-center text-md md:text-lg">{{ reserved_1[3].text }}</p>
-                </div>
-            </div>
         </div>
     </div>
-    </div>
+</div>
+
 </template>
   
 <script>
@@ -154,25 +76,13 @@
 // import saai from '../assets/images/SemiFinalists/Saai Syvendra.jpg'
 // import sasindi from '../assets/images/SemiFinalists/Sasindi.jpg'
 
-import aloka_f from '../assets/images/finalists/final/aloka.png'
+
+import aloka from '../assets/images/finalists/final/aloka.png'
 import afra_f from '../assets/images/finalists/final/afra.png'
-import neela_f from '../assets/images/finalists/final/neela.png'
-import thulasi_f from '../assets/images/finalists/final/thulasi.png'
-import ami_f from '../assets/images/finalists/final/ami.png'
-
-
-import aloka from '../assets/images/finalists/aloka.png'
-import afra from '../assets/images/finalists/afra.png'
-import neela from '../assets/images/finalists/neela.png'
-import anuja from '../assets/images/finalists/anuja.png'
-import harshi  from '../assets/images/finalists/harshi.png'
-import ranuja from '../assets/images/finalists/ranuja.png'
-import ravitha from '../assets/images/finalists/ravitha.png'
-import thulasi from '../assets/images/finalists/thulasi.png'
+import neela from '../assets/images/finalists/final/neela.png'
+import thulasi from '../assets/images/finalists/final/thulasi.png'
 import unduli from '../assets/images/finalists/unduli.png'
-import ami from '../assets/images/finalists/ami.png'
-import nethu from  '../assets/images/finalists/nethu.png'
-import hemi from  '../assets/images/finalists/hemi.png'
+import ami from '../assets/images/finalists/final/ami.png'
 
 export default {
 
@@ -182,6 +92,7 @@ export default {
         return {
             activeItem: null ,
             hoverIndex: null ,
+ 
 
 
             // gridData_2: [
@@ -199,44 +110,18 @@ export default {
             //     { text: "Sasindi Peiris", image: sasindi, number: 11 },
             //     // Add more items as needed
             // ],
-
-            grid_data_finals : [
-                { text: "Afrah Rumie", image: afra_f, number: 1 },
-                { text: "Aloka Fernando", image: aloka_f, number: 4 },
-                { text: "Neelayadhakshi Priyadhakshan", image: neela_f, number: 6 },
-                { text: "Thulasithan Gnanenthiram", image: thulasi_f, number: 10 },
-                { text: "Amirthavarshani Ananthan", image: ami_f, number: 12 },
-            ],
-
             gridData_1: [
                 
-                { text: "Afrah Rumie", image: afra, number: 1 },
+                { text: "Afrah Rumie", image: afra_f, number: 1 },
                 { text: "Aloka Fernando", image: aloka, number: 4 },
-                { text: "Amirthavarshani Ananthan", image: ami, number: 12 },
-                { text: "Anuja Mahamalage", image:anuja, number: 3 },
-                { text: "Harshi Gunawardhane", image: harshi , number: 5 },
-                { text: "Hemindi Kalubovila", image: hemi, number: 14 },
                 { text: "Neelayadhakshi Priyadhakshan", image: neela, number: 6 },
-                { text: "Nethu Lamahewa", image: nethu, number: 13 },
-                { text: "Ranuja Jayawardena", image: ranuja, number: 7 },
-                { text: "Ravitha Perera", image: ravitha, number: 8 },
                 { text: "Thulasithan Gnanenthiram", image: thulasi, number: 10 },
-                { text: "Unduli Senadheera", image: unduli, number: 11 },
-
-
+                { text: "Amirthavarshani Ananthan", image: ami, number: 12 },
                 // Add more items as needed
             ],
 
-            reserved_f : [
-                { text: "Unduli Senadheera", number: 1 },
-            ],
-
             reserved_1: [
-            { text: "Hasith Nettikumara", number: 13 },
-            { text: "Rasika Gunasekera", number: 14 },
-            { text: "Sadil Jayatilaka", number: 15 },
-            { text: "Thilakshan Balakrishnan", number: 16 },
-
+            { text: "Unduli Senadheera", number: 13 },
             ],
 
             reserved_2: [
@@ -323,12 +208,7 @@ export default {
         height: 80%;
     }
     
-    .card-background-semi {
-        /* background: rgb(237,192,1); */
-        background: linear-gradient(166deg, rgba(132,106,0,1) 0%, rgba(132,0,30,1) 100%);
-    }
-
-    .card-background-final {
+    .card-background {
         /* background: rgb(237,192,1); */
         background: linear-gradient(166deg, #e5be06 0%, #0991b0 100%);
     }
