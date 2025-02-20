@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[90%] sm:w-[80%] rounded-xl mx-auto my-9 bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm">
+<div class="w-[90%] sm:w-[80%] rounded-xl mx-auto my-9 bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm">
     <div class="px-9 py-9 mx-auto"> 
         <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
             Finalists
@@ -9,7 +9,7 @@
             With unwavering spirit and brilliance, you've conquered the stage—each moment a testament to your talent.
         </div>
         <div class="text-gray-300 leading-6 text-left text-md sm:text-lg font-thin mt-1">
-            Now, the final stage awaits—where your journey becomes <span class="text-xl sm:text-2xl italic font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#edc001] to-[#ff5e5e]">unbound</span>.
+            Now, the final stage awaits—where your journey becomes <span class="text-xl sm:text-2xl italic font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#edc001] to-cyan-600">Unbound</span>.
         </div>
     </div>
     <div class="flex h-full w-full items-center justify-center px-4">
@@ -17,12 +17,12 @@
             <ul
                 name="fade"
                 tag="ul"
-                class="flex flex-row gap-2 justify-center"
+                class="flex flex-row gap-7 justify-center flex-wrap"
             >
                 <li
                 v-for="(item, index) in gridData_1"
                 :key="`item-${index}`"
-                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-2']"
+                :class="['card-width card-height rounded-lg card-background overflow-hidden transition-all duration-300 ease-in-out p-[1px]']"
                 :aria-current="hoverIndex === index ? 'true' : 'false'"
                 @mouseenter="hoverIndex = index"
                 @mouseleave="hoverIndex = null"
@@ -34,8 +34,8 @@
                 >
                     <p class="typing-effect" style="color: ghostwhite">{{ item.text }}</p>
                 </div>
-                <div class="block sm:hidden absolute left-0 bottom-2 text-xs w-full" style="color: ghostwhite">
-                    <p class="w-[90%] mx-auto text-center text-[#edc001] p-2 bg-gray-900 bg-opacity-40 h-16 font-extrabold">
+                <div class="block sm:hidden absolute left-0 bottom-0 sm:bottom-2  w-full" style="color: ghostwhite">
+                    <p class="w-[90%] mx-auto text-center text-[#edc001] p-2 bg-gray-900 bg-opacity-40 h-12 sm:h-16 font-normal sm:font-extrabold text-[10px] sm:text-xs">
                     {{ item.text }}
                     </p>
                 </div>
@@ -48,17 +48,17 @@
         <h2 class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2">
             Reserved Finalists
         </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
             <div class="bg-gradient-to-br  border-4 border-red-50 p-2 rounded-lg shadow-2xl transform hover:translate-y-[-8px] hover:scale-105 hover:shadow-3xl transition-transform duration-150 ease-out animate-fade-in"
                 :class="{ 'animate-elementL': (number >= reserved_1[0].number) }">
                 <div class="flex flex-col items-center">
-                    <span class="text-center text-md md:text-lg">{{ reserved_1[0].text }}</span>
+                    <span class="text-center md:text-lg">{{ reserved_1[0].text }}</span>
                 </div>
             </div>
     
-            </div>
         </div>
     </div>
+</div>
 
 </template>
   
@@ -77,12 +77,12 @@
 // import sasindi from '../assets/images/SemiFinalists/Sasindi.jpg'
 
 
-import aloka from '../assets/images/finalists/aloka.png'
-import afra_f from '../assets/images/finalists/afra.png'
-import neela from '../assets/images/finalists/neela.png'
-import thulasi from '../assets/images/finalists/thulasi.png'
+import aloka from '../assets/images/finalists/final/aloka.png'
+import afra_f from '../assets/images/finalists/final/afra.png'
+import neela from '../assets/images/finalists/final/neela.png'
+import thulasi from '../assets/images/finalists/final/thulasi.png'
 import unduli from '../assets/images/finalists/unduli.png'
-import ami from '../assets/images/finalists/ami.png'
+import ami from '../assets/images/finalists/final/ami.png'
 
 export default {
 
@@ -121,7 +121,7 @@ export default {
             ],
 
             reserved_1: [
-            { text: "Unduli Senadheera", number: 13 },
+            { text: "Unduli Senadheera", number: 13 },
             ],
 
             reserved_2: [
@@ -210,21 +210,8 @@ export default {
     
     .card-background {
         /* background: rgb(237,192,1); */
-        background: linear-gradient(166deg, rgb(219, 169, 4) 0%, rgb(0, 0, 0) 100%);
+        background: linear-gradient(166deg, rgba(132,106,0,1) 0%, rgba(132,0,30,1) 100%);
     }
-
-    .overflow-hidden {
-    overflow: hidden;
-    }
-
-    .transition-all {
-    transition: all 0.3s ease-in-out;
-    }
-
-    .hovered-scale:hover {
-    transform: scale(1.05); /* Slightly increase size on hover */
-    }
-
 
     li {
         transition: width 0.5s ease; /* Ensures smooth transition for width changes */
@@ -253,13 +240,8 @@ export default {
         }
     }
     
-    .text-ellipsis {
-        overflow: hidden;    /* Ensures content that exceeds the bounds is hidden */
-        text-overflow: ellipsis; /* Adds '...' at the end if the content overflows */
-        white-space: nowrap; /* Prevents text from wrapping to the next line */
-        }
-    
 
+    
     .gradient-border {
         border-image: linear-gradient(to bottom right, rgba(132,106,0,1), rgba(132,0,30,1));
         border-image-slice: 1;
@@ -269,7 +251,8 @@ export default {
 
     /* Specific hover styles for first and last items if needed */
 
-    
+
+
 
 .animate-fade-in {
     opacity: 0;
@@ -341,7 +324,7 @@ export default {
         text-align: center;
         display: inline-block;
         font-weight: bold; /* Making sure the font is bold */
-        font-size: 24px; /* Adjust font size as needed */
+        font-size: 20px; /* Adjust font size as needed */
         animation: typing 2s steps(20, end) ;
     }
 

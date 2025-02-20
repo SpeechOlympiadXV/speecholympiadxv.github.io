@@ -12,7 +12,8 @@ import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonia
 import HomePage_testimonial_malindi from "../assets/images/HomePage_testimonial_malindi.jpeg";
 import HomePage_testimonial_amaya from "../assets/images/HomePage_testimonial_amaya.jpg";
 import HomePage_testimonial_asitha from "../assets/images/HomePage_testimonial_asitha.jpg";
-import PageSemi from "./PageSemiFinalists.vue"
+// import PageSemi from "./PageSemiFinalists.vue"
+import PageFinalists from "./PageFinalists.vue";
 import Prelis1 from "../assets/images/gallery/1.png";
 import Prelis2 from "../assets/images/gallery/3.jpg";
 import Prelis3 from "../assets/images/gallery/8.jpg";
@@ -42,7 +43,8 @@ import CompetitionTimeline from "../components/CompetitionTimeline.vue";
 
 export default {
   components: {
-    PageSemi,
+    // PageSemi,
+    PageFinalists,
     AppFeaturette,
     AppTestimonialCard,
     AppCarousel,
@@ -196,7 +198,8 @@ export default {
         <p class="p-4 text-gray-300 italic text-center">Coming soon, stay tuned...</p>
       </div> -->
 
-      <PageSemi />
+      <!-- <PageSemi /> -->
+      <PageFinalists></PageFinalists>
 
       <!-- <hr class="featurette-divider" />
       <div class="col-12 mb-2 mt-6">
