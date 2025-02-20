@@ -9,12 +9,12 @@
       
       <div v-for="type in ['Gold', 'Silver', 'Bronze']" :key="type" class="mb-8">
         <template v-if="getSponsorsByType(type).length > 0">
-          <h2 class="text-xl lg:text-2xl font-semibold text-gray-300 mb-4">{{ type }} Sponsor</h2>
+          <h2 class="text-xl lg:text-2xl font-semibold text-gray-300 mb-4" :class="type === 'Gold' ? 'text-yellow-400' : type === 'Silver' ? 'text-gray-200' : 'text-orange-400'">{{ type }} Sponsor</h2>
           <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
             <div v-for="sponsor in getSponsorsByType(type)" :key="sponsor.id" class="sponsor-box col-span-1">
               <div class="backdrop-brightness-150 rounded-lg shadow-lg p-4 transition duration-300 ease-in-out transform w-full h-full border border-gray-700">
                 <div class="w-full h-full flex flex-col items-center justify-center">
-                  <img v-if="sponsor.name !== 'mystery'" :src="sponsor.imageUrl" :alt="sponsor.name" class="w-full object-contain">
+                  <img v-if="sponsor.name !== 'mystery'" :src="sponsor.imageUrl" :alt="sponsor.name" class="w-full object-contain" :class="sponsor.bgStyle">
                   <svg v-else xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-question mb-4">
                     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
                     <path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"/>
@@ -38,13 +38,22 @@
 <script setup>
 import { ref } from 'vue'
 import combankLogo from '../assets/logos/combanklogo.png'
+import nestle from '../assets/logos/NESTLElogo.png'
 
 const sponsors = ref([
   {
     id: 1,
     name: 'Commercial Bank',
     imageUrl: combankLogo,
-    partnershipType: 'Silver'
+    partnershipType: 'Silver',
+    bgStyle : "",
+  },
+  {
+    id: 2,
+    name: 'Nestlé',
+    imageUrl: nestle,
+    partnershipType: 'Gold',
+    bgStyle : "bg-white",
   }
 ])
 const getSponsorsByType = (type) => {
