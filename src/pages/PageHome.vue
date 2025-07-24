@@ -6,6 +6,7 @@ import AppTestimonialCard from "../components/AppTestimonialCard.vue";
 import Doodle from "../components/Doodle.vue";
 import HomePage_About from "../assets/images/What is SO - Home page .png";
 import timeline2 from "../components/timeline2.vue"
+import RegisterSection from "../components/RegisterSection.vue";
 import sove from "../assets/images/souvenir.jpeg";
 
 import HomePage_testimonial_sirimevan from "../assets/images/HomePage_testimonial_sirimevan.jpg";
@@ -54,6 +55,7 @@ export default {
     timeline,
     sponserDisplay,
     timeline2,
+    RegisterSection,
     PageTT,
     Hero,
     Feature,
@@ -176,7 +178,8 @@ export default {
       </div> -->
 
       <!-- ==SPONSERS== -->
-      <sponserDisplay />
+      <!--<sponserDisplay />-->
+
       <!-- <hr class="featurette-divider" /> -->
       <!-- <PageSemi /> -->
       <!-- <hr class="featurette-divider" /> -->
@@ -199,7 +202,9 @@ export default {
       </div> -->
 
       <!-- <PageSemi /> -->
-      <PageFinalists></PageFinalists>
+      <RegisterSection/>
+
+      <!--<PageFinalists></PageFinalists>-->
 
       <!-- <hr class="featurette-divider" />
       <div class="col-12 mb-2 mt-6">
