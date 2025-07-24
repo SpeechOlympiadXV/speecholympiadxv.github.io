@@ -19,6 +19,7 @@ import PageAdmin from "./pages/PageAdmin.vue";
 import PageFormNew from "./pages/PageFormNew.vue";
 import Tips from "./components/tips.vue";
 import PageTT from "./pages/PageTechTips.vue";
+import PageRegister from "./pages/PageRegister.vue";
 
 import PageBlog2 from "./pages/PageBlog2.vue"
 import PageKasun from "./TechTips/Kasun.vue";
@@ -31,6 +32,7 @@ import PageVote from "./pages/PageVote.vue";
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
+  "/register": PageRegister,
   "/champions-story": PageChampionsStory,
   "/technical-tips": PageTT,
   "/gallery": PageGallery,
@@ -44,7 +46,8 @@ const routes = {
   "/aloka" : PageVote,
   "/amirthavarshani" : PageVote,
   "/neelayadhakshi" : PageVote,
-  "/afrah" : PageVote 
+  "/afrah" : PageVote
+  
 };
 
 export default {
