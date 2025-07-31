@@ -70,7 +70,7 @@
         {
           id : 1,
           name: "Preliminary Round",
-          date: "19th January, 2025",
+          date: "31st August, 2025",
           upcoming : false,
           lineStyle: 'bg-[#edc00133]',
           diamondStyle: 'bg-[#594d1b]',
@@ -78,7 +78,7 @@
         {
           id : 2,
           name: "Semi Finals",
-          date: "9th February, 2025",
+          date: "14th September, 2025",
           upcoming : false,
           lineStyle: 'bg-gradient-to-b from-[#edc00133] to-[#edc001]',
           diamondStyle: 'bg-[#594d1b]',
@@ -86,7 +86,7 @@
         {
           id : 3,
           name: "Finals",
-          date: "20th February, 2025",
+          date: "25th September, 2025",
           upcoming : true,
           lineStyle: 'bg-gradient-to-b from-[#edc00133] to-[#edc001]',
           diamondStyle: 'color-pulse',

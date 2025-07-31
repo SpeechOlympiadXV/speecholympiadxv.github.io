@@ -11,6 +11,7 @@ const navigation = [
   { name: 'Rules & Regulations', href: '#rules', current: false },
   { name: 'Blogs', href: '#blogs', current: false },
   { name: 'Current Standings', href: '#semi', current: false },
+  { name: 'Register', href: '#register', current: false }
 ]
 
 // const activeItemIndex = ref(getActiveItem());
