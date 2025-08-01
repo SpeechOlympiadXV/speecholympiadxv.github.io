@@ -26,10 +26,18 @@
             </div>
   
             <div class="p-6">
-              <h1 class="text-4xl font-bold mb-4 text-white">{{ post.title }}</h1>
-              <SanityBlocks :blocks="blocks" class="prose prose-invert max-w-none" />
+              <div class="text-center mb-12"> <!-- Added wrapper div with text-center -->
+                <h1 class="text-4xl font-bold text-white border-b border-[#edc001] pb-2 inline-block"> <!-- Added inline-block -->
+                  {{ post.title }}
+                </h1>
+              </div>
+              <div class="blog-container">
+                <div class="max-w-[920px] mx-auto">
+                  <SanityBlocks :blocks="blocks" class="prose prose-invert prose-lg blog-content" />
+                </div>
+              </div>
               
-              <div class="mt-6 flex items-center">
+              <div class="mt-8 flex items-center">
                 <img v-if="post.authorImage" :src="imageUrlFor(post.authorImage)" class="w-12 h-12 rounded-full mr-4" />
                 <p class="text-sm text-gray-300">By: {{ post.name }}</p>
               </div>
@@ -264,33 +272,122 @@
   };
   </script>
   
-  <style>
-  @import 'tailwindcss/base';
-  @import 'tailwindcss/components';
-  @import 'tailwindcss/utilities';
-  
-  /* Additional custom styles */
+  <style scoped>
+  /* Blog container and content formatting */
+  .blog-container {
+    width: 100%;
+    max-width: none;
+    text-align: left;
+    margin: 0;
+    padding: 0 2rem;
+  }
+
   .prose {
-    @apply text-gray-100;
+    color: rgb(243 244 246);
+    font-size: 1.25rem; /* Increased from 1.125rem */
+    line-height: 2; /* Increased from 1.8 for better readability */
+    text-align: left;
+    max-width: none !important;
   }
-  
-  .prose img {
-    @apply rounded-lg shadow-md;
+
+  /* Paragraph styling */
+  .prose p {
+    margin: 2rem 0; /* Increased from 1.75rem */
+    text-align: justify;
+    text-justify: inter-word;
+    max-width: 75ch;
+    padding-right: 1.5rem; /* Increased from 1rem */
+    font-weight: 400; /* Added for better visibility */
   }
-  
-  .prose a {
-    @apply text-amber-400 hover:text-amber-300;
+
+  /* First paragraph emphasis - make it even larger */
+  .prose p:first-of-type {
+    font-size: 1.4rem; /* Increased from 1.25rem */
+    font-weight: 400;
+    color: rgb(229 231 235);
+    line-height: 1.7;
+    font-style: italic;
+    border-left: 4px solid rgb(251 191 36);
+    padding-left: 1.5rem;
+    margin: 2.5rem 0;
   }
-  
-  .prose h2, .prose h3, .prose h4 {
-    @apply font-semibold mt-6 mb-4 text-white;
+
+  /* Headings */
+  .prose h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: rgb(255 255 255);
+    margin: 2.5rem 0 1.5rem 0;
+    border-bottom: 2px solid rgba(237, 192, 1, 0.4);
+    padding-bottom: 0.5rem;
   }
-  
+
+  .prose h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(251 191 36);
+    margin: 2rem 0 1rem 0;
+  }
+
+  /* Lists */
   .prose ul, .prose ol {
-    @apply my-4 ml-6 text-gray-200;
+    margin: 1.5rem 0 1.5rem 2rem;
+    color: rgb(229 231 235);
   }
-  
+
   .prose li {
-    @apply mb-2;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .prose li::marker {
+    color: rgb(251 191 36);
+  }
+
+  /* Quotes */
+  .prose blockquote {
+    border-left: 4px solid rgb(251 191 36);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    background: linear-gradient(135deg, rgba(237, 192, 1, 0.1), rgba(0, 0, 0, 0));
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .prose blockquote p {
+    font-style: italic;
+    color: rgb(209 213 219);
+  }
+
+  /* Images */
+  .prose img {
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    margin: 2.5rem auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .blog-container {
+      padding: 0 1rem;
+    }
+
+    .prose {
+      font-size: 1.125rem; /* Increased from 1rem */
+      line-height: 1.8;
+    }
+
+    .prose p:first-of-type {
+      font-size: 1.25rem;
+    }
+
+    .prose h2 {
+      font-size: 1.5rem;
+    }
+
+    .prose h3 {
+      font-size: 1.25rem;
+    }
   }
   </style>

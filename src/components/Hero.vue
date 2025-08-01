@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import WingedAward from './WingedAward.vue';
+import LaurelWreath from './LaurelWreath.vue';
 
 const isLoaded = ref(false);
 const textAnimationDone = ref(false);
@@ -33,51 +33,63 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="w-full h-[78vh] sm:h-[82vh] md:h-[86vh] lg:h-[90vh] background-gradient flex flex-col lg:flex-row items-center justify-fill relative overflow-hidden">
+    <div class="w-full h-[78vh] sm:h-[82vh] md:h-[86vh] lg:h-[90vh] background-gradient flex flex-col items-center justify-center relative overflow-hidden">
         <div v-if="textAnimationDone" class="absolute inset-0">
           <div v-for="star in stars" :key="star.id" :style="star.style" class="star"></div>
         </div>
-        <div class="absolute w-auto h-auto z-0 -translate-x-20 opacity-[30%] left-1/4 -translate-y-32 md:-translate-y-4 lg:translate-y-1">
-            <WingedAward />
+        <div class="absolute w-auto h-auto z-0 opacity-[20%] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <LaurelWreath />
         </div>
-        <div class="w-full lg:w-[78%] xl:w-[73%] 2xl:w-[69%] h-full flex flex-col items-end justify-center p-2">
+        <div class="w-full max-w-4xl h-full flex flex-col items-center justify-center p-2">
+            
+            <!-- SPEAK -->
             <div class="flex flex-row justify-center items-baseline p-2 relative overflow-hidden">
-                <Transition name="unveiled-animation">
-                    <!-- Animate this div when the page loads -->
+                <Transition name="word-1-animation">
                     <div v-if="!isLoaded" class="absolute w-full h-full bg-black z-20"></div>
                 </Transition>
-                <div class="font-thin italic text-md md:text-2xl">Stories</div>
-                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl font-semibold text-white">Unveiled</div>
+                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl font-semibold text-white">SPEAK</div>
             </div>
-            <div class="flex flex-row justify-center items-baseline p-2 overflow-hidden">
-                <Transition name="unleashed-animation">
-                    <div v-if="isLoaded" class="font-thin italic text-md md:text-2xl unleashed-shadow">Wings</div>
+            
+            <!-- THE -->
+            <div class="flex flex-row justify-center items-baseline p-2 relative overflow-hidden">
+                <Transition name="word-2-animation">
+                    <div v-if="!isLoaded" class="absolute w-full h-full bg-black z-20"></div>
                 </Transition>
-                <Transition name="unleashed-animation">
-                    <div v-if="isLoaded" class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold unleashed-shadow ">Unleashed</div>
-                </Transition>
+                <div class="font-thin italic text-md md:text-2xl">THE</div>
             </div>
-            <div class="flex flex-row justify-center items-baseline p-2">
-                <Transition name="unbound-slide-left">
-                    <div v-if="!isLoaded" class="absolute w-1/2 h-full left-0 bg-black z-20"></div>
+            
+            <!-- LIGHT -->
+            <div class="flex flex-row justify-center items-baseline p-2 relative overflow-hidden">
+                <Transition name="word-3-animation">
+                    <div v-if="!isLoaded" class="absolute w-full h-full bg-black z-20"></div>
                 </Transition>
-                <Transition name="unbound-slide-right">
-                    <div v-if="!isLoaded" class="absolute w-1/2 h-full right-0 bg-black z-20"></div>
-                </Transition>
-                <div class="font-thin italic text-md md:text-2xl text-[#EDC001]">Limits</div>
-                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold text-[#EDC001] unbound-text-shadow">Unbound</div>
+                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold text-white unleashed-shadow">LIGHT</div>
             </div>
+            
+            <!-- BE -->
+            <div class="flex flex-row justify-center items-baseline p-2 relative overflow-hidden">
+                <Transition name="word-4-animation">
+                    <div v-if="!isLoaded" class="absolute w-full h-full bg-black z-20"></div>
+                </Transition>
+                <div class="font-thin italic text-md md:text-2xl text-[#EDC001]">BE THE</div>
+            </div>
+            
+            
+            <!-- STAR -->
+            <div class="flex flex-row justify-center items-baseline p-2 relative overflow-hidden">
+                <Transition name="word-6-animation">
+                    <div v-if="!isLoaded" class="absolute w-full h-full bg-black z-20"></div>
+                </Transition>
+                <div class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-semibold text-[#EDC001] unbound-text-shadow">STAR</div>
+            </div>
+            
         </div>
     </div>
 </template>
 
-
-
-<style>
-
+<style scoped>
 .unleashed-shadow {
     text-shadow: 0 0 10px #BC9C23;
-    /* text-shadow: 0 0 5px #FF7900ff; */
 }
 
 .unbound-text-shadow {
@@ -118,66 +130,93 @@ onMounted(() => {
     background-image: radial-gradient(75% 75% at 50% 50%, #000000 59%, #181818 100%);
 }
 
-.unveiled-animation-enter-active, .unveiled-animation-leave-active {
+/* Word 1: SPEAK - Slide down */
+.word-1-animation-enter-active, .word-1-animation-leave-active {
     transition: transform 1s;
     transition-delay: 0.2s;
 }
-
-.unveiled-animation-enter-from {
+.word-1-animation-enter-from {
+    transform: translateY(-100%);
+}
+.word-1-animation-enter-to {
+    transform: translateY(0);
+}
+.word-1-animation-leave-to {
     transform: translateY(-100%);
 }
 
-.unveiled-animation-enter-to {
-    transform: translateY(0);
+/* Word 2: THE - Slide from left */
+.word-2-animation-enter-active, .word-2-animation-leave-active {
+    transition: transform 1s;
+    transition-delay: 0.6s;
 }
-
-.unveiled-animation-leave-to {
-    transform: translateY(-100%);
+.word-2-animation-enter-from {
+    transform: translateX(-100%);
 }
-
-
-
-.unleashed-animation-enter-active, .unleashed-animation-leave-active {
-    transition: transform 1s, opacity 1s;
-    transition-delay: 1.2s;
-}
-
-.unleashed-animation-enter-from {
-    transform: translateY(100%); /* Slide upwards from below */
-    opacity: 0;
-}
-
-.unleashed-animation-enter-to {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-
-.unbound-slide-left-enter-active, .unbound-slide-left-leave-active {
-    transition: transform 1s ease-in-out;
-    transition-delay: 2.2s;
-}
-
-.unbound-slide-left-leave-from {
+.word-2-animation-enter-to {
     transform: translateX(0);
 }
-
-.unbound-slide-left-leave-to {
+.word-2-animation-leave-to {
     transform: translateX(-100%);
 }
 
-.unbound-slide-right-enter-active, .unbound-slide-right-leave-active {
-    transition: transform 1s ease-in-out;
-    transition-delay: 2.3s;
+/* Word 3: LIGHT - Slide from right */
+.word-3-animation-enter-active, .word-3-animation-leave-active {
+    transition: transform 1s;
+    transition-delay: 1.0s;
 }
-
-.unbound-slide-right-leave-from {
+.word-3-animation-enter-from {
+    transform: translateX(100%);
+}
+.word-3-animation-enter-to {
     transform: translateX(0);
 }
-
-.unbound-slide-right-leave-to {
+.word-3-animation-leave-to {
     transform: translateX(100%);
 }
 
+/* Word 4: BE - Slide up */
+.word-4-animation-enter-active, .word-4-animation-leave-active {
+    transition: transform 1s;
+    transition-delay: 1.4s;
+}
+.word-4-animation-enter-from {
+    transform: translateY(100%);
+}
+.word-4-animation-enter-to {
+    transform: translateY(0);
+}
+.word-4-animation-leave-to {
+    transform: translateY(100%);
+}
 
+/* Word 5: THE - Fade + Scale */
+.word-5-animation-enter-active, .word-5-animation-leave-active {
+    transition: transform 1s, opacity 1s;
+    transition-delay: 1.8s;
+}
+.word-5-animation-enter-from {
+    transform: scale(0.5);
+    opacity: 0;
+}
+.word-5-animation-enter-to {
+    transform: scale(1);
+    opacity: 1;
+}
+.word-5-animation-leave-to {
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+/* Word 6: STAR - Split reveal (like your original unbound) */
+.word-6-animation-enter-active, .word-6-animation-leave-active {
+    transition: transform 1s ease-in-out;
+    transition-delay: 2.2s;
+}
+.word-6-animation-leave-from {
+    transform: translateX(0);
+}
+.word-6-animation-leave-to {
+    transform: translateX(-100%);
+}
 </style>
