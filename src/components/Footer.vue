@@ -6,10 +6,10 @@
       faFacebook,
       faInstagram,
       faLinkedin,
-      faWordpress,
+      faYoutube,
   } from "@fortawesome/free-brands-svg-icons";
   // TODO: Check svg core bundle size
-  library.add(faInstagram, faFacebook, faLinkedin);
+  library.add(faInstagram, faFacebook, faLinkedin,faYoutube);
 
   const socialMedia = [
       {
@@ -28,9 +28,9 @@
         link: "https://www.linkedin.com/company/gavel-club-of-university-of-moratuwa/",
       },
       {
-        profile: "Website",
-        icon: faWordpress,
-        link: "http://gavel.mrt.ac.lk/",
+        profile: "YouTube",  // Changed from Website to YouTube
+        icon: faYoutube,    // Changed from faWordpress to faYoutube
+        link: "https://www.youtube.com/@SpeechOlympiad",  // Replace with your YouTube channel URL
       },
     ]
 
@@ -38,16 +38,16 @@
       title: "Contact",
       links: [
       {
-          text: "Akindu Kalhara : +94 70 722 9859",
-          href: "tel: +94 70 722 9859"
+          text: "Dehan Walakuluarachchi : +94 76 258 7836",
+          href: "tel: +94 76 258 7836"
       },
       {
-          text: "Saai Syvendra : +94 71 535 2524",
-          href: "tel: +94 71 535 2524",
+          text: "Neelayadakshi Priyadakshan : +94 76 317 5352",
+          href: "tel: +94 76 317 5352",
       },
       {
-          text: "Sasindi Peiris : +94 77 348 3696",
-          href: "tel: +94 71 77 348 3696"
+          text: "Thilakshan Balakrishnan : + 94 77 107 6556",
+          href: "tel: + 94 77 107 6556"
       },
       {
           text: "Email : speecholympiadxvii@gmail.com",
@@ -72,11 +72,20 @@
         <!-- Contact Persons -->
         <div class="text-center flex flex-col items-center mt-1">
           <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
-          <div class="w-2/3 lg:w-3/4">
-            <ul class="flex flex-col items-start">
-                <li v-for="link in contactsPersons.links" :key="link.text" class="border-0 p-0 m-b-4">
-                    <a :href="link.href" class="text-gray-400 m-0 p-0">{{ link.text }}</a>
-                </li>
+          <div class="w-full lg:w-[90%]"> <!-- Modified width -->
+            <ul class="flex flex-col items-start space-y-2"> <!-- Added space-y-2 for vertical spacing -->
+              <li 
+                v-for="link in contactsPersons.links" 
+                :key="link.text" 
+                class="w-full border-0 p-0"
+              > <!-- Added w-full -->
+                <a 
+                  :href="link.href" 
+                  class="text-gray-400 m-0 p-0 whitespace-nowrap block overflow-hidden text-ellipsis"
+                > <!-- Added whitespace-nowrap and other utilities -->
+                  {{ link.text }}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
