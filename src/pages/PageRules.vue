@@ -1,6 +1,6 @@
 <template>
     <div class="container m-8 mx-auto p-10 w-[90%] max-w-4xl bg-gradient-to-br from-[#282828] to-[#EDC00111] backdrop-blur-sm rounded-lg">
-      <h1 class="text-3xl font-semibold mb-6 text-center">Speech Olympiad XVII</h1>
+      <h1 class="text-3xl font-semibold mb-6 text-center">Speech Olympiad XVIII</h1>
       <h3 class="text-lg font-thin mb-6 text-center"> Intra-University Speech Competition- University of Moratuwa</h3>
       <h1 class="text-xl font-semibold mb-6 text-center">Contest Rules: Preliminaries</h1>
       
@@ -8,7 +8,7 @@
         <h2 class="text-2xl font-semibold mb-4">1. Eligibility</h2>
         <ul class="pl-6 space-y-2 list-disc">
           <li class="text-gray-300 font-normal">
-            The contestant should be an undergraduate studying in any of the following faculties<sup>1</sup> of University of Moratuwa to be eligible to participate in Speech Olympiad XVII.
+            The contestant should be an undergraduate studying in any of the following faculties<sup>1</sup> of University of Moratuwa to be eligible to participate in Speech Olympiad XVIII.
             <ul class="list-disc pl-6 mt-2 space-y-1" style="list-style-type: circle;">
               <li class="text-gray-300 p-1">Faculty of Engineering</li>
               <li class="text-gray-300 p-1">Faculty of Architecture</li>
@@ -49,7 +49,7 @@
         <h2 class="text-2xl font-semibold mb-4">4. Competition Procedure</h2>
         <ul class="pl-6 space-y-2 list-disc">
           <li class="text-gray-300 font-normal pt-1 pb-2">
-            The preliminaries will be happening on the <span class="font-bold text-white">19th of January</span> at the University Premises. For verification purposes, all contestants must bring their <span class="font-bold text-white">University ID</span> or the <span class="font-bold text-white">Student Record Book</span>.
+            The preliminaries will be happening on the <span class="font-bold text-white">31st of August</span> at the University Premises. For verification purposes, all contestants must bring their <span class="font-bold text-white">University ID</span> or the <span class="font-bold text-white">Student Record Book</span>.
           </li>
           <li class="text-gray-300 font-normal pt-1 pb-2">
             Prior to the contest, each speaker will be allocated a time slot at which the contestant must deliver the speech.
@@ -188,8 +188,8 @@
           <li class="text-gray-300 font-bold pt-1 pb-2">
             If the contestant has any issue or requires further details with the given procedure, please contact,
             <ul class="list-disc pl-6 mt-2 space-y-1" style="list-style-type: circle;">
-              <li class="text-gray-300 p-1 font-bold">Saai Syvendra +94 71 535 2524 (Co-Chair- SO XVII)</li>
-              <li class="text-gray-300 p-1 font-bold">Ilampoornan Raguparan +94 71 560 8525 (Education Pillar Head- SO XVII)</li>
+              <li class="text-gray-300 p-1 font-bold">Neelayadhakshi Priyadhakshan +94 76 317 5352 (Co-Chair- SO XVIII)</li>
+              <li class="text-gray-300 p-1 font-bold">Sandavi Nuthara +94 75 317 1438 (Education Pillar Head- SO XVIII)</li>
             </ul>
           </li>
         </ul>

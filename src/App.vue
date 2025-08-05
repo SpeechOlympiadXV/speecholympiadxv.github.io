@@ -39,7 +39,7 @@ const routes = {
   "/blogs": PageTest,
   // "/form": PageForm, 
   // "/admin": PageAdmin,
-  "/semi": Semi,
+  // "/semi": Semi,
   "/rules": PageRules,
   // "/blog2": PageBlog2,
   "/thulasithan": PageVote,

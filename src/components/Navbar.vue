@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Gallery', href: '#gallery', current: false },
   { name: 'Rules & Regulations', href: '#rules', current: false },
   { name: 'Blogs', href: '#blogs', current: false },
-  { name: 'Current Standings', href: '#semi', current: false },
+  // { name: 'Current Standings', href: '#semi', current: false },
   { name: 'Register', href: '#register', current: false }
 ]
 
