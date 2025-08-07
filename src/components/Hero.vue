@@ -32,6 +32,7 @@ onMounted(() => {
         <div v-if="textAnimationDone" class="absolute inset-0">
           <div v-for="star in stars" :key="star.id" :style="star.style" class="star"></div>
         </div>
+
         
         <!-- Laurel Wreath Background -->
         <div class="absolute w-auto h-auto z-0 opacity-[25%] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -64,7 +65,9 @@ onMounted(() => {
                         <span class="block text-[#EDC001] unbound-text-shadow text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">CROWN</span>
                     </h2>
                 </div>
+
             </div>
+            
         </div>
     </div>
 </template>
@@ -72,6 +75,7 @@ onMounted(() => {
 <style scoped>
 .unleashed-shadow {
     text-shadow: 0 0 20px rgba(188, 156, 35, 0.8), 0 0 40px rgba(188, 156, 35, 0.4);
+
 }
 
 .unbound-text-shadow {
@@ -115,6 +119,7 @@ onMounted(() => {
     background-position: 0px 0px;
     background-image: radial-gradient(75% 75% at 50% 50%, #000000 59%, #181818 100%);
 }
+
 
 /* Fade-in animation utilities */
 .animate-fade-in {
@@ -160,5 +165,6 @@ onMounted(() => {
     .w-full.max-w-6xl {
         max-width: 80rem;
     }
+
 }
 </style>
