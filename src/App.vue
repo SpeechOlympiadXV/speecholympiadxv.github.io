@@ -26,6 +26,8 @@ import PageKasun from "./TechTips/Kasun.vue";
 import Semi from "./pages/PageSemiFinalists.vue";
 import Footer from "./components/Footer.vue";
 import PageVote from "./pages/PageVote.vue";
+import BookletSection
+ from "./components/BookletSection.vue";
 // import RibbonNotice from "./components/RibbonNotice.vue";
 // import ToastButton from "./components/ToastButton.vue";
 

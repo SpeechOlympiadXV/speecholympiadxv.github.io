@@ -20,7 +20,7 @@ import Prelis2 from "../assets/images/gallery/3.jpg";
 import Prelis3 from "../assets/images/gallery/8.jpg";
 import sponserDisplay from "../components/sponsers.vue";
 import timeline from "../components/timeline.vue";
-
+import BookletSection from "../components/BookletSection.vue";
 
 
 import { animateOnScroll } from "../aos.js";
@@ -61,7 +61,8 @@ export default {
     Feature,
     pageChamp,
     // BlogIndex,
-    CompetitionTimeline
+    CompetitionTimeline,
+    BookletSection,
   },
   mounted() {
     var testimonialOut = null;
@@ -203,6 +204,7 @@ export default {
 
       <!-- <PageSemi /> -->
       <RegisterSection/>
+      <BookletSection/>
 
       <!--<PageFinalists></PageFinalists>-->
 

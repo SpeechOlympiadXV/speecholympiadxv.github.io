@@ -7,29 +7,20 @@
         <h2
           class="text-3xl lg:text-4xl font-semibold text-white tracking-[-2px] leading-2 w-[80%]"
         >
-          Register Now
+          Path to the Crown
         </h2>
         <p class="mt-4 text-gray-300 leading-6 text-left text-lg font-thin">
-          Registrations for
-          <span class="font-bold text-[#EDC001]">Speech Olympiad</span> are open
-          now. Time to own your voice!
+          Master the art of public speaking with our comprehensive 
+        <a href="https://drive.google.com/drive/folders/1sXQLDISy4CK6Bvx7z6BwDAUIrpLjWeQB?usp=sharing" target="_blank" class="text-blue-500 hover:text-blue-300 hover:cursor-pointer transition-colors duration-200 font-bold underline">Competition Guidelines</a>
+          and expert tips to elevate your speaking skills!
         </p>
       </div>
-
-      <section class="mt-6 flex justify-center">
-        <a
-         href="#register"
-         class="flex items-center justify-center w-48 h-12 bg-[#a78e1d] text-gray-100 rounded-lg hover:bg-[#7d6c22] transition-colors hover:text-white font-bold text-xl"
->
-  Register
-</a>
-      </section>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "RegisterSection",
+  name: "SpeakerGuideSection",
 };
 </script>

@@ -50,8 +50,8 @@
           href: "tel: + 94 77 107 6556"
       },
       {
-          text: "Email : speecholympiadxvii@gmail.com",
-          href: "mailto: speecholympiadxvii@gmail.com"
+          text: "Email : speecholympiadxviii@gmail.com",
+          href: "mailto: speecholympiadxviii@gmail.com"
       },
       ],
   }

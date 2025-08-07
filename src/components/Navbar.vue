@@ -3,15 +3,15 @@ import { ref, computed } from 'vue'
 import SOLogo from "./SOLogo.vue";
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'About', href: '#about', current: false },
-  { name: "Champion's Story", href: "#champions-story", current: false },
-  { name: 'Technical Tips', href: '#technical-tips', current: false },
-  { name: 'Gallery', href: '#gallery', current: false },
-  { name: 'Rules & Regulations', href: '#rules', current: false },
-  { name: 'Blogs', href: '#blogs', current: false },
-  // { name: 'Current Standings', href: '#semi', current: false },
-  { name: 'Register', href: '#register', current: false }
+  { name: 'Home', href: '#', current: true, class : 'text-white' },
+  { name: 'About', href: '#about', current: false, class: 'text-white' },
+  { name: "Champion's Story", href: "#champions-story", current: false, class: 'text-white' },
+  { name: 'Technical Tips', href: '#technical-tips', current: false, class: 'text-white' },
+  { name: 'Gallery', href: '#gallery', current: false, class: 'text-white' },
+  { name: 'Rules & Regulations', href: '#rules', current: false, class: 'text-white' },
+  { name: 'Blogs', href: '#blogs', current: false, class: 'text-white' },
+  // { name: 'Current Standings', href: '#semi', current: false, class: '' },
+  { name: 'Register', href: '#register', current: false, class: 'text-[#edc001]' }
 ]
 
 // const activeItemIndex = ref(getActiveItem());
@@ -42,7 +42,7 @@ window.addEventListener("hashchange", () => {
               :href="item.href"
               :class="[
                 activeURL === item.href ? 'backdrop-brightness-150' : 'transition duration-200 hover:backdrop-brightness-150',
-                'px-3 py-2 rounded-md text-sm font-semibold text-white'
+                'px-3 py-2 rounded-md text-sm font-semibold ' + item.class
               ]"
               :aria-current="activeURL === item.href ? 'page' : undefined"
             >
