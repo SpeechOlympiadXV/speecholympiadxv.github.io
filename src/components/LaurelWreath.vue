@@ -15,7 +15,7 @@ onMounted(() => {
         setTimeout(() => {
             startPetalAnimation();
         }, 500);
-    }, 3000);
+    }, 1500);
 });
 
 const startPetalAnimation = () => {

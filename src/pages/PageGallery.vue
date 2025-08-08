@@ -27,6 +27,15 @@ import c_7 from "../assets/images/gallery/7.jpg";
 import c_8 from "../assets/images/gallery/8.jpg";
 import c_9 from "../assets/images/gallery/9.jpg";
 import c_10 from "../assets/images/gallery/10.jpg";
+// New 2024 images
+import img_2024_1 from "../assets/images/gallery/2024.1.jpg";
+import img_2024_2 from "../assets/images/gallery/2024.2.jpg";
+import img_2024_3 from "../assets/images/gallery/2024.3.jpg";
+import img_2024_4 from "../assets/images/gallery/2024.4.jpg";
+import img_2024_5 from "../assets/images/gallery/2024.5.jpg";
+import img_2024_6 from "../assets/images/gallery/2024.6.jpg";
+import img_2024_7 from "../assets/images/gallery/2024.7.jpg";
+import img_2024_8 from "../assets/images/gallery/2024.8.jpg";
 
 export default {
   components: {
@@ -47,14 +56,21 @@ export default {
         c_9,
         c_10,
         c_5,
+        // Adding new 2024 images
+        img_2024_1,
+        img_2024_2,
+        img_2024_3,
+        img_2024_4,
+        img_2024_5,
+        img_2024_6,
+        img_2024_7,
+        img_2024_8,
       ],
     };
   },
 };
 </script>
 
-Gavel Logo
-Contact
 <template>
   <main>
     <div class="container">
