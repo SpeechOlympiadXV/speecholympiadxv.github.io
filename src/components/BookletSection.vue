@@ -11,7 +11,7 @@
         </h2>
         <p class="mt-4 text-gray-300 leading-6 text-left text-lg font-thin">
           Master the art of public speaking with our comprehensive 
-        <a href="https://drive.google.com/drive/folders/1sXQLDISy4CK6Bvx7z6BwDAUIrpLjWeQB?usp=sharing" target="_blank" class="text-blue-500 hover:text-blue-300 hover:cursor-pointer transition-colors duration-200 font-bold underline">Competition Guidelines</a>
+        <a href="https://drive.google.com/file/d/1q593UEqVGyOmJeEzJoMwOyjGEroa8Ksz/view?usp=sharing" target="_blank" class="text-blue-500 hover:text-blue-300 hover:cursor-pointer transition-colors duration-200 font-bold underline">Competition Guidelines</a>
           and expert tips to elevate your speaking skills!
         </p>
       </div>
