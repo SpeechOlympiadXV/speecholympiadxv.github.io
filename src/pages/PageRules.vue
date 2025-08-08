@@ -195,11 +195,11 @@
         </ul>
       </section>
 
-      <section class="mt-8">
+      <!-- <section class="mt-8">
         <a class="flex items-center justify-center w-48 h-12 bg-[#a78e1d] text-gray-100 rounded-lg hover:bg-[#7d6c22] transition-colors hover:text-white" href="https://bit.ly/SOXVII-Rules" target="_blank">
           Download the Rules  
         </a>
-      </section>
+      </section> -->
     </div>
 </template>
   
