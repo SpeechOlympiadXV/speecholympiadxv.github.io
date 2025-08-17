@@ -86,7 +86,7 @@
         {
           id : 3,
           name: "Finals",
-          date: "25th September, 2025",
+          date: "30th September, 2025",
           upcoming : true,
           lineStyle: 'bg-gradient-to-b from-[#edc00133] to-[#edc001]',
           diamondStyle: 'bg-[#594d1b]',
