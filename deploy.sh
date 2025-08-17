@@ -1,11 +1,18 @@
+# Start clean from master
+git checkout master
+
+# Create temp branch
+git checkout -b gh-temp
+
+# Build on temp branch
 npm run build
-
 touch dist/.nojekyll
-
 git add dist
-
 git commit -m "new deployment"
 
-# git subtree push --prefix dist origin gh-pages
+# Use subtree split to isolate dist/ and push it
+git push origin `git subtree split --prefix dist gh-temp`:gh-pages --force
 
-git push origin `git subtree split --prefix dist master`:gh-pages --force
+# Cleanup
+git checkout master
+git branch -D gh-temp
