@@ -19,3 +19,4 @@ coverage
 .idea
 
 yarn.lock
+dist
