@@ -203,8 +203,8 @@ export default {
       </div> -->
 
       <!-- <PageSemi /> -->
-      <RegisterSection/>
-      <BookletSection/>
+      <!-- <RegisterSection/> -->
+      <!-- <BookletSection/> -->
 
       <!--<PageFinalists></PageFinalists>-->
 

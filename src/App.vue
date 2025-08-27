@@ -34,7 +34,7 @@ import BookletSection
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
-  "/register": PageRegister,
+  // "/register": PageRegister,
   "/champions-story": PageChampionsStory,
   "/technical-tips": PageTT,
   "/gallery": PageGallery,
