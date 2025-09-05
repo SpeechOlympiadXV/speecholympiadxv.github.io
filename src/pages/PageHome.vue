@@ -179,7 +179,7 @@ export default {
       </div> -->
 
       <!-- ==SPONSERS== -->
-      <!--<sponserDisplay />-->
+      <sponserDisplay />
 
       <!-- <hr class="featurette-divider" /> -->
       <!-- <PageSemi /> -->

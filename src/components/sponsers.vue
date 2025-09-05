@@ -7,9 +7,9 @@
         </h1>
       </div>
       
-      <div v-for="type in ['Gold', 'Silver', 'Bronze']" :key="type" class="mb-8">
+      <div v-for="type in ['Platinum', 'Gold', 'Silver', 'Normal']" :key="type" class="mb-8">
         <template v-if="getSponsorsByType(type).length > 0">
-          <h2 class="text-xl lg:text-2xl font-semibold text-gray-300 mb-4" :class="type === 'Gold' ? 'text-yellow-400' : type === 'Silver' ? 'text-gray-200' : 'text-orange-400'">{{ type }} Sponsor</h2>
+          <h2 class="text-xl lg:text-2xl font-semibold text-gray-300 mb-4" :class="type === 'Platinum' ? 'text-blue-400' : type === 'Gold' ? 'text-yellow-400' : type === 'Silver' ? 'text-gray-200' : 'text-orange-400'">{{ type }} Sponsor</h2>
           <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
             <div v-for="sponsor in getSponsorsByType(type)" :key="sponsor.id" class="sponsor-box col-span-1">
               <div class="backdrop-brightness-150 rounded-lg shadow-lg p-4 transition duration-300 ease-in-out transform w-full h-full border border-gray-700">
@@ -37,24 +37,86 @@
 
 <script setup>
 import { ref } from 'vue'
-import combankLogo from '../assets/logos/combanklogo.png'
-import nestle from '../assets/logos/NESTLElogo.png'
+
+// Add your new sponsor logos here
+import platinumLogo from '../assets/logos/platinumlogo.png'
+import gold1Logo from '../assets/logos/gold1logo.png'
+import gold2Logo from '../assets/logos/gold2logo.png'
+import gold3Logo from '../assets/logos/gold3logo.png'
+import silverLogo from '../assets/logos/silverlogo.png'
+import normal1Logo from '../assets/logos/normal1logo.png'
+import normal2Logo from '../assets/logos/normal2logo.jpeg'
+import normal3Logo from '../assets/logos/normal3logo.png'
+// import normal4Logo from '../assets/logos/normal4logo.png'
 
 const sponsors = ref([
+  // Platinum
   {
-    id: 1,
-    name: 'Commercial Bank',
-    imageUrl: combankLogo,
-    partnershipType: 'Silver',
-    bgStyle : "",
+    id: 10,
+    name: 'Platinum Sponsor',
+    imageUrl: platinumLogo,
+    partnershipType: 'Platinum',
+    bgStyle: "bg-white",
+  },
+  // Gold
+  {
+    id: 11,
+    name: 'Gold Sponsor 1',
+    imageUrl: gold1Logo,
+    partnershipType: 'Gold',
+    bgStyle: "bg-white",
   },
   {
-    id: 2,
-    name: 'Nestlé',
-    imageUrl: nestle,
+    id: 12,
+    name: 'Gold Sponsor 2',
+    imageUrl: gold2Logo,
     partnershipType: 'Gold',
-    bgStyle : "bg-white",
-  }
+    bgStyle: "bg-white",
+  },
+  {
+    id: 13,
+    name: 'Gold Sponsor 3',
+    imageUrl: gold3Logo,
+    partnershipType: 'Gold',
+    bgStyle: "bg-white",
+  },
+  // Silver
+  {
+    id: 14,
+    name: 'Silver Sponsor',
+    imageUrl: silverLogo,
+    partnershipType: 'Silver',
+    bgStyle: "bg-white",
+  },
+  // Normal sponsors
+  {
+    id: 20,
+    name: 'Normal Sponsor 1',
+    imageUrl: normal1Logo,
+    partnershipType: 'Normal',
+    bgStyle: "bg-white",
+  },
+  {
+    id: 21,
+    name: 'Normal Sponsor 2',
+    imageUrl: normal2Logo,
+    partnershipType: 'Normal',
+    bgStyle: "bg-white",
+  },
+  {
+    id: 22,
+    name: 'Normal Sponsor 3',
+    imageUrl: normal3Logo,
+    partnershipType: 'Normal',
+    bgStyle: "bg-white",
+  },
+  // {
+  //   id: 23,
+  //   name: 'Normal Sponsor 4',
+  //   imageUrl: normal4Logo,
+  //   partnershipType: 'Normal',
+  //   bgStyle: "bg-white",
+  // },
 ])
 const getSponsorsByType = (type) => {
   return sponsors.value.filter(sponsor => sponsor.partnershipType === type)

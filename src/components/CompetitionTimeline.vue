@@ -71,7 +71,7 @@
           id : 1,
           name: "Preliminary Round",
           date: "31st August, 2025",  
-          upcoming : true,
+          upcoming : false,
           lineStyle: 'bg-gradient-to-t from-[#edc00133] to-[#edc001]',
           diamondStyle: 'color-pulse',
         },
