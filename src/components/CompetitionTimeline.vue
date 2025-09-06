@@ -71,9 +71,9 @@
           id : 1,
           name: "Preliminary Round",
           date: "31st August, 2025",  
-          upcoming : true,
+          upcoming : false,
           lineStyle: 'bg-gradient-to-t from-[#edc00133] to-[#edc001]',
-          diamondStyle: 'color-pulse',
+          diamondStyle: 'bg-[#594d1b]',
         },
         {
           id : 2,
@@ -81,7 +81,7 @@
           date: "14th September, 2025",
           upcoming : true,
           lineStyle: 'bg-[#edc00133]',
-          diamondStyle: 'bg-[#594d1b]',
+          diamondStyle: 'color-pulse',
         },
         {
           id : 3,
