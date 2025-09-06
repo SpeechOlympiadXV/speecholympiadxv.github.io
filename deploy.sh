@@ -7,7 +7,8 @@ git checkout -b gh-temp
 # Build on temp branch
 npm run build
 touch dist/.nojekyll
-git add dist
+# Since this is ignored, have to force add
+git add -f dist
 git commit -m "new deployment"
 
 # Use subtree split to isolate dist/ and push it
