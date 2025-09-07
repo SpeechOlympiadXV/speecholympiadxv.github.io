@@ -8,6 +8,7 @@
       </div>
       
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <div v-for="type in ['Gold', 'Silver', 'Bronze']" :key="type" class="mb-8">
         <template v-if="getSponsorsByType(type).length > 0">
           <h2 class="text-xl lg:text-2xl font-semibold text-gray-300 mb-4" :class="type === 'Gold' ? 'text-yellow-400' : type === 'Silver' ? 'text-gray-200' : 'text-orange-400'">{{ type }} Sponsor</h2>
@@ -15,10 +16,18 @@
       <!-- Updated partner types: replaced "Normal" with the three new categories -->
       <div v-for="type in ['Platinum', 'Gold', 'Silver', 'Gift', 'Wristband', 'Leisure']" :key="type" class="mb-8">
         <template v-if="getSponsorsByType(type).length > 0">
+=======
+      <!-- Updated partner types: replaced "Normal" with the three new categories -->
+      <div v-for="type in ['Platinum', 'Gold', 'Silver', 'Gift', 'Wristband', 'Leisure']" :key="type" class="mb-8">
+        <template v-if="getSponsorsByType(type).length > 0">
+>>>>>>> Stashed changes
           <h2 class="text-xl lg:text-2xl font-semibold mb-4" 
               :class="getPartnerTypeClass(type)">
             {{ type }} Partner
           </h2>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
             <div v-for="sponsor in getSponsorsByType(type)" :key="sponsor.id" class="sponsor-box col-span-1">
@@ -95,6 +104,9 @@ const sponsors = ref([
     partnershipType: 'Leisure',
     bgStyle: "bg-white",
   },
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 ])
 
