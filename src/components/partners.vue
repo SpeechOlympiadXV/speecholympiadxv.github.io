@@ -130,9 +130,9 @@ const getPartnerTypeClass = (type) => {
     case 'Platinum': return 'text-slate-100 drop-shadow-lg';
     case 'Gold': return 'text-amber-300 drop-shadow-lg';
     case 'Silver': return 'text-slate-300 drop-shadow-lg';
-    case 'Gift': return 'text-emerald-300 drop-shadow-lg';
-    case 'Wristband': return 'text-violet-300 drop-shadow-lg';
-    case 'Leisure': return 'text-rose-300 drop-shadow-lg';
+    case 'Gift': return 'text-orange-300 drop-shadow-lg';
+    case 'Wristband': return 'text-orange-300 drop-shadow-lg';
+    case 'Leisure': return 'text-orange-300 drop-shadow-lg';
     default: return 'text-orange-300 drop-shadow-lg';
   }
 }
