@@ -12,7 +12,7 @@
         <template v-if="getPartnersByType(type).length > 0">
           <h2 class="text-xl lg:text-2xl font-semibold mb-4" 
               :class="getPartnerTypeClass(type)">
-            {{ type }} Partner
+            {{ type }} Partners
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
             <div v-for="partner in getPartnersByType(type)" :key="partner.id" class="partner-box col-span-1">
