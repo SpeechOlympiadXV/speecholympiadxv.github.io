@@ -18,7 +18,7 @@ import PageFinalists from "./PageFinalists.vue";
 import Prelis1 from "../assets/images/gallery/1.png";
 import Prelis2 from "../assets/images/gallery/3.jpg";
 import Prelis3 from "../assets/images/gallery/8.jpg";
-import sponserDisplay from "../components/sponsers.vue";
+import partnerDisplay from "../components/partners.vue";
 import timeline from "../components/timeline.vue";
 import BookletSection from "../components/BookletSection.vue";
 
@@ -53,7 +53,7 @@ export default {
     AppGallery,
     Blogs,
     timeline,
-    sponserDisplay,
+    partnerDisplay,
     timeline2,
     RegisterSection,
     PageTT,
@@ -178,8 +178,8 @@ export default {
         </div>
       </div> -->
 
-      <!-- ==SPONSERS== -->
-      <!--<sponserDisplay />-->
+      <!-- ==PARTNERS== -->
+      <partnerDisplay />
 
       <!-- <hr class="featurette-divider" /> -->
       <!-- <PageSemi /> -->
