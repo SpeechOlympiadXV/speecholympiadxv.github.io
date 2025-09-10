@@ -72,7 +72,7 @@
           name: "Preliminary Round",
           date: "31st August, 2025",  
           upcoming : false,
-          lineStyle: 'bg-gradient-to-t from-[#edc00133] to-[#edc001]',
+          lineStyle: 'bg-gradient-to-b from-[#edc00133] to-[#edc001]',
           diamondStyle: 'bg-[#594d1b]',
         },
         {
@@ -80,7 +80,7 @@
           name: "Semi Finals",
           date: "14th September, 2025",
           upcoming : true,
-          lineStyle: 'bg-[#edc00133]',
+          lineStyle: 'bg-gradient-to-t from-[#edc00133] to-[#edc001]',
           diamondStyle: 'color-pulse',
         },
         {

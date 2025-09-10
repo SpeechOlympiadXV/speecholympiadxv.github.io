@@ -12,7 +12,7 @@
         <template v-if="getPartnersByType(type).length > 0">
           <h2 class="text-xl lg:text-2xl font-semibold mb-4" 
               :class="getPartnerTypeClass(type)">
-            {{ type }} Partner
+            {{ type }} Partners
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
             <div v-for="partner in getPartnersByType(type)" :key="partner.id" class="partner-box col-span-1">
@@ -130,9 +130,9 @@ const getPartnerTypeClass = (type) => {
     case 'Platinum': return 'text-slate-100 drop-shadow-lg';
     case 'Gold': return 'text-amber-300 drop-shadow-lg';
     case 'Silver': return 'text-slate-300 drop-shadow-lg';
-    case 'Gift': return 'text-emerald-300 drop-shadow-lg';
-    case 'Wristband': return 'text-violet-300 drop-shadow-lg';
-    case 'Leisure': return 'text-rose-300 drop-shadow-lg';
+    case 'Gift': return 'text-orange-300 drop-shadow-lg';
+    case 'Wristband': return 'text-orange-300 drop-shadow-lg';
+    case 'Leisure': return 'text-orange-300 drop-shadow-lg';
     default: return 'text-orange-300 drop-shadow-lg';
   }
 }

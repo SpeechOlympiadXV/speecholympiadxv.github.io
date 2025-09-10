@@ -15,5 +15,7 @@ git commit -m "new deployment"
 git push origin `git subtree split --prefix dist gh-temp`:gh-pages --force
 
 # Cleanup
+git reset --hard   # resets tracked files
+git clean -fdX     # removes ignored files like dist/
 git checkout master
 git branch -D gh-temp
