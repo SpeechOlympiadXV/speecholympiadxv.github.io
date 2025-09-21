@@ -8,7 +8,7 @@
       </div>
       
       <!-- Updated partner types: replaced "Normal" with the three new categories -->
-      <div v-for="type in ['Platinum', 'Gold', 'Silver', 'Gift', 'Wristband', 'Leisure']" :key="type" class="mb-8">
+      <div v-for="type in ['Platinum', 'Gold', 'Silver', 'Gift', 'Wristband', 'Leisure','Education']" :key="type" class="mb-8">
         <template v-if="getPartnersByType(type).length > 0">
           <h2 class="text-xl lg:text-2xl font-semibold mb-4" 
               :class="getPartnerTypeClass(type)">
@@ -54,6 +54,7 @@ import silverLogo from '../assets/logos/silverlogo.png'
 import normal1Logo from '../assets/logos/normal1logo.png'
 import normal2Logo from '../assets/logos/normal2logo.jpeg'
 import normal3Logo from '../assets/logos/normal3logo.png'
+import educationlogo from '../assets/logos/educationlogo.jpg'
 // import normal4Logo from '../assets/logos/normal4logo.png'
 
 const partners = ref([
@@ -117,6 +118,13 @@ const partners = ref([
     partnershipType: 'Leisure',
     bgStyle: "bg-white",
   },
+  {
+    id: 23,
+    name: 'Education Partner',
+    imageUrl: educationlogo,
+    partnershipType: 'Education',
+    bgStyle: "bg-white",
+  },
 ])
 
 // Function to filter partners by partnership type
@@ -133,6 +141,7 @@ const getPartnerTypeClass = (type) => {
     case 'Gift': return 'text-orange-300 drop-shadow-lg';
     case 'Wristband': return 'text-orange-300 drop-shadow-lg';
     case 'Leisure': return 'text-orange-300 drop-shadow-lg';
+    case 'Education': return 'text-orange-300 drop-shadow-lg';
     default: return 'text-orange-300 drop-shadow-lg';
   }
 }
