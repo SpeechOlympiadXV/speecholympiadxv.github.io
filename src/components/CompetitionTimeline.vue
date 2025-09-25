@@ -72,24 +72,24 @@
           name: "Preliminary Round",
           date: "31st August, 2025",  
           upcoming : false,
-          lineStyle: 'bg-gradient-to-b from-[#edc00133] to-[#edc001]',
+          lineStyle: 'bg-gradient-to-b from-[#edc00133] to-[#edc00133]',
           diamondStyle: 'bg-[#594d1b]',
         },
         {
           id : 2,
           name: "Semi Finals",
           date: "14th September, 2025",
-          upcoming : true,
-          lineStyle: 'bg-gradient-to-t from-[#edc00133] to-[#edc001]',
-          diamondStyle: 'color-pulse',
+          upcoming : false,
+          lineStyle: 'bg-gradient-to-b from-[#edc00133] to-[#edc001]',
+          diamondStyle: 'bg-[#594d1b]',
         },
         {
           id : 3,
           name: "Finals",
           date: "30th September, 2025",
           upcoming : true,
-          lineStyle: 'bg-gradient-to-b from-[#edc00133] to-[#edc001]',
-          diamondStyle: 'bg-[#594d1b]',
+          lineStyle: 'bg-gradient-to-t from-[#edc00133] to-[#edc001]',
+          diamondStyle: 'color-pulse',
         },
       ]);
   
@@ -114,11 +114,11 @@
   }
 
   50% {
-    background-color: #ffe675;
+    background-color: #edc001;
   }
 
   80% {
-    background-color: #edc001;
+    background-color: #ffe675;
   }
 }
 

@@ -9,7 +9,14 @@
             With unwavering spirit and brilliance, you've conquered the stage—each moment a testament to your talent.
         </div>
         <div class="text-gray-300 leading-6 text-left text-md sm:text-lg font-thin mt-1">
-            Now, the final stage awaits—where your journey becomes <span class="text-xl sm:text-2xl italic font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#edc001] to-cyan-600">Unbound</span>.
+            Now, the final stage awaits—where you 
+            <span class="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#d5c060] to-cyan-600">
+                Own Your Voice
+            </span> 
+            and 
+            <span class="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#d5c060] to-cyan-600">
+                Earn Your Crown
+            </span>.
         </div>
     </div>
     <div class="flex h-full w-full items-center justify-center px-4">
@@ -63,7 +70,6 @@
 </template>
   
 <script>
-
 // import afra from '../assets/images/SemiFinalists/Afra.jpg'
 // import chathura from '../assets/images/SemiFinalists/Chathura.jpg'
 // import damsith from '../assets/images/SemiFinalists/Damsith Adikari.jpeg'
@@ -77,12 +83,11 @@
 // import sasindi from '../assets/images/SemiFinalists/Sasindi.jpg'
 
 
-import aloka from '../assets/images/finalists/final/aloka.png'
-import afra_f from '../assets/images/finalists/final/afra.png'
-import neela from '../assets/images/finalists/final/neela.png'
-import thulasi from '../assets/images/finalists/final/thulasi.png'
-import unduli from '../assets/images/finalists/unduli.png'
-import ami from '../assets/images/finalists/final/ami.png'
+import chemini from '../assets/images/finalists/2025/chemini.png'
+import hansali from '../assets/images/finalists/2025/hansali.png'
+import vino from '../assets/images/finalists/2025/vino.png'
+import mathisha from '../assets/images/finalists/2025/mathisha.png'
+import hemindi from '../assets/images/finalists/2025/hemindi.png'
 
 export default {
 
@@ -112,16 +117,16 @@ export default {
             // ],
             gridData_1: [
                 
-                { text: "Afrah Rumie", image: afra_f, number: 1 },
-                { text: "Aloka Fernando", image: aloka, number: 4 },
-                { text: "Neelayadhakshi Priyadhakshan", image: neela, number: 6 },
-                { text: "Thulasithan Gnanenthiram", image: thulasi, number: 10 },
-                { text: "Amirthavarshani Ananthan", image: ami, number: 12 },
+                { text: "Chemini Mallikarachchi", image: chemini, number: 1 },
+                { text: "Hansali Kariyawasam", image: hansali, number: 2 },
+                { text: "Vino Wanniarachchi", image: vino, number: 3 },
+                { text: "Mathisha Thiyagalingam", image: mathisha, number: 4 },
+                { text: "Hemindi Kalubovila", image: hemindi, number: 5 },
                 // Add more items as needed
             ],
 
             reserved_1: [
-            { text: "Unduli Senadheera", number: 13 },
+            { text: "Aloka Fernando", number: 6 },
             ],
 
             reserved_2: [
@@ -329,4 +334,3 @@ export default {
     }
 
 </style>
-  
