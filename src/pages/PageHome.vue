@@ -206,7 +206,7 @@ export default {
       <!-- <RegisterSection/> -->
       <!-- <BookletSection/> -->
 
-      <!--<PageFinalists></PageFinalists>-->
+      <PageFinalists></PageFinalists>
 
       <!-- <hr class="featurette-divider" />
       <div class="col-12 mb-2 mt-6">
