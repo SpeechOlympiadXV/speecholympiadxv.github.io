@@ -35,17 +35,17 @@
                 @mouseleave="hoverIndex = null"
                 >
                 <img class="h-full w-full object-cover rounded-lg" :src="item.image" />
-                <div
+                <!-- <div
                     v-show="hoverIndex === index"
                     class="hidden sm:flex absolute top-0 left-0 right-0 items-center justify-center p-4 bg-opacity-50"
                 >
                     <p class="typing-effect" style="color: ghostwhite">{{ item.text }}</p>
-                </div>
-                <div class="block sm:hidden absolute left-0 bottom-0 sm:bottom-2  w-full" style="color: ghostwhite">
+                </div> -->
+                <!-- <div class="block sm:hidden absolute left-0 bottom-0 sm:bottom-2  w-full" style="color: ghostwhite">
                     <p class="w-[90%] mx-auto text-center text-[#edc001] p-2 bg-gray-900 bg-opacity-40 h-12 sm:h-16 font-normal sm:font-extrabold text-[10px] sm:text-xs">
                     {{ item.text }}
                     </p>
-                </div>
+                </div> -->
                 </li>
             </ul>
         </div>
@@ -119,9 +119,9 @@ export default {
                 
                 { text: "Chemini Mallikarachchi", image: chemini, number: 1 },
                 { text: "Hansali Kariyawasam", image: hansali, number: 2 },
-                { text: "Vino Wanniarachchi", image: vino, number: 3 },
+                { text: "Hemindi Kalubovila", image: hemindi, number: 3 },
                 { text: "Mathisha Thiyagalingam", image: mathisha, number: 4 },
-                { text: "Hemindi Kalubovila", image: hemindi, number: 5 },
+                { text: "Vino Wanniarachchi", image: vino, number: 5 },
                 // Add more items as needed
             ],
 
@@ -181,30 +181,30 @@ export default {
   
 <style scoped>
     .card-width {
-        width: 42%; 
+        width: 80%; 
     }
 
     @media (min-width: 640px) { /* sm */
         .card-width {
-            width: 35%;
+            width: 60%;
         }
     }
 
     @media (min-width: 768px) { /* md */
         .card-width {
-            width: 30%;
+            width: 35%;
         }
     }
 
     @media (min-width: 1024px) { /* lg */
         .card-width {
-            width: 25%;
+            width: 30%;
         }
     }
 
     @media (min-width: 1280px) { /* xl */
         .card-width {
-            width: 19%;
+            width: 20%;
         }
     }
 
