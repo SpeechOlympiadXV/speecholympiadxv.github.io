@@ -20,30 +20,23 @@ import PageFormNew from "./pages/PageFormNew.vue";
 import Tips from "./components/tips.vue";
 import PageTT from "./pages/PageTechTips.vue";
 import PageRegister from "./pages/PageRegister.vue";
-
 import PageBlog2 from "./pages/PageBlog2.vue"
 import PageKasun from "./TechTips/Kasun.vue";
 import Semi from "./pages/PageSemiFinalists.vue";
 import Footer from "./components/Footer.vue";
 import PageVote from "./pages/PageVote.vue";
-import BookletSection
- from "./components/BookletSection.vue";
-// import RibbonNotice from "./components/RibbonNotice.vue";
-// import ToastButton from "./components/ToastButton.vue";
+import BookletSection from "./components/BookletSection.vue";
+import PageFinalists from "./pages/PageFinalists.vue"; // Add this import
 
 const routes = {
   "/": PageHome,
   "/about": PageAbout,
-  // "/register": PageRegister,
   "/champions-story": PageChampionsStory,
   "/technical-tips": PageTT,
   "/gallery": PageGallery,
   "/blogs": PageTest,
-  // "/form": PageForm, 
-  // "/admin": PageAdmin,
-  // "/semi": Semi,
   "/rules": PageRules,
-  // "/blog2": PageBlog2,
+  "/finalists": PageFinalists, // Add this route
   "/thulasithan": PageVote,
   "/aloka" : PageVote,
   "/amirthavarshani" : PageVote,

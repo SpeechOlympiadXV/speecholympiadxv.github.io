@@ -7,11 +7,10 @@ const navigation = [
   { name: 'About', href: '#about', current: false, class: 'text-white' },
   { name: "Champion's Story", href: "#champions-story", current: false, class: 'text-white' },
   { name: 'Technical Tips', href: '#technical-tips', current: false, class: 'text-white' },
+  { name: 'Finalists', href: '#finalists', current: false, class: 'text-white' }, // Changed from '#/finalists' to '#finalists'
   { name: 'Gallery', href: '#gallery', current: false, class: 'text-white' },
   { name: 'Rules & Regulations', href: '#rules', current: false, class: 'text-white' },
   { name: 'Blogs', href: '#blogs', current: false, class: 'text-white' },
-  // { name: 'Current Standings', href: '#semi', current: false, class: '' },
-  // { name: 'Register', href: '#register', current: false, class: 'text-[#edc001]' }
 ]
 
 // const activeItemIndex = ref(getActiveItem());
